@@ -1,0 +1,195 @@
+#page1 {
+	background-image: url("back_2.jpeg");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 0px;
+	height: 100%
+}
+
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+}
+
+
+h1 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	background: transparent;
+	position: fixed;
+	bottom: 40px;
+        right: 40px;
+	left: 5%;
+        top: 40px;
+	float: left;
+        display: block;
+	z-index: 11;
+	text-align: left;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: white;
+	background: transparent;
+ 	margin-right: 100px;
+	display: block;
+	float: right;
+	text-align: right;
+	position: fixed;
+	z-index: 12;
+	width: 100%;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 300;
+    color: white;
+    background:transparent;
+    padding: 25px 25px;
+    font-size: 20px;
+    text-decoration: none;
+    top: 20px;
+    padding-top: 40px;
+    padding-right: 30px;
+    float: right;
+    text-align: right;
+    position: sticky;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #125186;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #125186;
+    color: white;
+}
+
+.page1 .introduction{
+	text-align:center;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+	top: 40%;
+	color: white;
+	
+	
+}
+
+.page1 .introduction .subintro{
+        text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 200;
+        line-height: 26.4px;
+        position: relative;
+        top: 22px;
+        color: white;
+
+}
+
+#page2{
+	background-color: #1D2434;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 0px;
+        height: 100%
+}
+.page2 .Om{
+        text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+        top: 40%;
+        color: white;
+
+}
+
+#page3{
+	background-color: #2D3341;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 0px;
+        height: 100%
+}
+.page3 .Reg{
+        text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+        top: 40%;
+        color: white;
+
+}
+
+#page4{
+	background-color: #788691;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 0px;
+        height: 100%
+}
+.page4 .Cont{
+        text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+        top: 40%;
+        color: white;
+
+}
+

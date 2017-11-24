@@ -1,0 +1,19 @@
+<?php include "../inc/dbinfo.inc"; ?>
+<html>
+<body>
+<h1>Sample page</h1>
+<?php
+
+
+  $connection = new PDO(
+    'pgsql:dbname=dev;host=basedb.cilpan63byk8.eu-central-1.redshift.amazonaws.com:5439;port=5439',
+    'sthlmjob_1_win',
+    'sthlmjob_1_Pass'
+);
+
+$statement = $connection->prepare('')
+$statement->execute();
+$result = $statement->fetch();
+
+?>
+
