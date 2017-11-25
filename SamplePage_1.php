@@ -3,6 +3,7 @@
 <body>
 <h1>Sample page</h1>
 <?php
+   echo "Aaasdasdklja<sdfhskdjgsagdhfsadjfhgasdhfgsakjdhfg"
 
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect('rds-mysql-10mintutorial.ctfv7gsi3y3z.eu-central-1.rds.amazonaws.com', 'Jokezor', '0302Wedok94');
@@ -24,7 +25,7 @@
 ?>
 
 <!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+<form action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
   <table border="0">
     <tr>
       <td>Name</td>
@@ -120,4 +121,3 @@ function TableExists($tableName, $connection, $dbName) {
   return false;
 }
 ?>
-
