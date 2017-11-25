@@ -27,13 +27,13 @@ error_reporting(-1);
 	<input type="text" name="Namn" maxlength="45" size="30" />
       </td>
       <td>
-	<input type="text" name="Adress" maxlength="90" size="60" />
+	<input type="text" name="Adress" maxlength="45" size="60" />
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="60" />
+  <input type="text" name="Mail" maxlength="45" size="60" />
       </td>
       <td>
-  <input type="text" name="Lösenord" maxlength="90" size="60" />
+  <input type="text" name="Lösenord" maxlength="45" size="60" />
       </td>
       <td>
 
