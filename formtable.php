@@ -4,7 +4,7 @@ error_reporting(-1);
 ?>
 <html>
 <body>
-<h1>Sample page</h1>
+
 <?php
 
   /* Connect to MySQL and select the database. */
