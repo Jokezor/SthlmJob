@@ -1,4 +1,5 @@
+git pull origin master
 
-git add SamplePage_3.php
+git add *
 git commit -m "asd"
 git push origin master
