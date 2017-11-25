@@ -152,6 +152,16 @@ h1 {
         background-size: cover;
         padding-top: 0px;
         height: 100%
+				text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+        top: 40%;
+        color: white;
 
 
 }
