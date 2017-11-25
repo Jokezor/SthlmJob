@@ -11,7 +11,7 @@ error_reporting(-1);
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
   $connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
  // if($connection == NULL
-  $result = pg_query($db_connection, "SELECT lastname FROM employees");
+  $result = pg_query($connection, "SELECT lastname FROM employees");
  //$connection = mysqli_connect('basedb.cilpan63byk8.eu-central-1.redshift.amazonaws.com', 'sthlmjob_1_win', 'sthlmjob_1_Pass');
 
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
