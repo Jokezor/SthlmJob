@@ -141,7 +141,7 @@ h1 {
 
 }
 
-#page3{
+.page3{
 	background-color: #2D3341;
         background-repeat: no-repeat;
         background-position: top;
@@ -152,6 +152,8 @@ h1 {
         background-size: cover;
         padding-top: 0px;
         height: 100%
+
+
 }
 .page3 .Reg{
         text-align:center;
@@ -162,7 +164,7 @@ h1 {
         font-weight: 500;
         line-height: 26.4px;
         position: relative;
-        top: 60%;
+        top: 40%;
         color: white;
 				z-index: 13;
 
