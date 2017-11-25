@@ -164,6 +164,7 @@ h1 {
         position: relative;
         top: 40%;
         color: white;
+				z-index: 13;
 
 }
 
