@@ -164,6 +164,7 @@ h1 {
         font-weight: 500;
         line-height: 26.4px;
         position: relative;
+				padding-top: 10px;
         top: 40%;
         color: white;
 				z-index: 13;
