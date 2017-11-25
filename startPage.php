@@ -55,10 +55,11 @@ h1 {
 <div class="page3" id="page3">
   <div class ="rubrik">
     Registrera Din Profil
+    <div class ="Reg">
+      <?php include "formtable.php"?>
+    </div>
   </div>
-  <div class ="Reg">
-    <?php include "formtable.php"?>
-  </div>
+
 
 </div>
 
