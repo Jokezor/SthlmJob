@@ -64,7 +64,6 @@ error_reporting(-1);
 pg_close($db_connection);
 ?>
 
-?>
 
 </body>
 </html>
