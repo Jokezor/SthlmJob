@@ -1,5 +1,5 @@
 #page1 {
-	background-image: url("back_2.jpeg");
+	background-image: url("images/back_2.jpeg");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-attachment: relative;
@@ -97,8 +97,8 @@ h1 {
         position: relative;
 	top: 40%;
 	color: white;
-	
-	
+
+
 }
 
 .page1 .introduction .subintro{
@@ -192,4 +192,3 @@ h1 {
         color: white;
 
 }
-
