@@ -49,6 +49,8 @@ error_reporting(-1);
   <td>ID</td>
   <td>Name</td>
   <td>Address</td>
+  <td>Mail</td>
+  <td>Lösenord</td>
 </tr>
 
 </table>
