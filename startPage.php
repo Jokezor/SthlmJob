@@ -53,11 +53,11 @@ h1 {
 
 <a id="register" class="smooth"></a>
 <div class="page3" id="page3">
+  <div class = "rubrik">
   Registrera Din Profil
+  </div>
   <div class ="Reg">
-
     <?php include "formtable.php"?>
-
   </div>
 
 </div>
