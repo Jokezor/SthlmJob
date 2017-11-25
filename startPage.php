@@ -60,7 +60,6 @@ h1 {
     </div>
   </div>
 
-
 </div>
 
 <a id="contact" class="smooth"></a>
