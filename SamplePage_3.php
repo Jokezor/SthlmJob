@@ -17,17 +17,26 @@ error_reporting(-1);
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0">
     <tr>
-      <td>Name</td>
-      <td>Address</td>
+      <td>Namn</td>
+      <td>Adress</td>
+      <td>Mail</td>
+      <td>Lösenord</td>
     </tr>
     <tr>
       <td>
-	<input type="text" name="Name" maxlength="45" size="30" />
+	<input type="text" name="Namn" maxlength="45" size="30" />
       </td>
       <td>
-	<input type="text" name="Address" maxlength="90" size="60" />
+	<input type="text" name="Adress" maxlength="90" size="60" />
       </td>
       <td>
+  <input type="text" name="Mail" maxlength="90" size="60" />
+      </td>
+      <td>
+  <input type="text" name="Lösenord" maxlength="90" size="60" />
+      </td>
+      <td>
+
 	<input type="submit" value="Add Data" />
 </td>
   </tr>
