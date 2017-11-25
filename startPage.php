@@ -55,7 +55,7 @@ h1 {
 <div class="page3" id="page3">
   <div class ="Reg">
     Registrera Din Profil
-    <?php include "SamplePage_3.php"?>
+    <?php include "formtable.php"?>
 
   </div>
 
