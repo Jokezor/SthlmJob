@@ -1,6 +1,8 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+   $emailErr  = ""; $nameErr = "";
+   $addressErr = ""; $passErr = "";
 
    $user_name = htmlentities($_POST['Namn']);
    $user_address = htmlentities($_POST['Adress']);
@@ -22,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   /* Validate email */
    if(!strlen($user_mail)){
       ?>
       <script>
@@ -29,6 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   else if(!filter_var($user_mail, FILTER_VALIDATE_EMAIL)) {
+      ?>
+      <script>
+         document.getElementById('emailError').innerHTML = "Invalid Email format";
+      </script>
+      <?php
+   }
+
    if(!strlen($user_password)){
       ?>
       <script>
