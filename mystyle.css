@@ -184,6 +184,10 @@ h1 {
 	z-index: 14;
 }
 
+.Reg{
+	top: 60%;
+}
+
 /*.page3 .Reg{
         text-align:center;
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
