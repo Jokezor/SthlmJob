@@ -37,7 +37,7 @@ error_reporting(-1);
       </td>
       <td>
 
-	<input type="submit" value="Add Data" />
+	<input type="submit" value="Ladda upp profil och registrera" />
 </td>
   </tr>
 </table>
