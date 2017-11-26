@@ -1,4 +1,4 @@
-<? php
+<?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -11,6 +11,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       ?>
       <script>
          document.getElementById('nameError').innerHTML = "Name cannot be empty";
+      </script>
+      <?php
+   }
+
+   if(!strlen($user_address)){
+      ?>
+      <script>
+         document.getElementById('addressError').innerHTML = "Address cannot be empty";
+      </script>
+      <?php
+   }
+   if(!strlen($user_mail)){
+      ?>
+      <script>
+         document.getElementById('emailError').innerHTML = "email cannot be empty";
+      </script>
+      <?php
+   }
+   if(!strlen($user_password)){
+      ?>
+      <script>
+         document.getElementById('passwordError').innerHTML = "Password cannot be empty";
       </script>
       <?php
    }

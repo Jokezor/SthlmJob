@@ -58,10 +58,12 @@ h1 {
       <?php include "formtable.php"?>
     </div>
     <div id='errorMessages' class="formErrors">
-       <p id='nameError'>hey</p>
-       <p id='addressError'>hey</p>
+       <p id='nameError'></p>
+       <p id='addressError'></p>
+       <p id='emailError'></p>
+       <p id='passwordError'></p>
     </div>
-    <?php include "checkFormEntries.php" ?> 
+    <?php include "checkFormEntries.php" ?>
 </div>
 
 <a id="contact" class="smooth"></a>
