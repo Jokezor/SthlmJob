@@ -2,7 +2,8 @@
 
 What to do?
 
- - Fix display Errors
+ - Check if user already exists by checking Mail
+ - Check if pasword 1 and password 2 are equal
  - Be able to insert CV and linkedin into either S3, RDS or Redshift directly
  - Get CV and linkedin and pass it to TextKernel or a serivce like TK
  - Get data from TK or likewise service and pass to the profile of that person.
