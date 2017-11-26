@@ -63,11 +63,11 @@ ini_set('html_errors', On);
       <td>
   <input type="password" name="Upprepa Lösenord" maxlength="90" size="35" />
       </td>
+  </tr>
   <tr>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
-  </tr>
   </tr>
 </table>
 </form>
