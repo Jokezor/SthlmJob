@@ -34,7 +34,7 @@ error_reporting(-1);
 ?>
 
 <!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+<form action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
   <table border="0">
     <tr>
       <td>Namn</td>
