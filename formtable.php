@@ -59,7 +59,9 @@ error_reporting(-1);
       echo "<tr>";
       echo "<td>",$query_data[0], "</td>",
            "<td>",$query_data[1], "</td>",
-           "<td>",$query_data[2], "</td>";
+           "<td>",$query_data[2], "</td>",
+           "<td>",$query_data[3], "</td>",
+           "<td>",$query_data[4], "</td>";
       echo "</tr>";
    }
 
