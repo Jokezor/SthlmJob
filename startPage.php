@@ -57,10 +57,11 @@ h1 {
       Registrera Din Profil
       <?php include "formtable.php"?>
     </div>
-    <div id='errorMessages' class='formErrors'>
+    <!--<div id='errorMessages' class='formErrors'>
        <p>asdf</p>
        <p>asdf2</p>
     </div>
+    -->
 </div>
 
 <a id="contact" class="smooth"></a>
