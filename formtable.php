@@ -58,7 +58,7 @@ error_reporting(-1);
   <input type="text" name="Mail" maxlength="90" size="40" />
       </td>
       <td>
-  <input type="text" name="Lösenord" maxlength="90" size="40" />
+  <input type="password" name="Lösenord" maxlength="90" size="40" />
       </td>
       <td>
 
