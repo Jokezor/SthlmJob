@@ -98,7 +98,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 ?>
 
 <?php
-funcion printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password){
+function printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password){
    if(!strlen($user_name)){
       ?>
       <script>
