@@ -187,8 +187,7 @@ h1 {
 .formReg{
 	top: 60%;
 	padding-top: 30px;
-	/*display: inline-block;*/
-	display: box;
+	display: inline-block;
   text-align: center;
 	box-orient: vertical;
 }
