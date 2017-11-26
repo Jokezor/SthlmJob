@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 ?>
 <html>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
 <body>
 
 <?php
@@ -39,7 +40,7 @@ error_reporting(-1);
 ?>
 
 <!-- Input form -->
-<form action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+<form class =Reg action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
   <table border="0">
     <tr>
       <td>Namn</td>
