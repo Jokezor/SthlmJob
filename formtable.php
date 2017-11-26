@@ -100,8 +100,8 @@ funcion printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_pas
    if(!strlen($user_name)){
       ?>
       <script>
-         var name_err = getElementById('nameError');
-         name_err.innerHTML("Name cannot be empty");
+         var name_err = document.getElementById('nameError');
+         name_err.innerHTML = "Name cannot be empty";
       </script>
       <?php
    }

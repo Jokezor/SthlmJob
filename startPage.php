@@ -58,8 +58,8 @@ h1 {
       <?php include "formtable.php"?>
     </div>
     <div id='errorMessages' class="formErrors">
-       <p id='nameError'>Name not filled</p>
-       <p id='addressError'>Adress not filled</p>
+       <p id='nameError'>hey</p>
+       <p id='addressError'>hey</p>
     </div>
 </div>
 
