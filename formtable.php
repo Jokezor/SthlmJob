@@ -46,6 +46,7 @@ ini_set('html_errors', On);
       <td>Adress</td>
       <td>Mail</td>
       <td>Lösenord</td>
+      <td>Upprepa Lösenord</td>
     </tr>
     <tr>
       <td>
@@ -61,10 +62,10 @@ ini_set('html_errors', On);
   <input type="password" name="Lösenord" maxlength="90" size="35" />
       </td>
       <td>
-    </tr>
-  <tr>
-  <input type="password" name="Upprepa" maxlength="90" size="35" />
+  <input type="password" name="Lösenord_test" maxlength="90" size="35" />
       </td>
+  </tr>
+  <tr>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
