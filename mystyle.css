@@ -171,6 +171,21 @@ h1 {
 
 }
 
+.formErrors{
+	text-align:center;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	position: relative;
+	top: 40%;
+	color: white;
+	z-index: 13;
+
+}
+
 /*.page3 .Reg{
         text-align:center;
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
