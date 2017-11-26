@@ -57,9 +57,9 @@ h1 {
       Registrera Din Profil
       <?php include "formtable.php"?>
     </div>
-    <div class='formErrors'>
-       <p id='nameError'>asdf</p>
-       <p id='addressError'>asdf2</p>
+    <div id='errorMessages' class="formErrors">
+       <p id='nameError'>Name not filled</p>
+       <p id='addressError'>Adress not filled</p>
     </div>
 </div>
 
