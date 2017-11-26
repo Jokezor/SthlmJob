@@ -177,10 +177,10 @@ h1 {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 26.4px;
+	line-height: 16.4px;
 	position: relative;
 	top: 40%;
-	color: white;
+	color: black;
 	z-index: 14;
 }
 
