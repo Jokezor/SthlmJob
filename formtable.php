@@ -33,7 +33,7 @@ error_reporting(-1);
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
     else{
-       echo "Alla fält!";
+       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
    }
 }
 ?>
@@ -67,6 +67,11 @@ error_reporting(-1);
   </tr>
 </table>
 </form>
+
+<div id='errorMessages' class='formErrors'>
+   <p id='nameError'>asdf</p>
+   <p id='addressError'>asdf2</p>
+</div>
 
 <!-- Display table data. -->
 <table border="1" cellpadding="2" cellspacing="2">
@@ -103,6 +108,9 @@ error_reporting(-1);
 pg_close($db_connection);
 ?>
 
+
+
+<!-- Functions  -->
 <?php
 function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password){
 
