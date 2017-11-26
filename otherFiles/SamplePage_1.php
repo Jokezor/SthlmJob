@@ -3,17 +3,13 @@
 <body>
 <h1>Sample page</h1>
 <?php
-<<<<<<< Updated upstream
-=======
-   echo "Aaasdasdklja<sdfhskdjgsagdhfsadjfhgasdhfgsakjdhfg";
->>>>>>> Stashed changes
 
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect('rds-mysql-10mintutorial.ctfv7gsi3y3z.eu-central-1.rds.amazonaws.com', 'Jokezor', '0302Wedok94');
 
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
-  $database = mysqli_select_db($connection, DB_DATABASE);
+  $database = mysqli_select_db($db_connection, DB_DATABASE);
 
   /* Ensure that the Employees table exists. */
   VerifyEmployeesTable($connection, DB_DATABASE);
