@@ -187,8 +187,10 @@ h1 {
 .formReg{
 	top: 60%;
 	padding-top: 30px;
-	display: inline-block;
+	/*display: inline-block;*/
+	display: box;
   text-align: center;
+	box-orient: vertical;
 }
 
 /*.page3 .Reg{
