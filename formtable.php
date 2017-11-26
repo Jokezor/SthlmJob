@@ -16,11 +16,16 @@ error_reporting(-1);
 <?php
  /* If input fields are populated, add a row to the Employees table. */
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    ?>
+    <script type="text/javascript">
+    window.location = "#register";
+    </script>
+    <?php
     $user_name = htmlentities($_POST['Namn']);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = ($_POST['Lösenord']);
-    $user_password = hash( 'sha256', $user_password);
+    $user_password = hash('sha256', $user_password);
 
 
 
@@ -104,8 +109,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
    // Prepare a query for execution
    $result = pg_prepare($db_connection, "my_query", 'INSERT INTO users (name, address, email, password) values ($1, $2, $3, $4)');
 
-   // Execute the prepared query.  Note that it is not necessary to escape
-   // the string "Joe's Widgets" in any way
+   // Execute the prepared query.
    $result = pg_execute($db_connection, "my_query", array($user_name, $user_address, $user_mail, $user_password));
 
 }
