@@ -53,6 +53,18 @@ error_reporting(-1);
   <td>Lösenord</td>
 </tr>
 
+<?php
+   $result = pg_query($connection, "SELECT * FROM users");
+   while($query_data = pg_fetch_row($result)){
+      echo "<tr>";
+      echo "<td>",$query_data[0], "</td>",
+           "<td>",$query_data[1], "</td>",
+           "<td>",$query_data[2], "</td>";
+      echo "</tr>";
+   }
+
+?>
+
 </table>
 
 <!-- Clean up. -->
