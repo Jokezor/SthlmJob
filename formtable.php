@@ -1,6 +1,7 @@
-<?php include "../inc/dbinfo.inc"; ini_set('display_startup_errors', 1);
+<?php include "../inc/dbinfo.inc";
+ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
-error_reporting(-1);
+error_reporting(E_ALL);
 ?>
 <html>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -34,7 +35,7 @@ error_reporting(-1);
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
     else{
-       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
+       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password);
    }
 }
 ?>
