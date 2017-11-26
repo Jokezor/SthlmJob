@@ -67,8 +67,8 @@ h1 {
 <div class="page4" id="page4">
   <div class ="Cont">
     Kontakta Oss På
+    <?php include "showEntriesInDB.php" ?>
   </div>
-<?php include "showEntriesInDB.php" ?>
 </div>
 
 </body>
