@@ -170,7 +170,7 @@ h1 {
 
 }
 
-.page3 .formErrors{
+.formErrors{
 	text-align:center;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	font-size: 22px;
@@ -182,7 +182,6 @@ h1 {
 	top: 60%;
 	color: white;
 	z-index: 14;
-
 }
 
 /*.page3 .Reg{
