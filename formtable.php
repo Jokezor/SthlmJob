@@ -17,7 +17,7 @@ ini_set('html_errors', On);
 ?>
 
 <?php
- /* If input fields are populated, add a row to the Employees table. */
+ /* If input fields are populated, add a row to the Users table. */
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
     <script type="text/javascript">
@@ -35,9 +35,6 @@ ini_set('html_errors', On);
     if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
-    else{
-       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password);
-   }
 }
 ?>
 
@@ -97,19 +94,6 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 }
 ?>
 
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors','On');
-function printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password){
-   if(!strlen($user_name)){
-      ?>
-      <script>
-         document.getElementById('nameError').innerHTML = "Name cannot be empty";
-      </script>
-      <?php
-   }
-}
-?>
 
 </body>
 </html>

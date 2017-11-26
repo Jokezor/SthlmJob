@@ -61,6 +61,7 @@ h1 {
        <p id='nameError'>hey</p>
        <p id='addressError'>hey</p>
     </div>
+    <?php include "checkFormEntries.php" ?> 
 </div>
 
 <a id="contact" class="smooth"></a>
