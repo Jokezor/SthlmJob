@@ -69,10 +69,7 @@ error_reporting(-1);
 </table>
 </form>
 
-<div id='errorMessages' class='formErrors'>
-   <p id='nameError'>asdf</p>
-   <p id='addressError'>asdf2</p>
-</div>
+
 
 <!-- Display table data. -->
 <table border="1" cellpadding="2" cellspacing="2">
