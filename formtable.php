@@ -19,7 +19,9 @@ error_reporting(-1);
     $user_name = htmlentities($_POST['Namn']);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
-    $user_password = htmlentities($_POST['Lösenord']);
+    $user_password = ($_POST['Lösenord']);
+    hash( 'sha256', $user_password);
+
 
 
     if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
