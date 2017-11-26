@@ -54,7 +54,7 @@ error_reporting(-1);
 </tr>
 
 <?php
-   $result = pg_query($connection, "SELECT * FROM users");
+   $result = pg_query($db_connection, "SELECT * FROM users");
    while($query_data = pg_fetch_row($result)){
       echo "<tr>";
       echo "<td>",$query_data[0], "</td>",
