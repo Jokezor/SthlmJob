@@ -104,7 +104,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 
    // Execute the prepared query.  Note that it is not necessary to escape
    // the string "Joe's Widgets" in any way
-   $result = pg_execute($db_connection, "my_query", $user_name, $user_address, $user_mail, $user_password);
+   $result = pg_execute($db_connection, "my_query", array($user_name, $user_address, $user_mail, $user_password));
 
 }
 ?>
