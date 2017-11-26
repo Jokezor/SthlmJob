@@ -60,6 +60,9 @@ ini_set('html_errors', On);
       <td>
   <input type="password" name="Lösenord" maxlength="90" size="35" />
       </td>
+      <td>
+  <input type="password" name="Upprepa Lösenord" maxlength="90" size="35" />
+      </td>
   <tr>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
