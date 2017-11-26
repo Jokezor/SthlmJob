@@ -20,7 +20,7 @@ error_reporting(-1);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = ($_POST['Lösenord']);
-    hash( 'sha256', $user_password);
+    $user_password = hash( 'sha256', $user_password);
 
 
 
