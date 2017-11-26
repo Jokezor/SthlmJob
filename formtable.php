@@ -20,15 +20,15 @@ error_reporting(-1);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = htmlentities($_POST['Lösenord']);
- }
 
- if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
-   AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
- }
- else{
-    echo "Alla fält!";
+
+    if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
+      AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
+    }
+    else{
+       echo "Alla fält!";
+   }
 }
-
 ?>
 
 <!-- Input form -->
@@ -104,7 +104,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 
    // Execute the prepared query.  Note that it is not necessary to escape
    // the string "Joe's Widgets" in any way
-   $result = pg_execute($db_connection, "my_query", $user_name, $user_address, $user_mail, $user_password);
+   $result = pg_execute($db_connection, "my_query", array($user_name, $user_address, $user_mail, $user_password));
 
 }
 ?>
