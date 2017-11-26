@@ -20,15 +20,15 @@ error_reporting(-1);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = htmlentities($_POST['Lösenord']);
- }
 
- if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
-   AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
- }
- else{
-    echo "Alla fält!";
+
+    if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
+      AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
+    }
+    else{
+       echo "Alla fält!";
+   }
 }
-
 ?>
 
 <!-- Input form -->
