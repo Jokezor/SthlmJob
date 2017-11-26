@@ -34,7 +34,7 @@ error_reporting(-1);
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
     else{
-       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
+       #printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
    }
 }
 ?>
