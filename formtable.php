@@ -66,6 +66,8 @@ ini_set('html_errors', On);
       </td>
   </tr>
   <tr>
+  </tr>
+  <tr>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
