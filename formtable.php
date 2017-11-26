@@ -34,7 +34,7 @@ error_reporting(-1);
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
     else{
-       //printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
+       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
    }
 }
 ?>
@@ -95,6 +95,18 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 }
 ?>
 
+<?php
+funcion printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password){
+   if(!strlen($user_name)){
+      ?>
+      <script>
+         var name_err = getElementById('nameError');
+         name_err.innerHTML("Name cannot be empty");
+      </script>
+      <?php
+   }
+}
+?>
 
 </body>
 </html>
