@@ -15,12 +15,12 @@ error_reporting(-1);
 
 <?php
  /* If input fields are populated, add a row to the Employees table. */
- //if ($_SERVER["REQUEST_METHOD"] == "POST"){
+ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $user_name = htmlentities($_POST['Namn']);
     $user_address = htmlentities($_POST['Adress']);
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = htmlentities($_POST['Lösenord']);
- //}
+ }
 
  if (strlen($user_name) && strlen($user_address) && strlen($user_mail) && strlen($user_password)) {
    AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
