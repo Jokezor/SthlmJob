@@ -189,9 +189,7 @@ h1 {
 	padding-top: 30px;
 	display: inline-block;
   text-align: center;
-	box-orient: vertical;
-	width:100%;
-  min-height: 100%;
+
 }
 
 /*.page3 .Reg{
