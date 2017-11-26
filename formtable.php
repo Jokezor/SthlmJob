@@ -34,7 +34,7 @@ error_reporting(-1);
       AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password);
     }
     else{
-       #printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
+       printEmptyfieldMessages($user_name, $user_address, $user_mail, $user_password)
    }
 }
 ?>
@@ -70,32 +70,6 @@ error_reporting(-1);
 </form>
 
 
-
-<!-- Display table data. -->
-<table border="1" cellpadding="2" cellspacing="2">
-<tr>
-  <td>ID</td>
-  <td>Name</td>
-  <td>Address</td>
-  <td>Mail</td>
-  <td>Lösenord</td>
-</tr>
-
-<?php
-   $result = pg_query($db_connection, "SELECT * FROM users");
-   while($query_data = pg_fetch_row($result)){
-      echo "<tr>";
-      echo "<td>",$query_data[0], "</td>",
-           "<td>",$query_data[1], "</td>",
-           "<td>",$query_data[2], "</td>",
-           "<td>",$query_data[3], "</td>",
-           "<td>",$query_data[4], "</td>";
-      echo "</tr>";
-   }
-
-?>
-
-</table>
 
 <!-- Clean up. -->
 <?php
