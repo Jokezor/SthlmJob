@@ -52,10 +52,10 @@ ini_set('html_errors', On);
 	<input type="text" name="Namn" maxlength="45" size="30" value="<?php echo $user_name;?>" />
       </td>
       <td>
-	<input type="text" name="Adress" maxlength="90" size="40" />
+	<input type="text" name="Adress" maxlength="90" size="40" value="<?php echo $user_address;?>"/>
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="40" />
+  <input type="text" name="Mail" maxlength="90" size="40" value="<?php echo $user_mail;?>"/>
       </td>
       <td>
   <input type="password" name="Lösenord" maxlength="90" size="40" />
