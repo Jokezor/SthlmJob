@@ -173,10 +173,10 @@ h1 {
 .formErrors{
 	text-align:center;
 	font-family: Arial, "Trebuchet MS", Arial, sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 200;
+	font-weight: 100;
 	line-height: 26.4px;
 	position: relative;
 	top: 40%;
