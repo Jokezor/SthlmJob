@@ -61,7 +61,7 @@ ini_set('html_errors', On);
   <input type="password" name="Lösenord" maxlength="90" size="35" />
       </td>
       <td>
-  <input type="password" name="UpprepaLösenord" maxlength="90" size="35" />
+  <input type="password" name="Upprepa" maxlength="90" size="35" />
       </td>
   </tr>
   <tr>
