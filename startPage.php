@@ -13,10 +13,10 @@ h1 {
 </style>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <div class="topnav"  id="myTopnav">
-  <a href="#contact">Kontakt</a>
-  <a href="#register">Registrera</a>
-  <a href="#about" class="smooth">Om Oss</a>
-  <a href="#home" class="smooth">Hem</a>
+  <a href="#contact" class="navigators">Kontakt</a>
+  <a href="#register" class="navigators">Registrera</a>
+  <a href="#about" class="navigators">Om Oss</a>
+  <a href="#home" class="navigators">Hem</a>
   <a href="#home" class="h1">Intro</a>
 
 

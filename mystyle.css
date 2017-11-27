@@ -42,7 +42,7 @@ body {
 
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav .navigators{
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 300;
     color: white;
@@ -60,12 +60,12 @@ body {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav .navigators:hover {
     color: #125186;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav .navigators.active {
     background-color: #125186;
     color: white;
 }
