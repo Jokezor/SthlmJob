@@ -43,10 +43,6 @@ ini_set('html_errors', On);
   <table border="0">
     <tr>
 
-      <td>Adress</td>
-      <td>Mail</td>
-      <td>Lösenord</td>
-      <td>Upprepa Lösenord</td>
     </tr>
     <tr>
       <td>
