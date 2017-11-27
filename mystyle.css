@@ -167,7 +167,7 @@ h1 {
 				color: white;
 				display: block;
 				height: 20%;
-				z-index: auto;
+				z-index: 13;
 
 }
 
