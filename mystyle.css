@@ -24,26 +24,7 @@ body {
 }
 
 
-.h1 {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	font-size: 44px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-	background: transparent;
-	position: fixed;
-	bottom: 40px;
-  right: 40px;
-	left: 5%;
-  top: 5%;
-	float: left;
-  display: block;
-	z-index: 11;
-	text-align: left;
-	height: 5%;
-	width: 30%;
-}
+
 
 
 /* Add a black background color to the top navigation */
@@ -87,6 +68,27 @@ body {
 .topnav a.active {
     background-color: #125186;
     color: white;
+}
+
+.h1 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 44px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	background: transparent;
+	position: fixed;
+	bottom: 40px;
+  right: 40px;
+	left: 5%;
+  top: 5%;
+	float: left;
+  display: block;
+	z-index: 11;
+	text-align: left;
+	height: 5%;
+	width: 30%;
 }
 
 .page1 .introduction{
