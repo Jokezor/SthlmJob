@@ -139,7 +139,7 @@ body {
         background-size: cover;
         padding-top: 0px;
         height: 100%
-				
+				alpha(Opacity=30); opacity: 0.3;
 }
 .page2 .Om{
         text-align:center;
