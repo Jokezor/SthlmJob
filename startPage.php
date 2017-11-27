@@ -17,9 +17,10 @@ h1 {
   <a href="#register">Registrera</a>
   <a href="#about" class="smooth">Om Oss</a>
   <a href="#home" class="smooth">Hem</a>
+  <h1> Intro </h1>
 
 </div>
- <h1> Intro </h1>
+
 <a id="home" class="smooth"></a>
 <div class="page1" id="page1">
   <div class="introduction">Välkommen till Intro
