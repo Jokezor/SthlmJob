@@ -201,6 +201,7 @@ h1 {
 
 .page3 #registerform .formTable{
 	height:60%;
+	z-index: 15;
 }
 
 .formReg{
