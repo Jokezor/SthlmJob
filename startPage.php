@@ -63,8 +63,8 @@ h1 {
        <p id='emailError'></p>
        <p id='passwordError'></p>
     </div>
-    <?php include "checkFormEntries.php" ?>
 </div>
+<?php include "checkFormEntries.php" ?>
 
 <a id="contact" class="smooth"></a>
 <div class="page4" id="page4">
