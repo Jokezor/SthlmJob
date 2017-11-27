@@ -92,6 +92,11 @@ body {
 	text-decoration: none;
 }
 
+.h1.active{
+
+	color: none;
+}
+
 .page1 .introduction{
 	text-align:center;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
