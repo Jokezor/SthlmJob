@@ -1,8 +1,4 @@
 <?php include "../inc/dbinfo.inc";
-ini_set('display_startup_errors', 1);
-ini_set('display_errors', On);
-error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-ini_set('html_errors', On);
 ?>
 
 <html>
