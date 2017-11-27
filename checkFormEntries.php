@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
    $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
    $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
    $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
-   $result = pg_execute($db_connection, "my_query", array($mail));
+   $result = pg_execute($db_connection, "my_query", array($user_mail));
    else if(pg_num_rows($result)!=0){
       ?>
       <script>
