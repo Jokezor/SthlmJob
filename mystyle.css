@@ -213,7 +213,7 @@ body {
 }
 
 #page3 #registerform .formTable{
-	height:60%;
+	height:70%;
 	z-index: 15;
 }
 
@@ -282,6 +282,6 @@ body {
 }
 
 input {
-    line-height: 2em; 
+    line-height: 2em;
 		height:30px;
 }
