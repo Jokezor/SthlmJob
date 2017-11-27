@@ -63,7 +63,7 @@ h1 {
        <p id='emailError'></p>
        <p id='passwordError'></p>
        <div class ="formTable">
-         <?php //include "formtable.php"?>
+         <?php /*include "formtable.php" */?>
        </div>
      -->
     </div>
