@@ -1,4 +1,4 @@
-<script src="smoothScroll.js"></script>
+<script src="Jquery.min.js"></script>
 
 <!DOCTYPE html>
 <html lang="se">
