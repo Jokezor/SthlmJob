@@ -167,6 +167,7 @@ h1 {
 				top: 15%;
 				color: white;
 				z-index: 13;
+				display: block;
 
 }
 
@@ -182,6 +183,13 @@ h1 {
 	top: 30%;
 	color: #CF4647;
 	z-index: 14;
+}
+
+.page3 .registerform{
+	top: auto;
+	padding-top: auto;
+	display: block;
+  text-align: center;
 }
 
 .page3 .registerform .formTable{
