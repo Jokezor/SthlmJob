@@ -106,6 +106,9 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       if($password != $password2){
          return false;
       }
+      else if(!isPasswordStrong($password)){
+         return false;
+      }
       if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
          return false;
       }

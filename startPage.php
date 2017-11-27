@@ -34,7 +34,7 @@ h1 {
 
 <body>
 
-<a id="about" class="smooth"></a>
+
 <div class="page2" id="page2">
   <a id="about" class="smooth"></a>
   <div class ="Om">
@@ -43,8 +43,9 @@ h1 {
 
 </div>
 
-<a id="register" class="smooth"></a>
+
 <div class="page3" id="page3">
+   <a id="register" class="smooth"></a>
     <div class = "space">
     </div>
     <div class ="Reg">
@@ -63,8 +64,9 @@ h1 {
     </div>
 </div>
 
-<a id="contact" class="smooth"></a>
+
 <div class="page4" id="page4">
+   <a id="contact" class="smooth"></a>
   <div class ="Cont">
     Kontakta Oss På
     <?php include "showEntriesInDB.php" ?>
