@@ -154,7 +154,7 @@ body {
 
 }
 
-.page3{
+#page3{
 	background-color: #788691;
         background-repeat: no-repeat;
         background-position: top;
@@ -168,7 +168,7 @@ body {
 
 }
 
-.page3 .Reg{
+#page3 .Reg{
 				text-align:center;
 				font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 				font-size: 36px;
@@ -184,14 +184,14 @@ body {
 
 }
 
-.page3 .space{
+#page3 .space{
 	height: 15%;
 
 
 }
 
 
-.page3 #registerform{
+#page3 #registerform{
 	top: auto;
 	padding-top: auto;
 	display: block;
@@ -211,7 +211,7 @@ body {
 	color: #CF4647;
 }
 
-.page3 #registerform .formTable{
+#page3 #registerform .formTable{
 	height:60%;
 	z-index: 15;
 }
