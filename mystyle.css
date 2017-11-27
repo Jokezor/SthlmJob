@@ -199,19 +199,14 @@ h1 {
 	z-index: 13;
 }
 
-.page3 #registerform .formTable{
-	top: auto;
-	padding-top: auto;
+
+
+.formReg{
 	display: inline-block;
-  text-align: center;
+	text-align: center;
 	z-index: auto;
 	line-height: 20px;
 	z-index: 14;
-
-}
-
-.formReg{
-
 }
 
 
