@@ -289,6 +289,6 @@ input {
 		border-radius: 3px;
 }
 
-input[type=text]{
-	background-color: #241B1C;
+input[type=submit]{
+	background-color: #1D2434;
 }
