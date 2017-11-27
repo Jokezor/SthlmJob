@@ -306,7 +306,7 @@ input {
 
 }
 
-input[type=text]{
+input[value]{
 	padding-left: 3px;
 }
 
