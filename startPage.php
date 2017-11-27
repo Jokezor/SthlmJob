@@ -56,12 +56,13 @@ h1 {
     <div class ="Reg">
       Registrera Din Profil
     </div>
-    <div id='errorMessages' class="form">
-
-       <p id='nameError'></p>
-       <p id='addressError'></p>
-       <p id='emailError'></p>
-       <p id='passwordError'></p>
+    <div id = "registerform">
+       <div id='errorMessages' class="form">
+         <p id='nameError'></p>
+         <p id='addressError'></p>
+         <p id='emailError'></p>
+         <p id='passwordError'></p>
+       </div>
        <div class ="formTable">
          <?php include "formtable.php" ?>
        </div>
