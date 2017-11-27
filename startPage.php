@@ -69,16 +69,13 @@ h1 {
          <?php include "formtable.php" ?>
        </div>
     </div>
-
 </div>
-<?php include "checkFormEntries.php" ?>
-
 
 <a id="contact" class="smooth"></a>
 <div class="page4" id="page4">
   <div class ="Cont">
     Kontakta Oss På
-    <?php /*include "showEntriesInDB.php" */?>
+    <?php include "showEntriesInDB.php" ?>
   </div>
 </div>
 
