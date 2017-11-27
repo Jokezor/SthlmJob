@@ -293,7 +293,7 @@ body {
 	 padding: 3px;
 }
 
-input {
+input[type=text] {
     line-height: 2em;
 		height:30px;
 		-webkit-border-radius: 3px;
