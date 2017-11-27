@@ -284,7 +284,7 @@ body {
 input {
     line-height: 2em;
 		height:30px;
-		-webkit-border-radius: 30px;
-		-moz-border-radius: 30px;
-		border-radius: 30px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
 }
