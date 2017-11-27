@@ -2,7 +2,7 @@
 
 What to do?
 
- - Check if user already exists by checking Mail
+ - Fix order of check entries and add user.
  - Check if password strength
  - Be able to insert CV and linkedin into either S3, RDS or Redshift directly
  - Get CV and linkedin and pass it to TextKernel or a serivce like TK
