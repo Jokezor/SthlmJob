@@ -56,15 +56,18 @@ h1 {
     <div class ="Reg">
       Registrera Din Profil
     </div>
-    <div id='errorMessages' class="formErrors">
+    <div id='errorMessages' class="form">
+      <!--
        <p id='nameError'></p>
        <p id='addressError'></p>
        <p id='emailError'></p>
        <p id='passwordError'></p>
+       <div class ="formTable">
+         <?php //include "formtable.php"?>
+       </div>
+     -->
     </div>
-    <div class ="formTable">
-      <?php include "formtable.php"?>
-    </div>
+
 </div>
 <?php /*include "checkFormEntries.php"*/ ?>
 
