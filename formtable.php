@@ -108,7 +108,7 @@ function validEntries($name, $address, $mail, $password, $password2){
       $rows = pg_num_rows($result);
       echo $result;
       echo $rows;
-      if(pg_num_rows($result)){
+      if(pg_num_rows($result)!=0){
          echo "hey!";
          return false;
       }
