@@ -90,11 +90,13 @@ body {
 	height: 5%;
 	width: 30%;
 	text-decoration: none;
+	color: #125186;
 }
 
 .h1.active{
+	background-color: #125186;
+	color: 125186;
 
-	color: none;
 }
 
 .page1 .introduction{
