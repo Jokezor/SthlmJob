@@ -49,7 +49,7 @@ ini_set('html_errors', On);
 	<input type="text" name="Namn" maxlength="45" size="30" value="<?php echo $user_name;?>" placeholder="Namn" />
       </td>
       <td>
-	<input type="text" name="Adress" maxlength="90" size="35" value="<?php echo $user_address;?>" placeholder="Adress"/>
+	<input type="text" name="Adress" maxlength="90" size="35" value="<?php echo $user_address;?>" placeholder="Intresseområde"/>
       </td>
       <td>
   <input type="text" name="Mail" maxlength="90" size="35" value="<?php echo $user_mail;?>" placeholder="Mail Adress"/>
