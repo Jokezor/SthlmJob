@@ -39,7 +39,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 
 <!-- Input form -->
 <!-- HTML table -->
-<form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+<form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
   <table border="0">
     <tr>
 

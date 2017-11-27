@@ -4,14 +4,12 @@
 <html lang="se">
 
 <head>
-<style>
-h1 {
-    color: #125186;
-    margin-left: 0%;
-    margin-top: 0%;
-}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
+<title>Intro</title>
+</head>
+
+<body>
 <div class="topnav"  id="myTopnav">
   <a href="#contact" class="navigators">Kontakt</a>
   <a href="#register" class="navigators">Registrera</a>
@@ -19,13 +17,6 @@ h1 {
   <a href="#home" class="navigators">Hem</a>
   <a href="#home" class="h1">Intro</a>
 </div>
-
-<title>Intro</title>
-</head>
-
-
-
-<body>
 
 <a id="home" class="smooth"></a>
 <div class="page1" id="page1">
