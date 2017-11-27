@@ -44,6 +44,7 @@ h1 {
 
 <div class="smooth" id="page3">
     <div class = "space">
+         <a id="register" class="smooth"></a>
     </div>
     <div class ="Reg">
       Registrera Din Profil
