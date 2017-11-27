@@ -53,6 +53,8 @@ h1 {
 
 <a id="register" class="smooth"></a>
 <div class="page3" id="page3">
+    <div class = "space">
+    </div>
     <div class ="Reg">
       Registrera Din Profil
     </div>
