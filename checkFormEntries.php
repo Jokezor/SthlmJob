@@ -1,7 +1,4 @@
-<?php include "../inc/dbinfo.inc"; ?>
 <?php
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 

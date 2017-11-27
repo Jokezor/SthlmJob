@@ -33,9 +33,8 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
-
         AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
-        echo "BRA!";
+        echo "PROFIL REGISTRERAD!";
    }
    else{
       // print error messages
