@@ -201,6 +201,15 @@ h1 {
 
 #errorMessages{
 	height:30%;
+	text-align:center;
+	font-family: Arial, "Trebuchet MS", Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	position: relative;
+	color: #CF4647;
+	z-index: 13;
 }
 
 .page3 #registerform .formTable{
