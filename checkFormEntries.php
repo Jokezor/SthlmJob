@@ -1,13 +1,14 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+//if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
-   $user_name = htmlentities($_POST['Name']);
-   $user_address = htmlentities($_POST['Address']);
-   $user_mail = htmlentities($_POST['Mail']);
-   $user_password = ($_POST['Password']);
-   $user_password2 = ($_POST['Password2']);
+   //$user_name = htmlentities($_POST['Name']);
+   //$user_address = htmlentities($_POST['Address']);
+   //$user_mail = htmlentities($_POST['Mail']);
+   //$user_password = ($_POST['Password']);
+   //$user_password2 = ($_POST['Password2']);
 
+   /* Check if username exists */
    if(!strlen($user_name)){
       ?>
       <script>
@@ -15,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
-
+   /* Check if address exists */
    if(!strlen($user_address)){
       ?>
       <script>
@@ -23,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
-   /* Validate email */
+   /* Check if email exists */
    if(!strlen($user_mail)){
       ?>
       <script>
@@ -31,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   /* If email does exist, check if it is valid */
    else if(!filter_var($user_mail, FILTER_VALIDATE_EMAIL)) {
       ?>
       <script>
@@ -39,8 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       <?php
    }
    else{
-      /* check if email exist */
-      /* Connect to PostGreSQL and select the database. */
+      /* check the email already exist in the database */
       $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
       $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
       $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
@@ -53,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
          <?php
       }
    }
-
+   /* Check if password is filled */
    if(!strlen($user_password) || !strlen($user_password2)){
       ?>
       <script>
@@ -61,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   /* Check if the two passwords match */
    else if($user_password != $user_password2){
       ?>
       <script>
@@ -68,5 +70,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
-}
+//}
 ?>

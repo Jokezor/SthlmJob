@@ -1,5 +1,4 @@
-<?php include "../inc/dbinfo.inc";
-?>
+<?php include "../inc/dbinfo.inc";?>
 
 <html>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -98,7 +97,6 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 
    // Execute the prepared query.
    $result = pg_execute($db_connection, "addUser_query", array($user_name, $user_address, $user_mail, $user_password));
-
 }
 
 function validEntries($db_connection, $name, $address, $mail, $password, $password2){
@@ -125,6 +123,9 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       return false;
    }
 }
+/* Check if password is strong enough */
+function
+
 ?>
 
 
