@@ -18,22 +18,20 @@ h1 {
   <a href="#about" class="navigators">Om Oss</a>
   <a href="#home" class="navigators">Hem</a>
   <a href="#home" class="h1">Intro</a>
-
-
 </div>
+
+<title>Intro</title>
+</head>
+
+
+
+<body>
 
 <a id="home" class="smooth"></a>
 <div class="page1" id="page1">
   <div class="introduction">Välkommen till Intro
 	<div class="subintro">Hitta ditt drömjobb</div> </div>
 </div>
-
-</head>
-<title>Intro</title>
-
-
-<body>
-
 
 <div class="page2" id="page2">
   <a id="about" class="smooth"></a>
