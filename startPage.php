@@ -1,4 +1,4 @@
-<script src="Jquery.min.js"></script>
+<script type="text/javascript" src="Jquery.min.js"></script>
 
 <!DOCTYPE html>
 <html lang="se">
