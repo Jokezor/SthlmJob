@@ -288,3 +288,7 @@ input {
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 }
+
+input[type=text]{
+	background-color: #241B1C;
+}
