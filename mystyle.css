@@ -184,7 +184,7 @@ h1 {
 	z-index: 14;
 }
 
-.page3.formTable{
+.page3 .formTable{
 	top: 100%;
 	padding-top: 30px;
 	display: inline-block;
