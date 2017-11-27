@@ -2,7 +2,8 @@
 
 What to do?
 
- - Check if password strength
+ - Check password strength
+ - Skriva vad som behövs för säkert lösenord
  - Be able to insert CV and linkedin into either S3, RDS or Redshift directly
  - Get CV and linkedin and pass it to TextKernel or a serivce like TK
  - Get data from TK or likewise service and pass to the profile of that person.
@@ -10,3 +11,5 @@ What to do?
  - Get a couple of jobs
  - Get jobs in a good format
  - Create new website for searching after candidates
+ - Recaptcha?
+ - Snyggare lägg till knapp
