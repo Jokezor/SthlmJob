@@ -185,11 +185,11 @@ h1 {
 }
 
 .page3 .formTable{
-	top: 30px;
-	padding-top: 300px;
+	top: auto;
+	padding-top: auto;
 	display: inline-block;
   text-align: center;
-	z-index: 15;
+	z-index: auto;
 	line-height: 20px;
 }
 
