@@ -49,16 +49,16 @@ ini_set('html_errors', On);
 	<input type="text" name="Namn" maxlength="45" size="30" value="<?php echo $user_name;?>" placeholder="Namn" />
       </td>
       <td>
-	<input type="text" name="Adress" maxlength="90" size="35" value="<?php echo $user_address;?>"/>
+	<input type="text" name="Adress" maxlength="90" size="35" value="<?php echo $user_address;?>" placeholder="Adress"/>
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="35" value="<?php echo $user_mail;?>"/>
+  <input type="text" name="Mail" maxlength="90" size="35" value="<?php echo $user_mail;?>" placeholder="Mail Adress"/>
       </td>
       <td>
-  <input type="password" name="Lösenord" maxlength="90" size="35" />
+  <input type="password" name="Lösenord" maxlength="90" size="35" placeholder="Lösenord"/>
       </td>
       <td>
-  <input type="password" name="Lösenord_test" maxlength="90" size="35" />
+  <input type="password" name="Lösenord_test" maxlength="90" size="35" placeholder="Upprepa Lösenord"/>
       </td>
   </tr>
   <tr>
