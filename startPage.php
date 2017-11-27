@@ -59,7 +59,7 @@ h1 {
       Registrera Din Profil
     </div>
     <div id = "registerform">
-       <div id='errorMessages' class="form">
+       <div id='errorMessages'>
          <p id='nameError'></p>
          <p id='addressError'></p>
          <p id='emailError'></p>
