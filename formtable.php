@@ -1,9 +1,10 @@
 <?php include "../inc/dbinfo.inc";?>
 
+<!--
 <html>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <body>
-
+-->
 <?php
   /* Connect to PostGreSQL and select the database. */
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
@@ -124,10 +125,13 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    }
 }
 /* Check if password is strong enough */
-function
+function isPasswordStrong($password){
+   return true;
+}
 
 ?>
 
-
+<!--
 </body>
 </html>
+-->
