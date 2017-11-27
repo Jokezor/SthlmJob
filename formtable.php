@@ -89,10 +89,10 @@ pg_close($db_connection);
 function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password){
 
    // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", 'INSERT INTO users (name, address, email, password) values ($1, $2, $3, $4)');
+   $result = pg_prepare($db_connection, "addUser_query", 'INSERT INTO users (name, address, email, password) values ($1, $2, $3, $4)');
 
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($user_name, $user_address, $user_mail, $user_password));
+   $result = pg_execute($db_connection, "addUser_query", array($user_name, $user_address, $user_mail, $user_password));
 
 }
 
@@ -105,8 +105,8 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
          return false;
       }
       // Prepare a query for execution and execute the prepared query.
-      $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
-      $result = pg_execute($db_connection, "my_query", array($mail));
+      $result = pg_prepare($db_connection, "validEntries_query", 'SELECT email FROM users WHERE email=$1');
+      $result = pg_execute($db_connection, "validEntries_query", array($mail));
       if(pg_num_rows($result)!=0){
          return false;
       }
