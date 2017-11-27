@@ -231,3 +231,35 @@ h1 {
         color: white;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+
+		opacity:  0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   opacity:  0.5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   opacity:  0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	 opacity:  0.5;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+	 opacity:  0.5;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+	 opacity:  0.5;
+}
