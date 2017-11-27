@@ -292,4 +292,5 @@ input {
 input[type=submit]{
 	background-color: #125186;
 	border-color: #125186;
+	color: white;
 }
