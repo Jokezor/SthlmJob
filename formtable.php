@@ -42,7 +42,7 @@ ini_set('html_errors', On);
 <form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
   <table border="0">
     <tr>
-      <td>Namn</td>
+
       <td>Adress</td>
       <td>Mail</td>
       <td>Lösenord</td>
