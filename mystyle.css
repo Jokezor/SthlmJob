@@ -188,7 +188,7 @@ h1 {
 }
 
 #errorMessages{
-	height:30%;
+	height:40%;
 	text-align:center;
 	font-family: Arial, "Trebuchet MS", Arial, sans-serif;
 	font-size: 12px;
@@ -200,7 +200,7 @@ h1 {
 }
 
 .page3 #registerform .formTable{
-	height:70%;
+	height:60%;
 }
 
 .formReg{
