@@ -41,18 +41,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
-   /* check if email exist */
-   /* Connect to PostGreSQL and select the database. */
-   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
-   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
-   $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
-   $result = pg_execute($db_connection, "my_query", array($user_mail));
-   else if(pg_num_rows($result)!=0){
-      ?>
-      <script>
-         document.getElementById('emailError').innerHTML = "Email redan registrerad";
-      </script>
-      <?php
+   else{
+      /* check if email exist */
+      /* Connect to PostGreSQL and select the database. */
+      $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
+      $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
+      $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
+      $result = pg_execute($db_connection, "my_query", array($user_mail));
+      if(pg_num_rows($result)!=0){
+         ?>
+         <script>
+            document.getElementById('emailError').innerHTML = "Email redan registrerad";
+         </script>
+         <?php
+      }
    }
 
    if(!strlen($user_password) || !strlen($user_password2)){
