@@ -33,7 +33,13 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
+
         AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
+        echo "BRA!";
+   }
+   else{
+      // print error messages
+      include "checkFormEntries.php";
    }
 }
 ?>
@@ -109,6 +115,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       $result = pg_execute($db_connection, "validEntries_query", array($mail));
       if(pg_num_rows($result)!=0){
          return false;
+
       }
       return true;
    }

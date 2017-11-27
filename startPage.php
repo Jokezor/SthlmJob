@@ -55,7 +55,6 @@ h1 {
 <div class="page3" id="page3">
     <div class ="Reg">
       Registrera Din Profil
-      <?php include "formtable.php"?>
     </div>
     <div id='errorMessages' class="formErrors">
        <p id='nameError'></p>
@@ -63,8 +62,10 @@ h1 {
        <p id='emailError'></p>
        <p id='passwordError'></p>
     </div>
+    <?php include "formtable.php"?>
 </div>
-<?php include "checkFormEntries.php" ?>
+<?php /*include "checkFormEntries.php"*/ ?> 
+
 
 <a id="contact" class="smooth"></a>
 <div class="page4" id="page4">
