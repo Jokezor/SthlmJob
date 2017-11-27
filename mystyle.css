@@ -191,7 +191,7 @@ h1 {
 	z-index: 14;
 }
 
-.page3 .registerform{
+.page3 #registerform{
 	top: auto;
 	padding-top: auto;
 	display: block;
@@ -199,7 +199,7 @@ h1 {
 	height: 65%;
 }
 
-.page3 .registerform .formTable{
+.page3 #registerform .formTable{
 	top: auto;
 	padding-top: auto;
 	display: inline-block;
