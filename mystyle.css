@@ -284,4 +284,5 @@ body {
 input {
     line-height: 2em;
 		height:30px;
+		border-radius:10px;
 }
