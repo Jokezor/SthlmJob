@@ -217,10 +217,10 @@ h1 {
 }
 
 .formReg{
+	display: inline-block;
 	text-align: center;
 	z-index: auto;
 	line-height: 20px;
-	z-index: 14;
 }
 
 
