@@ -219,7 +219,7 @@ h1 {
 .formReg{
 	display: inline-block;
 	text-align: center;
-	z-index: auto;
+	z-index: 15;
 	line-height: 20px;
 }
 
