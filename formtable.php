@@ -107,11 +107,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       // Prepare a query for execution and execute the prepared query.
       $result = pg_prepare($db_connection, "my_query", 'SELECT email FROM users WHERE email=$1');
       $result = pg_execute($db_connection, "my_query", array($mail));
-      $rows = pg_num_rows($result);
-      echo $result;
-      echo $rows;
       if(pg_num_rows($result)!=0){
-         echo "hey!";
          return false;
       }
       return true;
