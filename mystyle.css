@@ -280,3 +280,8 @@ body {
 	 opacity:  0.5;
 	 color: black;
 }
+
+input {
+    line-height: 2em; 
+		height:30px;
+}
