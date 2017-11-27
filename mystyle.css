@@ -36,7 +36,7 @@ h1 {
 	bottom: 40px;
   right: 40px;
 	left: 5%;
-  top: 40px;
+  top: 40%;
 	float: left;
   display: block;
 	z-index: 11;
@@ -74,6 +74,7 @@ h1 {
     float: right;
     text-align: right;
     position: sticky;
+
 }
 
 /* Change the color of links on hover */
