@@ -186,10 +186,10 @@ h1 {
 
 .page3.formTable{
 	top: 100%;
-	padding-top: 300px;
+	padding-top: 30px;
 	display: inline-block;
   text-align: center;
-	z-index: 15;
+	z-index: 13;
 }
 
 .formReg{
