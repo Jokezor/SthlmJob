@@ -62,7 +62,7 @@ h1 {
        <p id='addressError'></p>
        <p id='emailError'></p>
        <p id='passwordError'></p>
-       
+
        <!--
        <div class ="formTable">
          <?php /*include "formtable.php" */?>
@@ -71,7 +71,7 @@ h1 {
     </div>
 
 </div>
-<?php /*include "checkFormEntries.php"*/ ?>
+<?php include "checkFormEntries.php" ?>
 
 
 <a id="contact" class="smooth"></a>
