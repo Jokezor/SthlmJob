@@ -1,4 +1,4 @@
-<script type="text/javascript" src="Jquery.min.js"></script>
+<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
 
 <!DOCTYPE html>
 <html lang="se">
