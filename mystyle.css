@@ -34,13 +34,14 @@ h1 {
 	background: transparent;
 	position: fixed;
 	bottom: 40px;
-        right: 40px;
+  right: 40px;
 	left: 5%;
-        top: 40px;
+  top: 40px;
 	float: left;
-        display: block;
+  display: block;
 	z-index: 11;
 	text-align: left;
+	height: 10%;
 }
 
 
