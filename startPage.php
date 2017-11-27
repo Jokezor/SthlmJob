@@ -43,7 +43,6 @@ h1 {
 
 
 <div class="smooth" id="page3">
-   <a id="register" class="smooth"></a>
     <div class = "space">
     </div>
     <div class ="Reg">
