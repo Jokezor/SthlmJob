@@ -165,7 +165,6 @@ h1 {
 				line-height: 50.4px;
 				position: relative;
 				color: white;
-				z-index: 13;
 				display: block;
 				height: 20%;
 
@@ -177,18 +176,6 @@ h1 {
 
 }
 
-.form{
-	text-align:center;
-	font-family: Arial, "Trebuchet MS", Arial, sans-serif;
-	font-size: 12px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 100;
-	line-height: 10px;
-	position: relative;
-	color: #CF4647;
-	z-index: 13;
-}
 
 .page3 #registerform{
 	top: auto;
@@ -196,7 +183,6 @@ h1 {
 	display: block;
   text-align: center;
 	height: 65%;
-	z-index: 13;
 }
 
 #errorMessages{
@@ -209,7 +195,6 @@ h1 {
 	font-weight: 100;
 	position: relative;
 	color: #CF4647;
-	z-index: 13;
 }
 
 .page3 #registerform .formTable{
@@ -219,7 +204,6 @@ h1 {
 .formReg{
 	display: inline-block;
 	text-align: center;
-	z-index: 15;
 	line-height: 20px;
 }
 
