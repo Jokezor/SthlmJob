@@ -1,12 +1,12 @@
 <?php
-//if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
-   //$user_name = htmlentities($_POST['Name']);
-   //$user_address = htmlentities($_POST['Address']);
-   //$user_mail = htmlentities($_POST['Mail']);
-   //$user_password = ($_POST['Password']);
-   //$user_password2 = ($_POST['Password2']);
+   $user_name = htmlentities($_POST['Name']);
+   $user_address = htmlentities($_POST['Address']);
+   $user_mail = htmlentities($_POST['Mail']);
+   $user_password = ($_POST['Password']);
+   $user_password2 = ($_POST['Password2']);
 
    /* Check if username exists */
    if(!strlen($user_name)){
@@ -70,5 +70,5 @@
       </script>
       <?php
    }
-//}
+}
 ?>
