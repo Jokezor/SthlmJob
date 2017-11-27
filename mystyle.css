@@ -285,6 +285,7 @@ body {
 	 opacity:  0.5;
 	 color: black;
 	 padding-left: 5px;
+	 padding: 10px;
 }
 
 input {
@@ -294,6 +295,7 @@ input {
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 		font-size: 12px;
+		padding: 10px;
 
 }
 
