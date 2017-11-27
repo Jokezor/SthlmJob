@@ -1,13 +1,13 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-   $emailErr  = ""; $nameErr = "";
-   $addressErr = ""; $passErr = "";
 
-   $user_name = htmlentities($_POST['Namn']);
-   $user_address = htmlentities($_POST['Adress']);
+
+   $user_name = htmlentities($_POST['Name']);
+   $user_address = htmlentities($_POST['Address']);
    $user_mail = htmlentities($_POST['Mail']);
-   $user_password = ($_POST['Lösenord']);
+   $user_password = ($_POST['Password']);
+   $user_password2 = ($_POST['Password2']);
 
    if(!strlen($user_name)){
       ?>
@@ -40,10 +40,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       <?php
    }
 
-   if(!strlen($user_password)){
+   if(!strlen($user_password) || !strlen($user_password2)){
       ?>
       <script>
          document.getElementById('passwordError').innerHTML = "Password cannot be empty";
+      </script>
+      <?php
+   }
+   else if($user_password != $user_password2){
+      ?>
+      <script>
+         document.getElementById('passwordError').innerHTML = "Passwords does not match";
       </script>
       <?php
    }
