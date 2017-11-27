@@ -184,12 +184,21 @@ h1 {
 	z-index: 14;
 }
 
+.formTable{
+	padding-top: 30px;
+	display: inline-block;
+	top: 20%;
+	z-index: 14;
+}
+
 .formReg{
-	top: 60%;
+	top: 20%;
 	padding-top: 30px;
 	display: inline-block;
   text-align: center;
 }
+
+
 
 /*.page3 .Reg{
         text-align:center;

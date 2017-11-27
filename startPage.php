@@ -62,9 +62,11 @@ h1 {
        <p id='emailError'></p>
        <p id='passwordError'></p>
     </div>
-    <?php include "formtable.php"?>
+    <div class ="formTable">
+      <?php include "formtable.php"?>
+    </div>
 </div>
-<?php /*include "checkFormEntries.php"*/ ?> 
+<?php /*include "checkFormEntries.php"*/ ?>
 
 
 <a id="contact" class="smooth"></a>
