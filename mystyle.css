@@ -155,7 +155,7 @@ body {
 }
 
 #page3{
-	background-color: #125186;
+				background-image: url("images/newyork.jpeg");
         background-repeat: no-repeat;
         background-position: top;
         background-attachment: relative;
