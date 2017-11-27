@@ -287,10 +287,14 @@ input {
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
+		font-size: 14px;
+
 }
 
 input[type=submit]{
 	background-color: #CF4647;
 	border-color: #CF4647;
 	color: white;
+	padding-left: 3px;
+
 }
