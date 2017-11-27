@@ -12,6 +12,8 @@
 ?>
 
 <?php
+$user_name = "";   $user_address = "";   $user_mail = "";
+
  /* If input fields are populated, add a row to the Users table. */
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
     /* If method is post, scroll page to register */
