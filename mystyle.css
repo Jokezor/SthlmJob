@@ -187,6 +187,7 @@ h1 {
 	line-height: 10px;
 	position: relative;
 	color: #CF4647;
+	z-index: 13;
 }
 
 .page3 #registerform{
