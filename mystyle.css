@@ -224,6 +224,7 @@ body {
 	border-radius: 2px;
 	width: 95%;
 	align: center;
+	margin:0 auto;
 
 }
 
@@ -300,7 +301,6 @@ input {
 		font-size: 12px;
 		padding: 3px;
 		margin: auto;
-		display: inline-block;
 
 }
 
