@@ -1,5 +1,5 @@
 #page1 {
-	background-image: url("images/back_2.jpeg.icloud");
+	background-image: url("images/back_2.jpeg");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-attachment: relative;
@@ -155,7 +155,7 @@ body {
 }
 
 #page3{
-				background-image: url("images/newyork_1.jpeg");
+				background-image: url("images/newyork_1.jpeg.icloud");
         background-repeat: no-repeat;
         background-position: top;
         background-attachment: relative;
