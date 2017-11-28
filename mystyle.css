@@ -225,6 +225,7 @@ body {
 	border-radius: 2px;
 	width: 95%;
 	align: center;
+
 }
 
 
@@ -303,6 +304,7 @@ input {
 
 
 
+
 }
 
 input[type=text],[type=password]{
@@ -312,6 +314,7 @@ input[type=text],[type=password]{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+		margin: auto;
 }
 
 
@@ -323,6 +326,7 @@ input[type=submit]{
 	-moz-border-radius: 3px;
 	cursor: pointer;
 	width: 100%;
+	margin: auto;
 }
 
 input[type=submit]:hover {
