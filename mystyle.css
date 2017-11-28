@@ -315,8 +315,8 @@ input[type=submit]{
 	background-color: #CF4647;
 	border-color: #CF4647;
 	color: white;
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	cursor: pointer;
 }
 
