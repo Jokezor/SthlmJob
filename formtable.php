@@ -108,13 +108,13 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       if($password != $password2){
          return false;
       }
-      if (strlen($user_password) < 8 ) {
+      if (strlen($password) < 8 ) {
         return false;
       }
-      if (!preg_match("#[0-9]+#", $user_password)) {
+      if (!preg_match("#[0-9]+#", $password)) {
         return false;
       }
-      if (!preg_match("#[a-zA-Z]+#", $user_password)) {
+      if (!preg_match("#[a-zA-Z]+#", $password)) {
         return false;
       }
 
