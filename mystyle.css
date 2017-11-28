@@ -223,11 +223,13 @@ body {
 	border-radius: 2px;
 	width: 95%;
 	margin: auto;
-
+	max-width: 1250px;
 
 }
 
-
+.formReg #registerTable{
+	margin: auto;
+}
 
 
 #page4{
