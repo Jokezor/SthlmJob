@@ -300,7 +300,6 @@ input {
 		border-radius: 3px;
 		font-size: 12px;
 		padding: 3px;
-		margin: auto;
 
 }
 
@@ -309,7 +308,6 @@ input[type=text],[type=password]{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-		margin: auto;
 }
 
 
