@@ -308,7 +308,7 @@ input[type=text],[type=password]{
     border: 1px solid #ccc;
     border-radius: 4px;
 
-	border-spacing:  5px;
+	border-margin:  5px;
 }
 
 
