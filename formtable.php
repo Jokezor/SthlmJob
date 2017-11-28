@@ -46,19 +46,19 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     </tr>
     <tr>
       <td>
-	<input type="text" name="Name" maxlength="45" size="20%" value="<?php echo $user_name;?>" placeholder="Namn" />
+	<input type="text" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" />
       </td>
       <td>
-	<input type="text" name="Address" maxlength="90" size="20%" value="<?php echo $user_address;?>" placeholder="Adress"/>
+	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress"/>
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="20%" value="<?php echo $user_mail;?>" placeholder="Mail Adress"/>
+  <input type="text" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress"/>
       </td>
       <td>
-  <input type="password" name="Password" maxlength="90" size="20%" placeholder="Lösenord"/>
+  <input type="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord"/>
       </td>
       <td>
-  <input type="password" name="Password2" maxlength="90" size="20%" placeholder="Upprepa Lösenord"/>
+  <input type="password" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord"/>
       </td>
   </tr>
   <tr>
