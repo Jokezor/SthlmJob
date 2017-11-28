@@ -318,6 +318,8 @@ input[type=submit]{
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	cursor: pointer;
+}
 
-
+input[type=submit]:hover {
+    background-color: #b66262;
 }
