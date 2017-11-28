@@ -300,6 +300,8 @@ input {
 		font-size: 12px;
 		padding: 3px;
 		margin: auto;
+		display: inline-block;
+    text-align: center;
 
 }
 
