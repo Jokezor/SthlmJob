@@ -108,9 +108,16 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       if($password != $password2){
          return false;
       }
-      //else if(!isPasswordStrong($password)){
-      //   return false;
-      //}
+      if (strlen($user_password) < 8 ) {
+        return false;
+      }
+      if (!preg_match("#[0-9]+#", $user_password)) {
+        return false;
+      }
+      if (!preg_match("#[a-zA-Z]+#", $user_password)) {
+        return false;
+      }
+
       if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
          return false;
       }
