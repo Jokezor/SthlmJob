@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
        ?>
        <script>
         $errors[] = "Password too short!";
+       </script>
     }
 
     if (!preg_match("#[0-9]+#", $user_password)) {
