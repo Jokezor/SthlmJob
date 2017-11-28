@@ -69,5 +69,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   else{
+     if (strlen($user_password) < 8) {
+       ?>
+       <script>
+        $errors[] = "Password too short!";
+    }
+
+    if (!preg_match("#[0-9]+#", $user_password)) {
+        $errors[] = "Password must include at least one number!";
+    }
+
+    if (!preg_match("#[a-zA-Z]+#", $user_password)) {
+        $errors[] = "Password must include at least one letter!";
+    }
+   }
 }
 ?>
