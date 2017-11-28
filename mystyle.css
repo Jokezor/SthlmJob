@@ -222,9 +222,7 @@ body {
 	background-color: #f2f2f2;
 	border-radius: 2px;
 	width: 95%;
-
 	margin: auto;
-	text-align:center;
 
 
 }
@@ -301,6 +299,7 @@ input {
 		border-radius: 3px;
 		font-size: 12px;
 		padding: 3px;
+		margin: auto;
 
 }
 
