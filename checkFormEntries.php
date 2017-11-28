@@ -69,21 +69,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
-   else{
-     if (strlen($user_password) < 8) {
+     if (strlen($user_password) < 8 ) {
        ?>
        <script>
-        $errors[] = "Password too short!";
+          document.getElementById('passwordError').innerHTML = "Lösenordet måste vara minst 8 tecken långt";
        </script>
+       <?php
     }
 
     if (!preg_match("#[0-9]+#", $user_password)) {
-        $errors[] = "Password must include at least one number!";
+      ?>
+      <script>
+         document.getElementById('passwordError1').innerHTML = "Lösenordet måste innehålla minst en siffra";
+      </script>
+        <?php
     }
 
     if (!preg_match("#[a-zA-Z]+#", $user_password)) {
-        $errors[] = "Password must include at least one letter!";
+      ?>
+      <script>
+         document.getElementById('passwordError2').innerHTML = "Lösenordet måste innehålla minst en bokstav";
+      </script>
+      <?php
     }
-   }
 }
 ?>

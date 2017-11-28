@@ -46,6 +46,8 @@
          <p id='addressError'></p>
          <p id='emailError'></p>
          <p id='passwordError'></p>
+         <p id='passwordError1'></p>
+         <p id='passwordError2'></p>
        </div>
        <div class ="formTable">
          <?php include "formtable.php" ?>
