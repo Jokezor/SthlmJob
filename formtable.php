@@ -65,6 +65,14 @@ $user_name = "";   $user_address = "";   $user_mail = "";
   </tr>
   <tr>
       <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
   </tr>
