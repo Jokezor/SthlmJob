@@ -69,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   else{
      if (strlen($user_password) < 8 ) {
        ?>
        <script>
@@ -92,5 +93,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
     }
+  }
 }
 ?>
