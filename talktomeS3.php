@@ -1,6 +1,7 @@
 <?php
 
-echo getenv('HOME') . "\n";
+echo getenv('HOME');
+echo "\n";
 putenv("HOME=/var/www/html")
 echo getenv('HOME');
 /*
