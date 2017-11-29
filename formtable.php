@@ -12,7 +12,9 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
     /* If method is post, scroll page to register */
     ?>
-
+    <script type="text/javascript">
+    window.location = "#register";
+    </script>
     <?php
     $user_name = htmlentities($_POST['Name']);
     $user_address = htmlentities($_POST['Address']);
@@ -33,11 +35,6 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
            /* Add user to redshift db */
            AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
            echo "PROFIL REGISTRERAD!";
-           ?>
-           <script type="text/javascript">
-           window.location = "#register";
-           </script>
-           <?php
         }
    }
    else{
