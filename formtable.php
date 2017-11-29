@@ -31,7 +31,9 @@ $user_name = "";   $user_address = "";   $user_mail = "";
          /* Add user to redshift db */
         AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
         /* Upload CV to S3 */
-        include "uploadCV.php";
+        if(isset($_FILES["fileToUpload"])){
+           include "uploadCV.php";
+        }
 
         echo "PROFIL REGISTRERAD!";
    }
