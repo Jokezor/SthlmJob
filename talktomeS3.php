@@ -28,9 +28,9 @@ try {
 
     // Print the URL to the object.
     //echo $result['ObjectURL'] . "\n";
-} //catch (S3Exception $e) {
-    //echo $e->getMessage() . "\n";
-//}
+} catch (S3Exception $e) {
+    echo $e->getMessage() . "\n";
+}
 
 
 ?>
