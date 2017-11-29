@@ -28,14 +28,13 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
-         /* Add user to redshift db */
-        AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
-        /* Upload CV to S3 */
         if(isset($_FILES["fileToUpload"])){
+           /* Upload CV to S3 */
            include "uploadCV.php";
+           /* Add user to redshift db */
+           AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
+           echo "PROFIL REGISTRERAD!";
         }
-
-        echo "PROFIL REGISTRERAD!";
    }
    else{
       // print error messages

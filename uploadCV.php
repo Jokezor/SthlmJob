@@ -4,8 +4,10 @@ $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
-echo "YAYAYAYA";
-echo $fileType;
+
+echo $target_file;
+echo "\n";
+echo $_FILES["fileToUpload"]["tmp_name"];
 
 
 /* Check file size */
