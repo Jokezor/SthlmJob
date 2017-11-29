@@ -17,7 +17,7 @@ try {
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'Body'   => 'this is the body!',
-        'ACL'    => 'public-read-write'
+        'ACL'    => 'public'
     ));
 
     // Print the URL to the object.
