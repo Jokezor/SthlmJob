@@ -5,7 +5,6 @@
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
 ?>
 
-
 <?php
 $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
 
@@ -82,7 +81,7 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
          <input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $user_cv?>"/>
       </td>
       <td>
-	<input type="submit" value="Ladda upp profil och registrera" disabled />
+	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
   </tr>
 </table>
