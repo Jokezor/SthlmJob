@@ -10,7 +10,8 @@ $(document).ready(
         $('input:file').change(
             function(){
                 if ($(this).val()) {
-                    $('input:submit').attr('disabled',false);
+                    $('input:submit').attr('disabled',true);
+
                 }
             }
             );
