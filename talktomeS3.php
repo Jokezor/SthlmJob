@@ -1,9 +1,5 @@
 <?php
 
-
-putenv("HOME=/var/www/html");
-
-
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
