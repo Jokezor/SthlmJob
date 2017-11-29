@@ -13,11 +13,11 @@ $s3 = new Aws\S3\S3Client([
 
 try {
     // Upload data.
-    $result = $s3Client->putObject(array(
+    $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'Body'   => 'this is the body!',
-        'ACL'    => 'public-read'
+        'ACL'    => 'public-read-write'
     ));
 
     // Print the URL to the object.
