@@ -6,7 +6,7 @@
 ?>
 
 <?php
-$user_name = "";   $user_address = "";   $user_mail = "";
+$user_name = "";   $user_address = "";   $user_mail = ""; //$user_cv = "";
 
  /* If input fields are populated, add a row to the Users table. */
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -77,7 +77,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       <td>
       </td>
       <td>
-         <input type="file" name="fileToUpload" id="fileToUpload" />
+         <input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $_POST['fileToUpload'];?>"/>
       </td>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
