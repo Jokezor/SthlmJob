@@ -19,7 +19,7 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
     $user_name = htmlentities($_POST['Name']);
     $user_address = htmlentities($_POST['Address']);
     $user_mail = htmlentities($_POST['Mail']);
-    $user_cv = $_POST['fileToUpload'];
+    $user_cv = $_FILES["fileToUpload"];
     $user_password = ($_POST['Password']);
     $user_password2 = ($_POST['Password2']);
 
