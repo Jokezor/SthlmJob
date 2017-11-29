@@ -64,6 +64,5 @@
   </div>
 </div>
 
-<?php include "talktomeS3.php" ?>
 </body>
 </html>
