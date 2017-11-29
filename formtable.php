@@ -25,11 +25,14 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     $user_password_hash = hash('sha256', $user_password);
 
 
-    /* */
-    include "uploadCV.php";
+
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
+         /* Add user to redshift db */
         AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
+        /* Upload CV to S3 */
+        include "uploadCV.php";
+
         echo "PROFIL REGISTRERAD!";
    }
    else{
@@ -41,7 +44,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 
 <!-- Input form -->
 <!-- HTML table -->
-<form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
+<form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
   <table id="registerTable" border="0">
     <tr>
 
@@ -74,7 +77,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       </td>
       <td>
          <input type="file" name="fileToUpload" id="fileToUpload" />
-      </td>    
+      </td>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
