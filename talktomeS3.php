@@ -1,7 +1,7 @@
 <?php
 
-echo getenv('HOME');
-putenv('/var/www/html');
+echo getenv('HOME') . "\n";
+putenv("HOME=/var/www/html")
 echo getenv('HOME');
 /*
 require 'vendor/autoload.php';
