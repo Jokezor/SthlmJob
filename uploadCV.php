@@ -1,17 +1,9 @@
 <?php
 
-echo basename($_FILES["fileToUpload"]["name"]);
-
-
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
-echo $target_file;
-echo "\n";
-echo $_FILES["fileToUpload"]["name"];
-
 
 /* Check file size */
 if ($_FILES["fileToUpload"]["size"] > 1500000) {
@@ -31,6 +23,8 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
+   echo $_FILES["fileToUpload"]["name"];
+   echo $target_file;
     if (move_uploaded_file($_FILES["fileToUpload"]["name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
