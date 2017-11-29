@@ -25,6 +25,8 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     $user_password_hash = hash('sha256', $user_password);
 
 
+    /* */
+    include "uploadCV.php";
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
         AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
@@ -72,6 +74,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       </td>
       <td>
       </td>
+       <input type="file" name="fileToUpload" id="fileToUpload" />
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
