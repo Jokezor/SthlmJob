@@ -48,11 +48,6 @@
          <p id='passwordError'></p>
          <p id='passwordError1'></p>
          <p id='passwordError2'></p>
-         <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-        </form>
        </div>
        <div class ="formTable">
          <?php include "formtable.php" ?>

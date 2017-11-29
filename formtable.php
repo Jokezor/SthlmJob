@@ -73,8 +73,8 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       <td>
       </td>
       <td>
-      </td>
-       <input type="file" name="fileToUpload" id="fileToUpload" />
+         <input type="file" name="fileToUpload" id="fileToUpload" />
+      </td>    
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
       </td>
