@@ -4,19 +4,7 @@
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
 ?>
-<script>
-$(document).ready(
-    function(){
-        $('input:file').change(
-            function(){
-                if ($(this).val()) {
-                    $('input:submit').attr('disabled',true);
 
-                }
-            }
-            );
-    });
-</script>
 
 <?php
 $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
