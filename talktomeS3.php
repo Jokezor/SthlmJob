@@ -1,7 +1,8 @@
 <?php
 
 echo getenv('HOME');
-
+putenv('/var/www/html');
+echo getenv('HOME');
 /*
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
