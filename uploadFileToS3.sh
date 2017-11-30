@@ -7,7 +7,7 @@ for file in uploads/*; do
    ba="${b//[[:space:]]/}"
 
    #php talktomeS3.php $ba
-   echo $file
-   rm -f $file
+   echo "$file"
+   #rm -f $file
 
 done
