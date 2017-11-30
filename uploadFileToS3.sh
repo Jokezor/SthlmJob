@@ -1,10 +1,12 @@
 #!/bin/bash
 
 for file in /var/www/html/uploads/* ; do
-   #echo $file
-   #filename=$(basename "$file")
-   #$filename="/var/www/html/uploads/$filename"
+
+   xbase=${file##*/}
+   xfext=${xbase##*.}
+   xpref=${xbase%.*}
+   echo $xfext
    #echo $filename
-   php talktomeS3.php $file
+   #php talktomeS3.php $file
    #rm $file
 done
