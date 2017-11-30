@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
-$keyname = 'mystyle.css';
+$keyname = 'README.md';
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
@@ -19,7 +19,7 @@ try {
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'Body'   => 'this is the body!',
-        'ACL'    => 'public'
+        'ACL'    => 'public-write'
     ));
 
     // Print the URL to the object.
