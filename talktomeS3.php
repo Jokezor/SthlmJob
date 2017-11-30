@@ -3,6 +3,8 @@ if($argc != 2){
    echo "Not enough input args";
 }
 
+chdir('/uploads');
+
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
