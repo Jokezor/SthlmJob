@@ -4,7 +4,9 @@
 for file in uploads/*; do
 
    b=$(basename "$file")
-   php talktomeS3.php $b
+   ba="${b//[[:space:]]/}"
+
+   php talktomeS3.php $ba
    #rm $file
-   i=i+1
+
 done
