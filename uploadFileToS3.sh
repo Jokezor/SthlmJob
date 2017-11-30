@@ -9,6 +9,6 @@ for file in uploads/*; do
 
    #php talktomeS3.php $ba
    echo $filer
-   #rm -f $file
+   rm -f $filer
 
 done
