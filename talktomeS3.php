@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
-$keyname = 'README.md';
+$keyname = 'red.txt';
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
