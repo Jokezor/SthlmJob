@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in /uvar/www/html/uploads/* ; do
+for file in /uvar/www/html/uploads/*; do
 
    b=$(basename $file)
    echo $b
