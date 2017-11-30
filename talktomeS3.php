@@ -1,10 +1,13 @@
 <?php
+if($argc != 2){
+   echo "Not enough input args";
+}
 
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
-$keyname = 'README.md';
+$keyname = $argv[1];
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
@@ -19,7 +22,7 @@ try {
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'Body'   => 'this is the body!',
-        'ACL'    => 'public-write'
+        'ACL'    => 'public'
     ));
 
     // Print the URL to the object.
