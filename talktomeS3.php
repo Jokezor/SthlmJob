@@ -7,7 +7,7 @@ $bucket = 'sthlmjobcvinput1';
 $keyname = 'README.md';
 
 $s3 = new Aws\S3\S3Client([
-    'version' => '2006-03-01',
+    'version' => 'latest',
     'region'  => 'eu-central-1'
 ]);
 
