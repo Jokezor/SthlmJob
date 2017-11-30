@@ -1,11 +1,11 @@
 #!/bin/bash
 
-for file in /var/www/html/uploads/* ; do
+for file in /uvar/www/html/uploads/* ; do
 
    xbase=${file##*/}
    xfext=${xbase##*.}
    xpref=${xbase%.*}
-   echo $xfext
+   echo $xpref
    #echo $filename
    #php talktomeS3.php $file
    #rm $file
