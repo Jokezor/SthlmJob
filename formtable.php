@@ -6,7 +6,7 @@
 ?>
 
 <?php
-$user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
+$user_name = "";   $user_address = "";   $user_mail = "";
 
  /* If input fields are populated, add a row to the Users table. */
  if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -19,7 +19,6 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
     $user_name = htmlentities($_POST['Name']);
     $user_address = htmlentities($_POST['Address']);
     $user_mail = htmlentities($_POST['Mail']);
-    $user_cv = $_FILES["fileToUpload"];
     $user_password = ($_POST['Password']);
     $user_password2 = ($_POST['Password2']);
 
@@ -29,13 +28,15 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
 
 
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
-        if(isset($_FILES["fileToUpload"])){
+       // if(!empty($_FILES["fileToUpload"]["name"])){
            /* Upload CV to S3 */
            include "uploadCV.php";
            /* Add user to redshift db */
-           AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash);
+           if(!AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash)){
+             echo "Error adding user to database";
+            }
            echo "PROFIL REGISTRERAD!";
-        }
+        //}
    }
    else{
       // print error messages
@@ -78,7 +79,7 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
       <td>
       </td>
       <td>
-         <input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $user_cv?>"/>
+         <input type="file" name="fileToUpload" id="fileToUpload"/>
       </td>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
@@ -91,10 +92,7 @@ $user_name = "";   $user_address = "";   $user_mail = ""; $user_cv = "";
 
 <!-- Clean up. -->
 <?php
-// Free resultset
-//pg_free_result($result);
-
-// Closing connection
+/* Closing connection */
 pg_close($db_connection);
 ?>
 
@@ -103,47 +101,54 @@ pg_close($db_connection);
 <!-- Functions  -->
 <?php
 function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password){
-
    // Prepare a query for execution
    $result = pg_prepare($db_connection, "addUser_query", 'INSERT INTO users (name, address, email, password) values ($1, $2, $3, $4)');
+   if(!$result){
+      return false;
+   }
 
    // Execute the prepared query.
    $result = pg_execute($db_connection, "addUser_query", array($user_name, $user_address, $user_mail, $user_password));
+   if(!$result){
+      return false;
+   }
+   pg_free_result($result);
+   return true;
 }
 
 function validEntries($db_connection, $name, $address, $mail, $password, $password2){
-   if(strlen($name) && strlen($address) && strlen($mail) && strlen($password) && strlen($password2)){
-      if($password != $password2){
-         return false;
-      }
-      if (strlen($password) < 8 ) {
-        return false;
-      }
-      if (!preg_match("#[0-9]+#", $password)) {
-        return false;
-      }
-      if (!preg_match("#[a-zA-Z]+#", $password)) {
-        return false;
-      }
-
-      if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
-         return false;
-      }
-      // Prepare a query for execution and execute the prepared query.
-      $result = pg_prepare($db_connection, "validEntries_query", 'SELECT email FROM users WHERE email=$1');
-      $result = pg_execute($db_connection, "validEntries_query", array($mail));
-      if(pg_num_rows($result)!=0){
-         return false;
-
-      }
-      return true;
-   }
-   else{
+   /* Check that all fields are filled */
+   if(!strlen($name) || !strlen($address) || !strlen($mail) || !strlen($password) || !strlen($password2)){
       return false;
    }
-}
-/* Check if password is strong enough */
-function isPasswordStrong($password){
+   /* Check that passwords are valid */
+   if($password != $password2){
+      return false;
+   }
+   if (strlen($password) < 8 ) {
+     return false;
+   }
+   if (!preg_match("#[0-9]+#", $password)) {
+     return false;
+   }
+   if (!preg_match("#[a-zA-Z]+#", $password)) {
+     return false;
+   }
+   /* Is valid email */
+   if(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
+      return false;
+   }
+   /* If email already exist */
+   $result = pg_prepare($db_connection, "validEntries_query", 'SELECT email FROM users WHERE email=$1');
+   $result = pg_execute($db_connection, "validEntries_query", array($mail));
+   if(pg_num_rows($result)!=0){
+      return false;
+   }
+   /* Is file chosen */
+   if(empty($_FILES["fileToUpload"]["name"])){
+      return false;
+   }
+
+   /* If no error occurred */
    return true;
 }
-?>

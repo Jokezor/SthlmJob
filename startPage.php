@@ -45,6 +45,7 @@
          <p id='nameError'></p>
          <p id='addressError'></p>
          <p id='emailError'></p>
+         <p id='fileError'></p>
          <p id='passwordError'></p>
          <p id='passwordError1'></p>
          <p id='passwordError2'></p>

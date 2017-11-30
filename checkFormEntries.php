@@ -7,6 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
    $user_password = ($_POST['Password']);
    $user_password2 = ($_POST['Password2']);
 
+   /* Is file chosen */
+   if(empty($_FILES["fileToUpload"]["name"])){
+      ?>
+      <script>
+         document.getElementById('fileError').innerHTML = "Välj en fil att ladda upp";
+      </script>
+      <?php
+   }
+
    /* Check if username exists */
    if(!strlen($user_name)){
       ?>
