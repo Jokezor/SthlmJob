@@ -2,10 +2,8 @@
 
 for file in /uvar/www/html/uploads/* ; do
 
-   xbase=${file##*/}
-   xfext=${xbase##*.}
-   xpref=${xbase%.*}
-   echo $xfext
+   b=$(basename $file)
+   echo b
    #echo $filename
    #php talktomeS3.php $file
    #rm $file
