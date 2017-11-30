@@ -9,7 +9,7 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
-$keyname = "$argv[1]";
+$keyname = $argv[1];
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
