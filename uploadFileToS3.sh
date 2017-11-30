@@ -1,6 +1,6 @@
 #!/bin/bash
 
 for file in /var/www/html/uploads/* ; do
-   echo $file
-
+   php talktomeS3.php $file
+   rm $file
 done
