@@ -14,8 +14,4 @@ for file in uploads/*; do
 
    fi
 
-   echo "worked"
-
-
-
 done
