@@ -6,10 +6,9 @@ for file in uploads/*; do
 
 
    b=$(basename "$file")
-   ba="-n "${b//[[:space:]]/}""
-   echo "ba"
-   return
-   if [[ "$ba" =~ "$regex" ]]
+   ba=""${b//[[:space:]]/}""
+
+   if [[ ! -z "$b" ]]
    then
      ls uploads
      php talktomeS3.php "$b"
