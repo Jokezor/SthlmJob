@@ -16,7 +16,7 @@ $s3 = new Aws\S3\S3Client([
     'region'  => 'eu-central-1'
 ]);
 
-#echo file_get_contents("$keyname");
+
 
 
 try {
@@ -24,7 +24,7 @@ try {
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
-        'Body'   => "Here we are",#file_get_contents("$keyname"),
+        'Body'   => file_get_contents("$keyname"),
         'ACL'    => 'public-read-write'
     ));
 
