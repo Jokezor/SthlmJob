@@ -3,7 +3,7 @@
 What to do?
 
 
- - Be able to insert CV and linkedin into either S3, RDS or Redshift directly
+ - Be able to insert CV and linkedin into S3. Able to authorize with linkedin
  - Get CV and linkedin and pass it to TextKernel or a serivce like TK
  - Get data from TK or likewise service and pass to the profile of that person.
  - Adjust so that the profile looks crisp after CV translation
