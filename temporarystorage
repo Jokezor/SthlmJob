@@ -4,11 +4,10 @@ regex='^[]0-9a-zA-Z,!^`@{}=().;/~_|[-]+$'
 
 for file in uploads/*; do
 
-
+  ba=-n "${b//[[:space:]]/}"
+  echo ba
    b=$(basename "$file")
-   ba="-n "${b//[[:space:]]/}""
-
-   if [[ "$ba" =~ "$regex" ]]
+   if [[ "$b" =~ "$regex" ]]
    then
      ls uploads
      php talktomeS3.php "$b"
