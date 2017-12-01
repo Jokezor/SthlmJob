@@ -16,7 +16,7 @@ $s3 = new Aws\S3\S3Client([
     'region'  => 'eu-central-1'
 ]);
 
-echo "file_get_contents("$keyname")";
+echo file_get_contents("$keyname");
 
 
 try {
