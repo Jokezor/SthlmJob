@@ -7,7 +7,8 @@ for file in uploads/*; do
 
    b=$(basename "$file")
    ba="-n "${b//[[:space:]]/}""
-
+   echo "ba"
+   return
    if [[ "$ba" =~ "$regex" ]]
    then
      ls uploads
