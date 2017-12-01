@@ -7,7 +7,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $user_mail = htmlentities($_POST['Mail']);
 $uploadOk = 1;
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
-$user_mail_tofile = $target_dir . $user_mail . $fileType;
+$user_mail_tofile = $target_dir . $user_mail . "." . $fileType;
 
 /* Check file size */
 if ($_FILES["fileToUpload"]["size"] > 1500000) {
