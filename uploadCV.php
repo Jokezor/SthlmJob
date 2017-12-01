@@ -5,9 +5,9 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 // Need to get email and remove @ and the dot before the ex .com to com
 // First test with just $user_mail instead of targetfile $target_dir.$user_mail.$fileType
 $user_mail = htmlentities($_POST['Mail']);
-$user_mail_tofile = $target_dir . $user_mail . $fileType;
 $uploadOk = 1;
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
+$user_mail_tofile = $target_dir . $user_mail . $fileType;
 
 /* Check file size */
 if ($_FILES["fileToUpload"]["size"] > 1500000) {
