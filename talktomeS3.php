@@ -3,6 +3,7 @@ if($argc != 2){
    echo "Not enough input args";
 }
 
+# This is the directory where the uploads will be located.
 chdir('uploads');
 
 require 'vendor/autoload.php';
@@ -24,6 +25,7 @@ try {
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
+        # body needs to get the file contents.
         'Body'   => file_get_contents("$keyname"),
         'ACL'    => 'public-read-write'
     ));
