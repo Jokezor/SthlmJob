@@ -24,7 +24,7 @@ try {
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
-        'Body'   => "Here we are"#file_get_contents("$keyname"),
+        'Body'   => "Here we are",#file_get_contents("$keyname"),
         'ACL'    => 'public-read-write'
     ));
 
