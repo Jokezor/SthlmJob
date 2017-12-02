@@ -1,10 +1,7 @@
 <?php
 
-# This is the directory where the uploads will be located.
-if(!chdir('/var/www/html/')){
-   exit("chdir error");
-}
-$target_dir = "uploads/";
+
+$target_dir = "/var/www/html/uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 // Need to get email and remove @ and the dot before the ex .com to com
 // First test with just $user_mail instead of targetfile $target_dir.$user_mail.$fileType
@@ -32,6 +29,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   // Testing with $user_mail_tofile instead of $target_file
+  echo $user_mail_tofile;
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $user_mail_tofile)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
