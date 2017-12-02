@@ -10,7 +10,7 @@ for file in uploads/*; do
    # If folder is empty $b ="*"
    if [[ $b != '*' ]]
    then
-     ls uploads
+     #ls uploads
      php talktomeS3.php "$b"
      rm -f "$file"
    fi
