@@ -29,7 +29,6 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   // Testing with $user_mail_tofile instead of $target_file
-  echo $user_mail_tofile;
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $user_mail_tofile)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
