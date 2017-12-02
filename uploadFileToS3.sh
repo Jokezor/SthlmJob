@@ -12,7 +12,6 @@ for file in uploads/*; do
    then
      ls uploads
      php talktomeS3.php "$b"
-     echo "$b"
      rm -f "$file"
    fi
 
