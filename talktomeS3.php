@@ -1,6 +1,6 @@
 <?php
 if($argc != 2){
-   echo "Not enough input args";
+   exit("Not enough input args");
 }
 
 # This is the directory where the uploads will be located.
