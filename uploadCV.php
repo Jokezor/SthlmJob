@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "/var/www/html/uploads/";
+$target_dir = "/uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 // Need to get email and remove @ and the dot before the ex .com to com
 // First test with just $user_mail instead of targetfile $target_dir.$user_mail.$fileType
