@@ -4,7 +4,9 @@ if($argc != 2){
 }
 
 # This is the directory where the uploads will be located.
-chdir('uploads');
+if(!chdir('/var/www/html/uploads')){
+   exit("chdir error");
+}
 
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;

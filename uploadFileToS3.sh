@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-
-for file in uploads/*; do
+for file in /var/www/html/uploads/*; do
 
 
    b=$(basename "$file")
@@ -11,7 +9,7 @@ for file in uploads/*; do
    if [[ $b != '*' ]]
    then
      #ls uploads
-     php talktomeS3.php "$b"
+     php /var/www/html/talktomeS3.php "$b"
      rm -f "$file"
    fi
 
