@@ -1,5 +1,9 @@
 <?php
 
+# This is the directory where the uploads will be located.
+if(!chdir('/var/www/html/')){
+   exit("chdir error");
+}
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 // Need to get email and remove @ and the dot before the ex .com to com
