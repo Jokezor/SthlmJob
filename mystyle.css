@@ -329,3 +329,11 @@ input[type=submit]{
 input[type=submit]:hover {
     background-color: #ab3737;
 }
+
+input:invalid #inputname{
+  border: 2px solid red;
+}
+
+input:valid #inputname{
+  border: 2px solid green;
+}

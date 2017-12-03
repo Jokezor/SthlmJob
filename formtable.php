@@ -50,13 +50,13 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     </tr>
     <tr>
       <td>
-	<input type="text" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" required/>
+	<input type="text" id="name" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" required/>
       </td>
       <td>
 	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress" required/>
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
+  <input type="email" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
       </td>
       <td>
   <input type="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" required/>
