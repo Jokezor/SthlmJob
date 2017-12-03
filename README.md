@@ -12,3 +12,6 @@ What to do?
  - Create new website for searching after candidates
  - Recaptcha?
  - Snyggare lägg till knapp
+ - Salta hashen
+ - Mobilanpassning
+ - Token i form submit
