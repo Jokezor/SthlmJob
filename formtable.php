@@ -62,7 +62,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
   <input type="password" id="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" required/>
       </td>
       <td>
-  <input type="password" id="password" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord" required/>
+  <input type="password" id="password2" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord" oninput="check(this)" required/>
       </td>
   </tr>
   <tr>
