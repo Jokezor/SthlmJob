@@ -25,14 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
    }
 
    /* Allow certain file formats */
-   $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
-   else if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
-   && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps") {
-      ?>
-      <script>
-         document.getElementById('fileError').innerHTML = "Ej tillåten filtyp";
-      </script>
-      <?php
+   else{
+      $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
+      if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
+      && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps") {
+         ?>
+         <script>
+            document.getElementById('fileError').innerHTML = "Ej tillåten filtyp";
+         </script>
+         <?php
+      }
    }
 
    /* Check if username exists */
