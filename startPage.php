@@ -65,5 +65,27 @@
   </div>
 </div>
 
+<script>
+var email = document.getElementById("mail");
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("nåt slags felmeddelande");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+</script>
+
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Lösenorden stämmer ej överens');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+
 </body>
 </html>
