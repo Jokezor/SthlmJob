@@ -24,16 +24,15 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     $user_password_hash = hash('sha256', $user_password);
 
 
-
-
    if (validEntries($db_connection, $user_name, $user_address, $user_mail, $user_password, $user_password2)) {
       /* Upload CV to S3 */
-      include "uploadCV.php";
-      /* Add user to redshift db */
-      if(!AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash)){
-         echo "Error adding user to database";
+      if(uploadCV()){
+         /* Add user to redshift db */
+         if(!AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash)){
+            echo "Error adding user to database";
+         }
+         echo "PROFIL REGISTRERAD!";
       }
-      echo "PROFIL REGISTRERAD!";
    }
    else{
       /* print error messages */
@@ -51,19 +50,19 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     </tr>
     <tr>
       <td>
-	<input type="text" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" />
+	<input type="text" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" required/>
       </td>
       <td>
-	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress"/>
+	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress" required/>
       </td>
       <td>
-  <input type="text" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress"/>
+  <input type="text" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
       </td>
       <td>
-  <input type="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord"/>
+  <input type="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" required/>
       </td>
       <td>
-  <input type="password" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord"/>
+  <input type="password" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord" required/>
       </td>
   </tr>
   <tr>
@@ -76,7 +75,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       <td>
       </td>
       <td>
-         <input type="file" name="fileToUpload" id="fileToUpload"/>
+         <input type="file" name="fileToUpload" id="fileToUpload" required/>
       </td>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />
@@ -160,3 +159,23 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    /* If no error occurred */
    return true;
 }
+
+function uploadCV(){
+
+   $target_dir = "/var/www/html/uploads/";
+   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+   // Need to get email and remove @ and the dot before the ex .com to com
+   // First test with just $user_mail instead of targetfile $target_dir.$user_mail.$fileType
+   $user_mail = htmlentities($_POST['Mail']);
+   $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
+   $user_mail_tofile = $target_dir . $user_mail . "." . $fileType;
+
+   // Testing with $user_mail_tofile instead of $target_file
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $user_mail_tofile)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+?>
