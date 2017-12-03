@@ -56,7 +56,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress" required/>
       </td>
       <td>
-  <input type="email" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
+  <input type="email" id="mail" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
       </td>
       <td>
   <input type="password" id="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" required/>
