@@ -21,7 +21,6 @@ $user_name = "";   $user_address = "";   $user_mail = "";
     $user_mail = htmlentities($_POST['Mail']);
     $user_password = ($_POST['Password']);
     $user_password2 = ($_POST['Password2']);
-
     $user_password_hash = hash('sha256', $user_password);
 
 
@@ -146,6 +145,17 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    if(empty($_FILES["fileToUpload"]["name"])){
       return false;
    }
+   /* Check file size */
+   if ($_FILES["fileToUpload"]["size"] > 1500000) {
+      return false;
+   }
+   /* Allow only certain file formats */
+   $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
+   if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
+   && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps") {
+       return false;
+   }
+
 
    /* If no error occurred */
    return true;

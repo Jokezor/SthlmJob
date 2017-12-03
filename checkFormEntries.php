@@ -15,6 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       </script>
       <?php
    }
+   /* Check file size */
+   else if ($_FILES["fileToUpload"]["size"] > 2000000) {
+      ?>
+      <script>
+         document.getElementById('fileError').innerHTML = "Filen är för stor";
+      </script>
+      <?php
+   }
+
+   /* Allow certain file formats */
+   else if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
+   && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps") {
+      ?>
+      <script>
+         document.getElementById('fileError').innerHTML = "Ej tillåten filtyp";
+      </script>
+      <?php
+   }
 
    /* Check if username exists */
    if(!strlen($user_name)){
