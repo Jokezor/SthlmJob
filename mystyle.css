@@ -307,11 +307,10 @@ input {
 
 input[type=text],[type=password],[type=email]{
 	padding: 12px 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 4px;
-
-		width: 95%;
-	margin:  5px;
+	width: 95%;
+	margin: auto;
 }
 
 
@@ -331,7 +330,7 @@ input[type=submit]:hover {
 }
 
 input[type=text]:valid,[type=password]:valid,[type=email]:valid {
-  border: 3px solid #0A920A;
+  border: 3px solid #157915;
 }
 input[type=file]:valid {
 

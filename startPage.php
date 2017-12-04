@@ -78,7 +78,7 @@ email.addEventListener("input", function (event) {
 </script>
 
 <script language='javascript' type='text/javascript'>
-    function check(input) {
+    function checkIfPasswordsEqual(input) {
         if (input.value != document.getElementById('password').value) {
             input.setCustomValidity('Lösenorden stämmer ej överens');
         } else {
