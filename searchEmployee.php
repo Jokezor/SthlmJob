@@ -42,30 +42,39 @@ pg_close($db_connection);
    <title> Search </title>
 </head>
 <body>
-   <div style="margin:auto;">
-      <h1> Search Employee </h1>
-      <div>
-         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-            <input type="text" id="name" name="Name" size="30%" value="<?php echo $search_name;?>" placeholder="Namn" />
-            <input type="email" id="email" name="Mail" size="30%" value="<?php echo $search_mail;?>" placeholder="Email" />
-            <input type="submit" value="Sök" />
-         </form>
+   <div>
+      <div style="margin:auto;">
+         <h1> Search Employee </h1>
          <div>
-            <h2> Sökresultat</h2>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+               <input type="text" id="name" name="Name" size="30%" value="<?php echo $search_name;?>" placeholder="Namn" />
+               <input type="email" id="email" name="Mail" size="30%" value="<?php echo $search_mail;?>" placeholder="Email" />
+               <input type="submit" value="Sök" />
+            </form>
             <div>
-               <table>
-                  <?php
-                  if($_SERVER["REQUEST_METHOD"] == "POST"){
-                     while ($row = pg_fetch_row($result)){
-                        echo "<tr>";
-                        echo "<td> $row[0] </td>";
-                        echo "<td> $row[1] </td>";
-                        echo "<td> $row[2] </td>";
-                        echo "</tr>";
+               <h2> Sökresultat</h2>
+               <div>
+                  <table>
+                     <?php
+                     if($_SERVER["REQUEST_METHOD"] == "POST"){
+                        if(!$result == true){
+                           echo "<tr>";
+                           echo "<th> Namn </td>";
+                           echo "<th> Adress </td>";
+                           echo "<th> Email </td>";
+                           echo "</tr>";
+                           while ($row = pg_fetch_row($result)){
+                              echo "<tr>";
+                              echo "<td> $row[0] </td>";
+                              echo "<td> $row[1] </td>";
+                              echo "<td> $row[2] </td>";
+                              echo "</tr>";
+                           }
+                        }
                      }
-                  }
-                  ?>
-               </table>
+                     ?>
+                  </table>
+               </div>
             </div>
          </div>
       </div>
