@@ -1,5 +1,3 @@
-<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
-
 <!DOCTYPE html>
 <html lang="se">
 
@@ -86,6 +84,8 @@ email.addEventListener("input", function (event) {
         }
     }
 </script>
+
+<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
 
 </body>
 </html>

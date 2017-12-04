@@ -28,13 +28,15 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       /* Upload CV to S3 */
       if(uploadCV()){
          /* Add user to redshift db */
-         if(!AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash)){
+         if(AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password_hash)){
+            echo "PROFIL REGISTRERAD!";
+         } else {
             echo "Error adding user to database";
          }
-         echo "PROFIL REGISTRERAD!";
+      } else {
+         echo "Error uploading CV";
       }
-   }
-   else{
+   } else {
       /* print error messages */
       include "checkFormEntries.php";
    }
@@ -45,9 +47,6 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 <!-- HTML table -->
 <form class ="formReg" action="<?PHP echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
   <table id="registerTable" border="0">
-    <tr>
-
-    </tr>
     <tr>
       <td>
 	<input type="text" id="name" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" required/>
@@ -66,8 +65,6 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       </td>
   </tr>
   <tr>
-  </tr>
-  <tr>
       <td>
       </td>
       <td>
@@ -84,17 +81,12 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 </table>
 </form>
 
-
-
-<!-- Clean up. -->
 <?php
 /* Closing connection */
 pg_close($db_connection);
 ?>
 
 
-
-<!-- Functions  -->
 <?php
 function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_password){
    // Prepare a query for execution
@@ -145,7 +137,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       return false;
    }
    /* Check file size */
-   if ($_FILES["fileToUpload"]["size"] > 1500000) {
+   if ($_FILES["fileToUpload"]["size"] > 2000000) {
       return false;
    }
    /* Allow only certain file formats */
