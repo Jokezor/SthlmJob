@@ -43,7 +43,7 @@ pg_close($db_connection);
 </head>
 <body>
    <div>
-      <div style="margin:auto;">
+      <div style="margin:auto; width:30%;">
          <h1> Search Employee </h1>
          <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
@@ -57,7 +57,7 @@ pg_close($db_connection);
                   <table>
                      <?php
                      if($_SERVER["REQUEST_METHOD"] == "POST"){
-                        if(!$result == true){
+                        if(!$result == false){
                            echo "<tr>";
                            echo "<th> Namn </td>";
                            echo "<th> Adress </td>";
