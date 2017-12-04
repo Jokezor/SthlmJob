@@ -52,16 +52,16 @@ $user_name = "";   $user_address = "";   $user_mail = "";
 	<input type="text" id="name" name="Name" maxlength="45" size="30%" value="<?php echo $user_name;?>" placeholder="Namn" required/>
       </td>
       <td>
-	<input type="text" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress" required/>
+	<input type="text" id="address" name="Address" maxlength="90" size="30%" value="<?php echo $user_address;?>" placeholder="Adress" required/>
       </td>
       <td>
   <input type="email" id="mail" name="Mail" maxlength="90" size="30%" value="<?php echo $user_mail;?>" placeholder="Mail Adress" required/>
       </td>
       <td>
-  <input type="password" id="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" required/>
+  <input type="password" id="password" name="Password" maxlength="90" size="30%" placeholder="Lösenord" oninput="checkIfPasswordValid(this)" required/>
       </td>
       <td>
-  <input type="password" id="password2" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord" oninput="check(this)" required/>
+  <input type="password" id="password2" name="Password2" maxlength="90" size="30%" placeholder="Upprepa Lösenord" oninput="checkIfPasswordsEqual(this)" required/>
       </td>
   </tr>
   <tr>
@@ -72,7 +72,7 @@ $user_name = "";   $user_address = "";   $user_mail = "";
       <td>
       </td>
       <td>
-         <input type="file" name="fileToUpload" id="fileToUpload" required/>
+         <input type="file" id="fileToUpload" name="fileToUpload" required/>
       </td>
       <td>
 	<input type="submit" value="Ladda upp profil och registrera" />

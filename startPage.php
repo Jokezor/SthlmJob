@@ -1,3 +1,6 @@
+<!-- This script needs to be at the top -->
+<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
+
 <!DOCTYPE html>
 <html lang="se">
 
@@ -63,7 +66,7 @@
   </div>
 </div>
 
-<script>
+<script language='javascript' type='text/javascript'>
 var email = document.getElementById("mail");
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
@@ -85,7 +88,28 @@ email.addEventListener("input", function (event) {
     }
 </script>
 
-<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
+
+<script language='javascript' type='text/javascript'>
+    function checkIfPasswordValid(input) {
+      var numbers = /[0-9]/g;
+      var lowerCaseLetters = /[a-z]/g;
+      var upperCaseLetters = /[A-Z]/g;
+
+      if (input.value.length < 8) {
+         input.setCustomValidity('Minst åtta tecken');
+      }
+      else if(!input.value.match(numbers)) {
+         input.setCustomValidity('Minst en siffra');
+      }
+      else if(!input.value.match(lowerCaseLetters) && !input.value.match(upperCaseLetters)) {
+         input.setCustomValidity('Minst en bokstav');
+      }
+      else{
+      // input is valid -- reset the error message
+      input.setCustomValidity('');
+      }
+    }
+</script>
 
 </body>
 </html>
