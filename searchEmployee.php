@@ -13,12 +13,12 @@
    $search_mail = htmlentities($_POST['Mail']);
 
     // Prepare a query for execution
-   $result = pg_prepare($dbconn, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
+   $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
    if(!$result){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($dbconn, "my_query", $search_name);
+   $result = pg_execute($db_connection, "my_query", array($search_name));
    if(!$result){
       exit("query execute error");
    }
@@ -27,8 +27,8 @@
       echo "Namn: $row[0]  Adress: $row[1]   Email: $row[2]";
       echo "<br />\n";
    }
-}
    pg_free_result($result);
+}
 ?>
 
 
