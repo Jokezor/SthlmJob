@@ -69,7 +69,7 @@
 var email = document.getElementById("mail");
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("nåt slags felmeddelande");
+    email.setCustomValidity("Ogiltig mailadress");
   } else {
     email.setCustomValidity("");
   }

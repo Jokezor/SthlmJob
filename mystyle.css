@@ -305,7 +305,7 @@ input {
 
 }
 
-input[type=text],[type=password]{
+input[type=text],[type=password],[type=email]{
 	padding: 12px 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -330,6 +330,9 @@ input[type=submit]:hover {
     background-color: #ab3737;
 }
 
-input:valid {
-  border: 2px solid green;
+input[type=text]:valid,[type=password]:valid,[type=email]:valid {
+  border: 3px solid #0A920A;
+}
+input[type=file]:valid {
+
 }
