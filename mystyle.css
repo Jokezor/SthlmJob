@@ -310,7 +310,7 @@ input[type=text],[type=password],[type=email]{
     border: 3px solid #ccc;
     border-radius: 4px;
 	width: 95%;
-	margin: auto;
+	margin: 2px;
 }
 
 
@@ -322,7 +322,7 @@ input[type=submit]{
 	-moz-border-radius: 3px;
 	cursor: pointer;
 	width: 95%;
-	margin:  5px;
+	margin: 5ßpx;
 }
 
 input[type=submit]:hover {
