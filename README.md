@@ -2,7 +2,7 @@
 
 What to do?
 
-
+ - Blir fel när man väljer en för stor fil.
  - Be able to insert CV and linkedin into S3. Able to authorize with linkedin
  - Get CV and linkedin and pass it to TextKernel or a serivce like TK
  - Get data from TK or likewise service and pass to the profile of that person.
