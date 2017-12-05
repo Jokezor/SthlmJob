@@ -139,7 +139,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    ///   echo "ASDFGHJKL";
    //   return false;
    //}
-   if(array_key_exists('fileToUpload', $_FILES)){
+   if(!array_key_exists('fileToUpload', $_FILES)){
       echo "asd";
       return false;
    }
