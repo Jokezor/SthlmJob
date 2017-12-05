@@ -149,6 +149,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    }
    /* Allow only certain file formats */
    $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
+   echo "filetype:  " . $filetype;
    if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
    && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps" && $fileType != "png" && $fileType != "icloud") {
        return false;
