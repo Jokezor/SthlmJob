@@ -135,24 +135,27 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
       return false;
    }
    /* Is file chosen */
-   if(empty($_FILES["fileToUpload"]["name"])){
-      echo "ASDFGHJKL";
+   //if(empty($_FILES["fileToUpload"]["name"])){
+   ///   echo "ASDFGHJKL";
+   //   return false;
+   //}
+   if(array_key_exists('fileToUpload', $_FILES)){
+      echo "asd";
       return false;
    }
-   /* Check file size */
-   if(!isset($_FILES["fileToUpload"]["size"])){
-      echo "QWERTYUIO";
+   if($_FILES['fileToUpload']['error'] !== UPLOAD_ERR_OK) {
+      echo "qwe";
+      return false;
    }
-
-   echo $_FILES['fileToUpload']['error'];
 
    //echo $_FILES["fileToUpload"]["size"];
    if ($_FILES["fileToUpload"]["size"] > 2000000) {
+      echo "rty";
       return false;
    }
    /* Allow only certain file formats */
    $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
-   echo "filetype:  " . $fileType;
+   //echo "filetype:  " . $fileType;
    if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
    && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps" && $fileType != "png" && $fileType != "icloud") {
        return false;
