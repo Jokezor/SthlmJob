@@ -143,7 +143,10 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    if(!isset($_FILES["fileToUpload"]["size"])){
       echo "QWERTYUIO";
    }
-   echo $_FILES["fileToUpload"]["size"];
+
+   echo $_FILES['file']['error'];
+
+   //echo $_FILES["fileToUpload"]["size"];
    if ($_FILES["fileToUpload"]["size"] > 2000000) {
       return false;
    }
