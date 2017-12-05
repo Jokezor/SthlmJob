@@ -136,9 +136,14 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    }
    /* Is file chosen */
    if(empty($_FILES["fileToUpload"]["name"])){
+      echo "ASDFGHJKL";
       return false;
    }
    /* Check file size */
+   if(!isset($_FILES["fileToUpload"]["size"])){
+      echo "QWERTYUIO";
+   }
+   echo $_FILES["fileToUpload"]["size"];
    if ($_FILES["fileToUpload"]["size"] > 2000000) {
       return false;
    }
