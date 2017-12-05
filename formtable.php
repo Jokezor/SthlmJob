@@ -33,10 +33,12 @@ $user_name = "";   $user_address = "";   $user_mail = "";
          } else {
             echo "Error adding user to database";
          }
-      } else {
+      }
+      else {
          echo "Error uploading CV";
       }
-   } else {
+   }
+   else {
       /* print error messages */
       include "checkFormEntries.php";
    }
@@ -143,7 +145,7 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    /* Allow only certain file formats */
    $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);
    if($fileType != "doc" && $fileType != "docx" && $fileType != "pdf"
-   && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps") {
+   && $fileType != "rtf" && $fileType != "txt" && $fileType != "odt" && $fileType != "wps" && $fileType != "png") {
        return false;
    }
 

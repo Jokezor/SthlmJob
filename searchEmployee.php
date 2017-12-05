@@ -56,13 +56,13 @@ pg_close($db_connection);
                <div>
                   <table>
                      <?php
+                     echo "<tr>";
+                     echo "<th> Namn </td>";
+                     echo "<th> Adress </td>";
+                     echo "<th> Email </td>";
+                     echo "</tr>";
                      if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(!$result == false){
-                           echo "<tr>";
-                           echo "<th> Namn </td>";
-                           echo "<th> Adress </td>";
-                           echo "<th> Email </td>";
-                           echo "</tr>";
                            while ($row = pg_fetch_row($result)){
                               echo "<tr>";
                               echo "<td> $row[0] </td>";
@@ -81,3 +81,7 @@ pg_close($db_connection);
    </div>
 </body>
 </html>
+
+<?php
+   pg_free_result($result);
+?>
