@@ -7,23 +7,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
    $user_password = ($_POST['Password']);
    $user_password2 = ($_POST['Password2']);
 
-   /* Is file chosen */
-   if(empty($_FILES["fileToUpload"]["name"])){
+   if(!array_key_exists('fileToUpload', $_FILES)){
       ?>
       <script>
-         document.getElementById('fileError').innerHTML = "Välj en fil att ladda upp";
+         document.getElementById('fileError').innerHTML = "Otillåten fil";
       </script>
       <?php
    }
-   /* Check file size */
-   else if ($_FILES["fileToUpload"]["size"] > 2000000) {
+   else if($_FILES['fileToUpload']['error'] !== UPLOAD_ERR_OK) {
       ?>
       <script>
-         document.getElementById('fileError').innerHTML = "Filen är för stor";
+         document.getElementById('fileError').innerHTML = "fel 2";
       </script>
       <?php
    }
 
+   //echo $_FILES["fileToUpload"]["size"];
+   else if($_FILES["fileToUpload"]["size"] > 2000000) {
+      ?>
+      <script>
+         document.getElementById('fileError').innerHTML = "För stor fil";
+      </script>
+      <?php
+   }
    /* Allow certain file formats */
    else{
       $fileType = pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION);

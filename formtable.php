@@ -134,23 +134,15 @@ function validEntries($db_connection, $name, $address, $mail, $password, $passwo
    if(pg_num_rows($result)!=0){
       return false;
    }
-   /* Is file chosen */
-   //if(empty($_FILES["fileToUpload"]["name"])){
-   ///   echo "ASDFGHJKL";
-   //   return false;
-   //}
+
+   /* FILE */
    if(!array_key_exists('fileToUpload', $_FILES)){
-      echo "asd";
       return false;
    }
    if($_FILES['fileToUpload']['error'] !== UPLOAD_ERR_OK) {
-      echo "qwe";
       return false;
    }
-
-   //echo $_FILES["fileToUpload"]["size"];
    if ($_FILES["fileToUpload"]["size"] > 2000000) {
-      echo "rty";
       return false;
    }
    /* Allow only certain file formats */
