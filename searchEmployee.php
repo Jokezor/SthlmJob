@@ -71,6 +71,7 @@ pg_close($db_connection);
                               echo "</tr>";
                            }
                         }
+                        pg_free_result($result);
                      }
                      ?>
                   </table>
@@ -81,7 +82,3 @@ pg_close($db_connection);
    </div>
 </body>
 </html>
-
-<?php
-   pg_free_result($result);
-?>
