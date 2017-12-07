@@ -1,0 +1,68 @@
+--select
+--SELECT * FROM users;
+--SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
+--ALTER TABLE users IDENTITY(1, 1);
+--insert into users (name, address, email) values ('Hejtest', 'address', 'asdf');
+--select column_name, data_type, character_maximum_length
+--from INFORMATION_SCHEMA.COLUMNS where table_name = 'users';
+--DROP TABLE person;
+CREATE TABLE person
+(
+  userid            INT REFERENCES users (id) PRIMARY KEY,
+  firstname         VARCHAR(30) NOT NULL,
+  lastname          VARCHAR(30) NOT NULL,
+  title             VARCHAR(50),
+  nationality       VARCHAR(50),
+  birthdate         DATE,
+  salutation        VARCHAR(50),
+  driverslicense    VARCHAR(50),
+  telephonenumber   VARCHAR(25),
+  mobilenumber      VARCHAR(20),
+  email             VARCHAR(30),
+  streetname        VARCHAR(50),
+  streetnumber      INT,
+  postcode          INT,
+  city              VARCHAR(40),
+  region            VARCHAR(50),
+  country           VARCHAR(40),
+  url               VARCHAR(100)
+);
+
+CREATE TABLE cvsummary
+(
+  userid                  INT REFERENCES users (id) PRIMARY KEY,
+  cvtitle                 VARCHAR(40),
+  yearsofexperience       INT,
+  currentposition         VARCHAR(50),
+  currentemployer         VARCHAR(50),
+  last3experiences        VARCHAR(300),
+  highesteducationlevel   VARCHAR(30),
+  salaryrange             VARCHAR(30),
+  candidatestatus         VARCHAR(30),
+  availability            VARCHAR(30),
+  cvcomment               VARCHAR(500),
+  pictureextracted        BOOL,
+  permissiontostore       BOOL
+)
+CREATE TABLE education
+(
+  educationid         INT IDENTITY (1,1) PRIMARY KEY,
+  userid              INT REFERENCES users (id),
+  educationname       VARCHAR(100),
+  diplomaobtained     VARCHAR(10),
+  nameofinstitution   VARCHAR(60),
+  degreedirection     VARCHAR(50),
+  gradepointaverage   FLOAT,
+  startdate           DATE,
+  enddate             DATE
+)
+CREATE TABLE workexperience
+(
+  workexperienceid   INT IDENTITY (1,1) PRIMARY KEY,
+  userid             INT REFERENCES users (id),
+  positiontitle      VARCHAR(50),
+  employer           VARCHAR(50),
+  startdate          DATE,
+  enddate            DATE,
+  description        VARCHAR(1000)
+);
