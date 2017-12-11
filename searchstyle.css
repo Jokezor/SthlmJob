@@ -75,9 +75,10 @@ input[type=file]:valid {
 }
 
 
-#Searchforusers{
-  margin:auto;
+.Searchforusers{
   width:30%;
   text-align: center;
+  display: block;
+	float: right;
 
 }
