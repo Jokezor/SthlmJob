@@ -94,7 +94,8 @@ function showHint(str) {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      xmlfunction(this);
+      document.getElementById("txtHint").innerHTML = xhttp.responseText;
+      //xmlfunction(this);
     }
   };
   xhttp.open("GET", "searchSuggestions.php?q="+str, true);
