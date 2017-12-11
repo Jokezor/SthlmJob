@@ -94,11 +94,18 @@ function showHint(str) {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
+      xmlfunction(this);
     }
   };
   xhttp.open("GET", "searchSuggestions.php?q="+str, true);
   xhttp.send();
+}
+</script>
+<script>
+function xmlfunction(xml){
+   var xmlDoc = xml.responseXML;
+   var word1 = xmlDoc.getElementsByTagName("MATCHINGWORDS").childNodes[0].nodeValue;
+   document.getElementById("txtHint").innerHTML = word1;
 }
 </script>
 

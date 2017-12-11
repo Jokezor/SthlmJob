@@ -30,30 +30,16 @@
       }
    }
 
-   /* lookup all hints from array if $q is different from "" */
-   /*
-   if ($q !== "") {
-       $q = strtolower($q);
-       $len=strlen($q);
-       foreach($arr as $name) {
-           if (stristr($q, substr($name, 0, $len))) {
-               if ($hint === "") {
-                   $hint = $name;
-               } else {
-                   $hint .= ", $name";
-               }
-           }
-       }
-   }*/
-
    /* Output "no suggestion" if no hint was found or output correct values */
    if($sugg === ""){
       echo "No suggestions\n";
    }
    else{
+      echo "<MATCHINGWORDS>";
       for($i = 0; $i < count($sugg); $i++){
-         echo $sugg[$i] . " ";
+         echo "<WORD> " . $sugg[$i] . " </WORD>";
       }
+      echo "</MATCHINGWORDS>";
    }
    fclose($wordfile);
 ?>
