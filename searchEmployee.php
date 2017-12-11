@@ -104,7 +104,8 @@ function showHint(str) {
 <script>
 function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
-   var word1 = xmlDoc.getElementsByTagName("MATCHINGWORDS").childNodes[0].nodeValue;
+   var x = xmlDoc.getElementsByTagName("MATCHINGWORDS");
+   var word1 = x[0].getElementsByTagName("MATCHINGWORDS").childNodes[0].nodeValue;
    document.getElementById("txtHint").innerHTML = word1;
 }
 </script>
