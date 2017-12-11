@@ -44,7 +44,7 @@ pg_close($db_connection);
 </head>
 <body>
    <div>
-      <div>
+      <div class ="Searchforusers">
          <h1> Search Employee </h1>
          <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">

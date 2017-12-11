@@ -73,3 +73,10 @@ input[type=text]:valid,[type=password]:valid,[type=email]:valid {
 input[type=file]:valid {
 
 }
+
+
+.Searchforusers{
+  margin:auto;
+  width:30%;
+
+}
