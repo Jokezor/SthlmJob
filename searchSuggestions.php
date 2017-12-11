@@ -52,7 +52,7 @@
       echo "No suggestions\n";
    }
    else{
-      for($i = 0; $i < count($sugg[]); $i++){
+      for($i = 0; $i < count($sugg); $i++){
          echo $sugg[$i];
       }
    }
