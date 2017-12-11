@@ -48,7 +48,6 @@ pg_close($db_connection);
          <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                <input type="text" id="name" name="Name" size="30%" value="<?php echo $search_name;?>" placeholder="Namn" />
-               <input type="email" id="email" name="Mail" size="30%" value="<?php echo $search_mail;?>" placeholder="Email" />
                <input type="submit" value="Sök" />
             </form>
             <div>
