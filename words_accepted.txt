@@ -1,27 +1,11 @@
-controller
-styrekonom, ekonomichef, ekonomiövervakare, kamrer, bokhållare
-ekonomiassistent
-räkenskapsförare
+controller, styrekonom, ekonomichef, ekonomiövervakare, kamrer, bokhållare
+ekonomiassistent, räkenskapsförare
 redovisningsekonom
-
 redovisningsansvarig
-
 redovisningschef
-
-ekonomichef
-controller
-cfo
-chief financial officer
-business controller
-
-financial controller
-
+cfo, chief_financial_officer
+business_controller
+financial_controller
 koncernredovisningsekonom
-
 koncernredovisningschef
-
-vd
-verkställande direktör, direktör, chef, föreståndare
-
-ceo
-vd, chef, direktör, verkställande direktör
+vd, ceo, verkställande_direktör, direktör, chef, föreståndare
