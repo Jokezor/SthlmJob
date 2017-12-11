@@ -7,10 +7,9 @@
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
- $search_name = ""; $search_mail = "";
+ $search_name = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $search_name = htmlentities($_POST['Name']);
-   $search_mail = htmlentities($_POST['Mail']);
 
     // Prepare a query for execution
    $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
