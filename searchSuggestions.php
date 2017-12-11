@@ -26,6 +26,7 @@
          foreach($wordsInLine as $word){
             if(stristr($q, substr($word, 0, $len))){
                $sugg[] = $wordsInLine[0];
+               break;
             }
          }
       }
@@ -53,7 +54,7 @@
    }
    else{
       for($i = 0; $i < count($sugg); $i++){
-         echo $sugg[$i];
+         echo $sugg[$i] . " ";
       }
    }
    fclose($wordfile);
