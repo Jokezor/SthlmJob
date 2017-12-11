@@ -47,8 +47,7 @@ pg_close($db_connection);
          <h1> Search Employee </h1>
          <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-               <input type="text" id="name" name="Name" value="<?php echo $search_name;?>" placeholder="Namn" />
-
+               <input type="text" id="name" name="Name" value="<?php echo $search_name;?>" placeholder="Namn" onkeyup="showHint(this.value)"/>
                <input type="submit" value="Sök" />
             </form>
 
