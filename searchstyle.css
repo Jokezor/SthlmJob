@@ -79,6 +79,6 @@ input[type=file]:valid {
   width:30%;
   text-align: center;
   display: block;
-
+	float: center;
 
 }
