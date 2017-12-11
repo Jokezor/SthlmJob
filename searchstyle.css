@@ -80,5 +80,12 @@ input[type=file]:valid {
 	text-align:center;
   height: 100%;
   background-color: #7F7F7F;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
