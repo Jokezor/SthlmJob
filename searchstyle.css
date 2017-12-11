@@ -78,6 +78,7 @@ input[type=file]:valid {
 .Searchforusers{
   width:100%;
 	text-align:center;
-  
+  height: 100%;
+  background-color: #7F7F7F;
 
 }
