@@ -6,7 +6,7 @@
    $arr[] = "cto";
    $arr[] = "ceo";
 
-   $wordfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+   $wordfile = fopen("words_accepted.txt", "r") or die("Unable to open file!");
 
 
    /* get the q parameter from URL */
