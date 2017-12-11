@@ -68,7 +68,7 @@ input[type=submit]:hover {
 }
 
 input[type=text]:valid,[type=password]:valid,[type=email]:valid {
-  border: 3px solid #157915;
+  border: 3px solid #092B51;
 }
 input[type=file]:valid {
 
