@@ -6,12 +6,33 @@
    $arr[] = "cto";
    $arr[] = "ceo";
 
+   $wordfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+
+
    /* get the q parameter from URL */
    $q = $_REQUEST["q"];
 
-   $hint = "";
+   $sugg[] = "";
+
+   if ($q !== "") {
+      $q = strtolower($q);
+      $len=strlen($q);
+
+      while(!feof($wordfile)) {
+         $line = fgets($wordfile);
+         $wordsInLine = explode(", ", $line);
+
+
+         foreach($wordsInLine as $word){
+            if(stristr($q, substr($word, 0, $len))){
+               $sugg[] = $wordsInLine[0];
+            }
+         }
+      }
+   }
 
    /* lookup all hints from array if $q is different from "" */
+   /*
    if ($q !== "") {
        $q = strtolower($q);
        $len=strlen($q);
@@ -24,10 +45,17 @@
                }
            }
        }
-   }
+   }*/
 
-   // Output "no suggestion" if no hint was found or output correct values
-   echo $hint === "" ? "no suggestion" : $hint;
-//}
+   /* Output "no suggestion" if no hint was found or output correct values */
+   if($sugg === ""){
+      echo "No suggestions\n";
+   }
+   else{
+      for($i = 0; $i < count($sugg[]); $i++){
+         echo $sugg[$i];
+      }
+   }
+   fclose($wordfile);
 
 ?>
