@@ -1,6 +1,4 @@
 <?php
-if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
-   strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
 
    /* Array with names */
    $arr[] = "cto";
@@ -58,5 +56,4 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED
       }
    }
    fclose($wordfile);
-}
 ?>
