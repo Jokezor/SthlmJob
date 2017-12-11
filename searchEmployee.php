@@ -52,8 +52,10 @@ pg_close($db_connection);
 
                <input type="submit" value="Sök" />
             </form>
+
             <div>
                <h2> Sökresultat</h2>
+               <p>Suggestions: <span id="txtHint"></span></p>
                <div>
                   <table>
                      <?php
@@ -81,5 +83,26 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
+
+
+
+<script>
+function showHint(str) {
+  var xhttp;
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "gethint.php?q="+str, true);
+  xhttp.send();
+}
+</script>
+
 </body>
 </html>
