@@ -78,13 +78,6 @@ input[type=file]:valid {
 .Searchforusers{
   width:100%;
 	text-align:center;
-  background-color: #1D2434;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-attachment: relative;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+  
 
 }
