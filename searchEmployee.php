@@ -40,7 +40,7 @@ pg_close($db_connection);
 <head>
    <title> Search </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
-   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+   <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
 </head>
 <body>
    <div>
