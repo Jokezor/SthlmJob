@@ -12,24 +12,32 @@
 <html>
 <head>
    <title> Search </title>
-   <link rel="stylesheet" type="text/css" href="searchstyle.css">
+   <link rel="stylesheet" type="text/css" href="teststyle.css" href="searchstyle.css">
 </head>
 <body>
    <div>
       <div class ="Searchforusers">
          <h1> Search Employee </h1>
          <div>
-            <form action="/searchEmployee.php" method="POST">
-               <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
-               <input type="submit" value="Sök" />
-            </form>
-            <ul id="myUL">
-              <li><a href="#">Adele</a></li>
-              <li><a href="#">Agnes</a></li>
-              <li><a href="#">Billy</a></li>
-              <li><a href="#">Bob</a></li>
-            </ul>
+            <div>
+               <form action="/searchEmployee.php" method="POST">
+                  <div style="display:inline-block;">
+                     <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
+                     <div class="dropdown-content">
+                        <ul id="myUL">
+                          <li><a href="#">Adele</a></li>
+                          <li><a href="#">Agnes</a></li>
+                          <li><a href="#">Billy</a></li>
+                          <li><a href="#">Bob</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div >
+                     <input type="submit" value="Sök" />
+                  </div>
+               </form>
 
+            </div>
             <div>
                <h2> Sökresultat</h2>
                <p>Suggestions: <span id="txtHint"></span></p>
@@ -65,7 +73,7 @@ function showHint(str) {
 <script>
 function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
-   //var x = xmlDoc.getElementsByTagName("MATCHINGWORDS");
+   //vwar x = xmlDoc.getElementsByTagName("MATCHINGWORDS");
    var word1 = x[0].getElementsByTagName("MATCHINGWORDS").childNodes[0].nodeValue;
    document.getElementById("txtHint").innerHTML = word1;
 }

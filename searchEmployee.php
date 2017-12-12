@@ -50,6 +50,19 @@ pg_close($db_connection);
                <input type="text" id="name" name="Name" value="<?php echo $search_name;?>" placeholder="Namn" onkeyup="showHint(this.value)"/>
                <input type="submit" value="Sök" />
             </form>
+            <div class="ui dropdown">
+              <input type="hidden" name="gender">
+              <i class="dropdown icon"></i>
+              <div class="default text">Gender</div>
+              <div class="menu">
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="female">Female</div>
+              </div>
+            </div>
+            <script>
+            $('.ui.dropdown')
+            .dropdown();
+            </script>
 
             <div>
                <h2> Sökresultat</h2>
@@ -94,7 +107,6 @@ function showHint(str) {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      //document.getElementById("txtHint").innerHTML = xhttp.responseText;
       xmlfunction(this);
     }
   };
@@ -106,7 +118,6 @@ function showHint(str) {
 function xmlfunction(xml){
    var responseString = xml.responseText;
    document.getElementById("txtHint").innerHTML = responseString;
-
 }
 </script>
 
