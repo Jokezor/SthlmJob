@@ -59,6 +59,7 @@ pg_close($db_connection);
                 <div class="item" data-value="female">Female</div>
               </div>
             </div>
+            <script src="node_modules/semantic-ui-dropdown/dropdown.min.css"></script>
             <script>
             $('.ui.dropdown')
             .dropdown();
