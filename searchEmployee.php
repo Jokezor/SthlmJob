@@ -41,6 +41,7 @@ pg_close($db_connection);
    <title> Search </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
+   <script src="Jquery.min.js"></script>
 </head>
 <body>
    <div>
