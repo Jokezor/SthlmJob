@@ -61,7 +61,8 @@ pg_close($db_connection);
                 <div class="item" data-value="female">Female</div>
               </div>
             </div>
-            
+
+            <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
             <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
             <script>
                $(document).ready(function(){
