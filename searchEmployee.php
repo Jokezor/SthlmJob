@@ -41,7 +41,7 @@ pg_close($db_connection);
    <title> Search </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
-   <script src="jquery-3.2.1.js"></script>
+   <script src="Jquery-3.2.1.js"></script>
 </head>
 <body>
    <div>
@@ -61,10 +61,13 @@ pg_close($db_connection);
                 <div class="item" data-value="female">Female</div>
               </div>
             </div>
+            
             <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
             <script>
-            $('.ui.dropdown')
-            .dropdown();
+               $(document).ready(function(){
+                  $('.ui.dropdown')
+                  .dropdown();
+               });
             </script>
 
             <div>

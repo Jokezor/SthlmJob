@@ -13,6 +13,7 @@
 <head>
    <title> Search </title>
    <link rel="stylesheet" type="text/css" href="teststyle.css" href="searchstyle.css">
+   <script src="otherFiles/jquery-3.2.1.js"></script>
 </head>
 <body>
    <div>
@@ -31,6 +32,13 @@
                           <li><a href="#">Bob</a></li>
                         </ul>
                      </div>
+                     <script>
+
+                         $("input").click(function(){
+                             $("a").hide();
+                         });
+                  
+                     </script>
                   </div>
                   <div >
                      <input type="submit" value="Sök" />
