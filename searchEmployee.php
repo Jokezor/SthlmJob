@@ -52,24 +52,7 @@ pg_close($db_connection);
                <input type="text" id="name" name="Name" value="<?php echo $search_name;?>" placeholder="Namn" onkeyup="showHint(this.value)"/>
                <input type="submit" value="Sök" />
             </form>
-            <div class="ui dropdown">
-              <input type="hidden" name="gender">
-              <i class="dropdown icon"></i>
-              <div class="default text">Gender</div>
-              <div class="menu">
-                <div class="item" data-value="male">Male</div>
-                <div class="item" data-value="female">Female</div>
-              </div>
-            </div>
 
-            <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
-            <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
-            <script>
-               $(document).ready(function(){
-                  $('.ui.dropdown')
-                  .dropdown();
-               });
-            </script>
 
             <div>
                <h2> Sökresultat</h2>
@@ -101,6 +84,27 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
+
+   <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
+   <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $('.ui.dropdown')
+         .dropdown();
+      });
+   </script>
+
+   <div class="ui dropdown">
+     <input type="hidden" name="gender">
+     <i class="dropdown icon"></i>
+     <div class="default text">Gender</div>
+     <div class="menu">
+      <div class="item" data-value="male">Male</div>
+      <div class="item" data-value="female">Female</div>
+     </div>
+   </div>
+
+
 
 
 
