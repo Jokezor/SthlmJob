@@ -1,3 +1,4 @@
+<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
 
 <!DOCTYPE html>
 <html lang="se">
@@ -5,7 +6,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
 <title>Intro</title>
 </head>
 
