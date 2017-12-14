@@ -1,4 +1,4 @@
-<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js"></script>
+<script type="text/javascript" src="zenscroll-latest/zenscroll-min.js">/* Needs to be at the very top */</script>
 
 <!DOCTYPE html>
 <html lang="se">
