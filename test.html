@@ -12,40 +12,27 @@
 <html>
 <head>
    <title> Search </title>
-   <link rel="stylesheet" type="text/css" href="teststyle.css" href="searchstyle.css">
-   <script src="otherFiles/jquery-3.2.1.js"></script>
+   <link rel="stylesheet" type="text/css" href="searchstyle.css">
+   <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
+   <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
+
+   <script src="jquery-3.2.1.js"></script>
+
+      <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
+      <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
+
 </head>
 <body>
    <div>
       <div class ="Searchforusers">
          <h1> Search Employee </h1>
          <div>
-            <div>
-               <form action="/searchEmployee.php" method="POST">
-                  <div style="display:inline-block;">
-                     <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
-                     <div class="dropdown-content">
-                        <ul id="myUL">
-                          <li><a href="#">Adele</a></li>
-                          <li><a href="#">Agnes</a></li>
-                          <li><a href="#">Billy</a></li>
-                          <li><a href="#">Bob</a></li>
-                        </ul>
-                     </div>
-                     <script>
+            <form action="/searchEmployee.php" method="POST">
+               <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
+               <input type="submit" value="Sök" />
+            </form>
 
-                         $("input").click(function(){
-                             $("a").hide();
-                         });
-                  
-                     </script>
-                  </div>
-                  <div >
-                     <input type="submit" value="Sök" />
-                  </div>
-               </form>
 
-            </div>
             <div>
                <h2> Sökresultat</h2>
                <p>Suggestions: <span id="txtHint"></span></p>
@@ -60,6 +47,31 @@
 
 
 
+   <div class="ui dropdown">
+     <input type="hidden" name="gender">
+     <i class="dropdown icon"></i>
+     <div class="default text">Gender</div>
+     <div class="menu">
+      <div class="item" data-value="male">Male</div>
+      <div class="item" data-value="female">Female</div>
+     </div>
+   </div>
+
+   <div class="ui three buttons">
+     <button class="ui active button">One</button>
+     <button class="ui button">Two</button>
+     <button class="ui button">Three</button>
+   </div>
+
+
+   <script>
+      $(document).ready(function(){
+         $('.ui.dropdown')
+         .dropdown();
+      });
+   </script>
+
+
 <script>
 function showHint(str) {
   var xhttp;
@@ -70,7 +82,6 @@ function showHint(str) {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      //document.getElementById("txtHint").innerHTML = xhttp.responseText;
       xmlfunction(this);
     }
   };
@@ -80,10 +91,8 @@ function showHint(str) {
 </script>
 <script>
 function xmlfunction(xml){
-   var xmlDoc = xml.responseXML;
-   //vwar x = xmlDoc.getElementsByTagName("MATCHINGWORDS");
-   var word1 = x[0].getElementsByTagName("MATCHINGWORDS").childNodes[0].nodeValue;
-   document.getElementById("txtHint").innerHTML = word1;
+   var responseString = xml.responseText;
+   document.getElementById("txtHint").innerHTML = responseString;
 }
 </script>
 
