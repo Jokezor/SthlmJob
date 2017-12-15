@@ -39,7 +39,7 @@ pg_close($db_connection);
 <html>
 <head>
    <title> Search </title>
-   <link rel="stylesheet" type="text/css" href="searchstyle.css">
+   <!--<link rel="stylesheet" type="text/css" href="searchstyle.css"> -->
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <script src="jquery-3.2.1.min.js"></script>
@@ -47,17 +47,44 @@ pg_close($db_connection);
    <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
 </head>
 <body>
-   <div>
-      <div class ="Searchforusers">
-         <h1> Search Employee </h1>
+      <div>
          <div>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-               <input type="text" id="name" name="Name" value="<?php echo $search_name;?>" placeholder="Namn" onkeyup="showHint(this.value)"/>
-               <input type="submit" value="Sök" />
-            </form>
-
-
+            <h1 style="text-align:center;"> Search Employee </h1>
             <div>
+               <!-- <form action="searchEmployee.php" method="POST">
+                  <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
+                  <input type="submit" value="Sök" />
+               </form>
+               -->
+               <form action="#" method="POST">
+                  <div>
+                     <div style="width:30%; margin:auto;">
+                        <div class="ui form">
+                            <div class="two fields">
+                             <div class="field">
+                               <select multiple="" class="ui fluid search selection dropdown" name="keyword" onkeyup="showHint(this.value)">
+                                 <option value="">Select Country</option>
+                                 <option value="AF">Afghanistan</option>
+                                 <option value="AX">Åland Islands</option>
+                                 <option value="AL">Albania</option>
+                                 <option value="DZ">Algeria</option>
+                                 <option value="AS">American Samoa</option>
+                                 <option value="AD">Andorra</option>
+                                 <option value="AO">Angola</option>
+                                 <option value="AI">Anguilla</option>
+                                 <option value="AQ">Antarctica</option>
+                               </select>
+                             </div>
+                             <div class="field">
+                                <button class="fluid ui button" type="submit">Submit</button>
+                             </div>
+                           </div>
+                          </div>
+                      </div>
+                 </div>
+              </form>
+
+             <div>
                <h2> Sökresultat</h2>
                <p id="txtHint"></p>
                <div>
@@ -88,60 +115,47 @@ pg_close($db_connection);
       </div>
    </div>
 
-x
+
+
    <script>
       $(document).ready(function(){
          $('.ui.dropdown').dropdown();
       });
    </script>
 
-   <div class="ui dropdown">
-     <input type="hidden" name="gender">
-     <i class="dropdown icon"></i>
-     <div class="default text">Gender</div>
-     <div class="menu">
-      <div class="item" data-value="male">Male</div>
-      <div class="item" data-value="female">Female</div>
-     </div>
-   </div>
+   <script>
+   function showHint(str) {
+     var xhttp;
+     if (str.length == 0) {
+       document.getElementById("txtHint").innerHTML = ""; //slow?
+       return;
+     }
+     xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+         xmlfunction(this);
+       }
+     };
+     xhttp.open("GET", "searchSuggestions.php?q="+str, true);
+     xhttp.send();
+   }
+   </script>
+   <script>
+   function xmlfunction(xml){
+      var xmlDoc = xml.responseXML;
+      var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
 
-
-
-
-
-<script>
-function showHint(str) {
-  var xhttp;
-  if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = ""; //slow?
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      xmlfunction(this);
-    }
-  };
-  xhttp.open("GET", "searchSuggestions.php?q="+str, true);
-  xhttp.send();
-}
-</script>
-<script>
-function xmlfunction(xml){
-   var xmlDoc = xml.responseXML;
-   var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
-
-   document.getElementById("txtHint").innerHTML = ""; //slow? Remove elements before adding
-   if(allWords.hasChildNodes()){
-      for(var word = allWords.firstChild; word !== null; word = word.nextSibling) {
-         var node = document.createElement("SPAN");
-         var textnode = document.createTextNode(word.childNodes[0].nodeValue);
-         node.appendChild(textnode);
-         document.getElementById("txtHint").appendChild(node);
+      document.getElementById("txtHint").innerHTML = ""; //slow? Remove elements before adding
+      if(allWords.hasChildNodes()){
+         for(var word = allWords.firstChild; word !== null; word = word.nextSibling) {
+            var node = document.createElement("SPAN");
+            var textnode = document.createTextNode(word.childNodes[0].nodeValue);
+            node.appendChild(textnode);
+            document.getElementById("txtHint").appendChild(node);
+         }
       }
    }
-}
-</script>
+   </script>
 
 </body>
 </html>
