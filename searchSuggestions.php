@@ -1,9 +1,5 @@
 <?php
 
-   /* Array with names */
-   $arr[] = "cto";
-   $arr[] = "ceo";
-
    $wordfile = fopen("words_accepted.txt", "r") or die("Unable to open file!");
 
 
