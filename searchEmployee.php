@@ -133,9 +133,9 @@ function xmlfunction(xml){
    console.log(xml.responseText);
    var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS");
-   var word1 = allWords.childNodes[0];
+   var word1 = allWords[0].childNodes[0];
    console.log(word1);
-   
+
 }
 </script>
 
