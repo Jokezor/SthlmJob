@@ -130,10 +130,12 @@ function showHint(str) {
 function xmlfunction(xml){
    //var responseString = xml.responseText;
    //document.getElementById("txtHint").innerHTML = responseString;
-   var xmlDoc = xml.responseXML;
+   console.log(xml.responseText);
+   /*var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS");
    var word1 = allWords.childNodes[0];
    console.log(word1);
+   */
 }
 </script>
 
