@@ -15,6 +15,7 @@
    if ($q !== "") {
       $q = strtolower($q);
       $len=strlen($q);
+      $suggIndex = 0;
 
       while(!feof($wordfile)) {
          $line = fgets($wordfile);
@@ -23,7 +24,8 @@
 
          foreach($wordsInLine as $word){
             if(stristr($q, substr($word, 0, $len))){
-               $sugg[] = $wordsInLine[0];
+               $sugg[$suggIndex] = $wordsInLine[0];
+               $suggIndex += 1;
                break;
             }
          }
