@@ -28,6 +28,7 @@
             }
          }
       }
+      fclose($wordfile);
    }
 
    /* Output "no suggestion" if no hint was found or output correct values */
@@ -35,11 +36,13 @@
       echo "No suggestions\n";
    }
    else{
+      header("Content-type: text/xml");
+      echo "<?xml version="1.0" encoding="UTF-8"?>";
       echo "<MATCHINGWORDS>";
       for($i = 0; $i < count($sugg); $i++){
          echo "<WORD> " . $sugg[$i] . " </WORD>";
       }
       echo "</MATCHINGWORDS>";
    }
-   fclose($wordfile);
+
 ?>

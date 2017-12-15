@@ -42,7 +42,7 @@ pg_close($db_connection);
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
-   <script src="jquery-3.2.1.js"></script>
+   <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
    <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
 </head>
@@ -91,8 +91,7 @@ pg_close($db_connection);
 x
    <script>
       $(document).ready(function(){
-         $('.ui.dropdown')
-         .dropdown();
+         $('.ui.dropdown').dropdown();
       });
    </script>
 
@@ -129,8 +128,10 @@ function showHint(str) {
 </script>
 <script>
 function xmlfunction(xml){
-   var responseString = xml.responseText;
-   document.getElementById("txtHint").innerHTML = responseString;
+   //var responseString = xml.responseText;
+   //document.getElementById("txtHint").innerHTML = responseString;
+   var xmlDoc = xml.responseXML;
+   console.log(xmlDoc);
 }
 </script>
 
