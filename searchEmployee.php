@@ -59,7 +59,7 @@ pg_close($db_connection);
 
             <div>
                <h2> Sökresultat</h2>
-               <p id="txtHint"> Suggestions: </p>
+               <p id="txtHint"></p>
                <div>
                   <table>
                      <?php
@@ -113,7 +113,7 @@ x
 function showHint(str) {
   var xhttp;
   if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
+    document.getElementById("txtHint").innerHTML = ""; //slow?
     return;
   }
   xhttp = new XMLHttpRequest();
@@ -131,6 +131,7 @@ function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
 
+   document.getElementById("txtHint").innerHTML = ""; //slow? Remove elements before adding
    if(allWords.hasChildNodes()){
       for(var word = allWords.firstChild; word !== null; word = word.nextSibling) {
          var node = document.createElement("SPAN");
