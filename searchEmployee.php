@@ -9,7 +9,7 @@
  /* If input fields are populated, add a row to the Users table. */
  $search_name = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
-   $search_name = htmlentities($_POST['Name']);
+   $search_name = htmlentities($_POST['keyword']);
 
     // Prepare a query for execution
    $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
@@ -125,6 +125,7 @@ pg_close($db_connection);
 
    <script>
    function showHint(str) {
+   console.log("ASDheyyyyyyy");
      var xhttp;
      if (str.length == 0) {
        document.getElementById("txtHint").innerHTML = ""; //slow?
