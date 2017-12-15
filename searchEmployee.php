@@ -130,18 +130,19 @@ function showHint(str) {
 function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
-   var word1 = allWords.childNodes[0];
 
-   console.log(word1);
-   console.log(word1.childNodes[0].nodeValue);
+   for(var word = allWords.firstChild; word !== null; word = word.nextSibling) {
+
+      //var word1 = allWords.childNodes[0];
+      var node = document.createElement("SPAN");
+      var textnode = document.createTextNode(word.childNodes[0].nodeValue);
+      node.appendChild(textnode);
+      document.getElementById("txtHint").appendChild(node);
+   }
+   console.log(word);
+   console.log(word.childNodes[0].nodeValue);
    console.log(allWords);
    console.log(xmlDoc);
-/*
-   var node = document.createElement("SPAN");
-   var textnode = document.createTextNode(word1.nodeValue);
-   node.appendChild(textnode);
-   document.getElementById("txtHint").appendChild(node);
-*/
 }
 </script>
 
