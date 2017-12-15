@@ -129,11 +129,11 @@ function showHint(str) {
 <script>
 function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
-   var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS");
-   var word1 = allWords[0].childNodes[0];
+   var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
+   var word1 = allWords.childNodes[0];
 
    console.log(word1);
-   console.log(word1.nodeValue);
+   console.log(word1.childNodes[0].nodeValue);
    console.log(allWords);
    console.log(xmlDoc);
 /*
