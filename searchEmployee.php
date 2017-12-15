@@ -133,6 +133,7 @@ function xmlfunction(xml){
    var word1 = allWords[0].childNodes[0];
 
    console.log(word1);
+   console.log(word1.nodeValue);
    console.log(allWords);
    console.log(xmlDoc);
 /*
