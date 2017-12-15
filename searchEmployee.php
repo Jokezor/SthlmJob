@@ -59,7 +59,7 @@ pg_close($db_connection);
 
             <div>
                <h2> Sökresultat</h2>
-               <p>Suggestions: <span id="txtHint"></span></p>
+               <p id="txtHint"> Suggestions: </p>
                <div>
                   <table>
                      <?php
@@ -128,13 +128,14 @@ function showHint(str) {
 </script>
 <script>
 function xmlfunction(xml){
-   //var responseString = xml.responseText;
-   //document.getElementById("txtHint").innerHTML = responseString;
-   console.log(xml.responseText);
    var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS");
    var word1 = allWords[0].childNodes[0];
-   console.log(word1);
+
+   var node = document.createElement("SPAN");
+   var textnode = document.createTextNode(word1.nodeValue);
+   node.appendChild(textnode);
+   document.getElementById("txtHint").appendChild(node);
 
 }
 </script>
