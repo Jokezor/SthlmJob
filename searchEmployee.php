@@ -131,7 +131,7 @@ function xmlfunction(xml){
    var xmlDoc = xml.responseXML;
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS")[0];
 
-   if(allwords.hasChildNodes()){
+   if(allWords.hasChildNodes()){
       for(var word = allWords.firstChild; word !== null; word = word.nextSibling) {
          var node = document.createElement("SPAN");
          var textnode = document.createTextNode(word.childNodes[0].nodeValue);
