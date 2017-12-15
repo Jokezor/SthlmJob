@@ -132,11 +132,15 @@ function xmlfunction(xml){
    var allWords = xmlDoc.getElementsByTagName("MATCHINGWORDS");
    var word1 = allWords[0].childNodes[0];
 
+   console.log(word1);
+   console.log(allWords);
+   console.log(xmlDoc);
+/*
    var node = document.createElement("SPAN");
    var textnode = document.createTextNode(word1.nodeValue);
    node.appendChild(textnode);
    document.getElementById("txtHint").appendChild(node);
-
+*/
 }
 </script>
 
