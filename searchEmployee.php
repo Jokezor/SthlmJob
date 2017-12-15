@@ -51,18 +51,18 @@ pg_close($db_connection);
          <div>
             <h1 style="text-align:center;"> Search Employee </h1>
             <div>
-                <form action="searchEmployee.php" method="POST">
+               <!-- <form action="searchEmployee.php" method="POST">
                   <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
                   <input type="submit" value="Sök" />
                </form>
-               
+            -->
                <form action="#" method="POST">
                   <div>
                      <div style="width:30%; margin:auto;">
                         <div class="ui form">
                             <div class="two fields">
-                             <div class="required field">
-                               <select multiple="" class="ui fluid search selection dropdown" name="keyword" onkeyup="showHint(this.value)">
+                             <div class="field">
+                               <select multiple="" class="ui fluid search selection dropdown" name="keyword" onchange="showHint(this.value)" required>
                                  <option value="">Select Country</option>
                                  <option value="AF">Afghanistan</option>
                                  <option value="AX">Åland Islands</option>
