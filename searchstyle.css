@@ -91,15 +91,8 @@ input[type=file]:valid {
 }
 
 #Result{
-	width:100%;
-	text-align:center;
-	height: 100%;
-	background-color: #;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-attachment: relative;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
 }
