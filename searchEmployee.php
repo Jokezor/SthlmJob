@@ -9,9 +9,8 @@
  /* If input fields are populated, add a row to the Users table. */
  $search_words[] = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
-   $search_words = htmlentities($_POST['keywords']);
-   echo $search_words[0];
-   echo $search_words;
+   $search_word1 = htmlentities($_POST['keywords'][0]);
+   echo $search_word1;
 
     // Prepare a query for execution
    $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
@@ -19,7 +18,7 @@
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($search_name));
+   $result = pg_execute($db_connection, "my_query", array($search_words));
    if(!$result){
       exit("query execute error");
    }
@@ -63,8 +62,8 @@ pg_close($db_connection);
                      <div style="width:30%; margin:auto;">
                         <div class="ui form">
                             <div class="two fields">
-                             <div class="field">
-                               <select multiple="" class="ui fluid search selection dropdown" name="keywords[]" required>
+                             <div class="required field">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Ange Sökord</option>
                                  <option value="AF">Afghanistan</option>
                                  <option value="AX">Åland Islands</option>
