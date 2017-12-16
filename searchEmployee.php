@@ -7,9 +7,11 @@
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
- $search_name = "";
+ $search_words[] = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
-   $search_name = htmlentities($_POST['keyword']);
+   $search_words = htmlentities($_POST['keywords']);
+   echo $search_words[0];
+   echo $search_words;
 
     // Prepare a query for execution
    $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
@@ -62,8 +64,8 @@ pg_close($db_connection);
                         <div class="ui form">
                             <div class="two fields">
                              <div class="field">
-                               <select multiple="" class="ui fluid search selection dropdown" name="keyword" onchange="showHint(this.value)" required>
-                                 <option value="">Select Country</option>
+                               <select multiple="" class="ui fluid search selection dropdown" name="keywords[]" required>
+                                 <option value="">Ange Sökord</option>
                                  <option value="AF">Afghanistan</option>
                                  <option value="AX">Åland Islands</option>
                                  <option value="AL">Albania</option>
