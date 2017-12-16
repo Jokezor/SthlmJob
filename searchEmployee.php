@@ -106,7 +106,7 @@ pg_close($db_connection);
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                              -->
-                             <div class="field" style="width:11.8033937422%;">
+                             <div class="field" style="width:61.80339/3%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
