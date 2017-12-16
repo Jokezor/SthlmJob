@@ -93,8 +93,12 @@ pg_close($db_connection);
                              <div class="required field" style="width:61.80339/2%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
-                                 <option value="CR">Controller</option>
-                                 <option value="SEK">Styrekonom</option>
+                                 <option value="PGR">Programmering</option>
+                                 <option value="C">C</option>
+                                 <option value="C#">C#</option>
+                                 <option value="C++">C++</option>
+                                 <option value="PY">Python</option>
+                                 <option value="XCL">Excel</option>
                                </select>
                              </div>
                              <!--
