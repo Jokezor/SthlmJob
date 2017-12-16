@@ -62,7 +62,7 @@ pg_close($db_connection);
                      <div style="width:75%; margin:auto;">
                         <div class="ui form">
                             <div class="four fields">
-                             <div class="required field" style="width:61.80339/3%;">
+                             <div class="required field" style="width:30.901695%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Jobtitles</option>
                                  <option value="CR">Controller</option>
@@ -90,7 +90,14 @@ pg_close($db_connection);
                                  <option value="FORS">Föreståndare</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:61.80339/3%;">
+                             <div class="required field" style="width:30.901695%;">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <option value="">Geografiskt Område</option>
+                                 <option value="STHLM">Stockholm</option>
+                                 <option value="GBG">Göteborg</option>
+                               </select>
+                             </div>
+                             <div class="required field" style="width:19.098295%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
@@ -101,14 +108,7 @@ pg_close($db_connection);
                                  <option value="XCL">Excel</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:61.80339/3%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
-                                 <option value="">Geografiskt Område</option>
-                                 <option value="STHLM">Stockholm</option>
-                                 <option value="GBG">Göteborg</option>
-                               </select>
-                             </div>
-                             <div class="field" style="width:38.19659/3%;">
+                             <div class="field" style="width:19.098295%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
