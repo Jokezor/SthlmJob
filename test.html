@@ -29,13 +29,13 @@
                <input type="submit" value="Sök" />
             </form>
             -->
-            <form action="#" method="POST">
+            <form name="searchform" action="#" method="POST">
                <div>
                   <div style="width:30%; margin:auto;">
                      <div class="ui form">
                          <div class="two fields">
                           <div class="field">
-                            <select multiple="" class="ui fluid search selection dropdown" name="keyword" onkeyup="showHint(this.value)">
+                            <select id="asd" multiple="" class="ui search dropdown" name="keyword" onkeyup="showHint(this.value)">
                               <option value="">Select Country</option>
                               <option value="AF">Afghanistan</option>
                               <option value="AX">Åland Islands</option>
@@ -69,13 +69,18 @@
       </div>
    </div>
 
-x
+
    <script>
       $(document).ready(function(){
          $('.ui.dropdown').dropdown();
       });
    </script>
 
+<script>
+   $("#asd").change(function() {
+      console.log("asd!!!!!!!!");
+   });
+</script>
 
 
 
