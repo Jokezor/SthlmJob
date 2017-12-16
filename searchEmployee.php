@@ -59,7 +59,7 @@ pg_close($db_connection);
 
                <form action="#" method="POST">
                   <div>
-                     <div style="width:60%; margin:auto;">
+                     <div style="width:75%; margin:auto;">
                         <div class="ui form">
                             <div class="three fields">
                              <div class="required field" style="width:61.80339/3%;">
@@ -113,7 +113,7 @@ pg_close($db_connection);
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                              -->
-                             <div class="field" style="width:61.80339/6%;">
+                             <div class="field" style="width:11.80339%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
