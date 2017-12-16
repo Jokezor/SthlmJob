@@ -65,15 +65,29 @@ pg_close($db_connection);
                              <div class="required field">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Ange Sökord</option>
-                                 <option value="AF">Afghanistan</option>
-                                 <option value="AX">Åland Islands</option>
-                                 <option value="AL">Albania</option>
-                                 <option value="DZ">Algeria</option>
-                                 <option value="AS">American Samoa</option>
-                                 <option value="AD">Andorra</option>
-                                 <option value="AO">Angola</option>
-                                 <option value="AI">Anguilla</option>
-                                 <option value="AQ">Antarctica</option>
+                                 <option value="CR">Controller</option>
+                                 <option value="SEK">Styrekonom</option>
+                                 <option value="EKCE">Ekonomichef</option>
+                                 <option value="EKOV">Ekonomiövervakare</option>
+                                 <option value="KA">Kamrer</option>
+                                 <option value="BH">Bokhållare</option>
+                                 <option value="EKAS">Ekonomiassistent</option>
+                                 <option value="RAKFO">Räkenskapsförare</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDANS">Redovisningsansvarig</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDCE">Redovisningschef</option>
+                                 <option value="CFO">Chief Financial Officer</option>
+                                 <option value="BSCTRL">Business Controller</option>
+                                 <option value="FICTRL">Financial Controller</option>
+                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
+                                 <option value="KONREDCE">Koncernredovisningschef</option>
+                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="VD">VD</option>
+                                 <option value="CEO">Ceo</option>
+                                 <option value="DIR">Direktör</option>
+                                 <option value="CE">Chef</option>
+                                 <option value="FORS">Föreståndare</option>
                                </select>
                              </div>
                              <div class="field">
