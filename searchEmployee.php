@@ -7,7 +7,7 @@
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
- $search_words[] = "";
+ $search_word1[] = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $search_word1 = htmlentities($_POST['keywords'][0]);
    echo $search_word1;
@@ -18,7 +18,7 @@
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($search_words));
+   $result = pg_execute($db_connection, "my_query", array($search_word1));
    if(!$result){
       exit("query execute error");
    }
@@ -57,7 +57,7 @@ pg_close($db_connection);
                   <input type="submit" value="Sök" />
                </form>
 
-               <form action="#" method="POST">
+               <form novalidate action="#" method="POST">
                   <div>
                      <div style="width:30%; margin:auto;">
                         <div class="ui form">
