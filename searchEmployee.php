@@ -64,7 +64,7 @@ pg_close($db_connection);
                             <div class="three fields">
                              <div class="required field" style="width:61.80339/2%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
-                                 <option value="">Ange Titel</option>
+                                 <option value="">Jobtitles</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
                                  <option value="EKCE">Ekonomichef</option>
@@ -92,7 +92,7 @@ pg_close($db_connection);
                              </div>
                              <div class="required field" style="width:61.80339/2%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
-                                 <option value="">Ange Titel</option>
+                                 <option value="">Skills</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
                                </select>
