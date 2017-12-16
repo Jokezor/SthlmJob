@@ -99,7 +99,7 @@ pg_close($db_connection);
                  </div>
               </form>
 
-             <div>
+             <div class ="Result">
                <h2> Sökresultat</h2>
                <p id="txtHint"> </p>
                <div>
