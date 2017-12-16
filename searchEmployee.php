@@ -59,7 +59,7 @@ pg_close($db_connection);
 
                <form action="#" method="POST">
                   <div>
-                     <div style="width:40%; margin:auto;">
+                     <div style="width:60%; margin:auto;">
                         <div class="ui form">
                             <div class="three fields">
                              <div class="required field" style="width:61.80339/2%;">
@@ -90,10 +90,19 @@ pg_close($db_connection);
                                  <option value="FORS">Föreståndare</option>
                                </select>
                              </div>
+                             <div class="required field" style="width:61.80339/2%;">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <option value="">Ange Titel</option>
+                                 <option value="CR">Controller</option>
+                                 <option value="SEK">Styrekonom</option>
+                               </select>
+                             </div>
+                             <!--
                              <div class="field" style="width:38.19659%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
-                             <div class="field" style="width:61.80339/2%;">
+                             -->
+                             <div class="field" style="width:11.8033937422%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
