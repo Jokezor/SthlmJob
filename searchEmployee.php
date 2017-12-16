@@ -57,7 +57,7 @@ pg_close($db_connection);
                   <input type="submit" value="Sök" />
                </form>
 
-               <form novalidate action="#" method="POST">
+               <form action="#" method="POST">
                   <div>
                      <div style="width:30%; margin:auto;">
                         <div class="ui form">
