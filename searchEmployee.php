@@ -50,7 +50,7 @@ pg_close($db_connection);
 <body>
       <div>
          <div>
-            <h1 style="text-align:center; "> Search Employee </h1>
+            <h1 style="text-align:center; margin-top: 5%;"> Search Employee </h1>
             <div>
               <!--
                <form action="searchEmployee.php" method="POST">
@@ -98,7 +98,7 @@ pg_close($db_connection);
                                  <option value="GBG">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:%;">
+                             <div class="required field" style="width:19.098295%%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
