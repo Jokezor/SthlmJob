@@ -60,7 +60,7 @@ pg_close($db_connection);
              -->
                <form action="#" method="POST">
                   <div>
-                     <div style="width:75%; margin:auto; margin-top: 2cm;">
+                     <div style="width:75%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
                             <div class="four fields">
                              <div class="required field" style="width:30.901695%;">
