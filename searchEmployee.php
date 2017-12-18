@@ -50,8 +50,8 @@ pg_close($db_connection);
 <body>
       <div>
          <div>
-            <h1 style="text-align:center;"> Search Employee </h1>
-            <div style="top: 800px;">
+            <h1 style="text-align:center; margin:auto;"> Search Employee </h1>
+            <div>
               <!--
                <form action="searchEmployee.php" method="POST">
                   <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
