@@ -52,11 +52,15 @@ pg_close($db_connection);
          <div>
             <h1 style="text-align:center;"> Search Employee </h1>
             <div>
-               
-
+              <!--
+               <form action="searchEmployee.php" method="POST">
+                  <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
+                  <input type="submit" value="Sök" />
+               </form>
+             -->
                <form action="#" method="POST">
                   <div>
-                     <div style="width:75%; margin:auto;">
+                     <div style="width:75%; margin:auto; top:5%;">
                         <div class="ui form">
                             <div class="four fields">
                              <div class="required field" style="width:30.901695%;">
