@@ -50,7 +50,7 @@ pg_close($db_connection);
 <body>
       <div>
          <div>
-            <h1 style="text-align:center; margin:auto;"> Search Employee </h1>
+            <h1 style="text-align:center; "> Search Employee </h1>
             <div>
               <!--
                <form action="searchEmployee.php" method="POST">
@@ -60,7 +60,7 @@ pg_close($db_connection);
              -->
                <form action="#" method="POST">
                   <div>
-                     <div style="width:75%; margin:auto;">
+                     <div style="width:75%; margin:auto; margin-top: 2cm;">
                         <div class="ui form">
                             <div class="four fields">
                              <div class="required field" style="width:30.901695%;">
