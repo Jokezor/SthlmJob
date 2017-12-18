@@ -98,7 +98,7 @@ pg_close($db_connection);
                                  <option value="GBG">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:19.098295%%;">
+                             <div class="required field" style="width:19.098295%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
