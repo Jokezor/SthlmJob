@@ -289,12 +289,13 @@ body {
 .page5 .Why .Describe{
 	text-align:center;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	font-size: 34px;
+	font-size: 30px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 200;
 	line-height: 26.4px;
 	position: relative;
+	margin-top: auto;
 	top: 22px;
 	color: white;
 }
