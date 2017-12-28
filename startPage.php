@@ -67,10 +67,10 @@
 <div class="page2" id="page2">
   <a id="about" class="smooth"></a>
   <div class ="Om">
-    Om vi på Intro
+    Om Intro
 
-    Vi startade Intro för att vi själva har varit i sitsen som arbetssökande och rekryterare.
-    
+    Intro skapades för att vi själva har varit i sitsen som arbetssökande och rekryterare.
+
   </div>
 </div>
 
