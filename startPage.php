@@ -52,13 +52,14 @@
    <a id="whyus" class="smooth"></a>
   <div class ="Why">
     Varför välja Intro?
-
-    Vi vet av erfarenhet att det är en jobbig process att söka jobb och därför behöver du aldrig söka jobb igen. Du anger bara inom vilket område du vill jobba inom och vi matchar dig sedan mot jobbannonser direkt.
-    Du anger vad du skulle vilja ha i lön samt vad du helst vill jobba med för så att du får erbjudanden du faktiskt vill ha.
-    Enkelt, efter registrering så behöver du bara ladda ner vår app och logga in med det konto du registrerat och så får du notiser när du blir matchad mot ditt nya drömjobb.
-    När du blivit tillfrågad om ett jobb tackar du bara ja eller nej. Om du tackar ja så kommer du direkt vidare till en intervju med våra rekryterare.
-    Få personlig feedback på alla dina intervjuer.
-    Att registrera dig hos oss på Intro är gratis för dig som jobbsökande.
+    <div class="Describe">
+      Vi vet av erfarenhet att det är en jobbig process att söka jobb och därför behöver du aldrig söka jobb igen. Du anger bara inom vilket område du vill jobba inom och vi matchar dig sedan mot jobbannonser direkt.
+      Du anger vad du skulle vilja ha i lön samt vad du helst vill jobba med för så att du får erbjudanden du faktiskt vill ha.
+      Enkelt, efter registrering så behöver du bara ladda ner vår app och logga in med det konto du registrerat och så får du notiser när du blir matchad mot ditt nya drömjobb.
+      När du blivit tillfrågad om ett jobb tackar du bara ja eller nej. Om du tackar ja så kommer du direkt vidare till en intervju med våra rekryterare.
+      Få personlig feedback på alla dina intervjuer.
+      Att registrera dig hos oss på Intro är gratis för dig som jobbsökande.
+    </div>
   </div>
 </div>
 

@@ -286,6 +286,19 @@ body {
 
 }
 
+.page5 .Why .Describe{
+	text-align:center;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 34px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 200;
+	line-height: 26.4px;
+	position: relative;
+	top: 22px;
+	color: white;
+}
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 
 		opacity:  0.5;
