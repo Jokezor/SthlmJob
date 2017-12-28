@@ -139,6 +139,7 @@ body {
         background-size: cover;
         padding-top: 0px;
         height: 100%
+				background-color: #f2f2f2;
 }
 .page2 .Om{
         text-align:center;
@@ -259,7 +260,31 @@ body {
 
 }
 
+#page5{
+				background-color: #241B1C;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 0px;
+        height: 100%
+}
+.page5 .Why{
+        text-align:center;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+        position: relative;
+        top: 40%;
+        color: white;
 
+}
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 

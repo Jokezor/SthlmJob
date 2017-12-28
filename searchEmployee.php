@@ -60,10 +60,10 @@ pg_close($db_connection);
              -->
                <form action="#" method="POST">
                   <div>
-                     <div style="width:75%; margin:auto; margin-top: 5%;">
+                     <div style="width:90%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
                             <div class="four fields">
-                             <div class="required field" style="width:30.901695%;">
+                             <div class="required field" style="width:20.60113%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Jobtitles</option>
                                  <option value="CR">Controller</option>
@@ -91,14 +91,27 @@ pg_close($db_connection);
                                  <option value="FORS">Föreståndare</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:30.901695%;">
+                             <div class="required field" style="width:20.60113%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Geografiskt Område</option>
                                  <option value="STHLM">Stockholm</option>
                                  <option value="GBG">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:19.098295%;">
+                             <div class="required field" style="width:20.601135%;">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <option value="">Ekonomisystem</option>
+                                 <option value="BEK">Bästa ekonomi</option>
+                                 <option value="UBEK">Underbar ekonomi</option>
+                               </select><div class="required field" style="width:12.7321966%;">
+                                 <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                   <option value="">Utbildning</option>
+                                   <option value="CIVEK">Civilekonom</option>
+                                   <option value="EK">Ekonom</option>
+                                 </select>
+                               </div>
+                             </div>
+                             <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
@@ -109,7 +122,7 @@ pg_close($db_connection);
                                  <option value="XCL">Excel</option>
                                </select>
                              </div>
-                             <div class="field" style="width:19.098295%;">
+                             <div class="field" style="width:12.7321966%;">
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
