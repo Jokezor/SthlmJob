@@ -103,14 +103,16 @@ pg_close($db_connection);
                                  <option value="">Ekonomisystem</option>
                                  <option value="BEK">Bästa ekonomi</option>
                                  <option value="UBEK">Underbar ekonomi</option>
-                               </select><div class="required field" style="width:12.7321966%;">
+                               </select>
+                             </div>
+                               <div class="required field" style="width:12.7321966%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                    <option value="">Utbildning</option>
                                    <option value="CIVEK">Civilekonom</option>
                                    <option value="EK">Ekonom</option>
                                  </select>
                                </div>
-                             </div>
+
                              <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
