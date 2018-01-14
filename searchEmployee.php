@@ -46,6 +46,7 @@ pg_close($db_connection);
    <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
    <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
+   <script src="range.js"></script>
 </head>
 <body>
       <div>
