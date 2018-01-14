@@ -136,6 +136,7 @@ pg_close($db_connection);
               </form>
               <div class="ui container">
                 <br>
+                <h2>Place value in an input</h2>
                 <div class="ui segment">
                   <div class="ui range" id="range-1">
                   </div>
