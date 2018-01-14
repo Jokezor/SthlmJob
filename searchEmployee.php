@@ -213,16 +213,15 @@ pg_close($db_connection);
       }
    }
    </script>
-   <?php
-    echo
-       '$(document).ready(function() {
+   <script>
+       $(document).ready(function() {
       	$("#range-1").range({
       		min: 0,
       		max: 10,
         	start: 5
     	  });
-      });';
-    ?>
+      });
+    </script>
 
 </body>
 </html>
