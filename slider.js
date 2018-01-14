@@ -3,8 +3,8 @@ var myRangeValue; // your javascript variable that will store the value of the s
 $(document).ready(function() {
  $('#my-range').range({
    min: 0,
-   max: 100,
+   max: 10,
    start: 5
-   onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
+   //onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
  });
 });
