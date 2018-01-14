@@ -139,7 +139,7 @@ pg_close($db_connection);
                 <br>
                 <h2>Place value in an input</h2>
                 <div class="ui segment">
-                  <div class="ui range" id="range-1">
+                  <div class="ui range" id="my-range">
                   </div>
                 </div>
               </div>
