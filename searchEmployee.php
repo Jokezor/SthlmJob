@@ -135,6 +135,10 @@ pg_close($db_connection);
                              </div>
                            </div>
                            <h2>Lönenivå</h2>
+                           <p>
+                             <label for="amount">Price range:</label>
+                             <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                           </p>
                            <div id="#slider-range" style ="width:40%;">
                            </div>
                           </div>
