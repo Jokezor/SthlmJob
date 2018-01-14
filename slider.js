@@ -1,5 +1,5 @@
 $(document).ready(function() {
- $("#range-1").range({
+ $('#my-range').range({
    min: 0,
    max: 10,
    start: 5
