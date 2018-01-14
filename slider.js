@@ -1,7 +1,7 @@
 var myRangeValue; // your javascript variable that will store the value of the slider
 
 $(document).ready(function() {
- $('#range').range({
+ $('#rangers').range({
    range: true,
    min: 0,
    max: 100,
