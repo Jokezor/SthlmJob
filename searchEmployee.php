@@ -135,7 +135,7 @@ pg_close($db_connection);
                       </div>
                  </div>
               </form>
-              <div class="ui container">
+              <div class="ui container" style="width:40%; margin:auto;">
                 <br>
                 <h2>Lönenivå</h2>
                 <div class="ui segment">
