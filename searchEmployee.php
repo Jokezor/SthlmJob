@@ -44,11 +44,14 @@ pg_close($db_connection);
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
+   <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+
    <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
    <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
    <script src="range.js"></script>
    <script src="slider.js"></script>
+   <script src="jquery-ui.min.js"></script>
 </head>
 <body>
       <div>
