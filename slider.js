@@ -2,6 +2,7 @@ var myRangeValue; // your javascript variable that will store the value of the s
 
 $(document).ready(function() {
  $('#range').range({
+   range: true,
    min: 0,
    max: 100,
    start: 5
