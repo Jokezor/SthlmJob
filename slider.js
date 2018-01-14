@@ -6,7 +6,12 @@ $(document).ready(function() {
    min: 0,
    max: 100,
    start: 5
+   values: [ 75, 300 ],
+   slide: function( event, ui ) {
+     $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+   }
    //onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
  });
- $('#range').range('set value', 17); // Sets slider with id 'range' to value 17
+ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
