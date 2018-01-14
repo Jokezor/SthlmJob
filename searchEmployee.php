@@ -47,6 +47,7 @@ pg_close($db_connection);
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
    <script src="node_modules/semantic-ui-dropdown/dropdown.min.js"></script>
    <script src="range.js"></script>
+   <script src="slider.js"></script>
 </head>
 <body>
       <div>
@@ -214,15 +215,6 @@ pg_close($db_connection);
       }
    }
    </script>
-   <script>
-       $(document).ready(function() {
-      	$("#range-1").range({
-      		min: 0,
-      		max: 10,
-        	start: 5
-    	  });
-      });
-    </script>
 
 </body>
 </html>
