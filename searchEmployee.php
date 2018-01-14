@@ -131,6 +131,11 @@ pg_close($db_connection);
                                 <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
+                           <h2>Lönenivå</h2>
+                           <div class="ui segment" style ="width:40%;">
+                             <div class="ui range" id="my-range">
+                             </div>
+                           </div>
                           </div>
                       </div>
                  </div>
