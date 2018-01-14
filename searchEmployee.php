@@ -140,14 +140,7 @@ pg_close($db_connection);
                       </div>
                  </div>
               </form>
-              <div class="ui container" style="width:40%; margin:auto; margin-top: 5%;">
-                <br>
-                <h2>Lönenivå</h2>
-                <div class="ui segment">
-                  <div class="ui range" id="my-range">
-                  </div>
-                </div>
-              </div>
+              
 
              <div class ="Result" style="margin-top: 5%">
                <h2> Sökresultat</h2>
