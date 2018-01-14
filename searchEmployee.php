@@ -132,6 +132,13 @@ pg_close($db_connection);
                       </div>
                  </div>
               </form>
+              <div class="ui container">
+                <br>
+                <div class="ui segment">
+                  <div class="ui range" id="range-1">
+                  </div>
+                </div>
+              </div>
 
              <div class ="Result" style="margin-top: 5%">
                <h2> Sökresultat</h2>
@@ -206,6 +213,16 @@ pg_close($db_connection);
       }
    }
    </script>
+   <?php
+    echo
+       '$(document).ready(function() {
+      	$("#range-1").range({
+      		min: 0,
+      		max: 10,
+        	start: 5
+    	  });
+      });';
+    ?>
 
 </body>
 </html>
