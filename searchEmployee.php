@@ -136,7 +136,7 @@ pg_close($db_connection);
                            </div>
                            <h2>Lönenivå</h2>
                            <div class="ui segment" style ="width:40%;">
-                             <div class="ui range" id="rangers">
+                             <div class="ui range" id="#slider-range">
                              </div>
                            </div>
                           </div>

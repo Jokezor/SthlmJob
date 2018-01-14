@@ -1,7 +1,7 @@
 var myRangeValue; // your javascript variable that will store the value of the slider
 
 $(document).ready(function() {
- $('#rangers').range({
+ $("#slider-range").range({
    range: true,
    min: 0,
    max: 500,
@@ -11,6 +11,6 @@ $(document).ready(function() {
    }
    //onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
  });
- $( "#amount" ).val( "$" + $( "#rangers" ).slider( "values", 0 ) +
-      " - $" + $( "#rangers" ).slider( "values", 1 ) );
+ $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
