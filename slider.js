@@ -5,6 +5,6 @@ $(document).ready(function() {
    min: 0,
    max: 10,
    start: 5
-   //onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
+   onChange: function(val) { myRangeValue = val; } // assigning the callback argument to your variable each time the value changes
  });
 });
