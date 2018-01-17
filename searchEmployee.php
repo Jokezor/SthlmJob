@@ -70,9 +70,9 @@ pg_close($db_connection);
                </form>
              -->
              <div class="checkator_holder radio">
-               <input type="radio" name="radio1" class="radio1 checkator_source" id="radio1_1" style="opacity: 0;">
+               <input type="radio" name="radio1" class="radio1 checkator_source" id="radio1_1" style="opacity: 0.5;">
                <div id="checkator_radio1_1" class="checkator radio"></div>
-             </div>  
+             </div>
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
