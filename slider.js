@@ -32,8 +32,8 @@ $(document).ready(function() {
        }
      });
      $('#range-5').range({
-         min: 17,
-         max: 100,
+         min: 20,
+         max: 75,
          start: 30,
          step: 1,
          onChange: function(value) {
@@ -41,8 +41,8 @@ $(document).ready(function() {
          }
        });
        $('#range-6').range({
-           min: 17,
-           max: 100,
+           min: 20,
+           max: 75,
            start: 30,
            step: 1,
            onChange: function(value) {
