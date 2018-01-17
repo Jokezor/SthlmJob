@@ -69,14 +69,14 @@ pg_close($db_connection);
                   <input type="submit" value="Sök" />
                </form>
              -->
+             <div class="checkator_holder radio">
+               <input type="radio" name="radio1" class="radio1 checkator_source" id="radio1_1" style="opacity: 0;">
+               <div id="checkator_radio1_1" class="checkator radio"></div>
+             </div>  
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
-                          <div class="checkator_holder radio">
-                            <input type="radio" name="radio1" class="radio1 checkator_source" id="radio1_1" style="opacity: 0;">
-                            <div id="checkator_radio1_1" class="checkator radio"></div>
-                          </div>                          
                             <div class="four fields">
                              <div class="required field" style="width:20.60113%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
