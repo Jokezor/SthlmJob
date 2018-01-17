@@ -45,6 +45,7 @@ pg_close($db_connection);
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+   <link rel="stylesheet" href="fm.checkator.jquery.css"/>
    <!--link rel="stylesheet" type="text/css" href="rheostat-master/css/slider.css"-->
 
 
@@ -54,6 +55,9 @@ pg_close($db_connection);
    <script src="range.js"></script>
    <script src="slider.js"></script>
    <script src="jquery-ui.min.js"></script>
+
+   <script src="jquery-1.11.0.min.js"></script>
+   <script src="fm.checkator.jquery.js"></script>
 </head>
 <body>
       <div>
@@ -70,6 +74,10 @@ pg_close($db_connection);
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
+                          <div class="checkator_holder radio">
+                          	<input type="radio" name="radio1" class="radio1 checkator_source" id="radio1_1" style="opacity: 0;">
+                          	<div id="checkator_radio1_1" class="checkator radio"></div>
+                          </div>
                             <div class="four fields">
                              <div class="required field" style="width:20.60113%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
