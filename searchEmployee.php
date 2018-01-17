@@ -141,10 +141,7 @@ pg_close($db_connection);
                              <label for="amount">Price range:</label>
                              <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                            </p>
-                           <div id="#slider-range" style ="width:40%;">
-
-                           </div>
-                          </div>
+                           <div class="ui range" style="width:40%;" id="my-range"></div>
                       </div>
                  </div>
               </form>
