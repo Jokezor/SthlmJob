@@ -59,7 +59,7 @@ pg_close($db_connection);
 <body>
       <div>
          <div>
-            <h1 style="text-align:center; margin-top: 5%;"> Search Employee </h1>
+            <h1 style="text-align:center; margin-top: 5%;"> Sök Kandidater </h1>
             <div>
               <!--
                <form action="searchEmployee.php" method="POST">
