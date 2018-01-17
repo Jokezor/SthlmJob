@@ -141,14 +141,14 @@ pg_close($db_connection);
                              <div class="ui range" id="range-3"></div>
                              <br>
                               <p>
-                                Value: <span id="display-3"></span>
+                                Minimum: <span id="display-3"></span>
                               </p>
                            </div>
                            <div class="ui segment" style="width:20%;">
                              <div class="ui range" id="range-4"></div>
                              <br>
                               <p>
-                                Value: <span id="display-4"></span>
+                                Maximum: <span id="display-4"></span>
                               </p>
                            </div>
                  </div>
