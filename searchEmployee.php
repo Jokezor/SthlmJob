@@ -137,7 +137,7 @@ pg_close($db_connection);
                              </div>
                            </div>
                            <h2>Lönenivå</h2>
-                           <div class="ui segment" style="width:20%;">
+                           <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-3"></div>
                              <br>
                               <p>
@@ -150,7 +150,7 @@ pg_close($db_connection);
                                </p>
                            </div>
                            <h2>Ålderspann</h2>
-                           <div class="ui segment" style="width:20%;">
+                           <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-5"></div>
                              <br>
                               <p>
