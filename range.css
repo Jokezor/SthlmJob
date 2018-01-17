@@ -4,7 +4,7 @@
  */
 
 .ui.range {
-	width: 20%;
+	width: 100%;
 	height: 20px;
 }
 
@@ -20,7 +20,7 @@
 
 .ui.range .inner .track {
 	position: absolute;
-	width: 100%;
+	width: 10%;
 	height: 4px;
 	border-radius: 4px;
 	top: 9px;
