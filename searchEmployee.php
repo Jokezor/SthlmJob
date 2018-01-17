@@ -143,14 +143,20 @@ pg_close($db_connection);
                               <p>
                                 Minimum: <span id="display-3"></span>
                               </p>
+                              <div class="ui range" id="range-4"></div>
+                              <br>
+                               <p>
+                                 Maximum: <span id="display-4"></span>
+                               </p>
                            </div>
-                           <div class="ui segment" style="width:20%;">
+
+                           <!--div class="ui segment" style="width:20%;">
                              <div class="ui range" id="range-4"></div>
                              <br>
                               <p>
                                 Maximum: <span id="display-4"></span>
                               </p>
-                           </div>
+                           </div-->
                  </div>
               </form>
 
