@@ -148,7 +148,6 @@ pg_close($db_connection);
                                <p>
                                  Maximum: <span id="display-4"></span>
                                </p>
-                               <div class="ui range" id="range-7"></div>
                            </div>
                            <h2>Ålderspann</h2>
                            <div class="ui segment" style="width:40%;">
