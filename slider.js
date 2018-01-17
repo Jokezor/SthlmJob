@@ -16,6 +16,7 @@ $(document).ready(function() {
      min: 20000,
      max: 100000,
      start: 50000,
+     step: 1000,
      onChange: function(value) {
        $('#display-3').html(value);
      }
