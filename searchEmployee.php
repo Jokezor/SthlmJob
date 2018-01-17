@@ -72,29 +72,23 @@ pg_close($db_connection);
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
                           <div class="inline fields">
-                            <label>How often do you use checkboxes?</label>
+                            <label>Hur viktiga är egenskaperna?</label>
                             <div class="field">
                               <div class="ui radio checkbox">
                                 <input type="radio" name="frequency" checked="checked">
-                                <label>Once a week</label>
+                                <label>Måste ha</label>
                               </div>
                             </div>
                             <div class="field">
                               <div class="ui radio checkbox">
                                 <input type="radio" name="frequency">
-                                <label>2-3 times a week</label>
+                                <label>Bra att ha</label>
                               </div>
                             </div>
                             <div class="field">
                               <div class="ui radio checkbox">
                                 <input type="radio" name="frequency">
-                                <label>Once a day</label>
-                              </div>
-                            </div>
-                            <div class="field">
-                              <div class="ui radio checkbox">
-                                <input type="radio" name="frequency">
-                                <label>Twice a day</label>
+                                <label>Spelar ej roll</label>
                               </div>
                             </div>
                           </div>
