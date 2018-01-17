@@ -45,6 +45,8 @@ pg_close($db_connection);
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+   <!--link rel="stylesheet" type="text/css" href="rheostat-master/css/slider.css"-->
+
 
    <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
@@ -140,6 +142,7 @@ pg_close($db_connection);
                              <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                            </p>
                            <div id="#slider-range" style ="width:40%;">
+
                            </div>
                           </div>
                       </div>
