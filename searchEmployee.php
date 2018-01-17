@@ -55,8 +55,7 @@ pg_close($db_connection);
    <script src="range.js"></script>
    <script src="slider.js"></script>
    <script src="jquery-ui.min.js"></script>
-
-   <script src="jquery-1.11.0.min.js"></script>
+   <!--script src="jquery-1.11.0.min.js"></script-->
    <!--script src="fm.checkator.jquery.js"></script-->
 </head>
 <body>
