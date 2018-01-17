@@ -45,7 +45,7 @@ pg_close($db_connection);
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
-   <!--link rel="stylesheet" href="fm.checkator.jquery.css"/-->
+   <link rel="stylesheet" href="fm.checkator.jquery.css"/>
    <!--link rel="stylesheet" type="text/css" href="rheostat-master/css/slider.css"-->
 
 
