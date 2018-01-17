@@ -49,5 +49,14 @@ $(document).ready(function() {
              $('#display-6').html(value);
            }
          });
+         $('#range-7').range({
+             min: 20,
+             max: 75,
+             start: 40,
+             step: 1,
+             onChange: function(value) {
+               $('#display-7').html(value);
+             }
+           });
 
 });

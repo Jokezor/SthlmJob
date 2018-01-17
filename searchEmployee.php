@@ -140,6 +140,7 @@ pg_close($db_connection);
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-3"></div>
                              <br>
+                             <div class="ui range" id="range-7"></div>
                               <p>
                                 Minimum: <span id="display-3"></span>
                               </p>
