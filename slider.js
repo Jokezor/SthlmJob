@@ -15,7 +15,7 @@ $(document).ready(function() {
  $('#range-3').range({
      min: 20000,
      max: 100000,
-     start: 50000,
+     start: 30000,
      step: 1000,
      onChange: function(value) {
        $('#display-3').html(value);
@@ -25,7 +25,7 @@ $(document).ready(function() {
    $('#range-4').range({
        min: 20000,
        max: 100000,
-       start: 50000,
+       start: 70000,
        step: 1000,
        onChange: function(value) {
          $('#display-4').html(value);
@@ -34,7 +34,7 @@ $(document).ready(function() {
      $('#range-5').range({
          min: 20,
          max: 75,
-         start: 30,
+         start: 20,
          step: 1,
          onChange: function(value) {
            $('#display-5').html(value);
@@ -43,7 +43,7 @@ $(document).ready(function() {
        $('#range-6').range({
            min: 20,
            max: 75,
-           start: 30,
+           start: 40,
            step: 1,
            onChange: function(value) {
              $('#display-6').html(value);
