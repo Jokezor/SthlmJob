@@ -137,7 +137,14 @@ pg_close($db_connection);
                              </div>
                            </div>
                            <h2>Lönenivå</h2>
-                           <div class="ui segment" style="width:40%;">
+                           <div class="ui segment" style="width:20%;">
+                             <div class="ui range" id="range-3"></div>
+                             <br>
+                              <p>
+                                Value: <span id="display-3"></span>
+                              </p>
+                           </div>
+                           <div class="ui segment" style="width:20%;">
                              <div class="ui range" id="range-3"></div>
                              <br>
                               <p>
