@@ -32,19 +32,19 @@ $(document).ready(function() {
        }
      });
      $('#range-5').range({
-         min: 20000,
-         max: 100000,
-         start: 50000,
-         step: 1000,
+         min: 17,
+         max: 100,
+         start: 30,
+         step: 1,
          onChange: function(value) {
            $('#display-5').html(value);
          }
        });
        $('#range-6').range({
-           min: 20000,
-           max: 100000,
-           start: 50000,
-           step: 1000,
+           min: 17,
+           max: 100,
+           start: 30,
+           step: 1,
            onChange: function(value) {
              $('#display-6').html(value);
            }
