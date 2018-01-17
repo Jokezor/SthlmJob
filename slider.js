@@ -31,5 +31,23 @@ $(document).ready(function() {
          $('#display-4').html(value);
        }
      });
+     $('#range-5').range({
+         min: 20000,
+         max: 100000,
+         start: 50000,
+         step: 1000,
+         onChange: function(value) {
+           $('#display-5').html(value);
+         }
+       });
+       $('#range-6').range({
+           min: 20000,
+           max: 100000,
+           start: 50000,
+           step: 1000,
+           onChange: function(value) {
+             $('#display-6').html(value);
+           }
+         });
 
 });
