@@ -224,7 +224,7 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <div class="ui styled accordion" id="Result">
+   <div class="ui styled accordion">
      <div class="title">
        <i class="dropdown icon"></i>
        What is a dog?
