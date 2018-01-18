@@ -54,6 +54,7 @@ pg_close($db_connection);
    <script src="range.js"></script>
    <script src="slider.js"></script>
    <script src="jquery-ui.min.js"></script>
+   <script src="js/accordion.js"></script>
 </head>
 
 <body>
@@ -293,6 +294,11 @@ pg_close($db_connection);
          }
       }
    }
+   </script>
+   <script language='javascript'>
+             $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
    </script>
 
 </body>
