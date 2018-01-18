@@ -225,7 +225,7 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <div class="accordion" id="Result">
+   <div class="ui styled fluid accordion" id="Result">
     <div class="title">
       <i class="dropdown icon"></i>
       What is a dog?
@@ -296,12 +296,9 @@ pg_close($db_connection);
    }
    </script>
    <script language='javascript'>
-       jQuery(document).ready(function(){
-        $('.accordion .head').click(function() {
-        $(this).next().toggle('slow');
-        return false;
-        }).next().hide();
-        });
+             $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
    </script>
 
 </body>
