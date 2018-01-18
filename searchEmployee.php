@@ -190,7 +190,7 @@ pg_close($db_connection);
                               </p>
                            </div-->
                            <div class="field" style="width:20%;">
-                              <button class="fluid ui button" type="submit">Submit</button>
+                              <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
                  </div>
               </form>
