@@ -248,7 +248,7 @@ pg_close($db_connection);
        <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
      </div>
    </div>
-   <div style="margin:auto; width:100%; height: 10%;">
+   <div class="contact">
      Kontakt
    </div>
 
