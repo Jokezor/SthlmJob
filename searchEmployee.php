@@ -296,9 +296,12 @@ pg_close($db_connection);
    }
    </script>
    <script language='javascript'>
-             $(document).ready(function(){
-                $('.ui.accordion').accordion();
-             });
+       jQuery(document).ready(function(){
+        $('.accordion .head').click(function() {
+        $(this).next().toggle('slow');
+        return false;
+        }).next().hide();
+        });
    </script>
 
 </body>
