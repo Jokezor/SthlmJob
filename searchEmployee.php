@@ -182,14 +182,14 @@ pg_close($db_connection);
                                </p>
                            </div>
 
-                           <!--div class="ui segment" style="width:20%;">
+                           <!--div class="ui segment" style="width:12.7321966%;">
                              <div class="ui range" id="range-4"></div>
                              <br>
                               <p>
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
-                           <div class="field" style="width:12.7321966%;">
+                           <div class="field" style="width:20%;">
                               <button class="fluid ui button" type="submit">Submit</button>
                            </div>
                  </div>
