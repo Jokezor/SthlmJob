@@ -51,6 +51,7 @@
 .Result{
 	margin: auto;
   width: 50%;
+	height: 75%;
 	border:1px;
 	solid black;
 	text-align:center;
