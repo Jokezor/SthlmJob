@@ -225,11 +225,27 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <div id="multiOpenAccordion">
-        <h3><a href="#">tab 1</a></h3>
-        <div>Lorem ipsum dolor sit amet</div>
-        <h3><a href="#">tab 2</a></h3>
-        <div>Lorem ipsum dolor sit amet</div>
+   <script type="text/javascript">
+    (function($) {
+        $(function() {
+            $("#accordion > div").accordion({ header: "h3", collapsible: true });
+        })
+    })(jQuery);
+   </script>
+
+   <div id="accordion">
+    <div>
+        <h3><a href="#">First</a></h3>
+        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div>
+        <h3><a href="#">Second</a></h3>
+        <div>Phasellus mattis tincidunt nibh.</div>
+    </div>
+    <div>
+        <h3><a href="#">Third</a></h3>
+        <div>Nam dui erat, auctor a, dignissim quis.</div>
+    </div>
    </div>
    <div class="ui styled fluid accordion" id="Result">
     <div class="title">
@@ -307,15 +323,7 @@ pg_close($db_connection);
              });
    </script>
    <script>
-   $(function(){
-        $('#multiOpenAccordion').multiAccordion();
-       // you can use a number or an array with active option to specify which tabs to be opened by default:
-       $('#multiOpenAccordion').multiAccordion({ active: 1 });
-       // OR
-       $('#multiOpenAccordion').multiAccordion({ active: [1, 2, 3] });
 
-       $('#multiOpenAccordion').multiAccordion({ active: false }); // no opened tabs
-     });
    </script>
 
 </body>
