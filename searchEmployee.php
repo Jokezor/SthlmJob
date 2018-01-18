@@ -239,7 +239,7 @@ pg_close($db_connection);
     <div>Nam dui erat, auctor a, dignissim quis.</div>
 </div>
 
-   <div class="ui styled fluid accordion" id="Result">
+   <!--div class="ui styled fluid accordion" id="Result">
     <div class="title">
       <i class="dropdown icon"></i>
       What is a dog?
@@ -265,7 +265,7 @@ pg_close($db_connection);
   </div>
    <div class="contact">
      Kontakt
-   </div>
+   </div-->
 
 
 
