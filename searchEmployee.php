@@ -225,6 +225,12 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
+   <div id="multiOpenAccordion">
+        <h3><a href="#">tab 1</a></h3>
+        <div>Lorem ipsum dolor sit amet</div>
+        <h3><a href="#">tab 2</a></h3>
+        <div>Lorem ipsum dolor sit amet</div>
+   </div>
    <div class="ui styled fluid accordion" id="Result">
     <div class="title">
       <i class="dropdown icon"></i>
@@ -299,6 +305,17 @@ pg_close($db_connection);
              $(document).ready(function(){
                 $('.ui.accordion').accordion();
              });
+   </script>
+   <script>
+   $(function(){
+        $('#multiOpenAccordion').multiAccordion();
+       // you can use a number or an array with active option to specify which tabs to be opened by default:
+       $('#multiOpenAccordion').multiAccordion({ active: 1 });
+       // OR
+       $('#multiOpenAccordion').multiAccordion({ active: [1, 2, 3] });
+
+       $('#multiOpenAccordion').multiAccordion({ active: false }); // no opened tabs
+     });
    </script>
 
 </body>
