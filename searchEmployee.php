@@ -226,20 +226,7 @@ pg_close($db_connection);
       </div>
    </div>
 
-   <div class="accordion">
-    <h3><a href="#">First</a></h3>
-    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-</div>
-<div class="accordion">
-    <h3><a href="#">Second</a></h3>
-    <div>Phasellus mattis tincidunt nibh.</div>
-</div>
-<div class="accordion">
-    <h3><a href="#">Third</a></h3>
-    <div>Nam dui erat, auctor a, dignissim quis.</div>
-</div>
-
-   <!--div class="ui styled fluid accordion" id="Result">
+   <div class="ui styled fluid accordion" id="Result">
     <div class="title">
       <i class="dropdown icon"></i>
       What is a dog?
@@ -265,7 +252,7 @@ pg_close($db_connection);
   </div>
    <div class="contact">
      Kontakt
-   </div-->
+   </div>
 
 
 
@@ -315,7 +302,7 @@ pg_close($db_connection);
              });
    </script>
    <script language='text/javascript'>
-        $(".accordion").accordion({ collapsible: true, active: false });
+
    </script>
 
 </body>
