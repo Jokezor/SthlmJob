@@ -135,7 +135,7 @@ pg_close($db_connection);
                                  <option value="UBEK">Underbar ekonomi</option>
                                </select>
                              </div>
-                               <div class="required field" style="width:12.7321966%;">
+                               <div class="required field" style="width:19.0982949%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                    <option value="">Utbildning</option>
                                    <option value="CIVEK">Civilekonom</option>
@@ -143,7 +143,7 @@ pg_close($db_connection);
                                  </select>
                                </div>
 
-                             <div class="required field" style="width:12.7321966%;">
+                             <div class="required field" style="width:19.0982949%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
@@ -153,9 +153,6 @@ pg_close($db_connection);
                                  <option value="PY">Python</option>
                                  <option value="XCL">Excel</option>
                                </select>
-                             </div>
-                             <div class="field" style="width:12.7321966%;">
-                                <button class="fluid ui button" type="submit">Submit</button>
                              </div>
                            </div>
                            <h2>Lönenivå</h2>
@@ -192,6 +189,9 @@ pg_close($db_connection);
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
+                           <div class="field" style="width:12.7321966%;">
+                              <button class="fluid ui button" type="submit">Submit</button>
+                           </div>
                  </div>
               </form>
 
