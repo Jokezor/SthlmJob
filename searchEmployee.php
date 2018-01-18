@@ -196,7 +196,7 @@ pg_close($db_connection);
               </form>
 
 
-             <div class ="Result" style="margin-top: 5%; border:1px; solid black;">
+             <div class ="Result" style="margin-top: 5%;">
                <h2> Sökresultat</h2>
                <p id="txtHint"> </p>
                <div>
