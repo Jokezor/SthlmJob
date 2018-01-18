@@ -225,28 +225,20 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <script type="text/javascript">
-    (function($) {
-        $(function() {
-            $("#accordion > div").accordion({ header: "h3", collapsible: true });
-        })
-    })(jQuery);
-   </script>
 
-   <div id="accordion">
-    <div>
-        <h3><a href="#">First</a></h3>
-        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
-    </div>
-    <div>
-        <h3><a href="#">Second</a></h3>
-        <div>Phasellus mattis tincidunt nibh.</div>
-    </div>
-    <div>
-        <h3><a href="#">Third</a></h3>
-        <div>Nam dui erat, auctor a, dignissim quis.</div>
-    </div>
-   </div>
+   <div class="accordion">
+    <h3><a href="#">First</a></h3>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+</div>
+<div class="accordion">
+    <h3><a href="#">Second</a></h3>
+    <div>Phasellus mattis tincidunt nibh.</div>
+</div>
+<div class="accordion">
+    <h3><a href="#">Third</a></h3>
+    <div>Nam dui erat, auctor a, dignissim quis.</div>
+</div>
+
    <div class="ui styled fluid accordion" id="Result">
     <div class="title">
       <i class="dropdown icon"></i>
@@ -322,8 +314,8 @@ pg_close($db_connection);
                 $('.ui.accordion').accordion();
              });
    </script>
-   <script>
-
+   <script language='text/javascript'>
+        $(".accordion").accordion({ collapsible: true, active: false });
    </script>
 
 </body>
