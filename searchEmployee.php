@@ -54,7 +54,7 @@ pg_close($db_connection);
    <script src="range.js"></script>
    <script src="slider.js"></script>
    <script src="jquery-ui.min.js"></script>
-   <script src="js/accordion.js"></script>
+   <script src="node_modules/semantic-ui/dist/accordion.js"></script>
 </head>
 
 <body>
