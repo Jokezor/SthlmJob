@@ -296,13 +296,20 @@ pg_close($db_connection);
       }
    }
    </script>
-   <script language='javascript'>
+
+   <!--script language='javascript'>
              $(document).ready(function(){
                 $('.ui.accordion').accordion();
              });
-   </script>
-   <script language='text/javascript'>
+   </script-->
 
+   <script language='text/javascript'>
+       jQuery(document).ready(function(){
+    $('.ui.accordion').click(function() {
+     $(this).next().toggle('slow');
+     return false;
+    }).next().hide();
+    });
    </script>
 
 </body>
