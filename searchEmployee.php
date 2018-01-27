@@ -238,7 +238,7 @@ pg_close($db_connection);
     odio. Curabitur  malesuada. Vestibulum a velit eu ante scelerisque vulputate.
     </p>
   </div>
-  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
   <h3><a href="#">Section 2</a></h3>
   <div>
     <p>

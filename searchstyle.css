@@ -71,8 +71,7 @@
 }
 
 .employees{
-	margin: auto !important;
-	width: 80% !important;
+	float:left;
 }
 
 .contact{
