@@ -228,9 +228,9 @@ pg_close($db_connection);
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
-  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
   <label for="subscribeNews">Subscribe to newsletter?</label>
   <h3><a href="#">Section 1</a></h3>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
   <div>
     <p>
     Mauris mauris  ante, blandit et, ultrices a, suscipit eget, quam. Integer
