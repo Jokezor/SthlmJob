@@ -278,7 +278,7 @@ pg_close($db_connection);
     inceptos himenaeos.
      </p>
   </div>
-  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employeees">
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
 </div>
 </form>
 
