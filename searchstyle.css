@@ -72,7 +72,7 @@
 
 .employees{
 	float:right;
-	top:-3px;
+	top: -3px !important;
 }
 
 .contact{
