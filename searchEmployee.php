@@ -229,8 +229,8 @@ pg_close($db_connection);
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <label for="subscribeNews">Subscribe to newsletter?</label>
-  <h3 style="width:90%;"><a href="#">Section 1</a></h3>
-  <div style="width:90%;">
+  <h3 style="width:90%; float:left;"><a href="#">Section 1</a></h3>
+  <div style="width:90%; float:left;">
     <p>
     Mauris mauris  ante, blandit et, ultrices a, suscipit eget, quam. Integer
     ut neque. Vivamus  nisi metus, molestie vel, gravida in, condimentum sit
