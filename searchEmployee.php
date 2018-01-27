@@ -248,6 +248,7 @@ pg_close($db_connection);
     suscipit faucibus urna.
     </p>
   </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employeees">
   <h3 style="width:90%;"><a href="#">Section 3</a></h3>
   <div style="width:90%;">
     <p>
@@ -262,6 +263,7 @@ pg_close($db_connection);
       <li>List item  three</li>
     </ul>
   </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employeees">
   <h3 style="width:90%;"><a href="#">Section 4</a></h3>
   <div style="width:90%;">
     <p>
@@ -276,6 +278,7 @@ pg_close($db_connection);
     inceptos himenaeos.
      </p>
   </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employeees">
 </div>
 </form>
 
