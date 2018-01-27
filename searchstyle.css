@@ -65,8 +65,8 @@
 }
 
 #Res{
-	margin: auto; !important
-	width: 80%; !important
+	margin: auto !important;
+	width: 80% !important;
 	background-color: #6BB7B9;
 }
 
