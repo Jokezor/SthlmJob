@@ -230,8 +230,9 @@ pg_close($db_connection);
 <div id="notaccordion">
   <label for="subscribeNews">Subscribe to newsletter?</label>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
-  <h3><a href="#">Section 1</a></h3>
+
   <div class="Res">
+    <h3><a href="#">Section 1</a></h3>
     <p>
     Mauris mauris  ante, blandit et, ultrices a, suscipit eget, quam. Integer
     ut neque. Vivamus  nisi metus, molestie vel, gravida in, condimentum sit
