@@ -66,8 +66,13 @@
 
 .Res{
 	margin: auto !important;
-	width: 80% !important;
+	width: 100% !important;
 	color: #6BB7B9 !important;
+}
+
+.employees{
+	margin: auto !important;
+	width: 80% !important;
 }
 
 .contact{
