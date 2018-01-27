@@ -230,7 +230,7 @@ pg_close($db_connection);
 <div id="notaccordion" class="Res">
   <label for="subscribeNews">Subscribe to newsletter?</label>
   <h3><a href="#">Section 1</a></h3>
-  <div>
+  <div style="width:70%;">
     <p>
     Mauris mauris  ante, blandit et, ultrices a, suscipit eget, quam. Integer
     ut neque. Vivamus  nisi metus, molestie vel, gravida in, condimentum sit
@@ -240,7 +240,7 @@ pg_close($db_connection);
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
   <h3><a href="#">Section 2</a></h3>
-  <div>
+  <div style="width:70%;">
     <p>
     Sed non urna. Donec et ante. Phasellus eu ligula.  Vestibulum sit amet
     purus. Vivamus hendrerit, dolor at aliquet laoreet,  mauris turpis porttitor
@@ -249,7 +249,7 @@ pg_close($db_connection);
     </p>
   </div>
   <h3><a href="#">Section 3</a></h3>
-  <div>
+  <div style="width:70%;">
     <p>
     Nam enim risus, molestie et, porta ac, aliquam ac,  risus. Quisque lobortis.
     Phasellus pellentesque purus in massa. Aenean in pede.  Phasellus ac libero
@@ -263,7 +263,7 @@ pg_close($db_connection);
     </ul>
   </div>
   <h3><a href="#">Section 4</a></h3>
-  <div>
+  <div style="width:70%;">
     <p>
     Cras dictum. Pellentesque habitant morbi tristique  senectus et netus
     et malesuada fames ac turpis egestas. Vestibulum ante  ipsum primis in
