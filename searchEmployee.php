@@ -263,7 +263,7 @@ pg_close($db_connection);
       <li>List item  three</li>
     </ul>
   </div>
-  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employeees">
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
   <h3 style="width:90%;"><a href="#">Section 4</a></h3>
   <div style="width:90%;">
     <p>
