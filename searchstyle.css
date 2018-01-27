@@ -72,6 +72,7 @@
 
 .employees{
 	float:right;
+	margin: auto;
 	top: 2% !important;
 }
 
