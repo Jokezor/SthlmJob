@@ -240,8 +240,9 @@ pg_close($db_connection);
     odio. Curabitur  malesuada. Vestibulum a velit eu ante scelerisque vulputate.
     </p>
   </div>
-  <h3><a href="#">Section 2</a></h3>
+
   <div class="Res">
+    <h3><a href="#">Section 2</a></h3>
     <p>
     Sed non urna. Donec et ante. Phasellus eu ligula.  Vestibulum sit amet
     purus. Vivamus hendrerit, dolor at aliquet laoreet,  mauris turpis porttitor
@@ -249,8 +250,9 @@ pg_close($db_connection);
     suscipit faucibus urna.
     </p>
   </div>
-  <h3><a href="#">Section 3</a></h3>
+
   <div class="Res">
+    <h3><a href="#">Section 3</a></h3>
     <p>
     Nam enim risus, molestie et, porta ac, aliquam ac,  risus. Quisque lobortis.
     Phasellus pellentesque purus in massa. Aenean in pede.  Phasellus ac libero
@@ -263,8 +265,9 @@ pg_close($db_connection);
       <li>List item  three</li>
     </ul>
   </div>
-  <h3><a href="#">Section 4</a></h3>
+
   <div class="Res">
+    <h3><a href="#">Section 4</a></h3>
     <p>
     Cras dictum. Pellentesque habitant morbi tristique  senectus et netus
     et malesuada fames ac turpis egestas. Vestibulum ante  ipsum primis in
