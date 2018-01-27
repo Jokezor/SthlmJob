@@ -226,8 +226,8 @@ pg_close($db_connection);
       </div>
    </div>
 
-   <h1 style="text-align: center;">Toggle Panels</h1>
-<div id="notaccordion" class="Res">
+   <h1 style="text-align: center;">Kandidater</h1>
+<div id="notaccordion" class="Res" style="width:80%;">
   <h3><a href="#">Section 1</a></h3>
   <div>
     <p>
