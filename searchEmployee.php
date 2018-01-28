@@ -235,7 +235,7 @@ pg_close($db_connection);
     <p>
     Dokument datum: 2017-11-02
     <br>
-    Högsta utbildnings nivå: Kandidat
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
     <br>
     Antal års erfarenhet: 6
     <br>
