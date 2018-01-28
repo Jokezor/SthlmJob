@@ -234,15 +234,25 @@ pg_close($db_connection);
   <div style="width:95%; margin-top:5px;">
     <p>
     Dokument datum: 2017-11-02
+    <br>
     Högsta utbildnings nivå: Kandidat
+    <br>
     Antal års erfarenhet: 6
+    <br>
     Nuvarande anställare: Umeå Kommun, Umeå
+    <br>
     Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
     Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
     Ekonomisystem: Bästa ekonomi
+    <br>
     Språk: Svenska, Engelska Spanska, Franska
+    <br>
     Kandidat status: -
+    <br>
     Önskad titel: Controller
+    <br>
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
