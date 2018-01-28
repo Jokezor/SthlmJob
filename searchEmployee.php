@@ -265,8 +265,8 @@ pg_close($db_connection);
     </ul>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%;"><a href="#">Section 4</a></h3>
-  <div style="width:95%;">
+  <h3 style="width:95%; margin-top:5px;"><a href="#">Section 4</a></h3>
+  <div style="width:95%; margin-top:5px;">
     <p>
     Cras dictum. Pellentesque habitant morbi tristique  senectus et netus
     et malesuada fames ac turpis egestas. Vestibulum ante  ipsum primis in
