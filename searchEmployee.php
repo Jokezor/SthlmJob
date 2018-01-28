@@ -230,17 +230,23 @@ pg_close($db_connection);
 <div id="notaccordion" class="Res">
   <label for="subscribeNews">Skicka notiser till kandidater?</label>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Section 1</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p>
-    Mauris mauris  ante, blandit et, ultrices a, suscipit eget, quam. Integer
-    ut neque. Vivamus  nisi metus, molestie vel, gravida in, condimentum sit
-    amet, nunc. Nam a  nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-    odio. Curabitur  malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    Dokument datum: 2017-11-02
+    Högsta utbildnings nivå: Kandidat
+    Antal års erfarenhet: 6
+    Nuvarande anställare: Umeå Kommun, Umeå
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    Ekonomisystem: Bästa ekonomi
+    Språk: Svenska, Engelska Spanska, Franska
+    Kandidat status: -
+    Önskad titel: Controller
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Section 2</a></h3>
+  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 2</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p>
     Sed non urna. Donec et ante. Phasellus eu ligula.  Vestibulum sit amet
@@ -250,7 +256,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Section 3</a></h3>
+  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 3</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p>
     Nam enim risus, molestie et, porta ac, aliquam ac,  risus. Quisque lobortis.
@@ -265,7 +271,7 @@ pg_close($db_connection);
     </ul>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Section 4</a></h3>
+  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 4</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p>
     Cras dictum. Pellentesque habitant morbi tristique  senectus et netus
