@@ -234,7 +234,6 @@ pg_close($db_connection);
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
-    <br>
     </p>
     <p>
     Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
