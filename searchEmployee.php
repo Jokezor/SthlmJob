@@ -232,14 +232,19 @@ pg_close($db_connection);
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
-    <p>
+    <p class = "Rubrik">
     Dokument datum: 2017-11-02
     <br>
+    </p>
+    <p>
     Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
     <br>
     Antal års erfarenhet: 6
     <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
     Nuvarande anställare: Umeå Kommun, Umeå
+
     <br>
     Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
     <br>
