@@ -71,7 +71,7 @@ pg_close($db_connection);
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
-                        <div class="ui form">
+                        <!--div class="ui form">
                           <div class="inline fields">
                             <label>Hur viktiga är egenskaperna?</label>
                             <div class="field">
@@ -92,7 +92,7 @@ pg_close($db_connection);
                                 <label>Spelar ej roll</label>
                               </div>
                             </div>
-                          </div>
+                          </div-->
                             <div class="four fields">
                              <div class="required field" style="width:20.60113%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
