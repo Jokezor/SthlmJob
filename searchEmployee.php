@@ -71,8 +71,8 @@ pg_close($db_connection);
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
-                        <!--div class="ui form">
-                          <div class="inline fields">
+                        <div class="ui form">
+                          <!--div class="inline fields">
                             <label>Hur viktiga är egenskaperna?</label>
                             <div class="field">
                               <div class="ui radio checkbox">
