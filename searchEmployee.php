@@ -94,9 +94,9 @@ pg_close($db_connection);
                             </div>
                           </div-->
                             <div class="four fields">
-                             <div class="required field" style="width:20.60113%;">
+                             <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
-                                 <option value="">Jobtitles</option>
+                                 <option value="">Tidigare Tjänster</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
                                  <option value="EKCE">Ekonomichef</option>
@@ -122,21 +122,77 @@ pg_close($db_connection);
                                  <option value="FORS">Föreståndare</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:20.60113%;">
+                             <div class="required field" style="width:15.4508475%;">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <option value="">Tjänst Idag</option>
+                                 <option value="CR">Controller</option>
+                                 <option value="SEK">Styrekonom</option>
+                                 <option value="EKCE">Ekonomichef</option>
+                                 <option value="EKOV">Ekonomiövervakare</option>
+                                 <option value="KA">Kamrer</option>
+                                 <option value="BH">Bokhållare</option>
+                                 <option value="EKAS">Ekonomiassistent</option>
+                                 <option value="RAKFO">Räkenskapsförare</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDANS">Redovisningsansvarig</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDCE">Redovisningschef</option>
+                                 <option value="CFO">Chief Financial Officer</option>
+                                 <option value="BSCTRL">Business Controller</option>
+                                 <option value="FICTRL">Financial Controller</option>
+                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
+                                 <option value="KONREDCE">Koncernredovisningschef</option>
+                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="VD">VD</option>
+                                 <option value="CEO">Ceo</option>
+                                 <option value="DIR">Direktör</option>
+                                 <option value="CE">Chef</option>
+                                 <option value="FORS">Föreståndare</option>
+                               </select>
+                             </div>
+                             <div class="required field" style="width:15.4508475%;">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <option value="">Tjänst Viljes</option>
+                                 <option value="CR">Controller</option>
+                                 <option value="SEK">Styrekonom</option>
+                                 <option value="EKCE">Ekonomichef</option>
+                                 <option value="EKOV">Ekonomiövervakare</option>
+                                 <option value="KA">Kamrer</option>
+                                 <option value="BH">Bokhållare</option>
+                                 <option value="EKAS">Ekonomiassistent</option>
+                                 <option value="RAKFO">Räkenskapsförare</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDANS">Redovisningsansvarig</option>
+                                 <option value="REDEK">Redovisningsekonom</option>
+                                 <option value="REDCE">Redovisningschef</option>
+                                 <option value="CFO">Chief Financial Officer</option>
+                                 <option value="BSCTRL">Business Controller</option>
+                                 <option value="FICTRL">Financial Controller</option>
+                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
+                                 <option value="KONREDCE">Koncernredovisningschef</option>
+                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="VD">VD</option>
+                                 <option value="CEO">Ceo</option>
+                                 <option value="DIR">Direktör</option>
+                                 <option value="CE">Chef</option>
+                                 <option value="FORS">Föreståndare</option>
+                               </select>
+                             </div>
+                             <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Geografiskt Område</option>
                                  <option value="STHLM">Stockholm</option>
                                  <option value="GBG">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:20.601135%;">
+                             <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Ekonomisystem</option>
                                  <option value="BEK">Bästa ekonomi</option>
                                  <option value="UBEK">Underbar ekonomi</option>
                                </select>
                              </div>
-                               <div class="required field" style="width:19.0982949%;">
+                               <div class="required field" style="width:12.7321966%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                    <option value="">Utbildning</option>
                                    <option value="CIVEK">Civilekonom</option>
@@ -144,7 +200,7 @@ pg_close($db_connection);
                                  </select>
                                </div>
 
-                             <div class="required field" style="width:19.0982949%;">
+                             <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
