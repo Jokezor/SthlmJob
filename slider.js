@@ -50,13 +50,22 @@ $(document).ready(function() {
            }
          });
          $('#range-7').range({
-             min: 20,
-             max: 75,
-             start: 40,
+             min: 0,
+             max: 50,
+             start: 0,
              step: 1,
              onChange: function(value) {
                $('#display-7').html(value);
              }
            });
+           $('#range-8').range({
+               min: 0,
+               max: 50,
+               start: 5,
+               step: 1,
+               onChange: function(value) {
+                 $('#display-8').html(value);
+               }
+             });
 
 });
