@@ -1,5 +1,5 @@
 var myRangeValue; // your javascript variable that will store the value of the slider
-
+/*
 $(function() {
     $( "#slider-range" ).slider({
       range: true,
@@ -14,7 +14,7 @@ $(function() {
     $( "#amount" ).val( (new Date($( "#slider-range" ).slider( "values", 0 )*1000).toDateString()) +
       " - " + (new Date($( "#slider-range" ).slider( "values", 1 )*1000)).toDateString());
   });
-
+*/
 
 $(document).ready(function() {
  $("#slider-range").range({
