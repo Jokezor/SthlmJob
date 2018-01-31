@@ -70,7 +70,7 @@ $(document).ready(function() {
              $('#range-9').range({
                  min: 0,
                  max: 50,
-                 start: 5,
+                 start: 0,
                  step: 1,
                  onChange: function(value) {
                    $('#display-9').html(value);
@@ -88,7 +88,7 @@ $(document).ready(function() {
                  $('#range-11').range({
                      min: 0,
                      max: 50,
-                     start: 5,
+                     start: 0,
                      step: 1,
                      onChange: function(value) {
                        $('#display-11').html(value);
