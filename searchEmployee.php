@@ -180,7 +180,7 @@ pg_close($db_connection);
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
-                                 <option value="">Geografiskt Område</option>
+                                 <option value="">Plats</option>
                                  <option value="STHLM">Stockholm</option>
                                  <option value="GBG">Göteborg</option>
                                </select>
