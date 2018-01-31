@@ -264,7 +264,7 @@ pg_close($db_connection);
                                  Maximum: <span id="display-10"></span>
                                </p>
                            </div>
-                           <h2>Uppsägningstid i veckor</h2>
+                           <h2>Uppsägningstid i månader</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-11"></div>
                              <br>
