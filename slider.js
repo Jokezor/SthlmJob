@@ -3,8 +3,8 @@ var myRangeValue; // your javascript variable that will store the value of the s
 $(function() {
     $( "#slider-range" ).slider({
       range: true,
-      min: new Date('2010.01.01').getTime() / 1000,
-      max: new Date('2014.01.01').getTime() / 1000,
+      min: new Date('2018.01.01').getTime() / 1000,
+      max: new Date('2019.01.01').getTime() / 1000,
       step: 86400,
       values: [ new Date('2013.01.01').getTime() / 1000, new Date('2013.02.01').getTime() / 1000 ],
       slide: function( event, ui ) {
