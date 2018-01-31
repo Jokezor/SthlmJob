@@ -84,7 +84,6 @@ $(document).ready(function() {
                }
              });
              $('#range-9').range({
-
                  min: 0,
                  max: 12,
                  start: 0,
