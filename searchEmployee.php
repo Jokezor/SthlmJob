@@ -251,6 +251,32 @@ pg_close($db_connection);
                                  Maximum: <span id="display-8"></span>
                                </p>
                            </div>
+                           <h2>Tillgänglighet</h2>
+                           <div class="ui segment" style="width:40%;">
+                             <div class="ui range" id="range-9"></div>
+                             <br>
+                              <p>
+                                Minimum: <span id="display-9"></span>
+                              </p>
+                              <div class="ui range" id="range-10"></div>
+                              <br>
+                               <p>
+                                 Maximum: <span id="display-10"></span>
+                               </p>
+                           </div>
+                           <h2>Uppsägningstid</h2>
+                           <div class="ui segment" style="width:40%;">
+                             <div class="ui range" id="range-11"></div>
+                             <br>
+                              <p>
+                                Minimum: <span id="display-11"></span>
+                              </p>
+                              <div class="ui range" id="range-12"></div>
+                              <br>
+                               <p>
+                                 Maximum: <span id="display-12"></span>
+                               </p>
+                           </div>
 
                            <!--div class="ui segment" style="width:12.7321966%;">
                              <div class="ui range" id="range-4"></div>

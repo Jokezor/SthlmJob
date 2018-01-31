@@ -67,5 +67,42 @@ $(document).ready(function() {
                  $('#display-8').html(value);
                }
              });
+             $('#range-9').range({
+                 min: 0,
+                 max: 50,
+                 start: 5,
+                 step: 1,
+                 onChange: function(value) {
+                   $('#display-9').html(value);
+                 }
+               });
+               $('#range-10').range({
+                   min: 0,
+                   max: 50,
+                   start: 5,
+                   step: 1,
+                   onChange: function(value) {
+                     $('#display-10').html(value);
+                   }
+                 });
+                 $('#range-11').range({
+                     min: 0,
+                     max: 50,
+                     start: 5,
+                     step: 1,
+                     onChange: function(value) {
+                       $('#display-11').html(value);
+                     }
+                   });
+                   $('#range-12').range({
+                       min: 0,
+                       max: 50,
+                       start: 5,
+                       step: 1,
+                       onChange: function(value) {
+                         $('#display-12').html(value);
+                       }
+                     });
+
 
 });
