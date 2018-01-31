@@ -6,7 +6,7 @@ $(function() {
       min: new Date('2018.01.01').getTime() / 1000,
       max: new Date('2019.01.01').getTime() / 1000,
       step: 86400,
-      values: [ new Date('2013.01.01').getTime() / 1000, new Date('2013.02.01').getTime() / 1000 ],
+      values: [ new Date('2018.01.01').getTime() / 1000, new Date('2019.01.01').getTime() / 1000 ],
       slide: function( event, ui ) {
         $( "#amount" ).val( (new Date(ui.values[ 0 ] *1000).toDateString() ) + " - " + (new Date(ui.values[ 1 ] *1000)).toDateString() );
       }
@@ -84,6 +84,7 @@ $(document).ready(function() {
                }
              });
              $('#range-9').range({
+
                  min: 0,
                  max: 12,
                  start: 0,
