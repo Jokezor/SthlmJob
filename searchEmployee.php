@@ -323,7 +323,7 @@ pg_close($db_connection);
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
-  <label for="subscribeNews">Skicka notiser till kandidater?</label>
+  <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
