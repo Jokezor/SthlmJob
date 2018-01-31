@@ -69,7 +69,7 @@ $(document).ready(function() {
              });
              $('#range-9').range({
                  min: 0,
-                 max: 50,
+                 max: 12,
                  start: 0,
                  step: 1,
                  onChange: function(value) {
@@ -78,7 +78,7 @@ $(document).ready(function() {
                });
                $('#range-10').range({
                    min: 0,
-                   max: 50,
+                   max: 12,
                    start: 5,
                    step: 1,
                    onChange: function(value) {
@@ -87,7 +87,7 @@ $(document).ready(function() {
                  });
                  $('#range-11').range({
                      min: 0,
-                     max: 50,
+                     max: 12,
                      start: 0,
                      step: 1,
                      onChange: function(value) {
@@ -96,8 +96,8 @@ $(document).ready(function() {
                    });
                    $('#range-12').range({
                        min: 0,
-                       max: 50,
-                       start: 5,
+                       max: 12,
+                       start: 12,
                        step: 1,
                        onChange: function(value) {
                          $('#display-12').html(value);
