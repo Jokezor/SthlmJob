@@ -68,21 +68,21 @@ $(document).ready(function() {
                }
              });
              $('#range-9').range({
-               var d = new Date();
-               var dd = d.getDate();
-               var mm = d.getMonth()+1; //January is 0!
-               var yyyy = d.getFullYear();
-               if(dd<10) {
-                 dd = '0'+dd
-               }
+                 var d = new Date();
+                 var dd = d.getDate();
+                 var mm = d.getMonth()+1; //January is 0!
+                 var yyyy = d.getFullYear();
+                 if(dd<10) {
+                   dd = '0'+dd
+                 }
 
-               if(mm<10) {
-                 mm = '0'+mm
-               }
+                 if(mm<10) {
+                   mm = '0'+mm
+                 }
 
-               today = yyyy + '-' + mm + '-' + dd;
-               yyyy = yyyy+1;
-               future = yyyy + '-' + mm + '-' + dd;
+                 today = yyyy + '-' + mm + '-' + dd;
+                 yyyy = yyyy+1;
+                 future = yyyy + '-' + mm + '-' + dd;
                  min: today,
                  max: future,
                  start: today,
