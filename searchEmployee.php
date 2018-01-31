@@ -212,7 +212,7 @@ pg_close($db_connection);
                                </select>
                              </div>
                            </div>
-                           <h2>Lönenivå</h2>
+                           <h2>Lönenivå i SEK</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-3"></div>
                              <br>
@@ -238,7 +238,7 @@ pg_close($db_connection);
                                  Maximum: <span id="display-6"></span>
                                </p>
                            </div>
-                           <h2>Erfarenhet</h2>
+                           <h2>Års Erfarenhet</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-7"></div>
                              <br>
@@ -251,7 +251,7 @@ pg_close($db_connection);
                                  Maximum: <span id="display-8"></span>
                                </p>
                            </div>
-                           <h2>Tillgänglighet</h2>
+                           <h2>Tillgänglighet i veckor</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-9"></div>
                              <br>
@@ -264,7 +264,7 @@ pg_close($db_connection);
                                  Maximum: <span id="display-10"></span>
                                </p>
                            </div>
-                           <h2>Uppsägningstid</h2>
+                           <h2>Uppsägningstid i veckor</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-11"></div>
                              <br>
