@@ -292,7 +292,7 @@ pg_close($db_connection);
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
-                           <div class="field" style="width:20%;">
+                           <div class="field" style="width:20%; margin:auto;">
                               <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
                  </div>
@@ -327,12 +327,6 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <p>
-     <label for="amount1" style = "margin-left: 5%;">Tillgänglighets datum:</label>
-     <input type="text" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 5%;" size="100"/>
-   </p>
-
-   <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 5%;"></div>
 
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
