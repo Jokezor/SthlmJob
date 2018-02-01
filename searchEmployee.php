@@ -251,12 +251,7 @@ pg_close($db_connection);
                                  Maximum: <span id="display-8"></span>
                                </p>
                            </div>
-                           <p>
-                             <label for="amount1" style = "margin-left: 5%;">Tillgänglighets datum:</label>
-                             <input type="text" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 5%;" size="100"/>
-                           </p>
 
-                           <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 5%;"></div>
                            <h2>Tillgänglighets datum</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-9"></div>
@@ -283,6 +278,12 @@ pg_close($db_connection);
                                  Maximum: <span id="display-12"></span>
                                </p>
                            </div>
+                           <p>
+                             <label for="amount1" style = "margin-left: 0%;">Tillgänglighets datum:</label>
+                             <input type="text" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100"/>
+                           </p>
+
+                           <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div>
 
                            <!--div class="ui segment" style="width:12.7321966%;">
                              <div class="ui range" id="range-4"></div>
