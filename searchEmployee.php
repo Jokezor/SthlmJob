@@ -320,12 +320,12 @@ pg_close($db_connection);
          </div>
       </div>
    </div>
-   <p>
+   <!--p>
      <label for="amount">Date range:</label>
      <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" size="100"/>
    </p>
 
-   <div id="slider-range" style="width:40%;"></div>
+   <div id="slider-range" style="width:40%;"></div-->
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
