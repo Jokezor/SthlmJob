@@ -292,7 +292,7 @@ pg_close($db_connection);
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
-                           <div class="field" style="width:20%; margin:auto;">
+                           <div class="field" style="width:20%; margin-top:5%;">
                               <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
                  </div>
