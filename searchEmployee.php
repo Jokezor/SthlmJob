@@ -325,8 +325,8 @@ pg_close($db_connection);
      <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" size="100"/>
    </p>
 
-   <div id="slider-range"></div>
-   
+   <div id="slider-range1"></div>
+
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
