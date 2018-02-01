@@ -321,7 +321,7 @@ pg_close($db_connection);
       </div>
    </div>
    <p>
-     <label for="amount1" style = "margin-left: 5%;">Date range:</label>
+     <label for="amount1" style = "margin-left: 5%;">Datum:</label>
      <input type="text" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 5%;" size="100"/>
    </p>
 
