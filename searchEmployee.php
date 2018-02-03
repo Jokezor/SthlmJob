@@ -334,7 +334,7 @@ pg_close($db_connection);
   <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:30%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
-  <label for ="menu" style="color:black; margin-left:10%;">Sortering:</label>
+  <label for ="menu" style="color:black; margin-left:5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
   <div class="default text">Sortering</div>
