@@ -334,6 +334,28 @@ pg_close($db_connection);
   <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:40%;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
+  <div class="ui scrolling dropdown">
+  <input type="hidden" name="gender">
+  <div class="default text">Select choice</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item">Choice 1</div>
+    <div class="item">Choice 2</div>
+    <div class="item">Choice 3</div>
+    <div class="item">Choice 4</div>
+    <div class="item">Choice 5</div>
+    <div class="item">Choice 6</div>
+    <div class="item">Choice 7</div>
+    <div class="item">Choice 8</div>
+    <div class="item">Choice 9</div>
+    <div class="item">Choice 10</div>
+    <div class="item">Choice 11</div>
+    <div class="item">Choice 12</div>
+    <div class="item">Choice 13</div>
+    <div class="item">Choice 14</div>
+    <div class="item">Choice 15</div>
+  </div>
+</div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
