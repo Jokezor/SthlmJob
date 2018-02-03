@@ -331,7 +331,7 @@ pg_close($db_connection);
 <form>
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
-  <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
+  <label for="subscribeNews" style="color:black;">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
   <label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
