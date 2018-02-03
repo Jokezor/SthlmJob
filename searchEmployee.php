@@ -333,7 +333,7 @@ pg_close($db_connection);
 <div id="notaccordion" class="Res">
   <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:45%;">Endast önskad titel</label>
-  <input type="checkbox" id ="wishtitle" name = "wish" style="margin-left:45%;">
+  <input type="checkbox" id ="wishtitle" name = "wish">
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
