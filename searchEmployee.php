@@ -332,11 +332,11 @@ pg_close($db_connection);
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <label for="subscribeNews">Kryssa i de kandidater du vill skicka notiser till</label>
-  <label for="wishtitle" style="margin-left:40%;">Endast önskad titel</label>
+  <label for="wishtitle" style="margin-left:40%; color:black">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
-  <div class="default text">Select choice</div>
+  <div class="default text">Sortering</div>
   <i class="dropdown icon"></i>
   <div class="menu">
     <div class="item">Choice 1</div>
