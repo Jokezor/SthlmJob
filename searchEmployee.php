@@ -337,24 +337,15 @@ pg_close($db_connection);
   <label for ="menu" style="color:black; margin-left:5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
-  <div class="default text">Sortering</div>
+  <div class="default text">Standard</div>
   <i class="dropdown icon"></i>
   <div class="menu">
-    <div class="item">Choice 1</div>
-    <div class="item">Choice 2</div>
-    <div class="item">Choice 3</div>
-    <div class="item">Choice 4</div>
-    <div class="item">Choice 5</div>
-    <div class="item">Choice 6</div>
-    <div class="item">Choice 7</div>
-    <div class="item">Choice 8</div>
-    <div class="item">Choice 9</div>
-    <div class="item">Choice 10</div>
-    <div class="item">Choice 11</div>
-    <div class="item">Choice 12</div>
-    <div class="item">Choice 13</div>
-    <div class="item">Choice 14</div>
-    <div class="item">Choice 15</div>
+    <div class="item">Erfarenhet (högst)</div>
+    <div class="item">Erfarenhet (lägst)</div>
+    <div class="item">Lönekrav (högst)</div>
+    <div class="item">Lönekrav (lägst)</div>
+    <div class="item">Rekommenderade (högst)</div>
+    <div class="item">Rekommenderade (lägst)</div>
   </div>
 </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
