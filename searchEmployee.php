@@ -349,7 +349,7 @@ pg_close($db_connection);
   </div>
 </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">1. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -379,7 +379,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">2. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -409,7 +409,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">3. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -439,7 +439,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">4. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -469,7 +469,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">5. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -499,7 +499,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">6. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -529,7 +529,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">7. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -559,7 +559,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">8. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -589,7 +589,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">9. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -619,7 +619,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">10. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -649,7 +649,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">11. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -679,7 +679,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">12. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -709,7 +709,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">13. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -739,7 +739,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">14. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
@@ -769,7 +769,7 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">15. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
