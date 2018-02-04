@@ -328,7 +328,7 @@ pg_close($db_connection);
       </div>
    </div>
 
-<form style="margin-top:50%;">
+<form style="margin-top:10%;">
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <label for="subscribeNews" style="color:black;">Kryssa i de kandidater du vill skicka notiser till</label>
