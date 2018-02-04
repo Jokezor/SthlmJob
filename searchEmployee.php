@@ -424,9 +424,9 @@ pg_close($db_connection);
 </div>
 </form>
 
-   <div class="contact">
+   <!--div class="contact">
      Kontakt
-   </div>
+   </div-->
 
    <script>
       $.fn.togglepanels = function(){
