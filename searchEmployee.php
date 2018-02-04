@@ -468,6 +468,336 @@ pg_close($db_connection);
     <br>
     </p>
   </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
+  </div>
 </div>
 <div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
