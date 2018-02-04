@@ -419,7 +419,7 @@ pg_close($db_connection);
      </p>
   </div>
 </div>
-<div class="field" style="width:20%; float:right;">
+<div class="field" style="width:20%; float:right; margin-top:5%; margin-left:10%;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
 </div>
 </form>
