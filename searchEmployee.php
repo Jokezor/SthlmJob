@@ -349,7 +349,7 @@ pg_close($db_connection);
   </div>
 </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">1.  Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
