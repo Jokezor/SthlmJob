@@ -379,44 +379,94 @@ pg_close($db_connection);
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 2</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
+    </p>
     <p>
-    Sed non urna. Donec et ante. Phasellus eu ligula.  Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet,  mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo.  Vivamus non quam. In
-    suscipit faucibus urna.
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
     </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 3</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
-    <p>
-    Nam enim risus, molestie et, porta ac, aliquam ac,  risus. Quisque lobortis.
-    Phasellus pellentesque purus in massa. Aenean in pede.  Phasellus ac libero
-    ac tellus pellentesque semper. Sed ac felis. Sed  commodo, magna quis
-    lacinia ornare, quam ante aliquam nisi, eu iaculis leo  purus venenatis dui.
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
     </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item  three</li>
-    </ul>
+    <p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
-  <h3 style="width:95%; margin-top:5px;"><a href="#">Candidate 4</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique  senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante  ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae;  Aenean lacinia
-    mauris vel est.
+    <p class = "Rubrik">
+    Dokument datum: 2017-11-02
     </p>
     <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer  dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per  conubia nostra, per
-    inceptos himenaeos.
-     </p>
+    Högsta utbildnings nivå: Kandidatexamen inom ekonomi, Umeå Universitet
+    <br>
+    Antal års erfarenhet: 6
+    <br>
+    Nuvarande anställning: Personlig Assistent
+    <br>
+    Nuvarande anställare: Umeå Kommun, Umeå
+
+    <br>
+    Jobtitlar: Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+    <br>
+    Skills: Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
+    <br>
+    Ekonomisystem: Bästa ekonomi
+    <br>
+    Språk: Svenska, Engelska Spanska, Franska
+    <br>
+    Kandidat status: -
+    <br>
+    Önskad titel: Controller
+    <br>
+    </p>
   </div>
 </div>
 <div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
