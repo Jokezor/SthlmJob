@@ -88,6 +88,11 @@
 	float:center;
 	margin-right: 9.75%;
 	margin-top: 5px;
+	margin-bottom
+}
+
+.fluid ui button{
+	margin:auto;
 }
 
 .Rubrik{
@@ -114,5 +119,5 @@
 }
 
 .SeeCV{
-	
+
 }
