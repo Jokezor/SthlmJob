@@ -379,27 +379,27 @@ pg_close($db_connection);
     </div>
     <div class="Tryshiftleft">
       <p>
-        Dokument datum:
+        2017-11-02
         <br>
-        Högsta utbildnings nivå:
+        Kandidatexamen inom ekonomi, Umeå Universitet
         <br>
-        Antal års erfarenhet:
+        6
         <br>
-        Nuvarande anställning:
+        Personlig Assistent
         <br>
-        Nuvarande anställare:
+        Umeå Kommun, Umeå
         <br>
-        Jobtitlar:
+        Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
         <br>
-        Skills:
+        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning
         <br>
-        Ekonomisystem:
+        Bästa ekonomi
         <br>
-        Språk:
+        Svenska, Engelska Spanska, Franska
         <br>
-        Kandidat status:
+        -
         <br>
-        Önskad titel:
+        Controller
         <br>
       </p>
     </div>

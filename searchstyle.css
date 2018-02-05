@@ -98,13 +98,13 @@
 	width: 20%;
 	text-align: right;
 	float:left;
-	font-weight: bold;
 }
 
 .Tryshiftleft{
 	text-align: left;
 	float: left;
 	overflow: hidden;
+	font-weight: bold;
 }
 
 #notaccordion{
