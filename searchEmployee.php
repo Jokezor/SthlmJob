@@ -355,40 +355,30 @@ pg_close($db_connection);
       <p>
         Dokument datum:
         <br>
-        <br>
         Högsta utbildnings nivå:
-        <br>
         <br>
         Antal års erfarenhet:
         <br>
-        <br>
         Nuvarande anställning:
-        <br>
         <br>
         Nuvarande anställare:
         <br>
-        <br>
         Jobtitlar:
-        <br>
         <br>
         Skills:
         <br>
-        <br>
         Ekonomisystem:
-        <br>
         <br>
         Språk:
         <br>
-        <br>
         Kandidat status:
-        <br>
         <br>
         Önskad titel:
         <br>
-        <br>
       </p>
     </div>
-    <p class = "Rubrik">
+
+    <!--p class = "Rubrik">
     Dokument datum: 2017-11-02
     </p>
     <p>
@@ -413,7 +403,7 @@ pg_close($db_connection);
     <br>
     Önskad titel: Controller
     <br>
-    </p>
+  </p-->
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
   <h3 style="width:95%; margin-top:5px"><a href="#">2.  &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
