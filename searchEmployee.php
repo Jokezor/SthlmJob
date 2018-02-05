@@ -424,12 +424,8 @@ pg_close($db_connection);
       </p>
     </div>
     <div class="SeeCV">
-      <div class="ui vertical animated button" tabindex="0">
-        <div class="hidden content">Visa CV</div>
-        <div class="visible content">
-          <i class="shop icon"></i>
-        </div>
-      </div>
+      <button class="ui button">Visa CV</button>
+      <button class="ui button">Visa Profil</button>
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
