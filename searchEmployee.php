@@ -391,7 +391,7 @@ pg_close($db_connection);
       <p>
         2017-11-02
         <br>
-        Kandidatexamen inom ekonomi, Umeå UniversitetMatlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
+        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
         <br>
         6
         <br>
