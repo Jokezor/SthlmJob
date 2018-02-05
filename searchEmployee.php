@@ -401,7 +401,7 @@ pg_close($db_connection);
         <br>
         Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
         <br>
-        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python, C#, Jonglering, Kung i sängen, Grym på allt
+        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
         <br>
         Bästa ekonomi
         <br>
