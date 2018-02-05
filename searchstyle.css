@@ -91,9 +91,9 @@
 	margin-bottom
 }
 
-#field{
+.field{
 	margin:auto;
-	margin-bottom:5px;
+	height: 20%;
 }
 
 .Rubrik{
