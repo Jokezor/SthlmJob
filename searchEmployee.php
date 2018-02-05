@@ -351,6 +351,32 @@ pg_close($db_connection);
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
+    <div class="Tryshiftright">
+      <p>
+        Dokument datum:
+        <br>
+        Högsta utbildnings nivå:
+        <br>
+        Antal års erfarenhet:
+        <br>
+        Nuvarande anställning:
+        <br>
+        Nuvarande anställare:
+        <br>
+        Jobtitlar:
+        <br>
+        Skills:
+        <br>
+        Ekonomisystem:
+        <br>
+        Språk:
+        <br>
+        Kandidat status:
+        <br>
+        Önskad titel:
+        <br>
+      </p>
+    </div>
     <p class = "Rubrik">
     Dokument datum: 2017-11-02
     </p>

@@ -93,3 +93,9 @@
 .Rubrik{
 	font-weight: bold;
 }
+
+.Tryshiftright{
+	width: 30%;
+	float: right;
+	text-align: right;
+}
