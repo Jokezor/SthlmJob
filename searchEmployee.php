@@ -423,6 +423,14 @@ pg_close($db_connection);
         <br>
       </p>
     </div>
+    <div class="SeeCV">
+      <div class="ui vertical animated button" tabindex="0">
+        <div class="hidden content">Shop</div>
+        <div class="visible content">
+          <i class="shop icon"></i>
+        </div>
+      </div>
+    </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
   <h3 style="width:95%; margin-top:5px"><a href="#">2.  &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
