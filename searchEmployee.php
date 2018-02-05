@@ -377,6 +377,32 @@ pg_close($db_connection);
         <br>
       </p>
     </div>
+    <div class="Tryshiftleft">
+      <p>
+        Dokument datum:
+        <br>
+        Högsta utbildnings nivå:
+        <br>
+        Antal års erfarenhet:
+        <br>
+        Nuvarande anställning:
+        <br>
+        Nuvarande anställare:
+        <br>
+        Jobtitlar:
+        <br>
+        Skills:
+        <br>
+        Ekonomisystem:
+        <br>
+        Språk:
+        <br>
+        Kandidat status:
+        <br>
+        Önskad titel:
+        <br>
+      </p>
+    </div>
 
     <!--p class = "Rubrik">
     Dokument datum: 2017-11-02
