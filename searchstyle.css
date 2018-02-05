@@ -101,6 +101,7 @@
 
 .Tryshiftleft{
 	text-align: left;
+	float: left;
 	overflow: hidden;
 }
 
