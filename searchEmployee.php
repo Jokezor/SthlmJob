@@ -363,7 +363,7 @@ pg_close($db_connection);
         <br>
         Nuvarande anställare:
         <br>
-        Jobtitlar:
+        Tidigare tjänster:
         <br>
         Skills:
         <br>
@@ -374,6 +374,16 @@ pg_close($db_connection);
         Kandidat status:
         <br>
         Önskad titel:
+        <br>
+        Plats:
+        <br>
+        Lönenivå:
+        <br>
+        Ålder:
+        <br>
+        Uppsägningstid:
+        <br>
+        Tillgänglig tidigast:
         <br>
       </p>
     </div>
@@ -400,6 +410,16 @@ pg_close($db_connection);
         -
         <br>
         Controller
+        <br>
+        Umeå
+        <br>
+        100000
+        <br>
+        23
+        <br>
+        3 månader
+        <br>
+        -
         <br>
       </p>
     </div>
