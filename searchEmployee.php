@@ -391,7 +391,7 @@ pg_close($db_connection);
       <p>
         2017-11-02
         <br>
-        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
+        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python, C++
         <br>
         6
         <br>
