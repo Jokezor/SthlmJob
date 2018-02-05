@@ -391,7 +391,7 @@ pg_close($db_connection);
       <p>
         2017-11-02
         <br>
-        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python, C++
+        Kandidatexamen inom ekonomi, Umeå Universitet
         <br>
         6
         <br>
@@ -424,7 +424,7 @@ pg_close($db_connection);
       </p>
     </div>
     <div class="SeeCV">
-      <button class="ui grey button">Se CV</button>
+      <button class="ui right floated grey button">Se CV</button>
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
