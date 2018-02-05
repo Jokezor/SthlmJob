@@ -507,7 +507,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">3. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -586,7 +586,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">4. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -665,7 +665,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">5. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -744,7 +744,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">6. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -823,7 +823,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">7. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -902,7 +902,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">8. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -981,7 +981,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">9. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1060,7 +1060,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">10. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1139,7 +1139,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">11. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1218,7 +1218,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">12. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1297,7 +1297,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">13. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1376,7 +1376,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">14. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
@@ -1455,7 +1455,7 @@ pg_close($db_connection);
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
-  <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+  <h3 style="width:95%; margin-top:5px"><a href="#">15. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
