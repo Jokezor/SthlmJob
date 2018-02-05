@@ -95,11 +95,11 @@
 }
 
 .Tryshiftright{
-	width: 15%;
+	width: 20%;
 	text-align: right;
 }
 
 .Tryshiftleft{
-	width: 20%;
-	text-align: left;
+	width: 80%;
+	text-align: right;
 }
