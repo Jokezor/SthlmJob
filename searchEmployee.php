@@ -425,7 +425,7 @@ pg_close($db_connection);
     </div>
     <div class="SeeCV">
       <div class="ui vertical animated button" tabindex="0">
-        <div class="hidden content">Shop</div>
+        <div class="hidden content">Visa CV</div>
         <div class="visible content">
           <i class="shop icon"></i>
         </div>
