@@ -424,7 +424,7 @@ pg_close($db_connection);
       </p>
     </div>
     <div class="SeeCV">
-      <button class="ui button">Visa CV</button>
+      <button class="ui grey utton">Visa CV</button>
     </div>
   </div>
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees">
