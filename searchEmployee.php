@@ -355,25 +355,36 @@ pg_close($db_connection);
       <p>
         Dokument datum:
         <br>
+        <br>
         Högsta utbildnings nivå:
+        <br>
         <br>
         Antal års erfarenhet:
         <br>
+        <br>
         Nuvarande anställning:
+        <br>
         <br>
         Nuvarande anställare:
         <br>
+        <br>
         Jobtitlar:
+        <br>
         <br>
         Skills:
         <br>
+        <br>
         Ekonomisystem:
+        <br>
         <br>
         Språk:
         <br>
+        <br>
         Kandidat status:
         <br>
+        <br>
         Önskad titel:
+        <br>
         <br>
       </p>
     </div>
