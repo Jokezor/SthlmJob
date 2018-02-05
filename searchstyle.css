@@ -101,5 +101,11 @@
 
 .Tryshiftleft{
 	width: 80%;
-	text-align: right;
+	text-align: left;
+	overflow: hidden;
+}
+
+#notaccordion{
+	overflow: hidden;
+
 }
