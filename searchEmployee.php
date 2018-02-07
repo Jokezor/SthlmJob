@@ -237,7 +237,7 @@ pg_close($db_connection);
                              <div class="ui range" id="range-3"></div>
                              <br>
                               <p>
-                                Minimum: <span id="display-3" name="keywords[]"></span>
+                                Minimum: <span id="display-3"></span>
                               </p>
                               <div class="ui range" id="range-4"></div>
                               <br>
