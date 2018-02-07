@@ -234,7 +234,7 @@ pg_close($db_connection);
                            </div>
                            <h2>Lönenivå i SEK</h2>
                            <div class="ui segment" style="width:40%;">
-                             <div class="ui range" id="range-3"></div>
+                             <div class="ui range" id="range-3" name="keywords[]"></div>
                              <br>
                               <p>
                                 Minimum: <span id="display-3"></span>
