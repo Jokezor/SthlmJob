@@ -67,7 +67,7 @@ pg_close($db_connection);
       for($i = 0; $i < sizeof($_POST['keywords']); $i++){
          echo $_POST['keywords'][$i] . "  ";
       }
-      $isFirst = true
+      $isFirst = true;
       foreach ($_POST as $key => $value) {
          if($isFirst){
             $isFirst = false;
