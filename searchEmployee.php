@@ -312,6 +312,9 @@ pg_close($db_connection);
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
+                           <input type="hidden" id="minsalary" name="minsalary" value="20000">
+                           <input type="hidden" id="maxsalary" name="maxsalary" value="100000">
+
                            <div class="field" style="width:20%; margin-top:5%;">
                               <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
