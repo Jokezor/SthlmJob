@@ -5,8 +5,28 @@
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
 ?>
 
+
 <?php
- /* If input fields are populated, add a row to the Users table. */
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+   echo "Keywords: ";
+   for($i = 0; $i < sizeof($_POST['keywords']); $i++){
+      echo $_POST(['keywords'][$i]);
+   }
+   foreach ($_POST as $key => $value) {
+      echo "<tr>";
+      echo "<td>";
+      echo $key;
+      echo "</td>";
+      echo "<td>";
+      echo $value;
+      echo "</td>";
+      echo "</tr>";
+   }
+}
+?>
+<?php
+/*
+  If input fields are populated, add a row to the Users table.
  $search_word1[] = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $search_word1 = htmlentities($_POST['keywords'][0]);
@@ -22,7 +42,7 @@
    if(!$result){
       exit("query execute error");
    }
-}
+}*/
 ?>
 
 
@@ -302,7 +322,7 @@ pg_close($db_connection);
                <p id="txtHint"> </p>
                <div>
                   <table>
-                     <?php
+                     <?php/*
                      echo "<tr>";
                      echo "<th> Namn </td>";
                      echo "<th> Adress </td>";
@@ -319,7 +339,7 @@ pg_close($db_connection);
                            }
                         }
                         pg_free_result($result);
-                     }
+                     }*/
                      ?>
                   </table>
                </div>
