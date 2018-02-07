@@ -73,8 +73,6 @@
 .employees{
 	float:right;
 	margin: auto;
-	height: 45px;
-	width: 45px;
 }
 
 .contact{
@@ -86,8 +84,7 @@
 	text-align: center;
 	float:center;
 	margin-right: 9.75%;
-	margin-top: 5px;
-	margin-bottom
+
 }
 
 .field{
