@@ -348,8 +348,7 @@ pg_close($db_connection);
     <div class="item">Rekommenderade (lägst)</div>
   </div>
 </div>
-  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;"-->
-  <input type="checkbox" id ="wishtitle" name = "wish">
+  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
   <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
