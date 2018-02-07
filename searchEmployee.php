@@ -65,17 +65,17 @@ pg_close($db_connection);
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       echo "Keywords: ";
       for($i = 0; $i < sizeof($_POST['keywords']); $i++){
-         echo $_POST['keywords'][$i];
+         echo $_POST['keywords'][$i] . "  ";
       }
+      $isFirst = true
       foreach ($_POST as $key => $value) {
-         echo "<tr>";
-         echo "<td>";
-         echo $key;
-         echo "</td>";
-         echo "<td>";
+         if($isFirst){
+            $isFirst = false;
+            continue;
+         }
+         echo $key . ": ";
          echo $value;
-         echo "</td>";
-         echo "</tr>";
+         echo "\n";
       }
    }
    ?>
