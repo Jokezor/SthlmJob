@@ -61,6 +61,9 @@ pg_close($db_connection);
 <body>
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
+      <script>
+
+      </script>
       echo "Keywords: ";
       for($i = 0; $i < sizeof($_POST['keywords']); $i++){
          echo $_POST['keywords'][$i] . "  ";
@@ -351,6 +354,7 @@ pg_close($db_connection);
   <label for="subscribeNews" style="color:black;">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
+
   <label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
@@ -364,7 +368,13 @@ pg_close($db_connection);
     <div class="item">Rekommenderade (högst)</div>
     <div class="item">Rekommenderade (lägst)</div>
   </div>
+
 </div>
+
+   <!-- Beginning of loop ? -->
+   <?php
+   for($numOfCandidates = 0; $numOfCandidates < 15; $numOfCandidates++){
+      echo '
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right; margin-top:3.5%;">
   <h3 style="width:95%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
@@ -443,7 +453,12 @@ pg_close($db_connection);
     <div class="SeeCV">
       <button class="ui right floated blue button">Se CV</button>
     </div>
-  </div>
+  </div>';
+   }
+?>
+<!-- End of loop ? -->
+
+<!--
   <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="margin-top:20px;">
   <h3 style="width:95%; margin-top:5px"><a href="#">2. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
   <div style="width:95%; margin-top:5px;">
@@ -1550,6 +1565,7 @@ pg_close($db_connection);
       <button class="ui right floated blue button">Se CV</button>
     </div>
   </div>
+   -->
 </div>
 <div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
