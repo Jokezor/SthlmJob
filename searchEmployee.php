@@ -7,6 +7,7 @@
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
+ /*
  $search_word1[] = "";
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $search_word1 = htmlentities($_POST['keywords'][0]);
@@ -22,7 +23,7 @@
    if(!$result){
       exit("query execute error");
    }
-}
+}*/
 ?>
 
 
@@ -309,6 +310,8 @@ pg_close($db_connection);
                                 Maximum: <span id="display-4"></span>
                               </p>
                            </div-->
+                           <input type=hidden name="minsalary" id="minsalary" value="20000">
+                           <input type=hidden name="maxsalary" id="maxsalary" value="100000">
                            <div class="field" style="width:20%; margin-top:5%;">
                               <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
