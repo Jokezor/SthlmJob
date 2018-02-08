@@ -111,7 +111,7 @@ pg_close($db_connection);
                               </div>
                             </div>
                           </div-->
-                          <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 7.72542375%;">
+                          <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
