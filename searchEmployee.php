@@ -58,6 +58,23 @@ pg_close($db_connection);
 </head>
 
 <body>
+   <?php
+   if($_SERVER["REQUEST_METHOD"] == "POST"){
+      echo "Keywords: ";
+      for($i = 0; $i < sizeof($_POST['keywords']); $i++){
+         echo $_POST['keywords'][$i] . "  ";
+      }
+      foreach ($_POST as $key => $value) {
+         if($key == "keywords"){
+            continue;
+         }
+         echo $key . ": ";
+         echo $value;
+         echo "\n";
+      }
+   }
+   ?>
+
       <div>
          <div>
             <h1 style="text-align:center; margin-top: 5%;"> SökKandidater </h1>
@@ -302,7 +319,7 @@ pg_close($db_connection);
                <p id="txtHint"> </p>
                <div>
                   <table>
-                     <?php
+                     <?php/*
                      echo "<tr>";
                      echo "<th> Namn </td>";
                      echo "<th> Adress </td>";
@@ -319,7 +336,7 @@ pg_close($db_connection);
                            }
                         }
                         pg_free_result($result);
-                     }
+                     }*/
                      ?>
                   </table>
                </div>
