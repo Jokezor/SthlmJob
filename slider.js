@@ -35,7 +35,7 @@ $(document).ready(function() {
      step: 1000,
      onChange: function(value) {
        $('#display-3').html(value);
-       $('#minsalary').value(value);
+       $('#minsalary').val(value);
      }
    });
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
        step: 1000,
        onChange: function(value) {
          $('#display-4').html(value);
-         $('#maxsalary').value(value);
+         $('#maxsalary').val(value);
        }
      });
      $('#range-5').range({
