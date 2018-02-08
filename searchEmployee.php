@@ -89,7 +89,7 @@ pg_close($db_connection);
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
-                       <p style="color:black; font-weight: bold; font-size =1.2em;">Kryssa i de tjänster som kan ha synonymer</p>
+                       <p style="color:black; font-weight: bold; font-size =1.2em;">Kryssa i de tjänster som kan ha synonymer vid sortering av kandidater</p>
                         <div class="ui form">
                           <!--div class="inline fields">
                             <label>Hur viktiga är egenskaperna?</label>
