@@ -112,8 +112,8 @@ pg_close($db_connection);
                             </div>
                           </div-->
                             <div class="four fields">
+                              <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="">
                              <div class="required field" style="width:15.4508475%;">
-                               <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
                                  <option value="">Tidigare Tjänster</option>
                                  <option value="CR">Controller</option>
