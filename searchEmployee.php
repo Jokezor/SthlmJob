@@ -88,6 +88,7 @@ pg_close($db_connection);
              -->
                <form action="#" method="POST">
                   <div>
+                    <p>Kryssa i de tjänster som kan ha synonymer</p>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                         <div class="ui form">
                           <!--div class="inline fields">
@@ -111,7 +112,6 @@ pg_close($db_connection);
                               </div>
                             </div>
                           </div-->
-                          <label for="synonyms" style="color:black;">Kryssa i de tjänster som kan ha synonymer</label>
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="">
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
