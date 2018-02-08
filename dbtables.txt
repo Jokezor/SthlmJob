@@ -1,3 +1,5 @@
+# Få alla ifyllda kandidater
+
 select * from users;
 select * from person;
 select * from recommendations;
@@ -5,13 +7,26 @@ select * from education;
 select * from cvsummary;
 select * from workexperience;
 
+# Få alla olika tables
+SELECT DISTINCT tablename
+FROM pg_table_def
+WHERE schemaname = 'public'
+ORDER BY tablename;
 
+# Få fram alla ifrån cvsummary men med villkor
+select * from cvsummary
+where yearsofexperience > 10
+order by yearsofexperience desc;
+
+# Sätta in data
 insert into person (userid, firstname, lastname, nationality, salutation, email)
  values (135, 'Joakim', 'Olovsson', 'Swedish', 'Male', 'thisidfstest@live.se')
 insert into cvsummary values (10, 'engineer', 13, 'cto', 'google', 'cto, ceo, assistant regional manager', 'master', '40000-70000', 'available', 'yes', '', true, true);
 insert into workexperience (userid, positiontitle, employer, startdate, enddate, description) values (10, 'cto', 'google', '2015-10-12', '2017-12-11', 'Hardworker');
 insert into users (name, address, email, password) values ('Jokezor olovsson', 'asdfghjkl', 'thisidfstest@live.se', '7qb292c3r2');
 
+
+# Skapa tables
 CREATE TABLE person
 (
   userid            INT REFERENCES users (id) PRIMARY KEY,
