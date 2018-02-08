@@ -81,6 +81,13 @@
 	margin-top: 1.3%;
 }
 
+.synonyms{
+	-ms-transform: scale(1.75); /* IE */
+  -moz-transform: scale(1.75); /* FF */
+  -webkit-transform: scale(1.75); /* Safari and Chrome */
+  -o-transform: scale(1.75); /* Opera */
+}
+
 .contact{
 	margin: auto;
 	padding: 10px;
