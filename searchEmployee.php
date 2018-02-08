@@ -61,9 +61,7 @@ pg_close($db_connection);
 <body>
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
-      <script>
 
-      </script>
       echo "Keywords: ";
       for($i = 0; $i < sizeof($_POST['keywords']); $i++){
          echo $_POST['keywords'][$i] . "  ";
