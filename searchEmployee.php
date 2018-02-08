@@ -111,6 +111,7 @@ pg_close($db_connection);
                               </div>
                             </div>
                           </div-->
+                          <label for="synonyms" style="color:black;">Kryssa i de tjänster som kan ha synonymer</label>
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
