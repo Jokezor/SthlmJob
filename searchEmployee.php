@@ -78,7 +78,7 @@ pg_close($db_connection);
 
       <div>
          <div>
-            <h1 style="text-align:center; margin-top: 5%;"> SökKandidater </h1>
+            <h1 style="text-align:center; margin-top: 5%;"> Sök Kandidater </h1>
             <div>
               <!--
                <form action="searchEmployee.php" method="POST">
@@ -296,9 +296,9 @@ pg_close($db_connection);
                                </p>
                            </div>
                            <p>
-                             <h2>Tillgänglighets datum</h2>
+                             <h2>Tillgänglighetsdatum</h2>
                              <label for="amount1" style = "margin-left: 0%;"></label>
-                             <input type="text" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100"/>
+                             <input type="text" name="amount1" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100" value"2018.01.01-2019.01.01"/>
                            </p>
 
                            <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div>
@@ -312,6 +312,16 @@ pg_close($db_connection);
                            </div-->
                            <input type=hidden name="minsalary" id="minsalary" value="20000">
                            <input type=hidden name="maxsalary" id="maxsalary" value="100000">
+
+                           <input type=hidden name="minage" id="minage" value="20">
+                           <input type=hidden name="maxage" id="maxage" value="75">
+
+                           <input type=hidden name="minexp" id="minexp" value="0">
+                           <input type=hidden name="maxexp" id="maxexp" value="50">
+
+                           <input type=hidden name="minleave" id="minleave" value="0">
+                           <input type=hidden name="maxleave" id="maxleave" value="12">
+
                            <div class="field" style="width:20%; margin-top:5%;">
                               <button class="fluid ui button" type="submit">Sök efter kandidater</button>
                            </div>
