@@ -352,7 +352,7 @@ pg_close($db_connection);
   <label for="subscribeNews" style="color:black;">Kryssa i de kandidater du vill skicka notiser till</label>
   <label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
-  
+
   <label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
@@ -371,10 +371,14 @@ pg_close($db_connection);
 
    <!-- Beginning of loop ? -->
    <?php
-   for($numOfCandidates = 0; $numOfCandidates < 15; $numOfCandidates++){
+   for($numOfCandidates = 1; $numOfCandidates <= 15; $numOfCandidates++){
       echo '
         <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
-        <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+        <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
+
+        echo $numOfCandidates . ". " . "Joakim Olofsson / Personlig Assistent / Umeå";
+
+        echo '</a></h3>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
