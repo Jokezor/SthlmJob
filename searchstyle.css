@@ -73,9 +73,11 @@
 .employees{
 	float:right;
 	margin: auto;
-	height: 45px;
-	width: 45px;
-	top: 0% !important;
+	-ms-transform: scale(1.75); /* IE */
+  -moz-transform: scale(1.75); /* FF */
+  -webkit-transform: scale(1.75); /* Safari and Chrome */
+  -o-transform: scale(1.75); /* Opera */
+	margin-right: 2%;
 }
 
 .contact{
@@ -87,8 +89,7 @@
 	text-align: center;
 	float:center;
 	margin-right: 9.75%;
-	margin-top: 5px;
-	margin-bottom
+
 }
 
 .field{
