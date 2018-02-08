@@ -371,8 +371,10 @@ pg_close($db_connection);
    <?php
    for($numOfCandidates = 0; $numOfCandidates < 15; $numOfCandidates++){
       echo '
-  <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
-  <h3 style="width:90%; margin-top:5px"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+      <div class="both" style="">
+        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
+        <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">1. &nbsp; Joakim Olofsson / Personlig Assistent / Umeå</a></h3>
+      </div>
   <div style="width:95%; margin-top:5px;">
     <div class="Tryshiftright">
       <p>
