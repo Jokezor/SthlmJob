@@ -460,6 +460,7 @@ pg_close($db_connection);
       <button class="ui right floated blue button">Se CV</button>
     </div>
   </div>';
+  }
   <div class="ui pagination menu">
     <a class="active item">
       1
@@ -477,7 +478,6 @@ pg_close($db_connection);
       12
     </a>
   </div>
-   }
 ?>
 <!-- End of loop ? -->
 </div>
