@@ -131,6 +131,6 @@
 
 }
 
-.ui pagination menu{
-	float: right;
+#ui pagination menu{
+	float: right !important;
 }
