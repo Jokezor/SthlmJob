@@ -461,7 +461,8 @@ pg_close($db_connection);
     </div>
   </div>';
   }
-  <div class="ui pagination menu">
+  echo
+  '<div class="ui pagination menu">
     <a class="active item">
       1
     </a>
@@ -477,7 +478,7 @@ pg_close($db_connection);
     <a class="item">
       12
     </a>
-  </div>
+  </div>';
 ?>
 <!-- End of loop ? -->
 </div>
