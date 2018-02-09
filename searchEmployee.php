@@ -460,6 +460,23 @@ pg_close($db_connection);
       <button class="ui right floated blue button">Se CV</button>
     </div>
   </div>';
+  <div class="ui pagination menu">
+    <a class="active item">
+      <?php echo $numOfCandidates??>
+    </a>
+    <div class="disabled item">
+      ...
+    </div>
+    <a class="item">
+      10
+    </a>
+    <a class="item">
+      11
+    </a>
+    <a class="item">
+      12
+    </a>
+  </div>
    }
 ?>
 <!-- End of loop ? -->

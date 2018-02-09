@@ -20,8 +20,8 @@ order by yearsofexperience desc;
 
 # Sätta in data
 insert into person (userid, firstname, lastname, nationality, salutation, email)
- values (135, 'Joakim', 'Olovsson', 'Swedish', 'Male', 'thisidfstest@live.se')
-insert into cvsummary values (10, 'engineer', 13, 'cto', 'google', 'cto, ceo, assistant regional manager', 'master', '40000-70000', 'available', 'yes', '', true, true);
+ values (135, 'Joakim', 'Olovsson', 'Swedish', 'Male', 'thisidfstest@live.se');
+insert into cvsummary values (11, 'engineer', 13, 'cto', 'google', 'cto, ceo, assistant regional manager', 'master', '100000', '23', '3','available', '2018-07-18', '', true, true);
 insert into workexperience (userid, positiontitle, employer, startdate, enddate, description) values (10, 'cto', 'google', '2015-10-12', '2017-12-11', 'Hardworker');
 insert into users (name, address, email, password) values ('Jokezor olovsson', 'asdfghjkl', 'thisidfstest@live.se', '7qb292c3r2');
 
@@ -58,7 +58,9 @@ CREATE TABLE cvsummary
   currentemployer         VARCHAR(50),
   last3experiences        VARCHAR(300),
   highesteducationlevel   VARCHAR(30),
-  salaryrange             VARCHAR(30),
+  salaryrange             integer,
+  age                     integer,
+  leavetime               integer,
   candidatestatus         VARCHAR(30),
   availability            VARCHAR(30),
   cvcomment               VARCHAR(500),
