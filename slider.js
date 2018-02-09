@@ -1,12 +1,13 @@
 var myRangeValue; // your javascript variable that will store the value of the slider
 
+/*
 $(function()) {
-
   var startDate = new Date();
   // Do your operations
   var endDate   = new Date();
   var seconds = (endDate.getTime() - startDate.getTime()) / 1000;
 }
+*/
 
 
 $(function() {
