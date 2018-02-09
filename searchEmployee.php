@@ -462,7 +462,7 @@ pg_close($db_connection);
   </div>';
   <div class="ui pagination menu">
     <a class="active item">
-      <?php echo $numOfCandidates??>
+      <?php echo $numOfCandidates ?>
     </a>
     <div class="disabled item">
       ...
