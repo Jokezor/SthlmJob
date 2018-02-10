@@ -7,26 +7,28 @@
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
- /*
- $search_word1[] = "";
+
  if($_SERVER["REQUEST_METHOD"] == "POST"){
-   $search_word1 = htmlentities($_POST['keywords'][0]);
-   echo $search_word1;
+   $minSalary = htmlentities($_POST['minsalary']);
+   $maxSalary = htmlentities($_POST['maxsalary']);
+
 
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", 'SELECT name, address, email FROM users WHERE name = $1');
+   $result = pg_prepare($db_connection, "my_query", 'select * from cvsummary
+      where yearsofexperience > 10
+      and salaryrange > $1
+      and salaryrange < $2
+      order by yearsofexperience desc;');
    if(!$result){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($search_word1));
+   $result = pg_execute($db_connection, "my_query", array($minSalary, $maxSalary));
    if(!$result){
       exit("query execute error");
    }
-}*/
+}
 ?>
-
-
 
 <?php
 /* Closing connection */
