@@ -462,23 +462,25 @@ pg_close($db_connection);
   </div>';
   }
   echo
-  '<div class="ui pagination menu">
-    <a class="active item">
-      1
-    </a>
-    <div class="disabled item">
-      ...
+  '<div class = "pagnation">
+    <div class="ui pagination menu">
+      <a class="active item">
+        1
+      </a>
+      <div class="disabled item">
+        ...
+      </div>
+      <a class="item">
+        10
+      </a>
+      <a class="item">
+        11
+      </a>
+      <a class="item">
+        12
+      </a>
     </div>
-    <a class="item">
-      10
-    </a>
-    <a class="item">
-      11
-    </a>
-    <a class="item">
-      12
-    </a>
-  </div>';
+   </div>';
 ?>
 <!-- End of loop ? -->
 </div>
