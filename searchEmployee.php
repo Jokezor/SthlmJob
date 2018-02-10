@@ -63,13 +63,14 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 
    // Skill table
    $itSkillsResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, itskill
-   FROM itskills WHERE userid IN (".implode(",",$1).")";;
-   ');
+   FROM itskills WHERE userid IN ($1);');
+   
    if(!$itSkillsResult){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $itSkillsResult = pg_execute($db_connection, "my_query2", array($allUserids));
+   $pgsqlstr = implode(", ", $allUserids);
+   $itSkillsResult = pg_execute($db_connection, "my_query2", array($pgsqlstr));
    if(!$itSkillsResult){
       exit("query execute error");
    }
