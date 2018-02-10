@@ -20,7 +20,7 @@
 
 
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", ' SELECT (userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability)
+   $result = pg_prepare($db_connection, "my_query", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
       FROM cvsummary
       WHERE salaryrange > $1 AND salaryrange < $2
       AND age > $3 AND age < $4
