@@ -110,11 +110,8 @@ pg_close($db_connection);
    <?php
 
    foreach ($allCandidates as $cand) {
-      # code...
       foreach ($cand as $column => $value) {
-         # code...
-         echo $column ": "$value . "\t\t";
-
+         echo $column . ": " . $value . "\t\t";
       }
       echo "<br>";
    }
