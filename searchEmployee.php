@@ -107,15 +107,8 @@ pg_close($db_connection);
    }
    ?>
 
-   <?php/*
-   echo "<br><br>";
-   for($a = 0; $a < $numOfCandidates; $a ++){
-      for($b = 0; $b < 16; $b ++){
-         echo $allCandidates[$a][$b] . "  ";
-      }
-      echo "<br>";
-   }
-   ?>*/
+   <?php
+
    foreach ($allCandidates as $cand) {
       # code...
       foreach ($cand as $column => $value) {
