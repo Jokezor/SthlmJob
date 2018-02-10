@@ -108,14 +108,14 @@ pg_close($db_connection);
    ?>
 
    <?php
-
-   foreach ($allCandidates as $cand) {
-      foreach ($cand as $column => $value) {
-         echo $column . ": " . $value . "\t\t";
+   if($_SERVER["REQUEST_METHOD"] == "POST"){
+      foreach ($allCandidates as $cand) {
+         foreach ($cand as $column => $value) {
+            echo $column . ": " . $value . "\t\t";
+         }
+         echo "<br>";
       }
-      echo "<br>";
    }
-
    ?>
 
       <div>
