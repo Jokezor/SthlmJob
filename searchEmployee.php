@@ -61,20 +61,26 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
    $numOfCandidates = $candIndex;
 
+   $pgsqlstr = implode(', ', $allUserids);
    // Skill table
-   $itSkillsResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, itskill
+   /*$itSkillsResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, itskill
    FROM itskills WHERE userid IN ($1);');
 
    if(!$itSkillsResult){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $pgsqlstr = implode(', ', $allUserids);
+
    $itSkillsResult = pg_execute($db_connection, "my_query2", array($pgsqlstr));
    if(!$itSkillsResult){
       exit("query execute error");
-   }
+   }*/
+   $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
+   FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
 
+
+   
+   pg_free_result($itSkillsResult);
    pg_free_result($cvsummaryResult);
 
 }
