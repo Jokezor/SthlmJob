@@ -11,19 +11,26 @@
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $minSalary = htmlentities($_POST['minsalary']);
    $maxSalary = htmlentities($_POST['maxsalary']);
+   $minAge = htmlentities($_POST['minage']);
+   $maxAge = htmlentities($_POST['maxage']);
+   $minExp = htmlentities($_POST['minexp']);
+   $maxExp = htmlentities($_POST['maxexp']);
+   $minLeave = htmlentities($_POST['minleave']);
+   $maxLeave = htmlentities($_POST['maxleave']);
 
 
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", 'select * from cvsummary
-      where yearsofexperience > 10
-      and salaryrange > $1
-      and salaryrange < $2
-      order by yearsofexperience desc;');
+   $result = pg_prepare($db_connection, "my_query", 'SELECT * FROM cvsummary
+      WHERE salaryrange > $1 AND salaryrange < $2
+      AND age > $3 AND age < $4
+      AND yearsofexperience > $5 AND yearsofexperience < $6
+      AND leavetime > $7 AND leavetime < $8
+      ORDER BY yearsofexperience DESC;');
    if(!$result){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($minSalary, $maxSalary));
+   $result = pg_execute($db_connection, "my_query", array($minSalary, $maxSalary, $minAge, $maxAge, $minExp, $maxExp, $minLeave, $maxLeave));
    if(!$result){
       exit("query execute error");
    }
@@ -84,6 +91,7 @@ pg_close($db_connection);
    echo "<th> userid </td>";
    echo "<th> cvtitle </td>";
    echo "<th> y o exp </td>";
+
    echo "</tr>";
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(!$result == false){
