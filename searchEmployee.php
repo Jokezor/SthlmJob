@@ -78,6 +78,28 @@ pg_close($db_connection);
    }
    ?>
 
+   <?php
+   echo "<table>";
+   echo "<tr>";
+   echo "<th> userid </td>";
+   echo "<th> cvtitle </td>";
+   echo "<th> y o exp </td>";
+   echo "</tr>";
+   if($_SERVER["REQUEST_METHOD"] == "POST"){
+      if(!$result == false){
+         while ($row = pg_fetch_row($result)){
+            echo "<tr>";
+            echo "<td> $row[0] </td>";
+            echo "<td> $row[1] </td>";
+            echo "<td> $row[2] </td>";
+            echo "</tr>";
+         }
+      }
+      pg_free_result($result);
+   }
+   echo "</table>"
+   ?>
+
       <div>
          <div>
             <h1 style="text-align:center; margin-top: 5%;"> Sök Kandidater </h1>
