@@ -34,10 +34,23 @@
    if(!$result){
       exit("query execute error");
    }
-}
-?>
 
-<?php
+
+   $candIndex = 0;
+   $allCandidates = array();
+
+   if(!$result == false){
+      while ($row = pg_fetch_row($result)){
+         $allCandidates[$candIndex] = $row;
+         $candIndex ++;
+      }
+   }
+   $numOfCandidates = $candIndex;
+   pg_free_result($result);
+
+
+
+}
 /* Closing connection */
 pg_close($db_connection);
 ?>
@@ -49,14 +62,12 @@ pg_close($db_connection);
 <!DOCTYPE html>
 <html>
 <head>
-   <title> Search </title>
+   <title> Sök Kandidater </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui-dropdown/dropdown.min.css">
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
-   <!--link rel="stylesheet" type="text/css" href="rheostat-master/css/slider.css"-->
-
 
    <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
@@ -86,64 +97,24 @@ pg_close($db_connection);
    ?>
 
    <?php
-   echo "<table>";
-   echo "<tr>";
-   echo "<th> userid </td>";
-   echo "<th> cvtitle </td>";
-   echo "<th> y o exp </td>";
-
-   echo "</tr>";
-   if($_SERVER["REQUEST_METHOD"] == "POST"){
-      if(!$result == false){
-         while ($row = pg_fetch_row($result)){
-            echo "<tr>";
-            echo "<td> $row[0] </td>";
-            echo "<td> $row[1] </td>";
-            echo "<td> $row[2] </td>";
-            echo "</tr>";
-         }
+   echo "\n\n";
+   for($a = 0; $a < $numOfCandidates; $a ++){
+      for($b = 0; $b < 16; $b ++){
+         echo $allCandidates[$a][$b] . "  ";
       }
-      pg_free_result($result);
+      echo "<br>";
    }
-   echo "</table>"
    ?>
 
       <div>
          <div>
             <h1 style="text-align:center; margin-top: 5%;"> Sök Kandidater </h1>
             <div>
-              <!--
-               <form action="searchEmployee.php" method="POST">
-                  <input type="text" id="name" name="Name" value="" placeholder="Namn" onkeyup="showHint(this.value)"/>
-                  <input type="submit" value="Sök" />
-               </form>
-             -->
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                        <p style="color:black; font-weight: bold; font-size =1.2em;">Kryssa i de tjänster som kan ha synonymer vid sortering av kandidater</p>
                         <div class="ui form">
-                          <!--div class="inline fields">
-                            <label>Hur viktiga är egenskaperna?</label>
-                            <div class="field">
-                              <div class="ui radio checkbox">
-                                <input type="radio" name="frequency" checked="checked">
-                                <label>Måste ha</label>
-                              </div>
-                            </div>
-                            <div class="field">
-                              <div class="ui radio checkbox">
-                                <input type="radio" name="frequency">
-                                <label>Bra att ha</label>
-                              </div>
-                            </div>
-                            <div class="field">
-                              <div class="ui radio checkbox">
-                                <input type="radio" name="frequency">
-                                <label>Spelar ej roll</label>
-                              </div>
-                            </div>
-                          </div-->
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
@@ -326,13 +297,8 @@ pg_close($db_connection);
 
                            <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div>
 
-                           <!--div class="ui segment" style="width:12.7321966%;">
-                             <div class="ui range" id="range-4"></div>
-                             <br>
-                              <p>
-                                Maximum: <span id="display-4"></span>
-                              </p>
-                           </div-->
+
+                           <!-- Hidden inputs -->
                            <input type=hidden name="minsalary" id="minsalary" value="20000">
                            <input type=hidden name="maxsalary" id="maxsalary" value="100000">
 
@@ -350,33 +316,6 @@ pg_close($db_connection);
                            </div>
                  </div>
               </form>
-             <!--div class ="Result" style="margin-top: 5%;">
-               <h2> Sökresultat</h2>
-               <p id="txtHint"> </p>
-               <div>
-                  <table>
-                     <?php/*
-                     echo "<tr>";
-                     echo "<th> Namn </td>";
-                     echo "<th> Adress </td>";
-                     echo "<th> Email </td>";
-                     echo "</tr>";
-                     if($_SERVER["REQUEST_METHOD"] == "POST"){
-                        if(!$result == false){
-                           while ($row = pg_fetch_row($result)){
-                              echo "<tr>";
-                              echo "<td> $row[0] </td>";
-                              echo "<td> $row[1] </td>";
-                              echo "<td> $row[2] </td>";
-                              echo "</tr>";
-                           }
-                        }
-                        pg_free_result($result);
-                     }*/
-                     ?>
-                  </table>
-               </div>
-            </div-->
          </div>
       </div>
    </div>
@@ -389,6 +328,7 @@ pg_close($db_connection);
   <label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish">
 
+  <!-- Sorteringsmeny -->
   <label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
@@ -405,14 +345,14 @@ pg_close($db_connection);
   </div>
   </div>
 
-   <!-- Beginning of loop ? -->
+   <!-- Beginning of loop  -->
    <?php
-   for($numOfCandidates = 1; $numOfCandidates <= 15; $numOfCandidates++){
+   for($candidate = 1; $candidate <= 15; $candidate++){
       echo '
         <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
         <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-        echo $numOfCandidates . ". " . "Joakim Olofsson / Personlig Assistent / Umeå";
+        echo $candidate . ". " . "Joakim Olofsson / Personlig Assistent / Umeå";
 
         echo '</a></h3>
   <div style="width:95%; margin-top:5px;">
@@ -514,7 +454,7 @@ pg_close($db_connection);
     </div>
    </div>';
 ?>
-<!-- End of loop ? -->
+<!-- End of loop  -->
 </div>
 <div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
