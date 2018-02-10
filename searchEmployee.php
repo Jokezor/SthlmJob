@@ -20,7 +20,8 @@
 
 
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", 'SELECT * FROM cvsummary
+   $result = pg_prepare($db_connection, "my_query", ' SELECT FROM cvsummary
+      (userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability)
       WHERE salaryrange > $1 AND salaryrange < $2
       AND age > $3 AND age < $4
       AND yearsofexperience > $5 AND yearsofexperience < $6
@@ -37,18 +38,28 @@
 
 
    $candIndex = 0;
-   $allCandidates = array();
+   $allCandidates = array(array());
 
    if(!$result == false){
       while ($row = pg_fetch_row($result)){
-         $allCandidates[$candIndex] = $row;
+         $userid = $row[0];
+         $allCandidates[$userid]["userid"] = $row[0];
+         $allCandidates[$userid]["cvtitle"] = $row[1];
+         $allCandidates[$userid]["yearsofexperience"] = $row[2];
+         $allCandidates[$userid]["currentposition"] = $row[3];
+         $allCandidates[$userid]["currentemployer"] = $row[4];
+         $allCandidates[$userid]["last3experiences"] = $row[5];
+         $allCandidates[$userid]["highesteducationlevel"] = $row[6];
+         $allCandidates[$userid]["salaryrange"] = $row[7];
+         $allCandidates[$userid]["age"] = $row[8];
+         $allCandidates[$userid]["leavetime"] = $row[9];
+         $allCandidates[$userid]["candidatestatus"] = $row[10];
+         $allCandidates[$userid]["availability"] = $row[11];
          $candIndex ++;
       }
    }
    $numOfCandidates = $candIndex;
    pg_free_result($result);
-
-
 
 }
 /* Closing connection */
@@ -96,15 +107,24 @@ pg_close($db_connection);
    }
    ?>
 
-   <?php
-   echo "\n\n";
+   <?php/*
+   echo "<br><br>";
    for($a = 0; $a < $numOfCandidates; $a ++){
       for($b = 0; $b < 16; $b ++){
          echo $allCandidates[$a][$b] . "  ";
       }
       echo "<br>";
    }
-   ?>
+   ?>*/
+   foreach ($allCandidates as $cand) {
+      # code...
+      foreach ($cand as $column => $value) {
+         # code...
+         echo $column ": "$value . "\t\t";
+
+      }
+      echo "<br>";
+   }
 
       <div>
          <div>
