@@ -1,4 +1,4 @@
-<?php include "../inc/dbinfo.inc";?>
+cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 <?php
   /* Connect to PostGreSQL and select the database. */
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
@@ -18,31 +18,32 @@
    $minLeave = htmlentities($_POST['minleave']);
    $maxLeave = htmlentities($_POST['maxleave']);
 
-
+    // CV summary table
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
+   $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
       FROM cvsummary
       WHERE salaryrange > $1 AND salaryrange < $2
       AND age > $3 AND age < $4
       AND yearsofexperience > $5 AND yearsofexperience < $6
       AND leavetime > $7 AND leavetime < $8
       ORDER BY yearsofexperience DESC;');
-   if(!$result){
+   if(!$cvsummaryResult){
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "my_query", array($minSalary, $maxSalary, $minAge, $maxAge, $minExp, $maxExp, $minLeave, $maxLeave));
-   if(!$result){
+   $cvsummaryResult = pg_execute($db_connection, "my_query1", array($minSalary, $maxSalary, $minAge, $maxAge, $minExp, $maxExp, $minLeave, $maxLeave));
+   if(!$cvsummaryResult){
       exit("query execute error");
    }
 
-
    $candIndex = 0;
    $allCandidates = array(array());
+   $allUserids = array();
 
-   if(!$result == false){
-      while ($row = pg_fetch_row($result)){
+   if(!$cvsummaryResult == false){
+      while ($row = pg_fetch_row($cvsummaryResult)){
          $userid = $row[0];
+         $allUserids[$candIndex] = $userid;
          $allCandidates[$userid]["userid"] = $row[0];
          $allCandidates[$userid]["cvtitle"] = $row[1];
          $allCandidates[$userid]["yearsofexperience"] = $row[2];
@@ -59,7 +60,21 @@
       }
    }
    $numOfCandidates = $candIndex;
-   pg_free_result($result);
+
+   // Skill table
+   $itSkillsResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, itskill
+   FROM itskills WHERE userid IN $1;
+   ');
+   if(!$itSkillsResult){
+      exit("query prepare error");
+   }
+   // Execute the prepared query.
+   $itSkillsResult = pg_execute($db_connection, "my_query2", array($allUserids);
+   if(!$itSkillsResult){
+      exit("query execute error");
+   }
+
+   pg_free_result($cvsummaryResult);
 
 }
 /* Closing connection */
@@ -90,6 +105,8 @@ pg_close($db_connection);
 </head>
 
 <body>
+
+   <!--  Printing out for errorchecking -->
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       echo "Keywords: ";
@@ -105,9 +122,6 @@ pg_close($db_connection);
          echo "\n";
       }
    }
-   ?>
-
-   <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       foreach ($allCandidates as $cand) {
          foreach ($cand as $column => $value) {
