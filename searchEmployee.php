@@ -72,6 +72,11 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    if(!$languageSkillsResult){
       exit("query error");
    }
+   $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname
+      FROM person WHERE userid IN (' . $pgsqlstr . ');');
+   if(!$personResult){
+      exit("query error");
+   }
 
 
    pg_free_result($itSkillsResult);
