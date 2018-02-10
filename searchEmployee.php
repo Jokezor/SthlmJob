@@ -70,7 +70,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
    // Execute the prepared query.
    $pgsqlstr = implode(', ', $allUserids);
-   $itSkillsResult = pg_execute($db_connection, "my_query2", array($pgsqlstr));
+   $itSkillsResult = pg_execute($db_connection, "my_query2", $pgsqlstr);
    if(!$itSkillsResult){
       exit("query execute error");
    }
