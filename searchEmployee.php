@@ -69,7 +69,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
       exit("query prepare error");
    }
    // Execute the prepared query.
-   $itSkillsResult = pg_execute($db_connection, "my_query2", array($allUserids);
+   $itSkillsResult = pg_execute($db_connection, "my_query2", array($allUserids));
    if(!$itSkillsResult){
       exit("query execute error");
    }
