@@ -135,4 +135,6 @@
 	float: right !important;
 	text-align: right;
 	margin-top: 3%;
+	margin: auto;
+	padding: 10px;
 }
