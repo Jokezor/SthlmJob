@@ -132,7 +132,7 @@
 }
 
 #ui pagination menu{
-	float: right !important;
+	float: center !important;
 	text-align: right;
 	margin-top: 3%;
 	margin: auto;
