@@ -20,8 +20,8 @@
 
 
     // Prepare a query for execution
-   $result = pg_prepare($db_connection, "my_query", ' SELECT FROM cvsummary
-      (userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability)
+   $result = pg_prepare($db_connection, "my_query", ' SELECT (userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability)
+      FROM cvsummary
       WHERE salaryrange > $1 AND salaryrange < $2
       AND age > $3 AND age < $4
       AND yearsofexperience > $5 AND yearsofexperience < $6
@@ -125,6 +125,8 @@ pg_close($db_connection);
       }
       echo "<br>";
    }
+
+   ?>
 
       <div>
          <div>
