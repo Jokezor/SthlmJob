@@ -131,8 +131,8 @@
 
 }
 
-#ui.pagination.menu{
-	float: center !important;
+.ui.pagination.menu{
+	float: right !important;
 	text-align: right;
 	margin-top: 3%;
 	margin: auto;
