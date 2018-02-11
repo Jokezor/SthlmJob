@@ -30,6 +30,9 @@ insert into cvsummary values (11, 'engineer', 13, 'cto', 'google', 'cto, ceo, as
 insert into workexperience (userid, positiontitle, employer, startdate, enddate, description) values (10, 'cto', 'google', '2015-10-12', '2017-12-11', 'Hardworker');
 insert into users (name, address, email, password) values ('Jokezor olovsson', 'asdfghjkl', 'thisidfstest@live.se', '7qb292c3r2');
 
+# Uppdatera data
+UPDATE person SET city = 'Umeå'
+where userid =11;
 
 # Skapa tables
 CREATE TABLE person
