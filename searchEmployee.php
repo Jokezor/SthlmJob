@@ -79,18 +79,18 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
 
    if(!$itSkillsResult == false){
-      $allCandidates[$userid]["itskill"] = "--";
+      $allCandidates[$userid]["itskills"] = "--";
       while ($row = pg_fetch_row($itSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
-         $allCandidates[$userid]["itskill"] = $allCandidates[$userid]["itskill"] . ", " . $skill;
+         $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
       }
    }
 
    if(!$languageSkillsResult == false){
-      $allCandidates[$userid]["langskill"] = "--";
+      $allCandidates[$userid]["langskills"] = "--";
       while ($row = pg_fetch_row($languageSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
-         $allCandidates[$userid]["langskill"] = $allCandidates[$userid]["langskill"] . ", " . $skill;
+         $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
       }
    }
 
@@ -474,7 +474,7 @@ pg_close($db_connection);
           </div>
           <div class="Tryshiftleft">
             <p>
-              ' . $candidate["highesteducationlevel"] . ', Umeå Universitet
+              ' . $candidate["highesteducationlevel"] . '
               <br>
               ' . $candidate["yearsofexperience"] . '
               <br>
@@ -492,7 +492,7 @@ pg_close($db_connection);
               <br>
               ' . $candidate["candidatestatus"] . '
               <br>
-              ?Controller?
+              ?
               <br>
               ' . $candidate["city"] . '
               <br>
