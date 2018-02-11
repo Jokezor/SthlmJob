@@ -104,7 +104,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 
    pg_free_result($itSkillsResult);
    pg_free_result($languageSkillsResult);
-   pg_free_result($personSkillsResult);
+   pg_free_result($personResult);
    pg_free_result($cvsummaryResult);
 
 }
