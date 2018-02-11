@@ -94,7 +94,6 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
 
    if(!$personResult == false){
-      $allCandidates[$userid]["name"] = "";
       while ($row = pg_fetch_row($personResult)){
          $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[3];
          $allCandidates[$userid]["name"] = $name;
