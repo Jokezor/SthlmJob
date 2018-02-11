@@ -79,7 +79,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
 
    if(!$itSkillsResult == false){
-      $allCandidates[$userid]["itskill"] = "";
+      $allCandidates[$userid]["itskill"] = " ";
       while ($row = pg_fetch_row($itSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
          $allCandidates[$userid]["itskill"] = $allCandidates[$userid]["itskill"] . ", " . $skill;
@@ -87,7 +87,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    }
 
    if(!$languageSkillsResult == false){
-      $allCandidates[$userid]["langskill"] = "";
+      $allCandidates[$userid]["langskill"] = " ";
       while ($row = pg_fetch_row($languageSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
          $allCandidates[$userid]["langskill"] = $allCandidates[$userid]["langskill"] . ", " . $skill;
@@ -153,6 +153,19 @@ pg_close($db_connection);
          echo "\n";
       }
    }
+
+
+   // Comparison function
+   function cmp($a, $b) {
+      if ($a == $b) {
+         return 0;
+      }
+      if ($a < $b){
+
+      };
+   }
+   //bool uasort ( array &$array , callable $value_compare_func )
+
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       foreach ($allCandidates as $cand) {
          foreach ($cand as $column => $value) {
