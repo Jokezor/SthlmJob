@@ -78,8 +78,33 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
       exit("query error");
    }
 
+   if(!$itSkillsResult == false){
+      $allCandidates[$userid]["itskill"] = "";
+      while ($row = pg_fetch_row($itSkillsResult)){
+         $userid = $row[0];   $skill = $row[1];
+         $allCandidates[$userid]["itskill"] = $allCandidates[$userid]["itskill"] . ", " . $skill;
+      }
+   }
+
+   if(!$languageSkillsResult == false){
+      $allCandidates[$userid]["langskill"] = "";
+      while ($row = pg_fetch_row($languageSkillsResult)){
+         $userid = $row[0];   $skill = $row[1];
+         $allCandidates[$userid]["langskill"] = $allCandidates[$userid]["langskill"] . ", " . $skill;
+      }
+   }
+
+   if(!$personResult == false){
+      $allCandidates[$userid]["name"] = "";
+      while ($row = pg_fetch_row($personResult)){
+         $userid = $row[0];   $name = $row[1] . " " . $row[2];
+         $allCandidates[$userid]["name"] = $name;
+      }
+   }
 
    pg_free_result($itSkillsResult);
+   pg_free_result($languageSkillsResult);
+   pg_free_result($personSkillsResult);
    pg_free_result($cvsummaryResult);
 
 }
