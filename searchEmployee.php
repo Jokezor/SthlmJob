@@ -180,8 +180,6 @@ pg_close($db_connection);
             echo $column . ": " . $value . "\t\t";
          }
          echo "<br>";
-         echo "HEYYYyyyyyyyyyyyyyyyy";
-
       }
    }
    ?>
@@ -442,8 +440,6 @@ pg_close($db_connection);
         <div style="width:95%; margin-top:5px;">
           <div class="Tryshiftright">
             <p>
-              Dokument datum:
-              <br>
               Högsta utbildnings nivå:
               <br>
               Antal års erfarenhet:
@@ -478,37 +474,35 @@ pg_close($db_connection);
           </div>
           <div class="Tryshiftleft">
             <p>
-              2017-11-02
+              ' . $candidate["highesteducationlevel"] . ', Umeå Universitet
               <br>
-              Kandidatexamen inom ekonomi, Umeå Universitet
+              ' . $candidate["yearsofexperience"] . '
               <br>
-              6
+              ' . $candidate["currentposition"] . '
               <br>
-              Personlig Assistent
+              ' . $candidate["currentemployer"] . ', ' . $candidate["city"] . '
               <br>
-              Umeå Kommun, Umeå
+              ' . $candidate["last3experiences"] . '
               <br>
-              Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
-              <br>
-              Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
-              <br>
-              Bästa ekonomi
-              <br>
-              Svenska, Engelska Spanska, Franska
+              ' . $candidate["itskills"] . '
               <br>
               -
               <br>
-              Controller
+              ' . $candidate["langskills"] . '
               <br>
-              Umeå
+              ' . $candidate["candidatestatus"] . '
               <br>
-              100000
+              ?Controller?
               <br>
-              23
+              ' . $candidate["city"] . '
               <br>
-              3 månader
+              ' . $candidate["salaryrange"] . '
               <br>
-              -
+              ' . $candidate["age"] . '
+              <br>
+              ' . $candidate["leavetime"] . '
+              <br>
+              ' . $candidate["availability"] . '
               <br>
             </p>
           </div>
