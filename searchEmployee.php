@@ -155,25 +155,24 @@ pg_close($db_connection);
    }
 
 
-   // Comparison function
-   function cmp($cand1, $cand2) {
-      if ($cand1["age"] == $cand2["age"]) {
-         return 0;
+   if($_SERVER["REQUEST_METHOD"] == "POST"){
+      // Comparison function
+      function cmp($cand1, $cand2) {
+         if ($cand1["age"] == $cand2["age"]) {
+            return 0;
+         }
+         if($cand1["age"] < $cand2["age"]){
+            return -1;
+         }
+         else {
+            return 1;
+         }
       }
-      if($cand1["age"] < $cand2["age"]){
-         return -1;
+      //bool uasort ( array &$array , callable $value_compare_func )
+      if(!uasort($allCandidates, 'cmp')){
+         echo "sort error";
       }
-      else {
-         return 1;
-      }
-
-      //return ($cand1["age"] < $cand2["age"]) ? -1 : 1;
    }
-   //bool uasort ( array &$array , callable $value_compare_func )
-   if(!uasort($allCandidates, 'cmp')){
-      echo "sort error";
-   }
-
 
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       foreach ($allCandidates as $cand) {
