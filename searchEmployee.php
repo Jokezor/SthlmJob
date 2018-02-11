@@ -180,7 +180,7 @@ pg_close($db_connection);
             echo $column . ": " . $value . "\t\t";
          }
          echo "<br>";
-         echo "HEYYYyyyyyyyyyyyyyyyy"
+         echo "HEYYYyyyyyyyyyyyyyyyy";
 
       }
    }
