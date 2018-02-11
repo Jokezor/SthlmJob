@@ -431,92 +431,93 @@ pg_close($db_connection);
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       $candNumber = 1;
       foreach($allCandidates as $candidate){
-         echo $candidate;
-         echo '
-           <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
-           <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
+         if(!empty($candidate)){
+            echo '
+              <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
+              <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-           echo $candNumber . ". " . $candidate["name"] . "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
+              echo $candNumber . ". " . $candidate["name"] . "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
 
-           echo '</a></h3>
-     <div style="width:95%; margin-top:5px;">
-       <div class="Tryshiftright">
-         <p>
-           Dokument datum:
-           <br>
-           Högsta utbildnings nivå:
-           <br>
-           Antal års erfarenhet:
-           <br>
-           Nuvarande anställning:
-           <br>
-           Nuvarande anställare:
-           <br>
-           Tidigare tjänster:
-           <br>
-           Skills:
-           <br>
-           Ekonomisystem:
-           <br>
-           Språk:
-           <br>
-           Kandidat status:
-           <br>
-           Önskad titel:
-           <br>
-           Plats:
-           <br>
-           Lönenivå:
-           <br>
-           Ålder:
-           <br>
-           Uppsägningstid:
-           <br>
-           Tillgänglig tidigast:
-           <br>
-         </p>
-       </div>
-       <div class="Tryshiftleft">
-         <p>
-           2017-11-02
-           <br>
-           Kandidatexamen inom ekonomi, Umeå Universitet
-           <br>
-           6
-           <br>
-           Personlig Assistent
-           <br>
-           Umeå Kommun, Umeå
-           <br>
-           Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
-           <br>
-           Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
-           <br>
-           Bästa ekonomi
-           <br>
-           Svenska, Engelska Spanska, Franska
-           <br>
-           -
-           <br>
-           Controller
-           <br>
-           Umeå
-           <br>
-           100000
-           <br>
-           23
-           <br>
-           3 månader
-           <br>
-           -
-           <br>
-         </p>
-       </div>
-       <div class="SeeCV">
-         <button class="ui right floated blue button">Se CV</button>
-       </div>
-     </div>';
-          $candNumber ++;
+              echo '</a></h3>
+        <div style="width:95%; margin-top:5px;">
+          <div class="Tryshiftright">
+            <p>
+              Dokument datum:
+              <br>
+              Högsta utbildnings nivå:
+              <br>
+              Antal års erfarenhet:
+              <br>
+              Nuvarande anställning:
+              <br>
+              Nuvarande anställare:
+              <br>
+              Tidigare tjänster:
+              <br>
+              Skills:
+              <br>
+              Ekonomisystem:
+              <br>
+              Språk:
+              <br>
+              Kandidat status:
+              <br>
+              Önskad titel:
+              <br>
+              Plats:
+              <br>
+              Lönenivå:
+              <br>
+              Ålder:
+              <br>
+              Uppsägningstid:
+              <br>
+              Tillgänglig tidigast:
+              <br>
+            </p>
+          </div>
+          <div class="Tryshiftleft">
+            <p>
+              2017-11-02
+              <br>
+              Kandidatexamen inom ekonomi, Umeå Universitet
+              <br>
+              6
+              <br>
+              Personlig Assistent
+              <br>
+              Umeå Kommun, Umeå
+              <br>
+              Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+              <br>
+              Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
+              <br>
+              Bästa ekonomi
+              <br>
+              Svenska, Engelska Spanska, Franska
+              <br>
+              -
+              <br>
+              Controller
+              <br>
+              Umeå
+              <br>
+              100000
+              <br>
+              23
+              <br>
+              3 månader
+              <br>
+              -
+              <br>
+            </p>
+          </div>
+          <div class="SeeCV">
+            <button class="ui right floated blue button">Se CV</button>
+          </div>
+        </div>';
+         }
+         $candNumber ++;
      }
      echo
      '<div class = "pagnation">
