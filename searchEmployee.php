@@ -8,6 +8,23 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 <?php
  /* If input fields are populated, add a row to the Users table. */
  if($_SERVER["REQUEST_METHOD"] == "POST"){
+   $allCandidates[$userid]["name"] = "-";
+   $allCandidates[$userid]["city"] = "-";
+   $allCandidates[$userid]["userid"] = "-";
+   $allCandidates[$userid]["cvtitle"] = "-";
+   $allCandidates[$userid]["yearsofexperience"] = "-";
+   $allCandidates[$userid]["currentposition"] = "-";
+   $allCandidates[$userid]["currentemployer"] = "-";
+   $allCandidates[$userid]["last3experiences"] = "-";
+   $allCandidates[$userid]["highesteducationlevel"] = "-";
+   $allCandidates[$userid]["salaryrange"] = $"-";
+   $allCandidates[$userid]["age"] = "-";
+   $allCandidates[$userid]["leavetime"] = "-";
+   $allCandidates[$userid]["candidatestatus"] = "-";
+   $allCandidates[$userid]["availability"] = "-";
+   $allCandidates[$userid]["itskill"] = "-";
+   $allCandidates[$userid]["langskill"] = "-";
+
    $minSalary = htmlentities($_POST['minsalary']);
    $maxSalary = htmlentities($_POST['maxsalary']);
    $minAge = htmlentities($_POST['minage']);
@@ -512,6 +529,7 @@ pg_close($db_connection);
          <button class="ui right floated blue button">Se CV</button>
        </div>
      </div>';
+          $candNumber ++;
      }
      echo
      '<div class = "pagnation">
@@ -533,7 +551,6 @@ pg_close($db_connection);
          </a>
        </div>
       </div>';
-      $candNumber ++;
    }
 ?>
 <!-- End of loop  -->
