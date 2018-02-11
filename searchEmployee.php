@@ -428,7 +428,7 @@ pg_close($db_connection);
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       $candNumber = 1;
-      foreach($allCandidates as $candidate)){
+      foreach($allCandidates as $candidate){
          echo '
            <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
            <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
