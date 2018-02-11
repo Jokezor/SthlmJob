@@ -78,16 +78,15 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
       exit("query error");
    }
 
+   $allCandidates[$userid]["itskills"] = "";
    if(!$itSkillsResult == false){
-      $allCandidates[$userid]["itskills"] = "--";
       while ($row = pg_fetch_row($itSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
          $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
       }
    }
-
+   $allCandidates[$userid]["langskills"] = "";
    if(!$languageSkillsResult == false){
-      $allCandidates[$userid]["langskills"] = "--";
       while ($row = pg_fetch_row($languageSkillsResult)){
          $userid = $row[0];   $skill = $row[1];
          $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
