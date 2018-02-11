@@ -7,7 +7,6 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 
 <?php
  /* If input fields are populated, add a row to the Users table. */
-
  if($_SERVER["REQUEST_METHOD"] == "POST"){
    $minSalary = htmlentities($_POST['minsalary']);
    $maxSalary = htmlentities($_POST['maxsalary']);
@@ -72,7 +71,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    if(!$languageSkillsResult){
       exit("query error");
    }
-   $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname
+   $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
       FROM person WHERE userid IN (' . $pgsqlstr . ');');
    if(!$personResult){
       exit("query error");
@@ -97,8 +96,9 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    if(!$personResult == false){
       $allCandidates[$userid]["name"] = "";
       while ($row = pg_fetch_row($personResult)){
-         $userid = $row[0];   $name = $row[1] . " " . $row[2];
+         $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[3];
          $allCandidates[$userid]["name"] = $name;
+         $allCandidates[$userid]["city"] = $city;
       }
    }
 
@@ -161,7 +161,7 @@ pg_close($db_connection);
          if ($cand1["age"] == $cand2["age"]) {
             return 0;
          }
-         if($cand1["age"] < $cand2["age"]){
+         if($cand1["age"] > $cand2["age"]){
             return -1;
          }
          else {
@@ -396,7 +396,7 @@ pg_close($db_connection);
               </form>
          </div>
       </div>
-   </div>
+      </div>
 
 <form style="margin-top:10%;">
    <h1 style="text-align: center;">Kandidater</h1>
@@ -424,113 +424,118 @@ pg_close($db_connection);
   </div>
 
    <!-- Beginning of loop  -->
+
    <?php
-   for($candidate = 1; $candidate <= 15; $candidate++){
-      echo '
-        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
-        <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
+   if($_SERVER["REQUEST_METHOD"] == "POST"){
+      $candNumber = 1;
+      foreach($allCandidates as $candidate)){
+         echo '
+           <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
+           <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-        echo $candidate . ". " . "Joakim Olofsson / Personlig Assistent / Umeå";
+           echo $candNumber . ". " . $candidate["name"] "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
 
-        echo '</a></h3>
-  <div style="width:95%; margin-top:5px;">
-    <div class="Tryshiftright">
-      <p>
-        Dokument datum:
-        <br>
-        Högsta utbildnings nivå:
-        <br>
-        Antal års erfarenhet:
-        <br>
-        Nuvarande anställning:
-        <br>
-        Nuvarande anställare:
-        <br>
-        Tidigare tjänster:
-        <br>
-        Skills:
-        <br>
-        Ekonomisystem:
-        <br>
-        Språk:
-        <br>
-        Kandidat status:
-        <br>
-        Önskad titel:
-        <br>
-        Plats:
-        <br>
-        Lönenivå:
-        <br>
-        Ålder:
-        <br>
-        Uppsägningstid:
-        <br>
-        Tillgänglig tidigast:
-        <br>
-      </p>
-    </div>
-    <div class="Tryshiftleft">
-      <p>
-        2017-11-02
-        <br>
-        Kandidatexamen inom ekonomi, Umeå Universitet
-        <br>
-        6
-        <br>
-        Personlig Assistent
-        <br>
-        Umeå Kommun, Umeå
-        <br>
-        Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
-        <br>
-        Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
-        <br>
-        Bästa ekonomi
-        <br>
-        Svenska, Engelska Spanska, Franska
-        <br>
-        -
-        <br>
-        Controller
-        <br>
-        Umeå
-        <br>
-        100000
-        <br>
-        23
-        <br>
-        3 månader
-        <br>
-        -
-        <br>
-      </p>
-    </div>
-    <div class="SeeCV">
-      <button class="ui right floated blue button">Se CV</button>
-    </div>
-  </div>';
-  }
-  echo
-  '<div class = "pagnation">
-    <div class="ui pagination menu">
-      <a class="active item">
-        1
-      </a>
-      <div class="disabled item">
-        ...
-      </div>
-      <a class="item">
-        10
-      </a>
-      <a class="item">
-        11
-      </a>
-      <a class="item">
-        12
-      </a>
-    </div>
-   </div>';
+           echo '</a></h3>
+     <div style="width:95%; margin-top:5px;">
+       <div class="Tryshiftright">
+         <p>
+           Dokument datum:
+           <br>
+           Högsta utbildnings nivå:
+           <br>
+           Antal års erfarenhet:
+           <br>
+           Nuvarande anställning:
+           <br>
+           Nuvarande anställare:
+           <br>
+           Tidigare tjänster:
+           <br>
+           Skills:
+           <br>
+           Ekonomisystem:
+           <br>
+           Språk:
+           <br>
+           Kandidat status:
+           <br>
+           Önskad titel:
+           <br>
+           Plats:
+           <br>
+           Lönenivå:
+           <br>
+           Ålder:
+           <br>
+           Uppsägningstid:
+           <br>
+           Tillgänglig tidigast:
+           <br>
+         </p>
+       </div>
+       <div class="Tryshiftleft">
+         <p>
+           2017-11-02
+           <br>
+           Kandidatexamen inom ekonomi, Umeå Universitet
+           <br>
+           6
+           <br>
+           Personlig Assistent
+           <br>
+           Umeå Kommun, Umeå
+           <br>
+           Personlig assistent, Personlig Assistent, Vårdbiträde, praktik
+           <br>
+           Matlab, Programmering, C, Comsol Multiphysics, CAD, LaTeX, Officepaketet, Projektledning, Python
+           <br>
+           Bästa ekonomi
+           <br>
+           Svenska, Engelska Spanska, Franska
+           <br>
+           -
+           <br>
+           Controller
+           <br>
+           Umeå
+           <br>
+           100000
+           <br>
+           23
+           <br>
+           3 månader
+           <br>
+           -
+           <br>
+         </p>
+       </div>
+       <div class="SeeCV">
+         <button class="ui right floated blue button">Se CV</button>
+       </div>
+     </div>';
+     }
+     echo
+     '<div class = "pagnation">
+       <div class="ui pagination menu">
+         <a class="active item">
+           1
+         </a>
+         <div class="disabled item">
+           ...
+         </div>
+         <a class="item">
+           10
+         </a>
+         <a class="item">
+           11
+         </a>
+         <a class="item">
+           12
+         </a>
+       </div>
+      </div>';
+      $candNumber ++;
+   }
 ?>
 <!-- End of loop  -->
 </div>
