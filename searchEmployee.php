@@ -17,7 +17,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    $allCandidates[$userid]["currentemployer"] = "-";
    $allCandidates[$userid]["last3experiences"] = "-";
    $allCandidates[$userid]["highesteducationlevel"] = "-";
-   $allCandidates[$userid]["salaryrange"] = $"-";
+   $allCandidates[$userid]["salaryrange"] = "-";
    $allCandidates[$userid]["age"] = "-";
    $allCandidates[$userid]["leavetime"] = "-";
    $allCandidates[$userid]["candidatestatus"] = "-";
