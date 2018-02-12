@@ -110,7 +110,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
          $_POST['keywords2']), $_POST['keywords3'])
          $_POST['keywords4']), $_POST['keywords5']) $_POST['keywords6'])
       );
-      calculateScore($allCandidates, $keywords);
+      //calculateScore($allCandidates, $keywords);
    }
    else{
       echo "INGA KANDIDATER :(";
