@@ -105,6 +105,7 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
          pg_free_result($languageSkillsResult);
          pg_free_result($personResult);
       }
+      //function ()
    }
    else{
       echo "INGA KANDIDATER :(";
@@ -210,7 +211,7 @@ pg_close($db_connection);
                                  <option value="EKCE">Ekonomichef</option>
                                  <option value="EKOV">Ekonomiövervakare</option>
                                  <option value="KA">Kamrer</option>
-                                 <option value="BH">Bokhållare</option>
+                                 <option value="Bokhållare">Bokhållare</option>
                                  <option value="EKAS">Ekonomiassistent</option>
                                  <option value="RAKFO">Räkenskapsförare</option>
                                  <option value="REDEK">Redovisningsekonom</option>
