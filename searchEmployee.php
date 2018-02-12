@@ -109,7 +109,6 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    else{
       echo "INGA KANDIDATER :(";
    }
-   pg_free_result($cvsummaryResult);
 
 }
 /* Closing connection */
@@ -433,91 +432,94 @@ pg_close($db_connection);
 
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
-      $candNumber = 1;
-      foreach($allCandidates as $candidate){
-         if(!empty($candidate)){
-            echo '
-              <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
-              <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
+      if(pg_num_rows($cvsummaryResult) != 0){
+         $candNumber = 1;
+         foreach($allCandidates as $candidate){
+            if(!empty($candidate)){
+               echo '
+                 <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;">
+                 <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-              echo $candNumber . ". " . $candidate["name"] . "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
+                 echo $candNumber . ". " . $candidate["name"] . "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
 
-              echo '</a></h3>
-        <div style="width:95%; margin-top:5px;">
-          <div class="Tryshiftright">
-            <p>
-              Högsta utbildnings nivå:
-              <br>
-              Antal års erfarenhet:
-              <br>
-              Nuvarande anställning:
-              <br>
-              Nuvarande anställare:
-              <br>
-              Tidigare tjänster:
-              <br>
-              Skills:
-              <br>
-              Ekonomisystem:
-              <br>
-              Språk:
-              <br>
-              Kandidat status:
-              <br>
-              Önskad titel:
-              <br>
-              Plats:
-              <br>
-              Lönenivå:
-              <br>
-              Ålder:
-              <br>
-              Uppsägningstid:
-              <br>
-              Tillgänglig tidigast:
-              <br>
-            </p>
-          </div>
-          <div class="Tryshiftleft">
-            <p>
-              ' . $candidate["highesteducationlevel"] . '
-              <br>
-              ' . $candidate["yearsofexperience"] . '
-              <br>
-              ' . $candidate["currentposition"] . '
-              <br>
-              ' . $candidate["currentemployer"] . ', ' . $candidate["city"] . '
-              <br>
-              ' . $candidate["last3experiences"] . '
-              <br>
-              ' . $candidate["itskills"] . '
-              <br>
-              -
-              <br>
-              ' . $candidate["langskills"] . '
-              <br>
-              ' . $candidate["candidatestatus"] . '
-              <br>
-              ?
-              <br>
-              ' . $candidate["city"] . '
-              <br>
-              ' . $candidate["salaryrange"] . '
-              <br>
-              ' . $candidate["age"] . '
-              <br>
-              ' . $candidate["leavetime"] . '
-              <br>
-              ' . $candidate["availability"] . '
-              <br>
-            </p>
-          </div>
-          <div class="SeeCV">
-            <button class="ui right floated blue button">Se CV</button>
-          </div>
-        </div>';
+                 echo '</a></h3>
+           <div style="width:95%; margin-top:5px;">
+             <div class="Tryshiftright">
+               <p>
+                 Högsta utbildnings nivå:
+                 <br>
+                 Antal års erfarenhet:
+                 <br>
+                 Nuvarande anställning:
+                 <br>
+                 Nuvarande anställare:
+                 <br>
+                 Tidigare tjänster:
+                 <br>
+                 Skills:
+                 <br>
+                 Ekonomisystem:
+                 <br>
+                 Språk:
+                 <br>
+                 Kandidat status:
+                 <br>
+                 Önskad titel:
+                 <br>
+                 Plats:
+                 <br>
+                 Lönenivå:
+                 <br>
+                 Ålder:
+                 <br>
+                 Uppsägningstid:
+                 <br>
+                 Tillgänglig tidigast:
+                 <br>
+               </p>
+             </div>
+             <div class="Tryshiftleft">
+               <p>
+                 ' . $candidate["highesteducationlevel"] . '
+                 <br>
+                 ' . $candidate["yearsofexperience"] . '
+                 <br>
+                 ' . $candidate["currentposition"] . '
+                 <br>
+                 ' . $candidate["currentemployer"] . ', ' . $candidate["city"] . '
+                 <br>
+                 ' . $candidate["last3experiences"] . '
+                 <br>
+                 ' . $candidate["itskills"] . '
+                 <br>
+                 -
+                 <br>
+                 ' . $candidate["langskills"] . '
+                 <br>
+                 ' . $candidate["candidatestatus"] . '
+                 <br>
+                 ?
+                 <br>
+                 ' . $candidate["city"] . '
+                 <br>
+                 ' . $candidate["salaryrange"] . '
+                 <br>
+                 ' . $candidate["age"] . '
+                 <br>
+                 ' . $candidate["leavetime"] . '
+                 <br>
+                 ' . $candidate["availability"] . '
+                 <br>
+               </p>
+             </div>
+             <div class="SeeCV">
+               <button class="ui right floated blue button">Se CV</button>
+             </div>
+           </div>';
+            $candNumber ++;
+            }
          }
-         $candNumber ++;
+         pg_free_result($cvsummaryResult);
      }
      echo
      '<div class = "pagnation">
