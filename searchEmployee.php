@@ -490,11 +490,11 @@ pg_close($db_connection);
                  <br>
                  ' . $candidate["last3experiences"] . '
                  <br>
-                 ' . $candidate["itskills"] . '
+                 ' . ((array_key_exists("itskills", $candidate)) ? $candidate["itskills"] : "-") . '
                  <br>
                  -
                  <br>
-                 ' . ((array_key_exists("langskills", $candidate)) ? $candidate["langskills"] : "asdf") . '
+                 ' . ((array_key_exists("langskills", $candidate)) ? $candidate["langskills"] : "-") . '
                  <br>
                  ' . $candidate["candidatestatus"] . '
                  <br>
