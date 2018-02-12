@@ -80,14 +80,14 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
          }
       }
 
-      $allCandidates[$userid]["itskills"] = "--";
+      $allCandidates[$userid]["itskills"] = "asd";
       if(!$itSkillsResult == false){
          while ($row = pg_fetch_row($itSkillsResult)){
             $userid = $row[0];   $skill = $row[1];
             $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
          }
       }
-      $allCandidates[$userid]["langskills"] = "--";
+      $allCandidates[$userid]["langskills"] = "asdf";
       if(!$languageSkillsResult == false){
          while ($row = pg_fetch_row($languageSkillsResult)){
             $userid = $row[0];   $skill = $row[1];
@@ -494,7 +494,7 @@ pg_close($db_connection);
                  <br>
                  -
                  <br>
-                 ' . $candidate["langskills"] . '
+                 ' . array_key_exists("langskills", $candidate) ? $candidate["langskills"] : "asdf" . '
                  <br>
                  ' . $candidate["candidatestatus"] . '
                  <br>
