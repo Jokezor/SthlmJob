@@ -231,118 +231,118 @@ function calculateScore($allCandidates, $keywords){
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords0[]">
                                  <option value="">Tidigare Tjänster</option>
-                                 <option value="CR">Controller</option>
-                                 <option value="SEK">Styrekonom</option>
-                                 <option value="EKCE">Ekonomichef</option>
-                                 <option value="EKOV">Ekonomiövervakare</option>
-                                 <option value="KA">Kamrer</option>
+                                 <option value="Controller">Controller</option>
+                                 <option value="Styrekonom">Styrekonom</option>
+                                 <option value="Ekonomichef">Ekonomichef</option>
+                                 <option value="Ekonomiövervakare">Ekonomiövervakare</option>
+                                 <option value="Kamrer">Kamrer</option>
                                  <option value="Bokhållare">Bokhållare</option>
-                                 <option value="EKAS">Ekonomiassistent</option>
-                                 <option value="RAKFO">Räkenskapsförare</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDANS">Redovisningsansvarig</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDCE">Redovisningschef</option>
-                                 <option value="CFO">Chief Financial Officer</option>
+                                 <option value="Ekonomiassistent">Ekonomiassistent</option>
+                                 <option value="Räkenskapsförare">Räkenskapsförare</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningsansvarig">Redovisningsansvarig</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningschef">Redovisningschef</option>
+                                 <option value="Chief Financial Officer">Chief Financial Officer</option>
                                  <option value="Business Controller">Business Controller</option>
-                                 <option value="FICTRL">Financial Controller</option>
-                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
-                                 <option value="KONREDCE">Koncernredovisningschef</option>
-                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="Financial Controller">Financial Controller</option>
+                                 <option value="Koncernredovisningsekonom">Koncernredovisningsekonom</option>
+                                 <option value="Koncernredovisningschef">Koncernredovisningschef</option>
+                                 <option value="Verkställande Direktör">Verkställande Direktör</option>
                                  <option value="VD">VD</option>
-                                 <option value="CEO">Ceo</option>
-                                 <option value="DIR">Direktör</option>
-                                 <option value="CE">Chef</option>
-                                 <option value="FORS">Föreståndare</option>
+                                 <option value="CEO">CEO</option>
+                                 <option value="Direktör">Direktör</option>
+                                 <option value="Chef">Chef</option>
+                                 <option value="Föreståndare">Föreståndare</option>
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords1[]">
                                  <option value="">Tjänst Idag</option>
-                                 <option value="CR">Controller</option>
-                                 <option value="SEK">Styrekonom</option>
-                                 <option value="EKCE">Ekonomichef</option>
-                                 <option value="EKOV">Ekonomiövervakare</option>
-                                 <option value="KA">Kamrer</option>
-                                 <option value="BH">Bokhållare</option>
-                                 <option value="EKAS">Ekonomiassistent</option>
-                                 <option value="RAKFO">Räkenskapsförare</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDANS">Redovisningsansvarig</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDCE">Redovisningschef</option>
-                                 <option value="CFO">Chief Financial Officer</option>
-                                 <option value="BSCTRL">Business Controller</option>
-                                 <option value="FICTRL">Financial Controller</option>
-                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
-                                 <option value="KONREDCE">Koncernredovisningschef</option>
-                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="Controller">Controller</option>
+                                 <option value="Styrekonom">Styrekonom</option>
+                                 <option value="Ekonomichef">Ekonomichef</option>
+                                 <option value="Ekonomiövervakare">Ekonomiövervakare</option>
+                                 <option value="Kamrer">Kamrer</option>
+                                 <option value="Bokhållare">Bokhållare</option>
+                                 <option value="Ekonomiassistent">Ekonomiassistent</option>
+                                 <option value="Räkenskapsförare">Räkenskapsförare</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningsansvarig">Redovisningsansvarig</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningschef">Redovisningschef</option>
+                                 <option value="Chief Financial Officer">Chief Financial Officer</option>
+                                 <option value="Business Controller">Business Controller</option>
+                                 <option value="Financial Controller">Financial Controller</option>
+                                 <option value="Koncernredovisningsekonom">Koncernredovisningsekonom</option>
+                                 <option value="Koncernredovisningschef">Koncernredovisningschef</option>
+                                 <option value="Verkställande Direktör">Verkställande Direktör</option>
                                  <option value="VD">VD</option>
-                                 <option value="CEO">Ceo</option>
-                                 <option value="DIR">Direktör</option>
-                                 <option value="CE">Chef</option>
-                                 <option value="FORS">Föreståndare</option>
+                                 <option value="CEO">CEO</option>
+                                 <option value="Direktör">Direktör</option>
+                                 <option value="Chef">Chef</option>
+                                 <option value="Föreståndare">Föreståndare</option>
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords2[]">
                                  <option value="">Tjänst Viljes</option>
-                                 <option value="CR">Controller</option>
-                                 <option value="SEK">Styrekonom</option>
-                                 <option value="EKCE">Ekonomichef</option>
-                                 <option value="EKOV">Ekonomiövervakare</option>
-                                 <option value="KA">Kamrer</option>
-                                 <option value="BH">Bokhållare</option>
-                                 <option value="EKAS">Ekonomiassistent</option>
-                                 <option value="RAKFO">Räkenskapsförare</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDANS">Redovisningsansvarig</option>
-                                 <option value="REDEK">Redovisningsekonom</option>
-                                 <option value="REDCE">Redovisningschef</option>
-                                 <option value="CFO">Chief Financial Officer</option>
-                                 <option value="BSCTRL">Business Controller</option>
-                                 <option value="FICTRL">Financial Controller</option>
-                                 <option value="KONREDEK">Koncernredovisningsekonom</option>
-                                 <option value="KONREDCE">Koncernredovisningschef</option>
-                                 <option value="VDDIR">Verkställande Direktör</option>
+                                 <option value="Controller">Controller</option>
+                                 <option value="Styrekonom">Styrekonom</option>
+                                 <option value="Ekonomichef">Ekonomichef</option>
+                                 <option value="Ekonomiövervakare">Ekonomiövervakare</option>
+                                 <option value="Kamrer">Kamrer</option>
+                                 <option value="Bokhållare">Bokhållare</option>
+                                 <option value="Ekonomiassistent">Ekonomiassistent</option>
+                                 <option value="Räkenskapsförare">Räkenskapsförare</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningsansvarig">Redovisningsansvarig</option>
+                                 <option value="Redovisningsekonom">Redovisningsekonom</option>
+                                 <option value="Redovisningschef">Redovisningschef</option>
+                                 <option value="Chief Financial Officer">Chief Financial Officer</option>
+                                 <option value="Business Controller">Business Controller</option>
+                                 <option value="Financial Controller">Financial Controller</option>
+                                 <option value="Koncernredovisningsekonom">Koncernredovisningsekonom</option>
+                                 <option value="Koncernredovisningschef">Koncernredovisningschef</option>
+                                 <option value="Verkställande Direktör">Verkställande Direktör</option>
                                  <option value="VD">VD</option>
-                                 <option value="CEO">Ceo</option>
-                                 <option value="DIR">Direktör</option>
-                                 <option value="CE">Chef</option>
-                                 <option value="FORS">Föreståndare</option>
+                                 <option value="CEO">CEO</option>
+                                 <option value="Direktör">Direktör</option>
+                                 <option value="Chef">Chef</option>
+                                 <option value="Föreståndare">Föreståndare</option>
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords3[]">
                                  <option value="">Plats</option>
-                                 <option value="STHLM">Stockholm</option>
-                                 <option value="GBG">Göteborg</option>
+                                 <option value="Stockholm">Stockholm</option>
+                                 <option value="Göteborg">Göteborg</option>
                                </select>
                              </div>
                              <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords4[]">
                                  <option value="">Ekonomisystem</option>
-                                 <option value="BEK">Bästa ekonomi</option>
-                                 <option value="UBEK">Underbar ekonomi</option>
+                                 <option value="Bästa ekonomi">Bästa ekonomi</option>
+                                 <option value="Underbar ekonomi">Underbar ekonomi</option>
                                </select>
                              </div>
                                <div class="required field" style="width:12.7321966%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords5[]">
                                    <option value="">Utbildning</option>
-                                   <option value="CIVEK">Civilekonom</option>
-                                   <option value="EK">Ekonom</option>
+                                   <option value="Civilekonom">Civilekonom</option>
+                                   <option value="Ekonom">Ekonom</option>
                                  </select>
                                </div>
 
                              <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords6[]">
                                  <option value="">Skills</option>
-                                 <option value="PGR">Programmering</option>
+                                 <option value="Programmering">Programmering</option>
                                  <option value="C">C</option>
                                  <option value="C#">C#</option>
                                  <option value="C++">C++</option>
-                                 <option value="PY">Python</option>
-                                 <option value="XCL">Excel</option>
+                                 <option value="Python">Python</option>
+                                 <option value="Excel">Excel</option>
                                </select>
                              </div>
                            </div>
