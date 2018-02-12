@@ -62,20 +62,22 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    $numOfCandidates = $candIndex;
 
    $pgsqlstr = implode(', ', $allUserids);
-   $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
-      FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
-   if(!$itSkillsResult){
-      exit("query error");
-   }
-   $languageSkillsResult = pg_query($db_connection, ' SELECT userid, lang
-      FROM languageskills WHERE userid IN (' . $pgsqlstr . ');');
-   if(!$languageSkillsResult){
-      exit("query error");
-   }
-   $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
-      FROM person WHERE userid IN (' . $pgsqlstr . ');');
-   if(!$personResult){
-      exit("query error");
+   if(strlen($pgsqlstr != 0)){
+      $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
+         FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
+      if(!$itSkillsResult){
+         exit("query error");
+      }
+      $languageSkillsResult = pg_query($db_connection, ' SELECT userid, lang
+         FROM languageskills WHERE userid IN (' . $pgsqlstr . ');');
+      if(!$languageSkillsResult){
+         exit("query error");
+      }
+      $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
+         FROM person WHERE userid IN (' . $pgsqlstr . ');');
+      if(!$personResult){
+         exit("query error");
+      }
    }
 
    $allCandidates[$userid]["itskills"] = "--";
