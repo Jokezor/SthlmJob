@@ -105,7 +105,12 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
          pg_free_result($languageSkillsResult);
          pg_free_result($personResult);
       }
-      //function ()
+      $keywords = array(
+         $_POST['keywords0']), $_POST['keywords1'])
+         $_POST['keywords2']), $_POST['keywords3'])
+         $_POST['keywords4']), $_POST['keywords5']) $_POST['keywords6'])
+      );
+      calculateScore($allCandidates, $keywords);
    }
    else{
       echo "INGA KANDIDATER :(";
@@ -114,6 +119,26 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 }
 /* Closing connection */
 pg_close($db_connection);
+function calculateScore($allCandidates, $keywords){
+   foreach ($allCandidates as $cand) {
+      // last3experiences
+
+      //currentposition
+
+      // Position wanted
+
+      // city
+
+      // Ekonimisystem
+
+      // education
+
+      // Itskills
+
+      $skillsSearchedFor = $keywords[6];
+      implode(', ', $cand["itskills"]);
+   }
+}
 ?>
 
 
@@ -145,11 +170,11 @@ pg_close($db_connection);
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       echo "Keywords: ";
-      for($i = 0; $i < sizeof($_POST['keywords']); $i++){
-         echo $_POST['keywords'][$i] . "  ";
+      for($i = 0; $i < sizeof($_POST['keywords0']); $i++){
+         echo $_POST['keywords0'][$i] . "  ";
       }
       foreach ($_POST as $key => $value) {
-         if($key == "keywords"){
+         if($key == "keywords0"){
             continue;
          }
          echo $key . ": ";
@@ -204,7 +229,7 @@ pg_close($db_connection);
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords0[]">
                                  <option value="">Tidigare Tjänster</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
@@ -232,7 +257,7 @@ pg_close($db_connection);
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords1[]">
                                  <option value="">Tjänst Idag</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
@@ -260,7 +285,7 @@ pg_close($db_connection);
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords2[]">
                                  <option value="">Tjänst Viljes</option>
                                  <option value="CR">Controller</option>
                                  <option value="SEK">Styrekonom</option>
@@ -288,21 +313,21 @@ pg_close($db_connection);
                                </select>
                              </div>
                              <div class="required field" style="width:15.4508475%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords3[]">
                                  <option value="">Plats</option>
                                  <option value="STHLM">Stockholm</option>
                                  <option value="GBG">Göteborg</option>
                                </select>
                              </div>
                              <div class="required field" style="width:12.7321966%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords4[]">
                                  <option value="">Ekonomisystem</option>
                                  <option value="BEK">Bästa ekonomi</option>
                                  <option value="UBEK">Underbar ekonomi</option>
                                </select>
                              </div>
                                <div class="required field" style="width:12.7321966%;">
-                                 <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                                 <select required multiple="" class="ui fluid search selection dropdown" name="keywords5[]">
                                    <option value="">Utbildning</option>
                                    <option value="CIVEK">Civilekonom</option>
                                    <option value="EK">Ekonom</option>
@@ -310,7 +335,7 @@ pg_close($db_connection);
                                </div>
 
                              <div class="required field" style="width:12.7321966%;">
-                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords[]">
+                               <select required multiple="" class="ui fluid search selection dropdown" name="keywords6[]">
                                  <option value="">Skills</option>
                                  <option value="PGR">Programmering</option>
                                  <option value="C">C</option>
