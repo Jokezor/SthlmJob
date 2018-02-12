@@ -494,7 +494,7 @@ pg_close($db_connection);
                  <br>
                  -
                  <br>
-                 ' . array_key_exists("langskills", $candidate) ? $candidate["langskills"] : "asdf" . '
+                 ' . ((array_key_exists("langskills", $candidate)) ? $candidate["langskills"] : "asdf") . '
                  <br>
                  ' . $candidate["candidatestatus"] . '
                  <br>
