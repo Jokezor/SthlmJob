@@ -35,77 +35,80 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
    if(!$cvsummaryResult){
       exit("query execute error");
    }
+   // ----------------
+   if(pg_num_rows($cvsummaryResult) != 0){
+      $candIndex = 0;
+      $allCandidates = array(array());
+      $allUserids = array();
+      if(!$cvsummaryResult == false){
+         while ($row = pg_fetch_row($cvsummaryResult)){
+            $userid = $row[0];
+            $allUserids[$candIndex] = $userid;
+            $allCandidates[$userid]["userid"] = $row[0];
+            $allCandidates[$userid]["cvtitle"] = $row[1];
+            $allCandidates[$userid]["yearsofexperience"] = $row[2];
+            $allCandidates[$userid]["currentposition"] = $row[3];
+            $allCandidates[$userid]["currentemployer"] = $row[4];
+            $allCandidates[$userid]["last3experiences"] = $row[5];
+            $allCandidates[$userid]["highesteducationlevel"] = $row[6];
+            $allCandidates[$userid]["salaryrange"] = $row[7];
+            $allCandidates[$userid]["age"] = $row[8];
+            $allCandidates[$userid]["leavetime"] = $row[9];
+            $allCandidates[$userid]["candidatestatus"] = $row[10];
+            $allCandidates[$userid]["availability"] = $row[11];
+            $candIndex ++;
+         }
+      }
+      $numOfCandidates = $candIndex;
 
-   $candIndex = 0;
-   $allCandidates = array(array());
-   $allUserids = array();
+      $pgsqlstr = implode(', ', $allUserids);
+      if(strlen($pgsqlstr != 0)){
+         $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
+            FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$itSkillsResult){
+            exit("query error");
+         }
+         $languageSkillsResult = pg_query($db_connection, ' SELECT userid, lang
+            FROM languageskills WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$languageSkillsResult){
+            exit("query error");
+         }
+         $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
+            FROM person WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$personResult){
+            exit("query error");
+         }
+      }
 
-   if(!$cvsummaryResult == false){
-      while ($row = pg_fetch_row($cvsummaryResult)){
-         $userid = $row[0];
-         $allUserids[$candIndex] = $userid;
-         $allCandidates[$userid]["userid"] = $row[0];
-         $allCandidates[$userid]["cvtitle"] = $row[1];
-         $allCandidates[$userid]["yearsofexperience"] = $row[2];
-         $allCandidates[$userid]["currentposition"] = $row[3];
-         $allCandidates[$userid]["currentemployer"] = $row[4];
-         $allCandidates[$userid]["last3experiences"] = $row[5];
-         $allCandidates[$userid]["highesteducationlevel"] = $row[6];
-         $allCandidates[$userid]["salaryrange"] = $row[7];
-         $allCandidates[$userid]["age"] = $row[8];
-         $allCandidates[$userid]["leavetime"] = $row[9];
-         $allCandidates[$userid]["candidatestatus"] = $row[10];
-         $allCandidates[$userid]["availability"] = $row[11];
-         $candIndex ++;
+      $allCandidates[$userid]["itskills"] = "--";
+      if(!$itSkillsResult == false){
+         while ($row = pg_fetch_row($itSkillsResult)){
+            $userid = $row[0];   $skill = $row[1];
+            $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
+         }
+      }
+      $allCandidates[$userid]["langskills"] = "--";
+      if(!$languageSkillsResult == false){
+         while ($row = pg_fetch_row($languageSkillsResult)){
+            $userid = $row[0];   $skill = $row[1];
+            $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
+         }
+      }
+
+      if(!$personResult == false){
+         while ($row = pg_fetch_row($personResult)){
+            $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[3];
+            $allCandidates[$userid]["name"] = $name;
+            $allCandidates[$userid]["city"] = $city;
+         }
+         pg_free_result($itSkillsResult);
+         pg_free_result($languageSkillsResult);
+         pg_free_result($personResult);
       }
    }
-   $numOfCandidates = $candIndex;
-
-   $pgsqlstr = implode(', ', $allUserids);
-   if(strlen($pgsqlstr != 0)){
-      $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
-         FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
-      if(!$itSkillsResult){
-         exit("query error");
-      }
-      $languageSkillsResult = pg_query($db_connection, ' SELECT userid, lang
-         FROM languageskills WHERE userid IN (' . $pgsqlstr . ');');
-      if(!$languageSkillsResult){
-         exit("query error");
-      }
-      $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
-         FROM person WHERE userid IN (' . $pgsqlstr . ');');
-      if(!$personResult){
-         exit("query error");
-      }
+   else{
+      echo "INGA KANDIDATER :(";
    }
-
-   $allCandidates[$userid]["itskills"] = "--";
-   if(!$itSkillsResult == false){
-      while ($row = pg_fetch_row($itSkillsResult)){
-         $userid = $row[0];   $skill = $row[1];
-         $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
-      }
-   }
-   $allCandidates[$userid]["langskills"] = "--";
-   if(!$languageSkillsResult == false){
-      while ($row = pg_fetch_row($languageSkillsResult)){
-         $userid = $row[0];   $skill = $row[1];
-         $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
-      }
-   }
-
-   if(!$personResult == false){
-      while ($row = pg_fetch_row($personResult)){
-         $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[3];
-         $allCandidates[$userid]["name"] = $name;
-         $allCandidates[$userid]["city"] = $city;
-      }
-   }
-
-   pg_free_result($itSkillsResult);
-   pg_free_result($languageSkillsResult);
-   pg_free_result($personResult);
    pg_free_result($cvsummaryResult);
 
 }
