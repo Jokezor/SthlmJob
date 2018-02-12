@@ -158,32 +158,34 @@ pg_close($db_connection);
       }
    }
 
-
-   if($_SERVER["REQUEST_METHOD"] == "POST"){
-      // Comparison function
-      function cmp($cand1, $cand2) {
-         if ($cand1["age"] == $cand2["age"]) {
-            return 0;
+   if(pg_num_rows($cvsummaryResult) != 0){
+      if($_SERVER["REQUEST_METHOD"] == "POST"){
+         // Comparison function
+         function cmp($cand1, $cand2) {
+            if ($cand1["age"] == $cand2["age"]) {
+               return 0;
+            }
+            if($cand1["age"] > $cand2["age"]){
+               return -1;
+            }
+            else {
+               return 1;
+            }
          }
-         if($cand1["age"] > $cand2["age"]){
-            return -1;
-         }
-         else {
-            return 1;
+         //bool uasort ( array &$array , callable $value_compare_func )
+         if(!uasort($allCandidates, 'cmp')){
+            echo "sort error";
          }
       }
-      //bool uasort ( array &$array , callable $value_compare_func )
-      if(!uasort($allCandidates, 'cmp')){
-         echo "sort error";
-      }
-   }
 
-   if($_SERVER["REQUEST_METHOD"] == "POST"){
-      foreach ($allCandidates as $cand) {
-         foreach ($cand as $column => $value) {
-            echo $column . ": " . $value . "\t\t";
+
+      if($_SERVER["REQUEST_METHOD"] == "POST"){
+         foreach ($allCandidates as $cand) {
+            foreach ($cand as $column => $value) {
+               echo $column . ": " . $value . "\t\t";
+            }
+            echo "<br>";
          }
-         echo "<br>";
       }
    }
    ?>
