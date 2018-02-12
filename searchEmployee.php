@@ -219,7 +219,7 @@ pg_close($db_connection);
                                  <option value="REDEK">Redovisningsekonom</option>
                                  <option value="REDCE">Redovisningschef</option>
                                  <option value="CFO">Chief Financial Officer</option>
-                                 <option value="BSCTRL">Business Controller</option>
+                                 <option value="Business Controller">Business Controller</option>
                                  <option value="FICTRL">Financial Controller</option>
                                  <option value="KONREDEK">Koncernredovisningsekonom</option>
                                  <option value="KONREDCE">Koncernredovisningschef</option>
