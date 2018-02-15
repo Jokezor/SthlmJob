@@ -183,8 +183,9 @@ function calculateScore($allCandidates, $keywords){
       }
    }
 
-   if(pg_num_rows($cvsummaryResult) != 0){
-      if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(pg_num_rows($cvsummaryResult) != 0){
          // Comparison function
          function cmp($cand1, $cand2) {
             if ($cand1["age"] == $cand2["age"]) {
