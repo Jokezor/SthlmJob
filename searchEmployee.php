@@ -86,19 +86,20 @@
          }
       }
 
-      $allCandidates[$userid]["itskills"] = "asd";
       if(!$itSkillsResult == false){
          while ($row = pg_fetch_row($itSkillsResult)){
             $userid = $row[0];   $skill = $row[1];
-            $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
+            //$allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
+            $allCandidates[$userid]["itskills"][] = $skill;
          }
          pg_free_result($itSkillsResult);
       }
-      $allCandidates[$userid]["langskills"] = "asdf";
+
       if(!$languageSkillsResult == false){
          while ($row = pg_fetch_row($languageSkillsResult)){
             $userid = $row[0];   $skill = $row[1];
-            $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
+            //$allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
+            $allCandidates[$userid]["langskills"][] = $skill;
          }
          pg_free_result($languageSkillsResult);
       }
@@ -112,7 +113,6 @@
          pg_free_result($personResult);
       }
 
-      //$allCandidates[$userid]["businessskills"] = "asdd";
       if(!$businessSkillsResult == false){
          while ($row = pg_fetch_row($businessSkillsResult)){
             $userid = $row[0];   $businessSkill = $row[1];
@@ -174,7 +174,7 @@ function calculateScore($allCandidates, $keywords){
       $numOfAgree = 0;
       $searchedFor = $keywords[6];
       if(array_key_exists("itskills", $cand)){
-         $itskillsArray = explode(', ', $cand["itskills"]);
+         $itskillsArray = $cand["itskills"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($itskillsArray); $j++){
