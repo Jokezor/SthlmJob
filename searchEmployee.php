@@ -120,8 +120,6 @@
 /* Closing connection */
 pg_close($db_connection);
 function calculateScore($allCandidates, $keywords){
-   echo "Scoring:\n"
-   //echo "Number of candidates: " . sizeof($al)
    foreach ($allCandidates as $cand) {
       // last3experiences
 
