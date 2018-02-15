@@ -142,7 +142,7 @@ function calculateScore($allCandidates, $keywords){
 
          for($i = 0; $i < sizeof($skillsSearchedFor); $i++){
             for($j = 0; $j < sizeof($itskillsArray); $j++){
-               if(!strcmp($skillsSearchedFor[i], $itskillsArray[$j])){
+               if(!strcmp($skillsSearchedFor[$i], $itskillsArray[$j])){
                   $numOfItskillsAgree++;
                }
 
