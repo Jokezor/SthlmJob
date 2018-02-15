@@ -3,6 +3,8 @@
   /* Connect to PostGreSQL and select the database. */
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
+
+  $weights = array(25,20,15,12,10,9,9);
 ?>
 
 <?php
@@ -78,6 +80,11 @@
          if(!$personResult){
             exit("query error");
          }
+         $businessSkillsResult = pg_query($db_connection, ' SELECT userid, businessskill
+            FROM businessskills WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$businessSkillsResult){
+            exit("query error");
+         }
       }
 
       $allCandidates[$userid]["itskills"] = "asd";
@@ -86,6 +93,7 @@
             $userid = $row[0];   $skill = $row[1];
             $allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
          }
+         pg_free_result($itSkillsResult);
       }
       $allCandidates[$userid]["langskills"] = "asdf";
       if(!$languageSkillsResult == false){
@@ -93,6 +101,7 @@
             $userid = $row[0];   $skill = $row[1];
             $allCandidates[$userid]["langskills"] = $allCandidates[$userid]["langskills"] . ", " . $skill;
          }
+         pg_free_result($languageSkillsResult);
       }
 
       if(!$personResult == false){
@@ -101,9 +110,14 @@
             $allCandidates[$userid]["name"] = $name;
             $allCandidates[$userid]["city"] = $city;
          }
-         pg_free_result($itSkillsResult);
-         pg_free_result($languageSkillsResult);
          pg_free_result($personResult);
+      }
+      if(!$businessSkillsResult == false){
+         while ($row = pg_fetch_row($businessSkillsResult)){
+            $userid = $row[0];   $businessSkill = $row[1];
+            $allCandidates[$userid]["businessskills"] = $allCandidates[$userid]["businessskills"] . ", " . $businessSkill;
+         }
+         pg_free_result($businessSkillsResult);
       }
       $keywords = array(
          $_POST['keywords0'], $_POST['keywords1'],
@@ -130,29 +144,47 @@ function calculateScore($allCandidates, $keywords){
       // city
 
       // Ekonimisystem
+      $numOfAgree = 0;
+      $searchedFor = $keywords[4];
+      if(array_key_exists("businessskills", $cand)){
+         $businessArray = explode(', ', $cand["businessskills"]);
 
-      // education
-
-      // Itskills
-
-      $numOfItskillsAgree = 0;
-      $skillsSearchedFor = $keywords[6];
-      if(array_key_exists("itskills", $cand)){
-         $itskillsArray = explode(', ', $cand["itskills"]);
-
-         for($i = 0; $i < sizeof($skillsSearchedFor); $i++){
-            for($j = 0; $j < sizeof($itskillsArray); $j++){
-               if(!strcmp($skillsSearchedFor[$i], $itskillsArray[$j])){
-                  $numOfItskillsAgree++;
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($businessArray); $j++){
+               if(!strcmp($searchedFor[$i], $businessArray[$j])){
+                  $numOfAgree++;
                }
 
-               echo $itskillsArray[$j] . "  ";
-               echo $skillsSearchedFor[$i] . '\\';
+               echo $businessArray[$j] . "  ";
+               echo $searchedFor[$i] . '\\';
             }
          }
       }
 
-      $itScore = $numOfItskillsAgree/sizeof($skillsSearchedFor)*9;
+      $businessScore = $numOfAgree/sizeof($searchedFor)*$weights[4];
+      echo "businessScore: " . $businessScore;
+      // education
+
+      // Itskills
+
+      $numOfAgree = 0;
+      $searchedFor = $keywords[6];
+      if(array_key_exists("itskills", $cand)){
+         $itskillsArray = explode(', ', $cand["itskills"]);
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($itskillsArray); $j++){
+               if(!strcmp($searchedFor[$i], $itskillsArray[$j])){
+                  $numOfItskillsAgree++;
+               }
+
+               echo $itskillsArray[$j] . "  ";
+               echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+      $itScore = $numOfItskillsAgree/sizeof($searchedFor)*$weights[6];
       echo "Itscore: " . $itScore;
       echo "Total score: " . $itScore; // + ...
       echo "<br>";
