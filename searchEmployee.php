@@ -4,7 +4,6 @@
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
 
-  $weights = array(25,20,15,12,10,9,9);
 ?>
 
 <?php
@@ -134,6 +133,7 @@
 /* Closing connection */
 pg_close($db_connection);
 function calculateScore($allCandidates, $keywords){
+   $weights = array(25,20,15,12,10,9,9);
    foreach ($allCandidates as $cand) {
       // last3experiences
 
@@ -175,7 +175,7 @@ function calculateScore($allCandidates, $keywords){
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($itskillsArray); $j++){
                if(!strcmp($searchedFor[$i], $itskillsArray[$j])){
-                  $numOfItskillsAgree++;
+                  $numOfAgree++;
                }
 
                echo $itskillsArray[$j] . "  ";
@@ -184,7 +184,7 @@ function calculateScore($allCandidates, $keywords){
          }
       }
 
-      $itScore = $numOfItskillsAgree/sizeof($searchedFor)*$weights[6];
+      $itScore = $numOfAgree/sizeof($searchedFor)*$weights[6];
       echo "Itscore: " . $itScore;
       echo "Total score: " . $itScore; // + ...
       echo "<br>";
