@@ -136,7 +136,17 @@ function calculateScore($allCandidates, $keywords){
       // Itskills
 
       $skillsSearchedFor = $keywords[6];
-      implode(', ', $cand["itskills"]);
+      $itskillsArray = explode(', ', $cand["itskills"]);
+      
+      for($i = 0; $i < size($itskillsArray); $i++){
+         echo $itskillsArray[$i];
+      }
+      for($i = 0; $i < size($skillsSearchedFor); $i++){
+         echo $skillsSearchedFor[$i];
+      }
+
+
+
    }
 }
 ?>
