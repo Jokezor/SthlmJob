@@ -146,7 +146,7 @@ function calculateScore($allCandidates, $keywords){
                   $numOfItskillsAgree++;
                }
 
-               echo $itskillsArray[$i] . "  ";
+               echo $itskillsArray[$j] . "  ";
                echo $skillsSearchedFor[$i] . '\\';
             }
          }
@@ -154,7 +154,6 @@ function calculateScore($allCandidates, $keywords){
 
       $itScore = $numOfItskillsAgree/sizeof($skillsSearchedFor)*9;
       echo $itScore;
-      echo '\n';
       echo "<br>";
 
    }
