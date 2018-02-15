@@ -1,4 +1,4 @@
-cvsummaryResult<?php include "../inc/dbinfo.inc";?>
+<?php include "../inc/dbinfo.inc";?>
 <?php
   /* Connect to PostGreSQL and select the database. */
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
@@ -120,6 +120,8 @@ cvsummaryResult<?php include "../inc/dbinfo.inc";?>
 /* Closing connection */
 pg_close($db_connection);
 function calculateScore($allCandidates, $keywords){
+   echo "Scoring:\n"
+   //echo "Number of candidates: " . sizeof($al)
    foreach ($allCandidates as $cand) {
       // last3experiences
 
@@ -135,17 +137,27 @@ function calculateScore($allCandidates, $keywords){
 
       // Itskills
 
+      $numOfItskillsAgree = 0;
       $skillsSearchedFor = $keywords[6];
       if(array_key_exists("itskills", $cand)){
          $itskillsArray = explode(', ', $cand["itskills"]);
-         for($i = 0; $i < sizeof($itskillsArray); $i++){
-            echo $itskillsArray[$i];
-         }
+
          for($i = 0; $i < sizeof($skillsSearchedFor); $i++){
-            echo $skillsSearchedFor[$i];
+            for($j = 0; $j < sizeof($itskillsArray); $j++){
+               if(!strcmp($skillsSearchedFor[i], $itskillsArray[$j])){
+                  $numOfItskillsAgree++;
+               }
+
+               echo $itskillsArray[$i] . "  ";
+               echo $skillsSearchedFor[$i] . '\\';
+            }
          }
       }
-      echo "\n\n\n";
+
+      $itScore = $numOfItskillsAgree/sizeof($skillsSearchedFor)*9;
+      echo $itScore;
+      echo '\n';
+      echo "<br>";
 
    }
 }
