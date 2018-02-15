@@ -178,8 +178,10 @@ function calculateScore($allCandidates, $keywords){
             continue;
          }
          echo $key . ": ";
-         echo $value;
-         echo "\n";
+         foreach($value as $val){
+           echo $val;
+           echo "\n";       
+         }
       }
    }
 
