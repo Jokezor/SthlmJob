@@ -112,7 +112,7 @@
          pg_free_result($personResult);
       }
 
-      $allCandidates[$userid]["businessskills"] = "asdd";
+      //$allCandidates[$userid]["businessskills"] = "asdd";
       if(!$businessSkillsResult == false){
          while ($row = pg_fetch_row($businessSkillsResult)){
             $userid = $row[0];   $businessSkill = $row[1];
