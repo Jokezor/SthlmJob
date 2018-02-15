@@ -153,7 +153,9 @@ function calculateScore($allCandidates, $keywords){
       }
 
       $itScore = $numOfItskillsAgree/sizeof($skillsSearchedFor)*9;
-      echo $itScore;
+      echo "Itscore: " . $itScore;
+      echo "Total score: " . $itScore; // + ...
+      echo "<br>";
       echo "<br>";
 
    }
