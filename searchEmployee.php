@@ -116,7 +116,8 @@
       if(!$businessSkillsResult == false){
          while ($row = pg_fetch_row($businessSkillsResult)){
             $userid = $row[0];   $businessSkill = $row[1];
-            $allCandidates[$userid]["businessskills"] = $allCandidates[$userid]["businessskills"] . ", " . $businessSkill;
+            //$allCandidates[$userid]["businessskills"] = $allCandidates[$userid]["businessskills"] . ", " . $businessSkill;
+            $allCandidates[$userid]["businessskills"][] = $businessSkill;
          }
          pg_free_result($businessSkillsResult);
       }
