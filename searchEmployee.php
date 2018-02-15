@@ -111,6 +111,8 @@
          }
          pg_free_result($personResult);
       }
+
+      $allCandidates[$userid]["langskills"] = "asdd";
       if(!$businessSkillsResult == false){
          while ($row = pg_fetch_row($businessSkillsResult)){
             $userid = $row[0];   $businessSkill = $row[1];
