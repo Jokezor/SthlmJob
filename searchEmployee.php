@@ -150,7 +150,8 @@ function calculateScore($allCandidates, $keywords){
       $numOfAgree = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("businessskills", $cand)){
-         $businessArray = explode(', ', $cand["businessskills"]);
+         //$businessArray = explode(', ', $cand["businessskills"]);
+         $businessArray = $cand["businessskills"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($businessArray); $j++){
