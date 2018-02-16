@@ -265,7 +265,9 @@ function calculateScore($allCandidates, $keywords){
       if($_SERVER["REQUEST_METHOD"] == "POST"){
          foreach ($allCandidates as $cand) {
             foreach ($cand as $column => $value) {
-               echo $column . ": " . $value . "\t\t";
+               //echo $column . ": " . $value . "\t\t";
+               echo $column . ": ";
+               print_r($value);
             }
             echo "<br>";
          }
