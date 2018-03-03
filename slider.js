@@ -38,7 +38,7 @@ $(function() {
         }
       });
       $( "#amount2" ).val((($( "#slider-range2" ).slider( "values", 0 )*1000)) +
-        " - " + (($( "#slider-range2" ).slider( "values", 1 )*1000)); */
+        " - " + (($( "#slider-range2" ).slider( "values", 1 )*1000)));
     });
 
 
