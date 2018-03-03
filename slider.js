@@ -34,7 +34,7 @@ $(function() {
         step: 1,
         values: [0,50],
         slide: function( event, ui ) {
-          $( "#amount2" ).val( ((ui.values[ 0 ] *1000).toDateString() ) + " - " + ((ui.values[ 1 ] *1000)).toDateString() );
+          $( "#amount2" ).val( ((ui.values[ 0 ] *1000)) + " - " + ((ui.values[ 1 ] *1000)));
         }
       });
       $( "#amount2" ).val((($( "#slider-range2" ).slider( "values", 0 )*1000)) +
