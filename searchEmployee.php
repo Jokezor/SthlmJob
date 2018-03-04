@@ -406,6 +406,10 @@ function calculateScore($allCandidates, $keywords){
                                </select>
                              </div>
                            </div>
+                           <br>
+                           <br>
+                           <br>
+                           <br>
                            <h2>Lönenivå i SEK</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-3"></div>
