@@ -410,6 +410,9 @@ function calculateScore($allCandidates, $keywords){
                            <br>
                            <br>
                            <br>
+                           <div class="ui dropdown">
+                             <div class="default text">Select Friend</div>
+                           </div>
                            <h2>Lönenivå i SEK</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-3"></div>
