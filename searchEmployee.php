@@ -472,7 +472,7 @@ function calculateScore($allCandidates, $keywords){
                              <input type="text" name="amount2" id="amount2" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100" value"0-50"/>
                            </p>
 
-                         <div id="slider-range2" style = "width:20%; margin: auto; float:left; margin-left: 0%;"></div>
+                         <div id="slider-range2" style = "width:15.4508475%; margin: auto; float:left; margin-left: 0%;"></div>
 
 
 
