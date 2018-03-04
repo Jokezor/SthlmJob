@@ -466,6 +466,7 @@ function calculateScore($allCandidates, $keywords){
 
                            <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div>
                            <p>
+                             <br>
                              <h2 style ="text-align: left !important;">Erfarenhet i roll</h2>
                              <br>
                              <label for="amount2" style = "margin-left: 0%;"></label>
