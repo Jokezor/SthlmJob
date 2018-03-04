@@ -37,8 +37,8 @@ $(function() {
           $( "#amount2" ).val( ((ui.values[ 0 ] )) + " - " + ((ui.values[ 1 ] )));
         }
       });
-      "Min: " + $( "#amount2" ).val((($( "#slider-range2" ).slider( "values", 0 ))) +
-        " - " + "Max: " + (($( "#slider-range2" ).slider( "values", 1 ))));
+      $( "#amount2" ).val((($( "#slider-range2" ).slider( "values", 0 ))) +
+        " - " + (($( "#slider-range2" ).slider( "values", 1 ))));
     });
 
 
