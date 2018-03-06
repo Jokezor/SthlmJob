@@ -15,9 +15,7 @@ $('.ui dropdown .menu .item').on({
     }
 });
 
-document.getElementById('ui dropdown').addEventListener('click', function (event) {
-    event.stopPropagation();
-  });
+
 
 
 
