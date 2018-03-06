@@ -9,10 +9,8 @@ $(function()) {
 }
 */
 
-$('#myDropdown .menu .item').on({
-	"click":function(e){
-      e.stopPropagation();
-    }
+$('#myDropdown').on('hide.bs.dropdown', function () {
+    return false;
 });
 
 $(function() {
