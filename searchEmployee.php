@@ -444,7 +444,7 @@ function calculateScore($allCandidates, $keywords){
                               <li class="divider"></li>
                             </ul>
                            </div>
-                           <div class="dropdown">
+                           <div class="dropdown" id="myDropdowned">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
