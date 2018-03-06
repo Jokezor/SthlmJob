@@ -16,9 +16,6 @@ $('.ui dropdown .menu .item').on({
 });
 
 
-
-
-
 $(function() {
     $( "#slider-range1" ).slider({
       range: true,
