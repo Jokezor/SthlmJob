@@ -9,6 +9,11 @@ $(function()) {
 }
 */
 
+$('#myDropdown .dropdown-menu').on({
+	"click":function(e){
+      e.stopPropagation();
+    }
+});
 
 $(function() {
     $( "#slider-range1" ).slider({
