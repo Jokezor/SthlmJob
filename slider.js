@@ -9,9 +9,13 @@ $(function()) {
 }
 */
 
-$('#myDropdown').on('hide.bs.dropdown', function () {
-    return false;
+$('#myDropdown .dropdown-menu').on({
+	"click":function(e){
+      e.stopPropagation();
+    }
 });
+
+
 
 $(function() {
     $( "#slider-range1" ).slider({
