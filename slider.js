@@ -9,7 +9,7 @@ $(function()) {
 }
 */
 
-$('.ui dropdown .menu').on({
+$('.ui dropdown .menu .item').on({
 	"click":function(e){
       e.stopPropagation();
     }
