@@ -428,19 +428,6 @@ function calculateScore($allCandidates, $keywords){
                               </div>
                             </div>
                            </div>
-                           <div class="btn-group" id="myDropdown">
-                              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                Menu
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Choice1</a></li>
-                                <li><a href="#">Choice2</a></li>
-                                <li><a href="#">Choice3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Choice..</a></li>
-                              </ul>
-                            </div>
                            <br>
                            <br>
                            <br>
