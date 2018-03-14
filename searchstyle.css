@@ -139,5 +139,6 @@
 
 
 .ui dropdown{
+	display:block
 	width:20% !important;
 }
