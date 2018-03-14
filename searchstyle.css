@@ -139,6 +139,6 @@
 
 
 .ui dropdown{
-	clear: both;
+	display: inline-block;
 	width:20% !important;
 }
