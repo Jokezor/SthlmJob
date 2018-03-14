@@ -429,6 +429,28 @@ function calculateScore($allCandidates, $keywords){
                               </div>
                             </div>
                           </div>
+                          <div class="ui dropdown" style="width:15%;">
+                            <div class="text">Urval</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                             <div class="item">
+                               <h2 style ="text-align: left !important;">Erfarenhet i roll</h2>
+                               <label for="amount2" style = "margin-left: 0%;"></label>
+                               <input type="text" name="amount2" id="amount2" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100" value"0-50"/>
+                             </p>
+
+                               <div id="slider-range2" style = "width:15.4508475%; margin: auto; float:left; margin-left: 0%;"></div>
+                             </div>
+                             <div class="item">
+                               <span class="description">ctrl + o</span>
+                               Open...
+                             </div>
+                             <div class="item">
+                               <span class="description">ctrl + s</span>
+                               Save as...
+                             </div>
+                           </div>
+                         </div>
                            <br>
                            <br>
                            <br>
