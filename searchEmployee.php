@@ -408,7 +408,7 @@ function calculateScore($allCandidates, $keywords){
                              </div>
                            </div>
                            <div class="ui sub header">Urval</div>
-                             <div class="ui fluid multiple search special selection dropdown">
+                             <div class="ui fluid multiple search special selection dropdown" style ="width:15.4508475%;">
                              <i class="dropdown icon"></i>
                              <div class="menu">
                               <div class="item">
