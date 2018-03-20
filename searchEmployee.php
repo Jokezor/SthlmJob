@@ -419,14 +419,14 @@ function calculateScore($allCandidates, $keywords){
 
                                 <div id="slider-range2" style = "width:100%; margin: auto; float:left; margin-left: 0%;"></div>
                               </div>
-                              <div class="item">
+                              <!--div class="item">
                                 <span class="description">ctrl + o</span>
                                 Open...
                               </div>
                               <div class="item">
                                 <span class="description">ctrl + s</span>
                                 Save as...
-                              </div>
+                              </div-->
                             </div>
                           </div>
                            <br>
