@@ -409,7 +409,7 @@ function calculateScore($allCandidates, $keywords){
                            </div>
                            <div class="ui sub header" style="width:15.4508475%!important; max-width: 15.4508475%!important;">Urval</div>
                             <div class="required field" style="width:15.4508475%;">
-                             <div class="ui fluid multiple search special selection dropdown" style ="width:15.4508475%; overflow: visible;">
+                             <div class="ui fluid multiple search special selection dropdown" style ="overflow: visible;">
                              <i class="dropdown icon"></i>
                              <div class="menu">
                               <div class="item" style="width:100%; margin-bottom:5%;">
