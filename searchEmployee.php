@@ -411,7 +411,7 @@ function calculateScore($allCandidates, $keywords){
                              <div class="ui fluid multiple search special selection dropdown" style ="width:15.4508475%;">
                              <i class="dropdown icon"></i>
                              <div class="menu">
-                              <div class="item" style="width:100%; margin-bottom:1%;">
+                              <div class="item" style="width:100%; margin-bottom:5%;">
                                 <h2 style ="text-align: left !important; font-size: 100%;">Erfarenhet i roll</h2>
                                 <label for="amount2" style = "margin-left: 0%;"></label>
                                 <input type="text" name="amount2" id="amount2" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100" value"0-50"/>
