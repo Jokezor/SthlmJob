@@ -345,7 +345,7 @@ function calculateScore($allCandidates, $keywords){
                                  <option value="Föreståndare">Föreståndare</option>
                                </select>
                              </div>
-                             <!--div class="required field" style="width:15.4508475%;">
+                             <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords2[]">
                                  <option value="">Tjänst Viljes</option>
                                  <option value="Controller">Controller</option>
@@ -372,7 +372,7 @@ function calculateScore($allCandidates, $keywords){
                                  <option value="Chef">Chef</option>
                                  <option value="Föreståndare">Föreståndare</option>
                                </select>
-                             </div-->
+                             </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords3[]">
                                  <option value="">Plats</option>
@@ -380,14 +380,14 @@ function calculateScore($allCandidates, $keywords){
                                  <option value="Göteborg">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:15.4508475%;">
+                             <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords4[]">
                                  <option value="">Ekonomisystem</option>
                                  <option value="Bästa ekonomi">Bästa ekonomi</option>
                                  <option value="Underbar ekonomi">Underbar ekonomi</option>
                                </select>
                              </div>
-                               <div class="required field" style="width:15.4508475%;">
+                               <div class="required field" style="width:12.7321966%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords5[]">
                                    <option value="">Utbildning</option>
                                    <option value="Civilekonom">Civilekonom</option>
@@ -395,7 +395,7 @@ function calculateScore($allCandidates, $keywords){
                                  </select>
                                </div>
 
-                             <div class="required field" style="width:15.4508475%;">
+                             <div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords6[]">
                                  <option value="">Skills</option>
                                  <option value="Programmering">Programmering</option>
