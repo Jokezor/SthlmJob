@@ -291,7 +291,7 @@ function calculateScore($allCandidates, $keywords){
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords0[]">
-                                 <option value="">Tidigare Tjänster</option>
+                                 <option value="">Tjänst Sökes</option>
                                  <option value="Controller">Controller</option>
                                  <option value="Styrekonom">Styrekonom</option>
                                  <option value="Ekonomichef">Ekonomichef</option>
@@ -347,7 +347,7 @@ function calculateScore($allCandidates, $keywords){
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords2[]">
-                                 <option value="">Tjänst Viljes</option>
+                                 <option value="">Tidigare Roller</option>
                                  <option value="Controller">Controller</option>
                                  <option value="Styrekonom">Styrekonom</option>
                                  <option value="Ekonomichef">Ekonomichef</option>
