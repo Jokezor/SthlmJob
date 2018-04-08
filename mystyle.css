@@ -375,11 +375,3 @@ input[type=text]:valid,[type=password]:valid,[type=email]:valid {
 input[type=file]:valid {
 
 }
-
-
-
-
-#e_middle {
-    position: absolute; font-size: 50%; top: 30ex !important;
-
-}

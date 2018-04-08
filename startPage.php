@@ -7,6 +7,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <title>Inextro</title>
+
+
+<style type="text/css">
+#sup,
+#sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
+
+}
+
+#sup {
+bottom: 1ex;
+}
+
+sub {
+top: .75ex;
+}
+</style>
+
 </head>
 
 <body>
@@ -16,7 +38,7 @@
   <!--a href="#home" class="navigators">Hem</a-->
   <a href="#whyus" class="navigators">Varför Intro?</a>
   <a href="#register" class="navigators">Registrera</a>
-  <a href="#home" class="h1">In<e_middle>≡</e_middle>xtro</a>
+  <a href="#home" class="h1">In<sub>≡</sub>xtro</a>
 </div>
 
 <a id="home" class="smooth"></a>
