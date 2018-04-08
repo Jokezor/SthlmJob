@@ -379,20 +379,6 @@ input[type=file]:valid {
 
 
 
-#sup,
-#sub {
-    height: 0;
-    line-height: 1.5;
-    vertical-align: baseline;
-    _vertical-align: baseline;
-    position: absolute;
-
-}
-
-#sup {
-bottom: 1ex;
-}
-
-#sub {
-
+#e_middle {
+    position: relative; font-size: 80%;
 }
