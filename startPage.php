@@ -12,7 +12,7 @@
 <style type="text/css">
 
 sub_e_for_Inextro {
-  top: .25ex!important;
+  top: .225ex!important;
   height: 0;
   line-height: 1;
   vertical-align: baseline;
