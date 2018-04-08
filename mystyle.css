@@ -384,7 +384,7 @@ input[type=file]:valid {
     height: 0;
     line-height: 1;
     vertical-align: baseline;
-    _vertical-align: bottom;
+    _vertical-align: baseline;
     position: relative;
 
 }
