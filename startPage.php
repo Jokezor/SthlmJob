@@ -37,7 +37,7 @@ sub_e_for_Inextro {
 
 <a id="home" class="smooth"></a>
 <div class="page1" id="page1">
-  <div class="introduction">Välkommen till Intro
+  <div class="introduction">Välkommen till InExtro
 	<div class="subintro">Hitta ditt drömjobb</div> </div>
 </div>
 
