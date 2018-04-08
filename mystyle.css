@@ -362,7 +362,7 @@ input[type=submit]{
 	-moz-border-radius: 3px;
 	cursor: pointer;
 	width: 95%;
-	margin: 5ßpx;
+	margin: 5px;
 }
 
 input[type=submit]:hover {
@@ -380,5 +380,6 @@ input[type=file]:valid {
 
 
 #e_middle {
-    position: relative; font-size: 50%;
+    position: relative; font-size: 50%; top: .5ex !important;
+
 }
