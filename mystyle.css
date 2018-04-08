@@ -380,6 +380,6 @@ input[type=file]:valid {
 
 
 #e_middle {
-    position: relative; font-size: 50%; top: 30ex !important;
+    position: absolute; font-size: 50%; top: 30ex !important;
 
 }
