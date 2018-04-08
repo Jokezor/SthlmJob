@@ -390,9 +390,9 @@ input[type=file]:valid {
 }
 
 #sup {
-top: 1ex;
+bottom: 1ex;
 }
 
 sub {
-bottom: 1ex;
+top: .5ex;
 }
