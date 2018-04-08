@@ -25,7 +25,7 @@ bottom: 1ex;
 }
 
 sub {
-top: .75ex;
+top: .25ex;
 }
 </style>
 
