@@ -16,7 +16,7 @@
   <!--a href="#home" class="navigators">Hem</a-->
   <a href="#whyus" class="navigators">Varför Intro?</a>
   <a href="#register" class="navigators">Registrera</a>
-  <a href="#home" class="h1" style="margin:5px;">In<div style="vertical-align:baseline; position:absolute; margin:5px;">≡</div> xtro</a>
+  <a href="#home" class="h1">In≡xtro</a>
 </div>
 
 <a id="home" class="smooth"></a>
