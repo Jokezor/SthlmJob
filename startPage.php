@@ -6,7 +6,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<title>In≡xtro</title>
+<title>Inextro</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
   <!--a href="#home" class="navigators">Hem</a-->
   <a href="#whyus" class="navigators">Varför Intro?</a>
   <a href="#register" class="navigators">Registrera</a>
-  <a href="#home" class="h1">Intro</a>
+  <a href="#home" class="h1">In≡xtro</a>
 </div>
 
 <a id="home" class="smooth"></a>
