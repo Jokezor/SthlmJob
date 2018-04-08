@@ -18,6 +18,7 @@ sub_e_for_Inextro {
   vertical-align: baseline;
   _vertical-align: bottom;
   position: relative;
+  font-size: 80%;
 }
 </style>
 
