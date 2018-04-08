@@ -6,7 +6,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<title>Intro</title>
+<title>In≡xtro</title>
 </head>
 
 <body>
