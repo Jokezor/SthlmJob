@@ -393,6 +393,6 @@ input[type=file]:valid {
 bottom: 1ex;
 }
 
-sub {
+#sub {
 top: .25ex;
 }
