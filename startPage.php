@@ -19,7 +19,7 @@ sub_e_for_Inextro {
   _vertical-align: bottom;
   position: relative;
   font-size: 80%;
-  color: white;
+  color: black;
 }
 </style>
 
