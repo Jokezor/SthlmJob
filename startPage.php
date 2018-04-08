@@ -10,22 +10,14 @@
 
 
 <style type="text/css">
-#sup,
-#sub {
-    height: 0;
-    line-height: 1;
-    vertical-align: baseline;
-    _vertical-align: bottom;
-    position: relative;
 
-}
-
-#sup {
-bottom: 1ex;
-}
-
-sub {
-top: .25ex!important;
+sub_e_for_Inextro {
+  top: .25ex!important;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+  position: relative;
 }
 </style>
 
@@ -38,7 +30,7 @@ top: .25ex!important;
   <!--a href="#home" class="navigators">Hem</a-->
   <a href="#whyus" class="navigators">Varför Intro?</a>
   <a href="#register" class="navigators">Registrera</a>
-  <a href="#home" class="h1">In<sub>≡</sub>xtro</a>
+  <a href="#home" class="h1">In<sub_e_for_Inextro>≡</sub_e_for_Inextro>xtro</a>
 </div>
 
 <a id="home" class="smooth"></a>
