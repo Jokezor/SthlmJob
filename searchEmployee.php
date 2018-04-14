@@ -1,6 +1,7 @@
 <?php include "../inc/dbinfo.inc";?>
 <?php
   /* Connect to PostGreSQL and select the database. */
+  
   $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
   $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
 
