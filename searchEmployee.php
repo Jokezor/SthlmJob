@@ -285,6 +285,7 @@ function calculateScore($allCandidates, $keywords){
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
                        <p style="color:black; font-weight: bold; font-size =1.2em;">I detta sökverktyg fyller ni i vad ni söker och så rangordnar vi kandidater åt er</p>
+                       <br>
                         <div class="ui form">
                           <!--input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
