@@ -720,9 +720,9 @@ function calculateScore($allCandidates, $keywords){
 ?>
 <!-- End of loop  -->
 </div>
-<div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
+<!--div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
-</div>
+</div-->
 </form>
 
    <!--div class="contact">
