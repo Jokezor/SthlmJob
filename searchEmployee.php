@@ -408,7 +408,7 @@ function calculateScore($allCandidates, $keywords){
                                </select>
                              </div>
                            </div>
-                           <div class="ui sub header" style="width:15.4508475%!important; max-width: 15.4508475%!important;">Urval</div>
+                           <!--div class="ui sub header" style="width:15.4508475%!important; max-width: 15.4508475%!important;">Urval</div>
                             <div class="required field" style="width:15.4508475%;">
                              <div class="ui fluid multiple search special selection dropdown" style ="overflow: visible;">
                              <i class="dropdown icon"></i>
@@ -421,17 +421,17 @@ function calculateScore($allCandidates, $keywords){
 
                                 <div id="slider-range2" style = "width:100%; margin: auto; float:left; margin-left: 0%;"></div>
                               </div>
-                              <!--div class="item">
+                              <div class="item">
                                 <span class="description">ctrl + o</span>
                                 Open...
                               </div>
                               <div class="item">
                                 <span class="description">ctrl + s</span>
                                 Save as...
-                              </div-->
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </div-->
 
                            <br>
                            <br>
