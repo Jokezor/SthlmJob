@@ -578,12 +578,12 @@ function calculateScore($allCandidates, $keywords){
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <div id="test">
-  <label for="subscribeNews" style="color:black;">Kryssa i de kandidater du vill skicka notiser till</label>
-  <label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
-  <input type="checkbox" id ="wishtitle" name = "wish">
+  <label for="subscribeNews" style="color:black;">Kontakta kandidater via mail om de matchar vad ni behöver</label>
+  <!--label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
+  <input type="checkbox" id ="wishtitle" name = "wish"-->
 
   <!-- Sorteringsmeny -->
-  <label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
+  <!--label for ="menu" style="color:black; margin-left:2.5%;">Sortering:</label>
   <div class="ui scrolling dropdown">
   <input type="hidden" name="gender">
   <div class="default text">Standard</div>
@@ -597,7 +597,7 @@ function calculateScore($allCandidates, $keywords){
     <div class="item">Rekommenderade (lägst)</div>
   </div>
   </div>
-  </div>
+</div-->
 
    <!-- Beginning of loop  -->
 
