@@ -284,11 +284,11 @@ function calculateScore($allCandidates, $keywords){
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
-                       <p style="color:black; font-weight: bold; font-size =1.2em;">Kryssa i de tjänster som kan ha synonymer vid sortering av kandidater</p>
+                       <p style="color:black; font-weight: bold; font-size =1.2em;">I detta sökverktyg fyller ni i vad ni söker och så rangordnar vi kandidater åt er</p>
                         <div class="ui form">
-                          <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
+                          <!--input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 6.72542375%;">
                           <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
-                          <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;">
+                          <input type="checkbox" id="synonyms" name="synonyms" value="synonyms" class="synonyms" style="margin-left: 14.4508475%;"-->
                             <div class="four fields">
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords0[]">
