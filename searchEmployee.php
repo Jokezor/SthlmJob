@@ -320,7 +320,7 @@ function calculateScore($allCandidates, $keywords){
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords1[]">
-                                 <option value="">Tjänst Idag</option>
+                                 <option value="">Branch</option>
                                  <option value="Controller">Controller</option>
                                  <option value="Styrekonom">Styrekonom</option>
                                  <option value="Ekonomichef">Ekonomichef</option>
@@ -381,14 +381,20 @@ function calculateScore($allCandidates, $keywords){
                                  <option value="Göteborg">Göteborg</option>
                                </select>
                              </div>
-                             <div class="required field" style="width:12.7321966%;">
+                             <div class="required field" style="width:19.098295%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords4[]">
-                                 <option value="">Ekonomisystem</option>
+                                 <option value="">Fritext</option>
                                  <option value="Bästa ekonomi">Bästa ekonomi</option>
                                  <option value="Underbar ekonomi">Underbar ekonomi</option>
+                                 <option value="Programmering">Programmering</option>
+                                 <option value="C">C</option>
+                                 <option value="C#">C#</option>
+                                 <option value="C++">C++</option>
+                                 <option value="Python">Python</option>
+                                 <option value="Excel">Excel</option>
                                </select>
                              </div>
-                               <div class="required field" style="width:12.7321966%;">
+                               <div class="required field" style="width:19.098295%;">
                                  <select required multiple="" class="ui fluid search selection dropdown" name="keywords5[]">
                                    <option value="">Utbildning</option>
                                    <option value="Civilekonom">Civilekonom</option>
@@ -396,7 +402,7 @@ function calculateScore($allCandidates, $keywords){
                                  </select>
                                </div>
 
-                             <div class="required field" style="width:12.7321966%;">
+                             <!--div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords6[]">
                                  <option value="">Skills</option>
                                  <option value="Programmering">Programmering</option>
@@ -406,7 +412,7 @@ function calculateScore($allCandidates, $keywords){
                                  <option value="Python">Python</option>
                                  <option value="Excel">Excel</option>
                                </select>
-                             </div>
+                             </div-->
                            </div>
                            <!--div class="ui sub header" style="width:15.4508475%!important; max-width: 15.4508475%!important;">Urval</div>
                             <div class="required field" style="width:15.4508475%;">
