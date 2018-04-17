@@ -534,13 +534,13 @@ function calculateScore($allCandidates, $keywords){
                                  Maximum: <span id="display-10"></span>
                                </p>
                            </div>
-                           <p>
+                           <!--p>
                              <h2>Tillgänglighetsdatum</h2>
                              <label for="amount1" style = "margin-left: 0%;"></label>
                              <input type="text" name="amount1" id="amount1" style="border: 0; color: #f6931f; font-weight: bold; margin-left: 0%;" size="100" value"2018.01.01-2019.01.01"/>
                            </p>
 
-                           <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div>
+                           <div id="slider-range1" style = "width:40%; margin: auto; float:left; margin-left: 0%;"></div-->
                            <p>
                              <br>
                              <h2 style ="text-align: left !important;">Erfarenhet i roll</h2>
