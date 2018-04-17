@@ -476,7 +476,7 @@ function calculateScore($allCandidates, $keywords){
                                  Maximum: <span id="display-8"></span>
                                </p>
                            </div>
-                           <h2>Uppsägningstid i månader</h2>
+                           <!--h2>Uppsägningstid i månader</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-9"></div>
                              <br>
@@ -488,7 +488,7 @@ function calculateScore($allCandidates, $keywords){
                                <p>
                                  Maximum: <span id="display-10"></span>
                                </p>
-                           </div>
+                           </div-->
                            <!--h2>Erfarenhet i rollen som sökes</h2>
                            <div class="ui segment" style="width:40%;">
                              <div class="ui range" id="range-9"></div>
