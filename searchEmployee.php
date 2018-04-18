@@ -402,7 +402,6 @@ function calculateScore($allCandidates, $keywords){
                                    <option value="Ekonom">Ekonom</option>
                                  </select>
                                </div>
-
                              <!--div class="required field" style="width:12.7321966%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords6[]">
                                  <option value="">Skills</option>
@@ -439,7 +438,6 @@ function calculateScore($allCandidates, $keywords){
                             </div>
                           </div>
                         </div-->
-
                            <br>
                            <br>
                            <br>
@@ -553,7 +551,7 @@ function calculateScore($allCandidates, $keywords){
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <div id="test">
-  <label for="subscribeNews" style="color:black;">Kontakta kandidater via mail om de matchar vad ni behöver</label>
+  <label for="subscribeNews" style="color:black;">Ta kontakta med de kandidater som matchar via mail</label>
   <!--label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish"-->
 

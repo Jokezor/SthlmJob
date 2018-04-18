@@ -65,7 +65,7 @@ CREATE TABLE person
   city              VARCHAR(40),
   region            VARCHAR(50),
   country           VARCHAR(40),
-  url               VARCHAR(100)
+  url               VARCHAR(100) # url till CV
 );
 
 CREATE TABLE cvsummary
@@ -116,6 +116,14 @@ CREATE TABLE itskills
   userid              INT REFERENCES users (id),
   itskill             VARCHAR(30),
   yearsofexperience   VARCHAR(30)
+);
+
+CREATE TABLE preferences
+(
+  prefid              INT IDENTITY (1,1) PRIMARY KEY,
+  userid              INT REFERENCES users (id),
+  job                 VARCHAR(30),
+  branch              VARCHAR(30)
 );
 
 
