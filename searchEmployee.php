@@ -19,6 +19,7 @@
    $maxExp = htmlentities($_POST['maxexp']);
    $minLeave = htmlentities($_POST['minleave']);
    $maxLeave = htmlentities($_POST['maxleave']);
+   $jobWanted = $keywords0[0];
 
     // CV summary table
     // Prepare a query for execution
@@ -38,6 +39,21 @@
       exit("query execute error");
    }
    // ----------------
+   // CV summary table
+   // Prepare a query for execution
+  $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
+     FROM preferences
+     WHERE job == $1;');
+  if(!$PreferencesResult){
+     exit("query prepare error");
+  }
+  // Execute the prepared query.
+  $PreferencesResult = pg_execute($db_connection, "my_query2", array($jobWanted));
+  if(!$PreferencesResult){
+     exit("query execute error");
+  }
+  echo $PreferencesResult;
+  // ----------------
    if(pg_num_rows($cvsummaryResult) != 0){
       $candIndex = 0;
       $allCandidates = array(array());
