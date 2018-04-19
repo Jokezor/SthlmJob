@@ -49,7 +49,7 @@
    // ----------------
    // CV summary table
    // Prepare a query for execution
-  $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT prefid, userid, job, branch
+  $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
      FROM preferences
      WHERE job = $1;');
   if(!$PreferencesResult){
@@ -63,8 +63,10 @@
   if(pg_num_rows($PreferencesResult) != 0){
     if(!$PreferencesResult == false){
        while ($ro = pg_fetch_row($PreferencesResult)){
-         $test = $ro[0];
-         echo "$test";
+         $usid = $ro[0];
+         $job = $ro[1];
+         $branch = $ro[2];
+         echo "$usid, $job, $branch";
        }
      }
    }
