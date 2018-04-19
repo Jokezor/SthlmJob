@@ -48,7 +48,7 @@
    // ----------------
    // CV summary table
    // Prepare a query for execution
-  $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
+  $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT prefid, userid, job, branch
      FROM preferences
      WHERE job = $1;');
   if(!$PreferencesResult){
