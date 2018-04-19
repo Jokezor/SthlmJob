@@ -40,7 +40,8 @@ insert into person (userid, firstname, lastname, nationality, salutation, email)
 insert into cvsummary values (11, 'engineer', 13, 'cto', 'google', 'cto, ceo, assistant regional manager', 'master', '100000', '23', '3','available', '2018-07-18', '', true, true);
 insert into workexperience (userid, positiontitle, employer, startdate, enddate, description) values (10, 'cto', 'google', '2015-10-12', '2017-12-11', 'Hardworker');
 insert into users (name, address, email, password) values ('Jokezor olovsson', 'asdfghjkl', 'thisidfstest@live.se', '7qb292c3r2');
-
+insert into preferences (userid, job, branch)
+ values (1, 'Controller', 'Business');
 # Uppdatera data
 UPDATE person SET city = 'Umeå'
 where userid =11;
@@ -126,7 +127,7 @@ CREATE TABLE preferences
   branch              VARCHAR(30)
 );
 
-
+Insert
 
 CREATE TABLE languageskills
 (
