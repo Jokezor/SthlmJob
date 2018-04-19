@@ -20,7 +20,7 @@
    $minLeave = htmlentities($_POST['minleave']);
    $maxLeave = htmlentities($_POST['maxleave']);
    $jobWanted = array($_POST['keywords0']);
-   echo "$jobWanted[0]";
+   echo $jobWanted[0];
 
     // CV summary table
     // Prepare a query for execution
