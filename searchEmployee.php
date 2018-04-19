@@ -52,7 +52,14 @@
   if(!$PreferencesResult){
      exit("query execute error");
   }
-  echo "$PreferencesResult";
+  if(pg_num_rows($PreferencesResult) != 0){
+    if(!$PreferencesResult == false){
+       while ($ro = pg_fetch_row($PreferencesResult)){
+         $test = $ro[0];
+         echo "$test";
+       }
+     }
+   }
   // ----------------
    if(pg_num_rows($cvsummaryResult) != 0){
       $candIndex = 0;
