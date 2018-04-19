@@ -14,7 +14,7 @@
    $keywords = array(
       $_POST['keywords0'], $_POST['keywords1'],
       $_POST['keywords2'], $_POST['keywords3'],
-      $_POST['keywords4'], $_POST['keywords5'], $_POST['keywords6']
+      $_POST['keywords4'], $_POST['keywords5']
    );
 
 
