@@ -56,7 +56,7 @@
      exit("query prepare error");
   }
   // Execute the prepared query.
-  $PreferencesResult = pg_execute($db_connection, "my_query2", array($jobWanted));
+  $PreferencesResult = pg_execute($db_connection, "my_query2", array($jobWanted[0]));
   if(!$PreferencesResult){
      exit("query execute error");
   }
