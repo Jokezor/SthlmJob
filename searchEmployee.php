@@ -11,6 +11,13 @@
  /* If input fields are populated, add a row to the Users table. */
  if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+   $keywords = array(
+      $_POST['keywords0'], $_POST['keywords1'],
+      $_POST['keywords2'], $_POST['keywords3'],
+      $_POST['keywords4'], $_POST['keywords5'], $_POST['keywords6']
+   );
+
+
    $minSalary = htmlentities($_POST['minsalary']);
    $maxSalary = htmlentities($_POST['maxsalary']);
    $minAge = htmlentities($_POST['minage']);
@@ -19,8 +26,7 @@
    $maxExp = htmlentities($_POST['maxexp']);
    $minLeave = htmlentities($_POST['minleave']);
    $maxLeave = htmlentities($_POST['maxleave']);
-   $jobWanted = array($_POST['keywords0']);
-   echo $jobWanted[0];
+   $jobWanted = $keywords[0];
 
     // CV summary table
     // Prepare a query for execution
