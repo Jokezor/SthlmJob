@@ -28,24 +28,6 @@
    $maxLeave = htmlentities($_POST['maxleave']);
    $jobWanted = $keywords[0];
 
-    // CV summary table
-    // Prepare a query for execution
-   $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
-      FROM cvsummary
-      WHERE salaryrange > $1 AND salaryrange < $2
-      AND age > $3 AND age < $4
-      AND yearsofexperience > $5 AND yearsofexperience < $6
-      AND leavetime > $7 AND leavetime < $8
-      ORDER BY yearsofexperience DESC;');
-   if(!$cvsummaryResult){
-      exit("query prepare error");
-   }
-   // Execute the prepared query.
-   $cvsummaryResult = pg_execute($db_connection, "my_query1", array($minSalary, $maxSalary, $minAge, $maxAge, $minExp, $maxExp, $minLeave, $maxLeave));
-   if(!$cvsummaryResult){
-      exit("query execute error");
-   }
-   // ----------------
    // CV summary table
    // Prepare a query for execution
   $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
@@ -69,6 +51,22 @@
        }
      }
    }
+
+    // CV summary table
+    // Prepare a query for execution
+   $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
+      FROM cvsummary
+      WHERE userid = $1;');
+   if(!$cvsummaryResult){
+      exit("query prepare error");
+   }
+   // Execute the prepared query.
+   $cvsummaryResult = pg_execute($db_connection, "my_query1", array($usid));
+   if(!$cvsummaryResult){
+      exit("query execute error");
+   }
+   // ----------------
+
   // ----------------
    if(pg_num_rows($cvsummaryResult) != 0){
       $candIndex = 0;
