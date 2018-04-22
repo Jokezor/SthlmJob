@@ -65,17 +65,13 @@
        // Prepare a query for execution
        $pgsqlstr = implode(', ', $allUserids);
 
-       $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
+       $cvsummaryResult = pg_query($db_connection, ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
          FROM cvsummary
          WHERE userid IN (' . $pgsqlstr . ');');
       if(!$cvsummaryResult){
          exit("query prepare error");
       }
-      // Execute the prepared query.
-      $cvsummaryResult = pg_execute($db_connection, "my_query1");
-      if(!$cvsummaryResult){
-         exit("query execute error");
-      }
+
 
        $numOfCandidates = $candIndex;
        $i=0;
