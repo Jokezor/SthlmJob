@@ -108,7 +108,7 @@
          if(!$languageSkillsResult){
             exit("query error");
          }
-         $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, city
+         $personResult = pg_query($db_connection, ' SELECT userid, firstname, lastname, title, nationality, birthdate, salutation, driverslicense, telephonenumber, mobilenumber, email, streetname, postcode, city, region, country, url
             FROM person WHERE userid IN (' . $pgsqlstr . ');');
          if(!$personResult){
             exit("query error");
@@ -118,6 +118,27 @@
          if(!$businessSkillsResult){
             exit("query error");
          }
+         $softSkillsResult = pg_query($db_connection, ' SELECT userid, skill
+            FROM softskills WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$softSkillsResult){
+            exit("query error");
+         }
+         $workexperienceResult = pg_query($db_connection, ' SELECT userid, positiontitle, employer, startdate, enddate
+            FROM workexperience WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$workexperienceResult){
+            exit("query error");
+         }
+         $educationResult = pg_query($db_connection, ' SELECT userid, educationname, diplomaobtained, nameofinstitution, degreedirection, gradepointaverage, startdate, enddate
+            FROM education WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$educationResult){
+            exit("query error");
+         }
+         /*$hobbiesResult = pg_query($db_connection, ' SELECT userid, skill
+            FROM hobbies WHERE userid IN (' . $pgsqlstr . ');');
+         if(!$softSkillsResult){
+            exit("query error");
+         }
+         */
       }
 
       if(!$itSkillsResult == false){
@@ -140,7 +161,7 @@
 
       if(!$personResult == false){
          while ($row = pg_fetch_row($personResult)){
-            $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[3];
+            $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[13];
             $allCandidates[$userid]["name"] = $name;
             $allCandidates[$userid]["city"] = $city;
          }
