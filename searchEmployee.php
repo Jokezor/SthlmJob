@@ -41,16 +41,7 @@
   if(!$PreferencesResult){
      exit("query execute error");
   }
-  if(pg_num_rows($PreferencesResult) != 0){
-    if(!$PreferencesResult == false){
-       while ($ro = pg_fetch_row($PreferencesResult)){
-         $usid = $ro[0];
-         $job = $ro[1];
-         $branch = $ro[2];
-         echo "$usid, $job, $branch";
-       }
-     }
-   }
+
 
     // CV summary table
     // Prepare a query for execution
@@ -72,11 +63,24 @@
       $candIndex = 0;
       $allCandidates = array(array());
       $allUserids = array();
+
+      if(pg_num_rows($PreferencesResult) != 0){
+        if(!$PreferencesResult == false){
+           while ($ro = pg_fetch_row($PreferencesResult)){
+             $usid = $ro[0];
+             $allUserids[$candIndex] = $usid;
+             $allCandidates[$usid]["userid"] = $ro[0];
+             $allCandidates[$usid]["job"] = $ro[1];
+             $allCandidates[$usid]["branch"] = $ro[2];
+             $candIndex ++;
+           }
+         }
+       }
+       $numOfCandidates = $candIndex;
+       $i=0;
       if(!$cvsummaryResult == false){
          while ($row = pg_fetch_row($cvsummaryResult)){
-            $userid = $row[0];
-            $allUserids[$candIndex] = $userid;
-            $allCandidates[$userid]["userid"] = $row[0];
+            $userid = $allUserids[$i];
             $allCandidates[$userid]["cvtitle"] = $row[1];
             $allCandidates[$userid]["yearsofexperience"] = $row[2];
             $allCandidates[$userid]["currentposition"] = $row[3];
@@ -88,10 +92,9 @@
             $allCandidates[$userid]["leavetime"] = $row[9];
             $allCandidates[$userid]["candidatestatus"] = $row[10];
             $allCandidates[$userid]["availability"] = $row[11];
-            $candIndex ++;
          }
       }
-      $numOfCandidates = $candIndex;
+
 
       $pgsqlstr = implode(', ', $allUserids);
       if(strlen($pgsqlstr != 0)){
@@ -167,7 +170,7 @@
 /* Closing connection */
 pg_close($db_connection);
 function calculateScore($allCandidates, $keywords){
-   $weights = array(25,20,15,12,10,9,9);
+   $weights = array(22,17,15,14,14,10,8);
    foreach ($allCandidates as $cand) {
       // last3experiences
 

@@ -19,13 +19,6 @@ where yearsofexperience > 10
 and salaryrange < 121000
 order by yearsofexperience desc;
 
-CREATE TABLE businessskills
-(
-  skillid             INT IDENTITY (1,1) PRIMARY KEY,
-  userid              INT REFERENCES users (id),
-  businessskill             VARCHAR(30),
-  yearsofexperience   VARCHAR(30)
-);
 
 
 # Sätta in data
@@ -156,3 +149,20 @@ CREATE TABLE recommendations
   userid    INT REFERENCES users (id),
   skill      VARCHAR(100)
 );
+
+CREATE TABLE businessskills
+(
+  skillid             INT IDENTITY (1,1) PRIMARY KEY,
+  userid              INT REFERENCES users (id),
+  businessskill             VARCHAR(30),
+  yearsofexperience   VARCHAR(30)
+);
+
+CREATE TABLE users
+(
+  id            INT IDENTITY (1,1) PRIMARY KEY,
+  name          varchar(200),
+  address       varchar(200),
+  email         varchar(300),
+  password      varchar(300)
+)
