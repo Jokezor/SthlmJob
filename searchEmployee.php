@@ -43,19 +43,6 @@
   }
 
 
-    // CV summary table
-    // Prepare a query for execution
-   $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
-      FROM cvsummary
-      WHERE userid = $1;');
-   if(!$cvsummaryResult){
-      exit("query prepare error");
-   }
-   // Execute the prepared query.
-   $cvsummaryResult = pg_execute($db_connection, "my_query1", array($usid));
-   if(!$cvsummaryResult){
-      exit("query execute error");
-   }
    // ----------------
 
   // ----------------
@@ -76,6 +63,21 @@
            }
          }
        }
+
+       // CV summary table
+       // Prepare a query for execution
+      $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
+         FROM cvsummary
+         WHERE userid = $1;');
+      if(!$cvsummaryResult){
+         exit("query prepare error");
+      }
+      // Execute the prepared query.
+      $cvsummaryResult = pg_execute($db_connection, "my_query1", array($allUserids));
+      if(!$cvsummaryResult){
+         exit("query execute error");
+      }
+
        $numOfCandidates = $candIndex;
        $i=0;
       if(!$cvsummaryResult == false){
