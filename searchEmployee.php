@@ -32,7 +32,7 @@
    // Prepare a query for execution
   $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
      FROM preferences
-     WHERE job = ANY {$1};');
+     WHERE job = $1;');
   if(!$PreferencesResult){
      exit("query prepare error");
   }
@@ -65,7 +65,7 @@
        // Prepare a query for execution
       $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
          FROM cvsummary
-         WHERE userid = $1;');
+         WHERE userid = ANY ($1);');
       if(!$cvsummaryResult){
          exit("query prepare error");
       }
