@@ -70,7 +70,7 @@
          exit("query prepare error");
       }
       // Execute the prepared query.
-      $cvsummaryResult = pg_execute($db_connection, "my_query1", $allUserids);
+      $cvsummaryResult = pg_execute($db_connection, "my_query1", array($allUserids));
       if(!$cvsummaryResult){
          exit("query execute error");
       }
