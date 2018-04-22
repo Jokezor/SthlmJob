@@ -32,7 +32,7 @@
    // Prepare a query for execution
   $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
      FROM preferences
-     WHERE job = ANY ($1);');
+     WHERE job = ANY ({$1});');
   if(!$PreferencesResult){
      exit("query prepare error");
   }
