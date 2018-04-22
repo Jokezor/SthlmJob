@@ -63,14 +63,16 @@
 
        // CV summary table
        // Prepare a query for execution
-      $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
+       $pgsqlstr = implode(', ', $allUserids);
+
+       $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
          FROM cvsummary
-         WHERE userid = unnest($1);');
+         WHERE userid IN (' . $pgsqlstr . ');');
       if(!$cvsummaryResult){
          exit("query prepare error");
       }
       // Execute the prepared query.
-      $cvsummaryResult = pg_execute($db_connection, "my_query1", $allUserids);
+      $cvsummaryResult = pg_execute($db_connection, "my_query1");
       if(!$cvsummaryResult){
          exit("query execute error");
       }
@@ -96,6 +98,9 @@
 
 
       $pgsqlstr = implode(', ', $allUserids);
+
+
+
       if(strlen($pgsqlstr != 0)){
          $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
             FROM itskills WHERE userid IN (' . $pgsqlstr . ');');
