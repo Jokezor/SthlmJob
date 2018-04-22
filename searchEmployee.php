@@ -32,7 +32,7 @@
    // Prepare a query for execution
   $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
      FROM preferences
-     WHERE job = $1;');
+     WHERE job = ANY ($1);');
   if(!$PreferencesResult){
      exit("query prepare error");
   }
@@ -157,7 +157,7 @@
       $keywords = array(
          $_POST['keywords0'], $_POST['keywords1'],
          $_POST['keywords2'], $_POST['keywords3'],
-         $_POST['keywords4'], $_POST['keywords5'], $_POST['keywords6']
+         $_POST['keywords4'], $_POST['keywords5']
       );
       calculateScore($allCandidates, $keywords);
    }
