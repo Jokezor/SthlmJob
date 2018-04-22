@@ -168,5 +168,5 @@ CREATE TABLE users
 )
 
 # Se tid mellan två datum för att få erfarenhet inom en roll vid insättning i databas.
-SELECT LTRIM(DATEADD(seconds,DATEDIFF(second,'2014-09-23 00:00:00','2014-09-23 01:23:45.000'),'1900-01-01 00:00:00'),'1900-01-01');
+DATEDIFF(hours, start, end) / 24;
 https://stackoverflow.com/questions/25973099/time-difference-in-redshift?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
