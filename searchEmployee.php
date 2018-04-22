@@ -46,12 +46,10 @@
    // ----------------
 
   // ----------------
-   if(pg_num_rows($cvsummaryResult) != 0){
-      $candIndex = 0;
-      $allCandidates = array(array());
-      $allUserids = array();
-
       if(pg_num_rows($PreferencesResult) != 0){
+        $candIndex = 0;
+        $allCandidates = array(array());
+        $allUserids = array();
         if(!$PreferencesResult == false){
            while ($ro = pg_fetch_row($PreferencesResult)){
              $usid = $ro[0];
@@ -62,13 +60,12 @@
              $candIndex ++;
            }
          }
-       }
 
        // CV summary table
        // Prepare a query for execution
       $cvsummaryResult = pg_prepare($db_connection, "my_query1", ' SELECT userid, cvtitle, yearsofexperience, currentposition, currentemployer, last3experiences, highesteducationlevel, salaryrange, age, leavetime, candidatestatus, availability
          FROM cvsummary
-         WHERE userid = $1;');
+         WHERE userid = ANY ($1);');
       if(!$cvsummaryResult){
          exit("query prepare error");
       }
@@ -167,7 +164,6 @@
    else{
       echo "INGA KANDIDATER :(";
    }
-
 }
 /* Closing connection */
 pg_close($db_connection);
