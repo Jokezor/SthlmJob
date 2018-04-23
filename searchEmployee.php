@@ -226,6 +226,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
       // branch
       $searchedFor = $keywords[1];
+      $branchScore=0;
       if(array_key_exists("branch", $cand)){
          //$businessArray = explode(', ', $cand["businessskills"]);
          $branchArray = $cand["branch"];
