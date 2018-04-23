@@ -63,7 +63,7 @@
              $allUserids[$candIndex] = $usid;
              $allCandidates[$usid]["userid"] = $ro[0];
              $allCandidates[$usid]["job"] = $ro[1];
-             $allCandidates[$usid]["branch"] = $ro[2];
+             $allCandidates[$usid]["branch"][] = $ro[2];
              $candIndex ++;
            }
          }
@@ -78,7 +78,6 @@
       if(!$cvsummaryResult){
          exit("query prepare error");
       }
-
 
        $numOfCandidates = $candIndex;
        $i=0;
@@ -100,10 +99,7 @@
          }
       }
 
-
       $pgsqlstr = implode(', ', $allUserids);
-
-
 
       if(strlen($pgsqlstr != 0)){
          $itSkillsResult = pg_query($db_connection, ' SELECT userid, itskill
@@ -226,6 +222,28 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    foreach ($allCandidates as $cand) {
       //
+
+
+      // branch
+      $searchedFor = $keywords[1];
+      if(array_key_exists("branch", $cand)){
+         //$businessArray = explode(', ', $cand["businessskills"]);
+         $branchArray = $cand["branch"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($branchArray); $j++){
+               if(!strcmp($searchedFor[$i], $branchArray[$j])){
+                  $branchScore=$weights[0];
+               }
+
+               echo $branchArray[$j] . "  ";
+               echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+      echo "branchScore: " . $businessScore;
+
 
       //currentposition
 
