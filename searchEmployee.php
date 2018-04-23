@@ -155,6 +155,16 @@
          pg_free_result($itSkillsResult);
       }
 
+      if(!$softSkillsResult == false){
+         while ($row = pg_fetch_row($softSkillsResult)){
+            $userid = $row[0];
+            $skill = $row[1];
+            //$allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
+            $allCandidates[$userid]["softskills"][] = $skill;
+         }
+         pg_free_result($softSkillsResult);
+      }
+
       if(!$languageSkillsResult == false){
          while ($row = pg_fetch_row($languageSkillsResult)){
             $userid = $row[0];   $skill = $row[1];
@@ -223,6 +233,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    foreach ($allCandidates as $cand) {
 
       // branch
+      $userid = $cand["userid"];
       $searchedFor = $keywords[1];
       $branchScore=0;
       if(array_key_exists("branch", $cand)){
@@ -269,7 +280,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // city
 
       // Ekonimisystem
-      $numOfAgree = 0;
+      $numOfAgreebusiness = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("businessskills", $cand)){
          //$businessArray = explode(', ', $cand["businessskills"]);
@@ -278,7 +289,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($businessArray); $j++){
                if(!strcmp($searchedFor[$i], $businessArray[$j])){
-                  $numOfAgree++;
+                  $numOfAgreebusiness++;
                }
 
                echo $businessArray[$j] . "  ";
@@ -286,22 +297,22 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
       }
-
-      $businessScore = $numOfAgree/sizeof($searchedFor)*$weights[4];
-      echo "businessScore: " . $businessScore;
+      $Amountsearchedforbusiness = sizeof($searchedFor);
+      //$businessScore = $numOfAgree/sizeof($searchedFor)*$weights[4];
+      //echo "businessScore: " . $businessScore;
       // education
 
       // Itskills
 
-      $numOfAgree = 0;
-      $searchedFor = $keywords[6];
+      $numOfAgreeitskills = 0;
+      $searchedFor = $keywords[4];
       if(array_key_exists("itskills", $cand)){
          $itskillsArray = $cand["itskills"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($itskillsArray); $j++){
                if(!strcmp($searchedFor[$i], $itskillsArray[$j])){
-                  $numOfAgree++;
+                  $numOfAgreeitskills++;
                }
 
                echo $itskillsArray[$j] . "  ";
@@ -310,9 +321,34 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
-      $itScore = $numOfAgree/sizeof($searchedFor)*$weights[6];
-      echo "Itscore: " . $itScore;
-      echo "Total score: " . $itScore; // + ...
+
+      // Softskills
+      $numOfAgreesoftskills = 0;
+      $searchedFor = $keywords[4];
+      if(array_key_exists("softskills", $cand)){
+         $softskillsArray = $cand["itskills"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($itskillsArray); $j++){
+               if(!strcmp($searchedFor[$i], $itskillsArray[$j])){
+                  $numOfAgreesoftskills++;
+               }
+
+               echo $itskillsArray[$j] . "  ";
+               echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+
+
+      $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills)/($Amountsearchedforbusiness);
+      // echo "Itscore: " . $itScore;
+
+      $totalScore = $currentpositionScore +$branchScore + $freetextScore;
+      echo "Total score: " . $totalScore; // + ...
+
+      $allCandidates[$userid]["score"] = $totalScore;
       echo "<br>";
       echo "<br>";
 
