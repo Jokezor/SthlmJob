@@ -242,7 +242,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
-      echo "branchScore: " . $businessScore;
+      echo "branchScore: " . $branchScore;
 
 
       //currentposition
