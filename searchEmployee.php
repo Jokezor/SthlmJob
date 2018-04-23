@@ -18,15 +18,19 @@
    );
    $jobWanted = $keywords[0];
 
+
+   $minSalary = htmlentities($_POST['minsalary']);
+   $maxSalary = htmlentities($_POST['maxsalary']);
+   $minAge = htmlentities($_POST['minage']);
+   $maxAge = htmlentities($_POST['maxage']);
+   $minExp = htmlentities($_POST['minexp']);
+   $maxExp = htmlentities($_POST['maxexp']);
+   $minLeave = htmlentities($_POST['minleave']);
+   $maxLeave = htmlentities($_POST['maxleave']);
+
    $sortingOut = array(
-     $minSalary = htmlentities($_POST['minsalary']);
-     $maxSalary = htmlentities($_POST['maxsalary']);
-     $minAge = htmlentities($_POST['minage']);
-     $maxAge = htmlentities($_POST['maxage']);
-     $minExp = htmlentities($_POST['minexp']);
-     $maxExp = htmlentities($_POST['maxexp']);
-     $minLeave = htmlentities($_POST['minleave']);
-     $maxLeave = htmlentities($_POST['maxleave']);
+     $minSalary, $maxSalary, $minAge, $maxAge,
+     $minExp, $maxExp, $minLeave, $maxLeave
    );
 
 
