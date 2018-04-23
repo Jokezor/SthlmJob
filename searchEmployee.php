@@ -325,11 +325,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $numOfAgreesoftskills = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("softskills", $cand)){
-         $softskillsArray = $cand["itskills"];
+         $softskillsArray = $cand["softskills"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
-            for($j = 0; $j < sizeof($itskillsArray); $j++){
-               if(!strcmp($searchedFor[$i], $itskillsArray[$j])){
+            for($j = 0; $j < sizeof($softskillsArray); $j++){
+               if(!strcmp($searchedFor[$i], $softskillsArray[$j])){
                   $numOfAgreesoftskills++;
                }
 
@@ -339,10 +339,34 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
+      // Languages
+      $numOfAgreelanguages = 0;
+      $searchedFor = $keywords[4];
+      if(array_key_exists("langskills", $cand)){
+         $languagesArray = $cand["langskills"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($languagesArray); $j++){
+               if(!strcmp($searchedFor[$i], $languagesArray[$j])){
+                  $numOfAgreelanguages++;
+               }
+
+               echo $languagesArray[$j] . "  ";
+               echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+      // Geografi
+
+      // Tidigare Roller
+
+      // Erfarenhet inom roll man söker och nuvarande roll
 
 
-      $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills)/($Amountsearchedforbusiness);
-      // echo "Itscore: " . $itScore;
+
+      $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
+      $freetextScore=$freetextScore*$weights[2];
 
       $totalScore = $currentpositionScore +$branchScore + $freetextScore;
 
