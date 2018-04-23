@@ -233,7 +233,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    foreach ($allCandidates as $cand) {
 
       // branch
-      $userid = $cand["userid"];
       $searchedFor = $keywords[1];
       $branchScore=0;
       if(array_key_exists("branch", $cand)){
@@ -346,9 +345,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // echo "Itscore: " . $itScore;
 
       $totalScore = $currentpositionScore +$branchScore + $freetextScore;
-      echo "Total score: " . $totalScore; // + ...
 
       $cand["score"] = $totalScore;
+      echo "Total score: " . $cand["score"]; // + ...
       echo "<br>";
       echo "<br>";
 
