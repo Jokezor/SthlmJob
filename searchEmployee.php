@@ -427,6 +427,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords1[]">
                                  <option value="">Branch</option>
+                                 <option value="Business">Business</option>
                                  <option value="Controller">Controller</option>
                                  <option value="Styrekonom">Styrekonom</option>
                                  <option value="Ekonomichef">Ekonomichef</option>
