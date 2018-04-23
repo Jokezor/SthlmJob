@@ -348,7 +348,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $totalScore = $currentpositionScore +$branchScore + $freetextScore;
       echo "Total score: " . $totalScore; // + ...
 
-      $allCandidates[$userid]["score"] = $totalScore;
+      $cand["score"] = $totalScore;
       echo "<br>";
       echo "<br>";
 
