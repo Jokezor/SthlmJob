@@ -16,17 +16,20 @@
       $_POST['keywords2'], $_POST['keywords3'],
       $_POST['keywords4'], $_POST['keywords5']
    );
-
-
-   $minSalary = htmlentities($_POST['minsalary']);
-   $maxSalary = htmlentities($_POST['maxsalary']);
-   $minAge = htmlentities($_POST['minage']);
-   $maxAge = htmlentities($_POST['maxage']);
-   $minExp = htmlentities($_POST['minexp']);
-   $maxExp = htmlentities($_POST['maxexp']);
-   $minLeave = htmlentities($_POST['minleave']);
-   $maxLeave = htmlentities($_POST['maxleave']);
    $jobWanted = $keywords[0];
+
+   $sortingOut = array(
+     $minSalary = htmlentities($_POST['minsalary']);
+     $maxSalary = htmlentities($_POST['maxsalary']);
+     $minAge = htmlentities($_POST['minage']);
+     $maxAge = htmlentities($_POST['maxage']);
+     $minExp = htmlentities($_POST['minexp']);
+     $maxExp = htmlentities($_POST['maxexp']);
+     $minLeave = htmlentities($_POST['minleave']);
+     $maxLeave = htmlentities($_POST['maxleave']);
+   );
+
+
 
    // CV summary table
    // Prepare a query for execution
@@ -89,6 +92,7 @@
             $allCandidates[$userid]["leavetime"] = $row[9];
             $allCandidates[$userid]["candidatestatus"] = $row[10];
             $allCandidates[$userid]["availability"] = $row[11];
+            $i++;
          }
       }
 
@@ -143,7 +147,8 @@
 
       if(!$itSkillsResult == false){
          while ($row = pg_fetch_row($itSkillsResult)){
-            $userid = $row[0];   $skill = $row[1];
+            $userid = $row[0];
+            $skill = $row[1];
             //$allCandidates[$userid]["itskills"] = $allCandidates[$userid]["itskills"] . ", " . $skill;
             $allCandidates[$userid]["itskills"][] = $skill;
          }
@@ -176,12 +181,36 @@
          }
          pg_free_result($businessSkillsResult);
       }
-      $keywords = array(
-         $_POST['keywords0'], $_POST['keywords1'],
-         $_POST['keywords2'], $_POST['keywords3'],
-         $_POST['keywords4'], $_POST['keywords5']
-      );
-      calculateScore($allCandidates, $keywords);
+
+      if(!$workexperienceResult == false){
+         while ($row = pg_fetch_row($workexperienceResult)){
+            $userid = $row[0];   $positiontitle = $row[1]; $employer = $row[2]; $startdate = $row[3]; $enddate = $row[4];
+            # Kommer vara vektorer.
+            $allCandidates[$userid]["positions"][] = $positiontitle;
+            $allCandidates[$userid]["employers"][] = $employer;
+            $allCandidates[$userid]["workstartdates"][] = $startdate;
+            $allCandidates[$userid]["workenddates"][] = $enddate;
+         }
+         pg_free_result($workexperienceResult);
+      }
+
+      if(!$educationResult == false){
+         while ($row = pg_fetch_row($educationResult)){
+            $userid = $row[0];   $educationname = $row[1]; $diplomaobtained = $row[2]; $nameofinstitution = $row[3]; $degreedirection = $row[4];
+            $gradepointaverage = $row[5]; $startdate = $row[6]; $enddate = $row[7];
+            # Kommer vara vektorer.
+            $allCandidates[$userid]["educationnames"][] = $educationname;
+            $allCandidates[$userid]["diplomasobtained"][] = $diplomaobtained;
+            $allCandidates[$userid]["nameofinstitutions"][] = $nameofinstitution;
+            $allCandidates[$userid]["degreedirections"][] = $degreedirection;
+            $allCandidates[$userid]["gradepointaverages"][] = $gradepointaverage;
+            $allCandidates[$userid]["educationstartdates"][] = $startdate;
+            $allCandidates[$userid]["educationenddates"][] = $enddate;
+         }
+         pg_free_result($educationResult);
+      }
+
+      calculateScore($allCandidates, $keywords, $sortingOut);
    }
    else{
       echo "INGA KANDIDATER :(";
@@ -189,10 +218,10 @@
 }
 /* Closing connection */
 pg_close($db_connection);
-function calculateScore($allCandidates, $keywords){
+function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    foreach ($allCandidates as $cand) {
-      // last3experiences
+      //
 
       //currentposition
 
