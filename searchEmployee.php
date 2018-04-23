@@ -221,14 +221,11 @@ pg_close($db_connection);
 function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    foreach ($allCandidates as $cand) {
-      //
-
 
       // branch
       $searchedFor = $keywords[1];
       $branchScore=0;
       if(array_key_exists("branch", $cand)){
-         //$businessArray = explode(', ', $cand["businessskills"]);
          $branchArray = $cand["branch"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
@@ -237,8 +234,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $branchScore=$weights[0];
                }
 
-               echo $branchArray[$j] . "  ";
-               echo $searchedFor[$i] . '\\';
+               #echo $branchArray[$j] . "  ";
+               #echo $searchedFor[$i] . '\\';
             }
          }
       }
@@ -246,7 +243,26 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       echo "branchScore: " . $branchScore;
 
 
-      //currentposition
+      // currentposition
+      $searchedFor = $keywords[0];
+      $currentpositionScore=0;
+      if(array_key_exists("currentposition", $cand)){
+         $currenpositionArray = $cand["currentposition"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($currenpositionArray); $j++){
+               if(!strcmp($searchedFor[$i], $currenpositionArray[$j])){
+                  $currentpositionScore=$weights[1];
+               }
+
+               #echo $branchArray[$j] . "  ";
+               #echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+      echo "currentpositionScore: " . $currentpositionScore;
+
 
       // Position wanted
 
@@ -426,7 +442,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                              </div>
                              <div class="required field" style="width:15.4508475%;">
                                <select required multiple="" class="ui fluid search selection dropdown" name="keywords1[]">
-                                 <option value="">Branch</option>
+                                 <option value="">Bransch</option>
                                  <option value="Business">Business</option>
                                  <option value="Controller">Controller</option>
                                  <option value="Styrekonom">Styrekonom</option>
