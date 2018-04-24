@@ -455,7 +455,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
-      $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore $educationScore + $earlyJobsScore;
+      $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore;
 
       $cand["score"] = $totalScore;
       echo "Total score: " . $cand["score"]; // + ...
