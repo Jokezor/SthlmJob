@@ -402,8 +402,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($positionsArray); $j++){
                if(!strcmp($searchedFor[$i], $positionsArray[$j])){
-                  $startdate = strtotime($cand["workstartdates"][j]);
-                  $enddate = strtotime($cand["workenddates"][j]);
+                  $startdate = strtotime($cand["workstartdates"][$j]);
+                  $enddate = strtotime($cand["workenddates"][$j]);
                   $datediff = ($enddate-$startdate);
                   $experienceinsearched=$experienceinsearched + round($datediff / (60 * 60 * 24));
                }
