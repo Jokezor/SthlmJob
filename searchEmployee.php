@@ -471,7 +471,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    // Sortera kandidater här.
    //print_r($sortIncurrent);
    foreach ($sortIncurrent as $cand => $value) {
-     echo "Heres candidate experience" . $value[0];
+     if($value[0] != null){
+       echo "Heres candidate experience" . $value[0];
+     }
    }
 
 }
