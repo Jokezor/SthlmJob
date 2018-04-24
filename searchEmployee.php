@@ -231,6 +231,7 @@ pg_close($db_connection);
 function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    $index = 0;
+   $sortIncurrent = array();
    foreach ($allCandidates as $cand) {
 
       // branch
@@ -449,7 +450,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
       // Calculate the median later to be used to give those above the median score.
-      $sortIncurrent[][] = [$index,$experienceincurrent];
+
+
+      $sortIncurrent[] = $experienceincurrent;
       $cand["experienceincurrent"] = $experienceincurrent;
       $cand["experienceinsearched"] = $experienceinsearched;
 
@@ -466,7 +469,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    }
    // Sortera kandidater här.
-   print_r($sortIncurrent[0]);
+   print_r($sortIncurrent);
 
 }
 ?>
