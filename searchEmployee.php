@@ -291,8 +291,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $numOfAgreebusiness++;
                }
 
-               echo $businessArray[$j] . "  ";
-               echo $searchedFor[$i] . '\\';
+               //echo $businessArray[$j] . "  ";
+               //echo $searchedFor[$i] . '\\';
             }
          }
       }
@@ -314,8 +314,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $numOfAgreeitskills++;
                }
 
-               echo $itskillsArray[$j] . "  ";
-               echo $searchedFor[$i] . '\\';
+               //echo $itskillsArray[$j] . "  ";
+               //echo $searchedFor[$i] . '\\';
             }
          }
       }
@@ -333,8 +333,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $numOfAgreesoftskills++;
                }
 
-               echo $itskillsArray[$j] . "  ";
-               echo $searchedFor[$i] . '\\';
+               //echo $softskillsArray[$j] . "  ";
+               //echo $searchedFor[$i] . '\\';
             }
          }
       }
@@ -351,24 +351,44 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $numOfAgreelanguages++;
                }
 
-               echo $languagesArray[$j] . "  ";
-               echo $searchedFor[$i] . '\\';
+               //echo $languagesArray[$j] . "  ";
+               //echo $searchedFor[$i] . '\\';
             }
          }
       }
 
       // Geografi
+      $searchedFor = $keywords[3];
+      $geographyScore=0;
+      if(array_key_exists("city", $cand)){
+         $geographyArray = $cand["city"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($geographyArray); $j++){
+               if(!strcmp($searchedFor[$i], $geographyArray[$j])){
+                  $geographyScore=$weights[6];
+               }
+
+               #echo $branchArray[$j] . "  ";
+               #echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+
+      echo "geographyScore: " . $geographyScore;
+
 
       // Tidigare Roller
 
       // Erfarenhet inom roll man söker och nuvarande roll
 
+      // Utbildning
 
 
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
-      $totalScore = $currentpositionScore +$branchScore + $freetextScore;
+      $totalScore = $currentpositionScore +$branchScore + $freetextScore + $geographyScore;
 
       $cand["score"] = $totalScore;
       echo "Total score: " . $cand["score"]; // + ...
