@@ -452,7 +452,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Calculate the median later to be used to give those above the median score.
 
 
-      $sortIncurrent[] = [$index,$experienceincurrent];
+      $sortIncurrent[] = [$cand["userid"],$experienceincurrent];
       $cand["experienceincurrent"] = $experienceincurrent;
       $cand["experienceinsearched"] = $experienceinsearched;
 
