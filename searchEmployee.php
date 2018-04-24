@@ -469,7 +469,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    }
    // Sortera kandidater här.
-   print_r($sortIncurrent);
+   //print_r($sortIncurrent);
+   foreach ($sortIncurrent as $cand => $value) {
+     echo $value;
+   }
 
 }
 ?>
