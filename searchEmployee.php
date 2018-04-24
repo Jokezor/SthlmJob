@@ -464,7 +464,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    }
    // Sortera kandidater här.
-   echo "Sort: " . $sortIncurrent;
+   echo $sortIncurrent;
 
 }
 ?>
