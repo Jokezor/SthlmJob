@@ -274,10 +274,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       echo "currentpositionScore: " . $currentpositionScore;
 
 
-      // Position wanted
-
-      // city
-
       // Ekonimisystem
       $numOfAgreebusiness = 0;
       $searchedFor = $keywords[4];
@@ -297,12 +293,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
       $Amountsearchedforbusiness = sizeof($searchedFor);
-      //$businessScore = $numOfAgree/sizeof($searchedFor)*$weights[4];
-      //echo "businessScore: " . $businessScore;
-      // education
+
 
       // Itskills
-
       $numOfAgreeitskills = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("itskills", $cand)){
@@ -379,16 +372,90 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
 
       // Tidigare Roller
+      $numOfAgreejobs = 0;
+      $searchedFor = $keywords[2];
+      if(array_key_exists("positions", $cand)){
+         $earlyjobsArray = $cand["positions"];
 
-      // Erfarenhet inom roll man söker och nuvarande roll
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($earlyjobsArray); $j++){
+               if(!strcmp($searchedFor[$i], $earlyjobsArray[$j])){
+                  $numOfAgreejobs++;
+               }
+
+               //echo $languagesArray[$j] . "  ";
+               //echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+      $earlyJobsScore = ($numOfAgreejobs/sizeof($searchedFor))*$weights[3];
+
+
+      // Erfarenhet inom roll man söker
+      $searchedFor = $keywords[0];
+      $experienceinsearched=0;
+      if(array_key_exists("positions", $cand)){
+         $positionsArray = $cand["positions"];
+
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($positionsArray); $j++){
+               if(!strcmp($searchedFor[$i], $positionsArray[$j])){
+                  $startdate = strtotime($cand["workstartdates"][j]);
+                  $enddate = strtotime($cand["workenddates"][j]);
+                  $datediff = ($enddate-$startdate);
+                  $experienceinsearched=$experienceinsearched + round($datediff / (60 * 60 * 24));
+               }
+            }
+         }
+      }
+
+      // Erfarenhet inom nuvarande roll
+      $experienceincurrent=0;
+      if(array_key_exists("currentposition", $cand)){
+         $currenpositionArray = $cand["currentposition"];
+         $positionsArray = $cand["positions"];
+
+         for($i = 0; $i < sizeof($positionsArray); $i++){
+            for($j = 0; $j < sizeof($currenpositionArray); $j++){
+               if(!strcmp($positionsArray[$i], $currenpositionArray[$j])){
+                 $startdate = strtotime($cand["workstartdates"][j]);
+                 $enddate = strtotime($cand["workenddates"][j]);
+                 $datediff = ($enddate-$startdate);
+                 $experienceincurrent=$experienceincurrent + round($datediff / (60 * 60 * 24));
+               }
+            }
+         }
+      }
+
+
+      echo "currentpositionScore: " . $experienceinsearched;
 
       // Utbildning
+      $searchedFor = $keywords[5];
+      $educationScore=0;
+      if(array_key_exists("educationname", $cand)){
+         $educationArray = $cand["educationname"];
 
+         for($i = 0; $i < sizeof($searchedFor); $i++){
+            for($j = 0; $j < sizeof($educationArray); $j++){
+               if(!strcmp($searchedFor[$i], $educationArray[$j])){
+                  $educationScore=$weights[5];
+               }
+
+               #echo $branchArray[$j] . "  ";
+               #echo $searchedFor[$i] . '\\';
+            }
+         }
+      }
+      // Calculate the median later to be used to give those above the median score.
+      $sortIncurrent[][] = [$cand["userid"],$experienceincurrent];
+      $cand["experienceincurrent"] = $experienceincurrent;
+      $cand["experienceinsearched"] = $experienceinsearched;
 
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
-      $totalScore = $currentpositionScore +$branchScore + $freetextScore + $geographyScore;
+      $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore $educationScore + $earlyJobsScore;
 
       $cand["score"] = $totalScore;
       echo "Total score: " . $cand["score"]; // + ...
@@ -396,6 +463,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       echo "<br>";
 
    }
+   // Sortera kandidater här.
+   echo "Sort: " . $sortIncurrent;
+
 }
 ?>
 
