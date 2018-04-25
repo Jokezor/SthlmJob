@@ -231,7 +231,7 @@ pg_close($db_connection);
 function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    $index = 0;
-   $sortIncurrent = array();
+   $sortInsearched = array();
    foreach ($allCandidates as $cand) {
      if($cand != null){
 
@@ -456,7 +456,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Calculate the median later to be used to give those above the median score.
 
 
-      $sortIncurrent[] = [$experienceincurrent];
+      $sortInsearched[] = [$cand["userid"],$experienceinsearched];
       $cand["experienceincurrent"] = $experienceincurrent;
       $cand["experienceinsearched"] = $experienceinsearched;
 
@@ -475,9 +475,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera kandidater här.
    //print_r($sortIncurrent);
-   $i=0;
-   for($i=0; $i<sizeof($sortIncurrent); $i++) {
-      echo "Heres candidate experience" . $sortIncurrent[$i][0];
+   foreach ($sortInsearched as $exp => $value) {
+     if($value[0] != null){
+       echo "Heres candidate experience" . $value[1];
+     }
    }
 
 }
