@@ -456,7 +456,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Calculate the median later to be used to give those above the median score.
 
 
-      $sortIncurrent[] = [$cand["userid"],$experienceincurrent];
+      $sortIncurrent[] = [$experienceincurrent];
       $cand["experienceincurrent"] = $experienceincurrent;
       $cand["experienceinsearched"] = $experienceinsearched;
 
@@ -475,9 +475,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera kandidater här.
    print_r($sortIncurrent);
-   foreach ($sortIncurrent as $exp => $value) {
+   $i=0;
+   foreach ($sortIncurrent as $exp) {
      if($value[0] != null){
-       echo "Heres candidate experience" . $value[1];
+       echo "Heres candidate experience" . $exp[i][1];
+       $i++;
      }
    }
 
