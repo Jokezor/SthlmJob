@@ -411,6 +411,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
       }
+      echo "experienceinsearched: " . $experienceinsearched;
 
       // Erfarenhet inom nuvarande roll
       $experienceincurrent=0;
@@ -430,8 +431,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
+      echo "experienceincurrent: " . $experienceincurrent;
 
-      echo "currentpositionScore: " . $experienceinsearched;
+
+
 
       // Utbildning
       $searchedFor = $keywords[5];
