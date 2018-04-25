@@ -476,9 +476,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    // Sortera kandidater här.
    //print_r($sortIncurrent);
    $i=0;
-   foreach ($sortIncurrent as $exp) {
-      echo "Heres candidate experience" . $exp[$i][1];
-      $i++;
+   for($i=0; i<len($sortIncurrent); $i++) {
+      echo "Heres candidate experience" . $sortIncurrent[$i][0];
    }
 
 }
