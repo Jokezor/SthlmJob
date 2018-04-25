@@ -233,6 +233,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    $index = 0;
    $sortIncurrent = array();
    foreach ($allCandidates as $cand) {
+     if($cand != null){
 
       // branch
       $searchedFor = $keywords[1];
@@ -466,8 +467,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       echo "<br>";
       echo "<br>";
       $index++;
-
+    }
    }
+
    // Sortera kandidater här.
    //print_r($sortIncurrent);
    foreach ($sortIncurrent as $cand => $value) {
