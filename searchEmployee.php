@@ -453,16 +453,15 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
 
       $sortInsearched[] = [$experienceinsearched,$cand["userid"]];
-      $cand["experienceincurrent"] = $experienceincurrent;
-      $cand["experienceinsearched"] = $experienceinsearched;
-
+      $allCandidates[$cand["userid"]]["experienceincurrent"] = $experienceincurrent;
+      $allCandidates[$cand["userid"]]["experienceinsearched"] = $experienceinsearched;
 
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
       $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore;
 
-      $cand["score"] = $totalScore;
+      $allCandidates[$cand["userid"]]["score"] = $totalScore;
       echo "Total score: " . $cand["score"]; // + ...
       echo "<br>";
       echo "<br>";
