@@ -473,6 +473,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    //print_r($sortIncurrent);
    $N=sizeof($sortInsearched);
    $median=$sortInsearched[floor($N/2)][0];
+   echo "median: " . $median;
 
    rsort($sortInsearched);
    foreach ($sortInsearched as $exp => $value) {
