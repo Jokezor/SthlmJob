@@ -235,7 +235,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[1];
       $branchScore=0;
       if(array_key_exists("branch", $cand)){
-         $branchArray = $cand["branch"];
+         $branchArray = explode(',', $cand["branch"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($branchArray); $j++){
@@ -256,7 +256,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[0];
       $currentpositionScore=0;
       if(array_key_exists("currentposition", $cand)){
-         $currenpositionArray = $cand["currentposition"];
+         $currenpositionArray = explode(',', $cand["currentposition"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($currenpositionArray); $j++){
@@ -278,7 +278,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[4];
       if(array_key_exists("businessskills", $cand)){
          //$businessArray = explode(', ', $cand["businessskills"]);
-         $businessArray = $cand["businessskills"];
+         $businessArray = explode(',', $cand["businessskills"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($businessArray); $j++){
@@ -298,7 +298,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $numOfAgreeitskills = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("itskills", $cand)){
-         $itskillsArray = $cand["itskills"];
+         $itskillsArray = explode(',', $cand["itskills"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($itskillsArray); $j++){
@@ -317,7 +317,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $numOfAgreesoftskills = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("softskills", $cand)){
-         $softskillsArray = $cand["softskills"];
+         $softskillsArray = explode(',', $cand["softskills"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($softskillsArray); $j++){
@@ -335,8 +335,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $numOfAgreelanguages = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("langskills", $cand)){
-         $languagesArray = $cand["langskills"];
-
+         $languagesArray = explode(',', $cand["langskills"]);
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($languagesArray); $j++){
                if(!strcmp($searchedFor[$i], $languagesArray[$j])){
@@ -354,7 +353,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $geographyScore=0;
       if(array_key_exists("city", $cand)){
         $geographyArray = explode(',', $cand["city"]);
-        
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($geographyArray); $j++){
               echo " "  . $geographyArray[$j] . " " . $searchedFor[$i];
@@ -375,7 +373,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $numOfAgreejobs = 0;
       $searchedFor = $keywords[2];
       if(array_key_exists("positions", $cand)){
-         $earlyjobsArray = $cand["positions"];
+         $earlyjobsArray = explode(',', $cand["positions"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($earlyjobsArray); $j++){
@@ -395,7 +393,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[0];
       $experienceinsearched=0;
       if(array_key_exists("positions", $cand)){
-         $positionsArray = $cand["positions"];
+         $positionsArray = explode(',', $cand["positions"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($positionsArray); $j++){
@@ -413,8 +411,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Erfarenhet inom nuvarande roll
       $experienceincurrent=0;
       if(array_key_exists("currentposition", $cand)){
-         $currenpositionArray = $cand["currentposition"];
-         $positionsArray = $cand["positions"];
+         $currenpositionArray = explode(',', $cand["currentposition"]);
+         $positionsArray = explode(',', $cand["positions"]);
 
          for($i = 0; $i < sizeof($positionsArray); $i++){
             for($j = 0; $j < sizeof($currenpositionArray); $j++){
@@ -479,7 +477,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[5];
       $educationScore=0;
       if(array_key_exists("educationname", $cand)){
-         $educationArray = $cand["educationname"];
+         $educationArray = explode(',', $cand["educationname"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($educationArray); $j++){
