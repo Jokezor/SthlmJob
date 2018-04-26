@@ -357,6 +357,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($geographyArray); $j++){
+              echo "yes";
                if(!strcmp($searchedFor[$i], $geographyArray[$j])){
                   $geographyScore=$weights[6];
                }
@@ -513,10 +514,12 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera kandidater här.
 
-   rsort($sortInsearched); // Sorterar kandidater fallande.
+
+   rsort($sortInsearched); // Sorterar kandidaters erfarenhet fallande.
    $N=sizeof($sortInsearched);
    $median=$sortInsearched[floor($N/2)][0];
 
+   // Sista poängen
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
        if($allCandidates[$value[1]]["experienceinsearched"] >= $median){
@@ -525,6 +528,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
      }
      echo "Heres candidate score" . $allCandidates[$value[1]]["score"];
    }
+
+   // Sortera nu alla kandidater efter score
+   //rsort($allCandidates)
 
 
 }
