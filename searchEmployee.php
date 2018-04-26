@@ -472,8 +472,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    // Sortera kandidater här.
    //print_r($sortIncurrent);
    $N=sizeof($sortInsearched);
-   $mean=$sortInsearched[floor($N/2)];
-   echo " " . $mean[0];
+   $mean=$sortInsearched[floor($N/2)][0];
+   echo " " . $mean;
    rsort($sortInsearched);
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
