@@ -471,11 +471,12 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera kandidater här.
    //print_r($sortIncurrent);
+   rsort($sortInsearched);
    $N=sizeof($sortInsearched);
-   $median=$sortInsearched[0][0];
+   $median=$sortInsearched[floor($N/2)][0];
    echo "median: " . floor($N/2);
 
-   rsort($sortInsearched);
+
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
        if($allCandidates[$value[1]]["experienceinsearched"] >= $median){
