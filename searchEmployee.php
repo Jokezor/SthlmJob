@@ -412,7 +412,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $experienceincurrent=0;
       if(array_key_exists("currentposition", $cand)){
          $currenpositionArray = explode(',', $cand["currentposition"]);
-         $positionsArray = explode(',', $cand["positions"]);
+         $positionsArray = $cand["positions"];
+         //$positionsArray = explode(',', $cand["positions"]);
 
          for($i = 0; $i < sizeof($positionsArray); $i++){
             for($j = 0; $j < sizeof($currenpositionArray); $j++){
