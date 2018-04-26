@@ -456,6 +456,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $cand["experienceincurrent"] = $experienceincurrent;
       $cand["experienceinsearched"] = $experienceinsearched;
 
+
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
@@ -472,15 +473,18 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    // Sortera kandidater här.
    //print_r($sortIncurrent);
    $N=sizeof($sortInsearched);
-   $mean=$sortInsearched[floor($N/2)][0];
-   echo " " . $mean;
+   $median=$sortInsearched[floor($N/2)][0];
+
    rsort($sortInsearched);
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
-       echo "Heres candidate experience" . $value[0];
-       echo ", here's userid" . $value[1];
+       if($allCandidates[$value[1]]["experienceinsearched"] >= $median){
+         $cand["score"] = $cand["score"] + $weights[4];
+       }
      }
+     echo "Heres candidate score" . $allCandidates[$value[1]]["score"];
    }
+
 
 }
 ?>
