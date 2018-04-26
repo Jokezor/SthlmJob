@@ -475,6 +475,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
        echo "Heres candidate experience" . $value[1];
+       echo ", here's userid" . $value[0];
      }
    }
 
