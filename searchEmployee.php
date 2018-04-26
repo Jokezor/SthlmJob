@@ -462,7 +462,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore;
 
       $allCandidates[$cand["userid"]]["score"] = $totalScore;
-      echo "Total score: " . $cand["score"]; // + ...
+      echo "Total score: " . $allCandidates[$cand["userid"]]["score"]; // + ...
       echo "<br>";
       echo "<br>";
       $index++;
@@ -478,7 +478,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
        if($allCandidates[$value[1]]["experienceinsearched"] >= $median){
-         $cand["score"] = $cand["score"] + $weights[4];
+         $allCandidates[$value[1]]["score"] = $allCandidates[$value[1]]["score"] + $weights[4];
        }
      }
      echo "Heres candidate score" . $allCandidates[$value[1]]["score"];
