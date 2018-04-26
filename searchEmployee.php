@@ -429,8 +429,50 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
       echo "experienceincurrent: " . $experienceincurrent;
 
+      $salaryScore=0;
+      $minSalary = $sortingOut[0];
+      $maxSalary = $sortingOut[1];
+      if(array_key_exists("salaryrange", $cand)){
+         $salaryWanted = $cand["salaryrange"];
+         if($salaryWanted<=$maxSalary){
+           if($salaryWanted>=$minSalary){
+             $salaryScore=1000;
+           }
+         }
+       }
 
+       $ageScore=0;
+       $minAge = $sortingOut[2];
+       $maxAge = $sortingOut[3];
+       if(array_key_exists("age", $cand)){
+          $ageWanted = $cand["age"];
+          if($ageWanted<=$maxAge){
+            if($ageWanted>=$minAge){
+              $ageScore=1000;
+            }
+          }
+        }
 
+        $expScore=0;
+        $minExp = $sortingOut[4];
+        $maxExp = $sortingOut[5];
+        if(array_key_exists("yearsofexperience", $cand)){
+           $expWanted = $cand["yearsofexperience"];
+           if($expWanted<=$maxExp){
+             if($expWanted>=$minExp){
+               $expScore=1000;
+             }
+           }
+         }
+
+      // Add all the sorting score together:
+      $sortingScore = $salaryScore + $ageScore + $expScore;
+      // Finally add this to the candidates score.
+
+      /*
+      $minLeave = htmlentities($_POST['minleave']);
+      $maxLeave = htmlentities($_POST['maxleave']);
+      */
 
       // Utbildning
       $searchedFor = $keywords[5];
@@ -459,7 +501,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
-      $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore;
+      $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore + $sortingScore;
 
       $allCandidates[$cand["userid"]]["score"] = $totalScore;
       echo "Total score: " . $allCandidates[$cand["userid"]]["score"]; // + ...
@@ -470,12 +512,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    }
 
    // Sortera kandidater här.
-   //print_r($sortIncurrent);
-   rsort($sortInsearched);
+
+   rsort($sortInsearched); // Sorterar kandidater fallande.
    $N=sizeof($sortInsearched);
    $median=$sortInsearched[floor($N/2)][0];
-   echo "median: " . floor($N/2);
-
 
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
