@@ -18,7 +18,6 @@
    );
    $jobWanted = $keywords[0];
 
-
    $minSalary = htmlentities($_POST['minsalary']);
    $maxSalary = htmlentities($_POST['maxsalary']);
    $minAge = htmlentities($_POST['minage']);
@@ -33,8 +32,6 @@
      $minExp, $maxExp, $minLeave, $maxLeave
    );
 
-
-
    // CV summary table
    // Prepare a query for execution
   $PreferencesResult = pg_prepare($db_connection, "my_query2", ' SELECT userid, job, branch
@@ -48,7 +45,6 @@
   if(!$PreferencesResult){
      exit("query execute error");
   }
-
 
    // ----------------
 
@@ -475,6 +471,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera kandidater här.
    //print_r($sortIncurrent);
+   rsort($sortInsearched);
    foreach ($sortInsearched as $exp => $value) {
      if($value[0] != null){
        echo "Heres candidate experience" . $value[1];
