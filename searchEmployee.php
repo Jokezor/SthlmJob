@@ -353,11 +353,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[3];
       $geographyScore=0;
       if(array_key_exists("city", $cand)){
-         $geographyArray = $cand["city"];
+         $geographyArray = array($cand["city"]);
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($geographyArray); $j++){
-              echo " "  . $geographyArray . " " . $searchedFor[$i];
+              echo " "  . $geographyArray[$j] . " " . $searchedFor[$i];
                if(!strcmp($searchedFor[$i], $geographyArray[$j])){
                   $geographyScore=$weights[6];
                }
