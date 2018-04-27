@@ -53,6 +53,7 @@
         $candIndex = 0;
         $allCandidates = array(array());
         $allUserids = array();
+        $scoretoSort = array();
         if(!$PreferencesResult == false){
            while ($ro = pg_fetch_row($PreferencesResult)){
              $usid = $ro[0];
@@ -228,7 +229,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    $index = 0;
    $sortInsearched = array();
-   $scoretoSort = array();
    foreach ($allCandidates as $cand) {
      if($cand != null){
 
