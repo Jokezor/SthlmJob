@@ -228,6 +228,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    $weights = array(22,17,15,14,14,10,8);
    $index = 0;
    $sortInsearched = array();
+   $scoretoSort = array();
    foreach ($allCandidates as $cand) {
      if($cand != null){
 
@@ -528,29 +529,17 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
      }
      echo "Heres candidate score" . $allCandidates[$value[1]]["score"];
      echo "Heres userid: " . $value[1];
+     $scoretoSort[] = [$allCandidates[$value[1]]["score"],$value[1]];
    }
-
+   rsort($scoretoSort); // Ok, how do we use this to sort $allCandidates? Maybe use it to take the userid from $scoretoSort!
+   // $allCandidates[$value[1]]["placement"] = ($value[1] in $scoretoSort[:][1]) // Behöver att den retunerar position där denna finns i $scoretoSort
    // Sortera nu alla kandidater efter score
-   //rsort($allCandidates)
-   array_sort_by_column($allCandidates["score"], 'order');
 
 
 }
 ?>
 
 
-<?php
-
-// Need this to sort the candidates after score.
-function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
-  $sort_col = array();
-  foreach ($arr as $key=> $row) {
-      $sort_col[$key] = $row[$col];
-  }
-
-  array_multisort($sort_col, $dir, $arr);
-}
-?>
 
 
 
@@ -932,6 +921,9 @@ function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
+         $userid_toprint = $scoretoSort[$candNumber-1][1];
+         $i = $allCandidates[$userid_toprint]["name"];
+         echo "Works? " . $i;
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
                echo '
