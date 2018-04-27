@@ -532,7 +532,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
      $scoretoSort[] = [$allCandidates[$value[1]]["score"],$value[1]];
    }
    rsort($scoretoSort); // Ok, how do we use this to sort $allCandidates? Maybe use it to take the userid from $scoretoSort!
-   echo "score: " . $scoretoSort[0][1];
+   echo "usid: " . $scoretoSort[0][1];
    // $allCandidates[$value[1]]["placement"] = ($value[1] in $scoretoSort[:][1]) // Behöver att den retunerar position där denna finns i $scoretoSort
    // Sortera nu alla kandidater efter score
 
@@ -922,9 +922,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
-         $userid_toprint = $scoretoSort[$candNumber-1][1];
+         //$userid_toprint = $scoretoSort[$candNumber-1][1];
          //$i = $allCandidates[$userid_toprint]["name"];
-         echo "Works? " . $userid_toprint;
+         echo "Works? " . $scoretoSort[0][1];
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
                echo '
