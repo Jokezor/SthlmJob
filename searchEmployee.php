@@ -532,6 +532,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    // Sortera nu alla kandidater efter score
    //rsort($allCandidates)
+   array_sort_by_column($allCandidates["score"], 'order');
 
 
 }
