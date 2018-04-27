@@ -922,8 +922,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
          $userid_toprint = $scoretoSort[$candNumber-1][1];
-         $i = $allCandidates[$userid_toprint]["name"];
-         echo "Works? " . $i;
+         //$i = $allCandidates[$userid_toprint]["name"];
+         echo "Works? " . $userid_toprint;
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
                echo '
