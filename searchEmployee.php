@@ -532,7 +532,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
      $scoretoSort[] = [$allCandidates[$value[1]]["score"],$value[1]];
    }
    rsort($scoretoSort); // Ok, how do we use this to sort $allCandidates? Maybe use it to take the userid from $scoretoSort!
-   print_r($scoretoSort);
+   echo "score: " . $scoretoSort[0][1];
    // $allCandidates[$value[1]]["placement"] = ($value[1] in $scoretoSort[:][1]) // Behöver att den retunerar position där denna finns i $scoretoSort
    // Sortera nu alla kandidater efter score
 
