@@ -294,6 +294,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $Amountsearchedforbusiness = sizeof($searchedFor);
 
 
+
       // Itskills
       $numOfAgreeitskills = 0;
       $searchedFor = $keywords[4];
@@ -526,12 +527,27 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
        }
      }
      echo "Heres candidate score" . $allCandidates[$value[1]]["score"];
+     echo "Heres userid: " . $value[1];
    }
 
    // Sortera nu alla kandidater efter score
    //rsort($allCandidates)
 
 
+}
+?>
+
+
+<?php
+
+// Need this to sort the candidates after score.
+function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
+  $sort_col = array();
+  foreach ($arr as $key=> $row) {
+      $sort_col[$key] = $row[$col];
+  }
+
+  array_multisort($sort_col, $dir, $arr);
 }
 ?>
 
