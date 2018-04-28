@@ -925,6 +925,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
          $scoretoSort = calculateScore($allCandidates, $keywords, $sortingOut);
+         $jobWanted = $keywords[0];
+         $bransch = $keywords[1];
          $N = max(array_map('count', $scoretoSort));
          /*$i = $allCandidates[$userid_toprint]["name"];
          echo "name: " . max(array_map('count', $scoretoSort));*/
@@ -936,57 +938,57 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-                 echo $candNumber . ". " . $allCandidates[$userid_toprint]["name"] . "/ " . $allCandidates[$userid_toprint]["currentposition"] . " /" . $allCandidates[$userid_toprint]["city"];
+                 echo $candNumber . ".  " . $allCandidates[$userid_toprint]["name"] . " - " . $allCandidates[$userid_toprint]["currentposition"] //. " /" . $allCandidates[$userid_toprint]["city"];
 
                  echo '</a></h3>
            <div style="width:95%; margin-top:5px;">
              <div class="Tryshiftright">
                <p>
-                 Högsta utbildnings nivå:
+                 Tjänst viljes:
                  <br>
-                 Antal års erfarenhet:
+                 Bransch:
+                 <br>
+                 Erfarenhet inom sökande roll:
                  <br>
                  Nuvarande anställning:
                  <br>
                  Nuvarande anställare:
                  <br>
-                 Tidigare tjänster:
+                 Tidigare roller:
                  <br>
-                 Skills:
+                 Tidigare anställare:
                  <br>
-                 Ekonomisystem:
-                 <br>
-                 Språk:
-                 <br>
-                 Kandidat status:
-                 <br>
-                 Önskad titel:
+                 Utbildning:
                  <br>
                  Plats:
                  <br>
-                 Lönenivå:
+                 Färdigheter:
+                 <br>
+                 Total erfarenhet:
+                 <br>
+                 Språk:
+                 <br>
+                 Lönenivå viljes:
                  <br>
                  Ålder:
                  <br>
-                 Uppsägningstid:
-                 <br>
-                 Tillgänglig tidigast:
+                 Mobil:
                  <br>
                  Email:
-                 <br>
-                 Mobil:
                  <br>
                </p>
              </div>
              <div class="Tryshiftleft">
                <p>
-                 ' . $allCandidates[$userid_toprint]["highesteducationlevel"] . '
+                 ' . $jobWanted . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . '
+                 ' . $bransch . '
+                 <br>
+                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . ' " år" . ''
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentposition"] . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["currentemployer"] . ', ' . $allCandidates[$userid_toprint]["city"] . '
+                 ' . $allCandidates[$userid_toprint]["currentemployer"] . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["last3experiences"] . '
                  <br>
