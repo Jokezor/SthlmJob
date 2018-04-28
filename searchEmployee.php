@@ -927,8 +927,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $getVariables = calculateScore($allCandidates, $keywords, $sortingOut);
          $scoretoSort = $getVariables[1];
          $allCandidates = $getVariables[0];
-         $jobWanted = $_POST['keywords0'];
-         $bransch = $_POST['keywords1'];
+         $jobWanted = $_POST['keywords0'][0];
+         $bransch = $_POST['keywords1'][0];
          $N = max(array_map('count', $scoretoSort));
 
          /*$i = $allCandidates[$userid_toprint]["name"];
