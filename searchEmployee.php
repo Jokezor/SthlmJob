@@ -941,7 +941,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               $dummy = 0;
               foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
                 $earlierString .= $key;
-                if($allCandidates[$userid_toprint]["positions"][$dummy+1]!=null){
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["positions"])){
                   $earlierString .= ", ";
                 }
                 $dummy++;
