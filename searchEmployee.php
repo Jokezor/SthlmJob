@@ -243,6 +243,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             for($j = 0; $j < sizeof($branchArray); $j++){
                if(!strcmp($searchedFor[$i], $branchArray[$j])){
                   $branchScore=$weights[0];
+                  $allCandidates[$cand["userid"]]["branchmatch"]=$searchedFor[$i];
                }
 
                #echo $branchArray[$j] . "  ";
@@ -928,7 +929,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $scoretoSort = $getVariables[1];
          $allCandidates = $getVariables[0];
          $jobWanted = $_POST['keywords0'][0];
-         $bransch = $_POST['keywords1'][0];
          $N = max(array_map('count', $scoretoSort));
 
          /*$i = $allCandidates[$userid_toprint]["name"];
@@ -937,7 +937,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          //foreach($allCandidates as $candidate){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
-              $earlierString = ''; // Should include all
+              $bransch = $allCandidates[$userid_toprint]["branchmatch"];
+              $earlierString = ''; // Need to insert into string before printing.
               $dummy = 0;
               foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
                 $earlierString .= $key;
