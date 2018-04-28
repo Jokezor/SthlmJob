@@ -924,18 +924,19 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
-         $N = 15;
+         $N = max(array_map('count', $scoretoSort));
          $scoretoSort = calculateScore($allCandidates, $keywords, $sortingOut);
-         $userid_toprint = $scoretoSort[$candNumber-1][1];
-         $i = $allCandidates[$userid_toprint]["name"];
-         echo "name: " . max(array_map('count', $scoretoSort));
-         foreach($allCandidates as $candidate){
-            if(!empty($candidate)){
+         /*$i = $allCandidates[$userid_toprint]["name"];
+         echo "name: " . max(array_map('count', $scoretoSort));*/
+         for($candNumber=1; $candNumber<=$N; $candNumber++){
+         //foreach($allCandidates as $candidate){
+            if(!empty($allCandidates)){
+              $userid_toprint = $scoretoSort[$candNumber-1][1];
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-                 echo $candNumber . ". " . $candidate["name"] . "/ " . $candidate["currentposition"] . " /" . $candidate["city"];
+                 echo $candNumber . ". " . $allCandidates[$userid_toprint]["name"] . "/ " . $allCandidates[$userid_toprint]["currentposition"] . " /" . $allCandidates[$userid_toprint]["city"];
 
                  echo '</a></h3>
            <div style="width:95%; margin-top:5px;">
@@ -979,35 +980,35 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
              </div>
              <div class="Tryshiftleft">
                <p>
-                 ' . $candidate["highesteducationlevel"] . '
+                 ' . $allCandidates[$userid_toprint]["highesteducationlevel"] . '
                  <br>
-                 ' . $candidate["yearsofexperience"] . '
+                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . '
                  <br>
-                 ' . $candidate["currentposition"] . '
+                 ' . $allCandidates[$userid_toprint]["currentposition"] . '
                  <br>
-                 ' . $candidate["currentemployer"] . ', ' . $candidate["city"] . '
+                 ' . $allCandidates[$userid_toprint]["currentemployer"] . ', ' . $allCandidates[$userid_toprint]["city"] . '
                  <br>
-                 ' . $candidate["last3experiences"] . '
+                 ' . $allCandidates[$userid_toprint]["last3experiences"] . '
                  <br>
-                 ' . ((array_key_exists("itskills", $candidate)) ? $candidate["itskills"] : "-") . '
+                 ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
                  -
                  <br>
-                 ' . ((array_key_exists("langskills", $candidate)) ? $candidate["langskills"] : "-") . '
+                 ' . ((array_key_exists("langskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["langskills"] : "-") . '
                  <br>
-                 ' . $candidate["candidatestatus"] . '
+                 ' . $allCandidates[$userid_toprint]["candidatestatus"] . '
                  <br>
                  ?
                  <br>
-                 ' . $candidate["city"] . '
+                 ' . $allCandidates[$userid_toprint]["city"] . '
                  <br>
-                 ' . $candidate["salaryrange"] . '
+                 ' . $allCandidates[$userid_toprint]["salaryrange"] . '
                  <br>
-                 ' . $candidate["age"] . '
+                 ' . $allCandidates[$userid_toprint]["age"] . '
                  <br>
-                 ' . $candidate["leavetime"] . '
+                 ' . $allCandidates[$userid_toprint]["leavetime"] . '
                  <br>
-                 ' . $candidate["availability"] . '
+                 ' . $allCandidates[$userid_toprint]["availability"] . '
                  <br>
                </p>
              </div>
@@ -1015,7 +1016,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                <button class="ui right floated blue button">Se CV</button>
              </div>
            </div>';
-            $candNumber ++;
             }
          }
          pg_free_result($cvsummaryResult);
