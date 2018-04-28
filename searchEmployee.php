@@ -276,7 +276,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       echo "currentpositionScore: " . $currentpositionScore;
 
 
-      // Ekonimisystem
+      // Ekonomisystem
       $numOfAgreebusiness = 0;
       $searchedFor = $keywords[4];
       if(array_key_exists("businessskills", $cand)){
@@ -958,6 +958,46 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                 }
                 $dummy++;
               }
+              // Need to insert into string before printing.
+              $educationString = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["educationnames"] as $key) {
+                $educationString .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["educationnames"])){
+                  $educationString .= ", ";
+                }
+                $dummy++;
+              }
+              // Need to insert into string before printing.
+              $itskillsString = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["itskills"] as $key) {
+                $itskillsString .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["itskills"])){
+                  $itskillsString .= ", ";
+                }
+                $dummy++;
+              }
+              // Need to insert into string before printing.
+              $businessskillString = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["businessskills"] as $key) {
+                $businessskillString .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["businessskills"])){
+                  $businessskillString .= ", ";
+                }
+                $dummy++;
+              }
+              // Need to insert into string before printing.
+              $softskillString = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["softskills"] as $key) {
+                $softskillString .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["softskills"])){
+                  $softskillString .= ", ";
+                }
+                $dummy++;
+              }
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
@@ -1018,15 +1058,17 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $earliercompaniesString . '
                  <br>
-                 -
+                 ' . $educationString . '
                  <br>
-                 ' . ((array_key_exists("langskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["langskills"] : "-") . '
+                 ' . $allCandidates[$userid_toprint]["city"] . '
+                 <br>
+                 ' . $itskillsString . $businessskillString . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["candidatestatus"] . '
                  <br>
                  ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["city"] . '
+                 ' . $allCandidates[$userid_toprint]["city"] . $softskillString . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["salaryrange"] . '
                  <br>
