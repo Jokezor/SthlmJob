@@ -926,7 +926,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          //$userid_toprint = $scoretoSort[$candNumber-1][1];
          //$i = $allCandidates[$userid_toprint]["name"];
          calculateScore($allCandidates, $keywords, $sortingOut);
-         print_r($allCandidates);
+         print_r($sortingOut);
          //echo "usid: " . $scoretoSort[0][1];
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
