@@ -928,11 +928,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $jobWanted = $keywords[0];
          $bransch = $keywords[1];
          $N = max(array_map('count', $scoretoSort));
-         $optionString = ''; // Should include all
-         foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
-           $optionString .= $key . ",";
-         }
-         echo "all work " . $optionString;
 
          /*$i = $allCandidates[$userid_toprint]["name"];
          echo "name: " . max(array_map('count', $scoretoSort));*/
@@ -940,6 +935,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          //foreach($allCandidates as $candidate){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
+              $optionString = ''; // Should include all
+              foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
+                $optionString .= $key . ",";
+              }
+              echo "all work " . $optionString;
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
