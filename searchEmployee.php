@@ -924,11 +924,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
-         //$userid_toprint = $scoretoSort[$candNumber-1][1];
-         //$i = $allCandidates[$userid_toprint]["name"];
          $scoretoSort = calculateScore($allCandidates, $keywords, $sortingOut);
-         print_r($scoretoSort);
-         //echo "usid: " . $scoretoSort[0][1];
+         $userid_toprint = $scoretoSort[$candNumber-1][1];
+         $i = $allCandidates[$userid_toprint]["name"];
+         echo "name: " . $i;
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
                echo '
