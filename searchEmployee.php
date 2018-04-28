@@ -534,7 +534,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    }
    rsort($scoretoSort); // Ok, how do we use this to sort $allCandidates? Maybe use it to take the userid from $scoretoSort!
    echo "usid: " . $scoretoSort[0][1];
-   return $scoretoSort;
+   return array($allCandidates,$scoretoSort);
    // $allCandidates[$value[1]]["placement"] = ($value[1] in $scoretoSort[:][1]) // Behöver att den retunerar position där denna finns i $scoretoSort
    // Sortera nu alla kandidater efter score
 
@@ -924,9 +924,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
          $candNumber = 1;
-         $scoretoSort = calculateScore($allCandidates, $keywords, $sortingOut);
-         $jobWanted = $keywords[0];
-         $bransch = $keywords[1];
+         $getVariables = calculateScore($allCandidates, $keywords, $sortingOut);
+         $scoretoSort = $getVariables[1];
+         $allCandidates = $getVariables[0];
+         $jobWanted = $_POST['keywords0'];
+         $bransch = $_POST['keywords1'];
          $N = max(array_map('count', $scoretoSort));
 
          /*$i = $allCandidates[$userid_toprint]["name"];
@@ -935,11 +937,10 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          //foreach($allCandidates as $candidate){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
-              $optionString = ''; // Should include all
+              $earlierString = ''; // Should include all
               foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
-                $optionString .= $key . ",";
+                $earlierString .= $key . ", ";
               }
-              echo "all work " . $optionString;
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
@@ -990,13 +991,13 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $bransch . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . ' år' . '
+                 ' . floor($allCandidates[$userid_toprint]["experienceinsearched"]/365.25) . ' år' . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentposition"] . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentemployer"] . '
                  <br>
-                 ' . $optionString . '
+                 ' . $earlierString . '
                  <br>
                  ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
