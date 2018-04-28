@@ -990,7 +990,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $bransch . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . " år" . ' 
+                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . ' år' . ' 
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentposition"] . '
                  <br>
