@@ -218,7 +218,7 @@
          pg_free_result($educationResult);
       }
 
-      calculateScore($allCandidates, $keywords, $sortingOut);
+      //calculateScore($allCandidates, $keywords, $sortingOut);
    }
    else{
       echo "INGA KANDIDATER :(";
@@ -925,7 +925,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $candNumber = 1;
          //$userid_toprint = $scoretoSort[$candNumber-1][1];
          //$i = $allCandidates[$userid_toprint]["name"];
-         print_r($scoretoSort);
+         calculateScore($allCandidates, $keywords, $sortingOut);
+         print_r($allCandidates);
          //echo "usid: " . $scoretoSort[0][1];
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
