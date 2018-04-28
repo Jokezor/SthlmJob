@@ -996,9 +996,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentemployer"] . '
                  <br>
-                 ' . foreach ($allCandidates[$userid_toprint]["last3experiences"] as $key) {
-                   echo $key; // need to print recursively
-                 } . '
+                 ' . $optionString . '
                  <br>
                  ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
