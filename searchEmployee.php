@@ -938,12 +938,23 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
               $bransch = $allCandidates[$userid_toprint]["branchmatch"];
-              $earlierString = ''; // Need to insert into string before printing.
+              // Need to insert into string before printing.
+              $earlierjobsString = '';
               $dummy = 0;
               foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
-                $earlierString .= $key;
+                $earlierjobsString .= $key;
                 if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["positions"])){
-                  $earlierString .= ", ";
+                  $earlierjobsString .= ", ";
+                }
+                $dummy++;
+              }
+              // Need to insert into string before printing.
+              $earliercompaniesString = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["employers"] as $key) {
+                $earliercompaniesString .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["employers"])){
+                  $earliercompaniesString .= ", ";
                 }
                 $dummy++;
               }
@@ -1003,9 +1014,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentemployer"] . '
                  <br>
-                 ' . $earlierString . '
+                 ' . $earlierjobsString . '
                  <br>
-                 ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
+                 ' . $earliercompaniesString . '
                  <br>
                  -
                  <br>
@@ -1013,7 +1024,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["candidatestatus"] . '
                  <br>
-                 ?
+                 ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["city"] . '
                  <br>
