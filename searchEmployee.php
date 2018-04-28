@@ -938,8 +938,13 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
               $earlierString = ''; // Should include all
+              $dummy = 0;
               foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
-                $earlierString .= $key . ", ";
+                $earlierString .= $key;
+                if($allCandidates[$userid_toprint]["positions"][$dummy+1]!=null){
+                  $earlierString .= ", ";
+                }
+                $dummy++;
               }
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
