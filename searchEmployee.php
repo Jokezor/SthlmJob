@@ -371,7 +371,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
       echo "geographyScore: " . $geographyScore;
 
-
       // Tidigare Roller
       $numOfAgreejobs = 0;
       $searchedFor = $keywords[2];
@@ -410,6 +409,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
       echo "experienceinsearched: " . $experienceinsearched;
+
 
       // Erfarenhet inom nuvarande roll
       $experienceincurrent=0;
@@ -928,6 +928,12 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $jobWanted = $keywords[0];
          $bransch = $keywords[1];
          $N = max(array_map('count', $scoretoSort));
+         $optionString = ''; // Should include all
+         foreach ($allCandidates[$userid_toprint]["positions"] as $key) {
+           $optionString .= $key . ",";
+         }
+         echo "all work " . $optionString;
+
          /*$i = $allCandidates[$userid_toprint]["name"];
          echo "name: " . max(array_map('count', $scoretoSort));*/
          for($candNumber=1; $candNumber<=$N; $candNumber++){
@@ -990,7 +996,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentemployer"] . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["last3experiences"] . '
+                 ' . foreach ($allCandidates[$userid_toprint]["last3experiences"] as $key) {
+                   echo $key; // need to print recursively
+                 } . '
                  <br>
                  ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
                  <br>
