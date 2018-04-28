@@ -53,7 +53,8 @@
         $candIndex = 0;
         $allCandidates = array(array());
         $allUserids = array();
-        global $scoretoSort = array();
+        global $scoretoSort;
+        $scoretoSort = array();
         if(!$PreferencesResult == false){
            while ($ro = pg_fetch_row($PreferencesResult)){
              $usid = $ro[0];
