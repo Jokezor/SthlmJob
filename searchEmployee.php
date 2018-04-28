@@ -944,7 +944,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
 
-                 echo $candNumber . ".  " . $allCandidates[$userid_toprint]["name"] . " - " . $allCandidates[$userid_toprint]["currentposition"] //. " /" . $allCandidates[$userid_toprint]["city"];
+                 echo $candNumber . ".  " . $allCandidates[$userid_toprint]["name"] . " - " . $allCandidates[$userid_toprint]["currentposition"]; //. " /" . $allCandidates[$userid_toprint]["city"];
 
                  echo '</a></h3>
            <div style="width:95%; margin-top:5px;">
@@ -990,7 +990,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $bransch . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . ' år' . ' 
+                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . ' år' . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["currentposition"] . '
                  <br>
