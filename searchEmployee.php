@@ -928,7 +928,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $scoretoSort = calculateScore($allCandidates, $keywords, $sortingOut);
          $userid_toprint = $scoretoSort[$candNumber-1][1];
          $i = $allCandidates[$userid_toprint]["name"];
-         echo "name: " . $sizeof($scoretoSort);
+         echo "name: " . max(array_map('count', $scoretoSort));
          foreach($allCandidates as $candidate){
             if(!empty($candidate)){
                echo '
