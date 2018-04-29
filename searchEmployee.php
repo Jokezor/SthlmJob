@@ -964,52 +964,62 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $educationString = '';
               $dummy = 0;
-              foreach ($allCandidates[$userid_toprint]["educationnames"] as $key) {
-                $educationString .= $key;
-                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["educationnames"])){
-                  $educationString .= ", ";
+              if(array_key_exists($allCandidates[$userid_toprint]["educationnames"])){
+                foreach ($allCandidates[$userid_toprint]["educationnames"] as $key) {
+                  $educationString .= $key;
+                  if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["educationnames"])){
+                    $educationString .= ", ";
+                  }
+                  $dummy++;
                 }
-                $dummy++;
               }
               // Need to insert into string before printing.
               $itskillsString = '';
               $dummy = 0;
-              foreach ($allCandidates[$userid_toprint]["itskills"] as $key) {
-                $itskillsString .= $key;
-                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["itskills"])){
-                  $itskillsString .= ", ";
+              if(array_key_exists($allCandidates[$userid_toprint]["itskills"])){
+                foreach ($allCandidates[$userid_toprint]["itskills"] as $key) {
+                  $itskillsString .= $key;
+                  if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["itskills"])){
+                    $itskillsString .= ", ";
+                  }
+                  $dummy++;
                 }
-                $dummy++;
               }
               // Need to insert into string before printing.
               $businessskillString = '';
               $dummy = 0;
-              foreach ($allCandidates[$userid_toprint]["businessskills"] as $key) {
-                $businessskillString .= $key;
-                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["businessskills"])){
-                  $businessskillString .= ", ";
+              if(array_key_exists($allCandidates[$userid_toprint]["businessskills"])){
+                foreach ($allCandidates[$userid_toprint]["businessskills"] as $key) {
+                  $businessskillString .= $key;
+                  if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["businessskills"])){
+                    $businessskillString .= ", ";
+                  }
+                  $dummy++;
                 }
-                $dummy++;
               }
               // Need to insert into string before printing.
               $softskillString = '';
               $dummy = 0;
-              foreach ($allCandidates[$userid_toprint]["softskills"] as $key) {
-                $softskillString .= $key;
-                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["softskills"])){
-                  $softskillString .= ", ";
+              if(array_key_exists($allCandidates[$userid_toprint]["softskills"])){
+                foreach ($allCandidates[$userid_toprint]["softskills"] as $key) {
+                  $softskillString .= $key;
+                  if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["softskills"])){
+                    $softskillString .= ", ";
+                  }
+                  $dummy++;
                 }
-                $dummy++;
               }
               // Need to insert into string before printing.
               $Languages = '';
               $dummy = 0;
-              foreach ($allCandidates[$userid_toprint]["langskills"] as $key) {
-                $Languages .= $key;
-                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["langskills"])){
-                  $Languages .= ", ";
+              if(array_key_exists($allCandidates[$userid_toprint]["langskills"])){
+                foreach ($allCandidates[$userid_toprint]["langskills"] as $key) {
+                  $Languages .= $key;
+                  if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["langskills"])){
+                    $Languages .= ", ";
+                  }
+                  $dummy++;
                 }
-                $dummy++;
               }
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
