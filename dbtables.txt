@@ -35,6 +35,8 @@ insert into workexperience (userid, positiontitle, employer, startdate, enddate,
 insert into users (name, address, email, password) values ('Jokezor olovsson', 'asdfghjkl', 'thisidfstest@live.se', '7qb292c3r2');
 insert into preferences (userid, job, branch)
  values (1, 'Controller', 'Business');
+ insert into education (userid, educationname)
+ values(2, 'Civilekonom')
 # Uppdatera data
 UPDATE person SET city = 'Umeå'
 where userid =11;
