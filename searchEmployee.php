@@ -414,6 +414,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Erfarenhet inom nuvarande roll
       $experienceincurrent=0;
       if(array_key_exists("currentposition", $cand)){
+        if(array_key_exists("positions", $cand)){
          $currenpositionArray = $cand["currentposition"];
          $positionsArray = $cand["positions"];
          //$positionsArray = explode(',', $cand["positions"]);
@@ -428,6 +429,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                }
             }
          }
+       }
       }
 
       $salaryScore=0;
