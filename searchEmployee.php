@@ -389,7 +389,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
       }
-      $earlyJobsScore = ($numOfAgreejobs/sizeof($searchedFor))*$weights[3];
+      $earlyJobsScore = ($numOfAgreejobs/sizeof($searchedFor));//*$weights[3];
 
 
       // Erfarenhet inom roll man söker
