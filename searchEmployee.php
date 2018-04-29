@@ -484,7 +484,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $searchedFor = $keywords[5];
       $educationScore=0;
       if(array_key_exists("educationnames", $cand)){
-         $educationArray = explode(',', $cand["educationnames"]);
+         //$educationArray = explode(',', $cand["educationnames"]); Tar in flera separat, ej som sträng.
+         $educationArray = $cand["educationnames"];
          echo "edu: " . $educationArray;
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
