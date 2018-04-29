@@ -1090,7 +1090,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["city"] . '
                  <br>
-                 ' . $itskillsString . $businessskillString . $softskillString . '
+                 ' . $itskillsString . ", " . $businessskillString . ", " . $softskillString . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["yearsofexperience"] . '
                  <br>
