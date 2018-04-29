@@ -264,16 +264,16 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          $currenpositionArray = $cand["currentposition"];
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
-            for($j = 0; $j < sizeof($currenpositionArray); $j++){
-              echo "var1: " . $searchedFor[$i] . ", " . $currenpositionArray[$j];
-               if(!strcmp($searchedFor[$i], $currenpositionArray[$j])){
+            //for($j = 0; $j < sizeof($currenpositionArray); $j++){
+              //echo "var1: " . $searchedFor[$i] . ", " . $currenpositionArray[$j];
+               if(!strcmp($searchedFor[$i], $currenpositionArray)){
                   $currentpositionScore=$weights[1];
                   echo "here";
                }
 
                #echo $branchArray[$j] . "  ";
                #echo $searchedFor[$i] . '\\';
-            }
+            //}
          }
       }
 
