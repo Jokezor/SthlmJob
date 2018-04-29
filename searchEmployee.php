@@ -507,20 +507,23 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
 
+      /*
       echo " branchScore: " . $branchScore;
       echo " currentpositionScore: " . $currentpositionScore;
       echo " freetextScore: " . $freetextScore;
       echo " earlyJobsScore: " . $earlyJobsScore;
       echo " educationScore: " . $educationScore;
       echo " geographyScore: " . $geographyScore;
-
+      */
 
       $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore + $sortingScore;
 
       $allCandidates[$cand["userid"]]["score"] = $totalScore;
+      /*
       echo "Total score: " . $allCandidates[$cand["userid"]]["score"]; // + ...
       echo "<br>";
       echo "<br>";
+      */
       $index++;
     }
    }
