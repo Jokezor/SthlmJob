@@ -265,7 +265,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($currenpositionArray); $j++){
-
+              echo "var1: " . $searchedFor[$i] . ", " . $currenpositionArray[$j];
                if(!strcmp($searchedFor[$i], $currenpositionArray[$j])){
                   $currentpositionScore=$weights[1];
                   echo "here";
