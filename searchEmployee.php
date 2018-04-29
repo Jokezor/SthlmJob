@@ -583,6 +583,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
    <!--  Printing out for errorchecking -->
    <?php
+   /*
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       echo "Keywords: ";
       for($i = 0; $i < sizeof($_POST['keywords0']); $i++){
@@ -631,6 +632,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
    }
+   */
    ?>
 
       <div>
