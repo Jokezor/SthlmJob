@@ -36,7 +36,7 @@ insert into users (name, address, email, password) values ('Jokezor olovsson', '
 insert into preferences (userid, job, branch)
  values (1, 'Controller', 'Business');
  insert into education (userid, educationname)
- values(2, 'Civilekonom')
+ values(2, 'Civilekonom');
 # Uppdatera data
 UPDATE person SET city = 'Umeå'
 where userid =11;
