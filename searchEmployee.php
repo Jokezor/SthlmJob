@@ -373,7 +373,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
 
       // Tidigare Roller
-      $earlierMatched = '';
+      $earlierMatched = array();
       $numOfAgreejobs = 0;
       $searchedFor = $keywords[2];
       if(array_key_exists("positions", $cand)){
@@ -382,9 +382,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($earlyjobsArray); $j++){
                if(!strcmp($searchedFor[$i], $earlyjobsArray[$j])){
-                 if(array_key_exists($searchedFor[$i],$earlierMatched))
+                 if(!array_key_exists($searchedFor[$i],$earlierMatched))
                   $numOfAgreejobs++;
-                  $earlierMatched .= $searchedFor[$i] . ', ';
+                  $earlierMatched[$searchedFor[$i]] = $searchedFor[$i];
                }
 
                //echo $languagesArray[$j] . "  ";
