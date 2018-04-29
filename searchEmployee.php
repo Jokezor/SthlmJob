@@ -964,7 +964,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $educationString = '';
               $dummy = 0;
-              if(array_key_exists($allCandidates[$userid_toprint]["educationnames"])){
+              if(array_key_exists("educationnames",$allCandidates[$userid_toprint])){
                 foreach ($allCandidates[$userid_toprint]["educationnames"] as $key) {
                   $educationString .= $key;
                   if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["educationnames"])){
@@ -976,7 +976,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $itskillsString = '';
               $dummy = 0;
-              if(array_key_exists($allCandidates[$userid_toprint]["itskills"])){
+              if(array_key_exists("itskills",$allCandidates[$userid_toprint])){
                 foreach ($allCandidates[$userid_toprint]["itskills"] as $key) {
                   $itskillsString .= $key;
                   if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["itskills"])){
@@ -988,7 +988,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $businessskillString = '';
               $dummy = 0;
-              if(array_key_exists($allCandidates[$userid_toprint]["businessskills"])){
+              if(array_key_exists("businessskills",$allCandidates[$userid_toprint])){
                 foreach ($allCandidates[$userid_toprint]["businessskills"] as $key) {
                   $businessskillString .= $key;
                   if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["businessskills"])){
@@ -1000,7 +1000,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $softskillString = '';
               $dummy = 0;
-              if(array_key_exists($allCandidates[$userid_toprint]["softskills"])){
+              if(array_key_exists("softskills",$allCandidates[$userid_toprint])){
                 foreach ($allCandidates[$userid_toprint]["softskills"] as $key) {
                   $softskillString .= $key;
                   if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["softskills"])){
