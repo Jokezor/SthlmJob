@@ -361,7 +361,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
         $geographyArray = explode(',', $cand["city"]);
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($geographyArray); $j++){
-              echo " "  . $geographyArray[$j] . " " . $searchedFor[$i];
                if(!strcmp($searchedFor[$i], $geographyArray[$j])){
                   $geographyScore=$weights[6];
                }
@@ -484,8 +483,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       // Utbildning
       $searchedFor = $keywords[5];
       $educationScore=0;
-      if(array_key_exists("educationname", $cand)){
-         $educationArray = explode(',', $cand["educationname"]);
+      if(array_key_exists("educationnames", $cand)){
+         $educationArray = explode(',', $cand["educationnames"]);
          echo "edu: " . $educationArray;
 
          for($i = 0; $i < sizeof($searchedFor); $i++){
