@@ -174,9 +174,12 @@
 
       if(!$personResult == false){
          while ($row = pg_fetch_row($personResult)){
-            $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[13];
+            $userid = $row[0];   $name = $row[1] . " " . $row[2];   $city = $row[13]; $mobile = $row[9]; $email = $row[10]; $url = $row[16];
             $allCandidates[$userid]["name"] = $name;
             $allCandidates[$userid]["city"] = $city;
+            $allCandidates[$userid]["mobilenumber"] = $mobile;
+            $allCandidates[$userid]["email"] = $email;
+            $allCandidates[$userid]["url"] = $url;
          }
          pg_free_result($personResult);
       }
@@ -998,6 +1001,16 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                 }
                 $dummy++;
               }
+              // Need to insert into string before printing.
+              $Languages = '';
+              $dummy = 0;
+              foreach ($allCandidates[$userid_toprint]["langskills"] as $key) {
+                $Languages .= $key;
+                if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["langskills"])){
+                  $Languages .= ", ";
+                }
+                $dummy++;
+              }
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
@@ -1036,8 +1049,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  Ålder:
                  <br>
-                 Mobil:
-                 <br>
                  Email:
                  <br>
                </p>
@@ -1062,21 +1073,17 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                  ' . $allCandidates[$userid_toprint]["city"] . '
                  <br>
-                 ' . $itskillsString . $businessskillString . '
+                 ' . $itskillsString . $businessskillString . $softskillString . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["candidatestatus"] . '
+                 ' . $allCandidates[$userid_toprint]["yearsofexperience"] . '
                  <br>
-                 ' . ((array_key_exists("itskills", $allCandidates[$userid_toprint])) ? $allCandidates[$userid_toprint]["itskills"] : "-") . '
-                 <br>
-                 ' . $allCandidates[$userid_toprint]["city"] . $softskillString . '
+                 ' . $Languages . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["salaryrange"] . '
                  <br>
                  ' . $allCandidates[$userid_toprint]["age"] . '
                  <br>
-                 ' . $allCandidates[$userid_toprint]["leavetime"] . '
-                 <br>
-                 ' . $allCandidates[$userid_toprint]["availability"] . '
+                 ' . $allCandidates[$userid_toprint]["email"] . '
                  <br>
                </p>
              </div>
