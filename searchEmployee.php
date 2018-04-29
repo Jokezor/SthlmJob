@@ -255,7 +255,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
-      echo "branchScore: " . $branchScore;
 
 
       // currentposition
@@ -276,7 +275,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
-      echo "currentpositionScore: " . $currentpositionScore;
 
 
       // Ekonomisystem
@@ -373,7 +371,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
       }
 
-      echo "geographyScore: " . $geographyScore;
 
       // Tidigare Roller
       $numOfAgreejobs = 0;
@@ -412,7 +409,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
       }
-      echo "experienceinsearched: " . $experienceinsearched;
 
 
       // Erfarenhet inom nuvarande roll
@@ -433,8 +429,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
       }
-
-      echo "experienceincurrent: " . $experienceincurrent;
 
       $salaryScore=0;
       $minSalary = $sortingOut[0];
@@ -507,6 +501,14 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
       $freetextScore = ($numOfAgreeitskills + $numOfAgreebusiness + $numOfAgreesoftskills + $numOfAgreelanguages)/($Amountsearchedforbusiness);
       $freetextScore=$freetextScore*$weights[2];
+
+      echo " branchScore: " . $branchScore;
+      echo " currentpositionScore: " . $currentpositionScore;
+      echo " freetextScore: " . $freetextScore;
+      echo " earlyJobsScore: " . $earlyJobsScore;
+      echo " educationScore: " . $educationScore;
+      echo " geographyScore: " . $geographyScore;
+
 
       $totalScore = $currentpositionScore + $branchScore + $freetextScore + $geographyScore + $educationScore + $earlyJobsScore + $sortingScore;
 
