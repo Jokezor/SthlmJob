@@ -262,13 +262,13 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       $currentpositionScore=0;
       if(array_key_exists("currentposition", $cand)){
          $currenpositionArray = $cand["currentposition"];
-         
+
          for($i = 0; $i < sizeof($searchedFor); $i++){
             for($j = 0; $j < sizeof($currenpositionArray); $j++){
-              echo "here";
+
                if(!strcmp($searchedFor[$i], $currenpositionArray[$j])){
                   $currentpositionScore=$weights[1];
-
+                  echo "here";
                }
 
                #echo $branchArray[$j] . "  ";
