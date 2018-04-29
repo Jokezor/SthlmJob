@@ -1012,7 +1012,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
               // Need to insert into string before printing.
               $Languages = '';
               $dummy = 0;
-              if(array_key_exists($allCandidates[$userid_toprint]["langskills"])){
+              if(array_key_exists("langskills",$allCandidates[$userid_toprint])){
                 foreach ($allCandidates[$userid_toprint]["langskills"] as $key) {
                   $Languages .= $key;
                   if(array_key_exists($dummy+1,$allCandidates[$userid_toprint]["langskills"])){
