@@ -35,8 +35,10 @@ try {
 
     // Print the URL to the object.
     //echo $result['ObjectURL'] . "\n";
+    return 1;
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
+    return 0;
 }
 
 
