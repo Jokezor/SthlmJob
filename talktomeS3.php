@@ -26,9 +26,9 @@ try {
         'Bucket' => $bucket,
         'Key'    => $keyname,
         # body needs to get the file contents.
-        'Body'   => file_get_contents("$keyname"),
         'ACL'    => 'public-read-write',
         'Metadata' => ['Content-Type' => 'application/pdf'],
+        'Body'   => file_get_contents("$keyname"),
     ));
 
     // Print the URL to the object.
