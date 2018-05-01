@@ -22,15 +22,24 @@ $s3 = new Aws\S3\S3Client([
 
 try {
     // Upload data.
+    $filetype = "application/pdf";
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
-        'Metadata' => ['Content-Type' => 'application/pdf'],
         'Body'   => file_get_contents("$keyname"),
-        "ContentType": "application/pdf",
     ));
+
+    sleep(5);
+    $change = $s3->copyObject(array(
+        'Bucket' => $bucket,
+        'Key'    => $keyname,
+        'CopySource' => urlencode($bucket . '/' . $key),
+        'MetadataDirective' => 'REPLACE',
+        'ContentType' => $filetype,
+    ));
+
 
     // Print the URL to the object.
     //echo $result['ObjectURL'] . "\n";
