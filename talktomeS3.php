@@ -20,8 +20,6 @@ $s3 = new Aws\S3\S3Client([
 ]);
 
 
-
-
 try {
     // Upload data.
     $result = $s3->putObject(array(
@@ -30,7 +28,7 @@ try {
         # body needs to get the file contents.
         'Body'   => file_get_contents("$keyname"),
         'ACL'    => 'public-read-write',
-        'Content-Type' => 'application/pdf'
+        'Content-Type' : 'application/pdf'
     ));
 
     // Print the URL to the object.
