@@ -9,9 +9,13 @@ for file in /var/www/html/uploads/*; do
    if [[ $b != '*' ]]
    then
      #ls uploads
-     if(php /var/www/html/talktomeS3.php "$b"){
+     if [php /var/www/html/talktomeS3.php "$b"]
+     then
        rm -f "$file"
-     }
+     else
+       exit 0
+     fi
+
    fi
 
 done
