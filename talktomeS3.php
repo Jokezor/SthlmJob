@@ -35,7 +35,7 @@ try {
     $change = $s3->copyObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
-        'CopySource' => urlencode($bucket . '/' . $key),
+        'CopySource' => "{$bucket}/{$key}",
         'MetadataDirective' => 'REPLACE',
         'ContentType' => $filetype,
     ));
