@@ -28,10 +28,7 @@ try {
         # body needs to get the file contents.
         'Body'   => file_get_contents("$keyname"),
         'ACL'    => 'public-read-write',
-        array('params' => array(
-        'Metadata' => array(
-            'Content-Type' => 'application/pdf'
-        )))
+        'Metadata' => ['Content-Type' => 'application/pdf'],
     ));
 
     // Print the URL to the object.
