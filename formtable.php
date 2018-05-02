@@ -103,14 +103,26 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
       return false;
    }
 
-   // Prepare a query for execution
-   $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (firstname, streetname, email) values ($1, $2, $3)');
+   $result = pg_prepare($db_connection, "get_Userid", 'SELECT id FROM users WHERE email = $1');
    if(!$result){
       return false;
    }
 
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "addPerson_query", array($user_name, $user_address, $user_mail));
+   $usid = pg_execute($db_connection, "get_Userid", array($user_mail));
+   if(!$usid){
+      return false;
+   }
+
+   // Need to get userid
+   // Prepare a query for execution
+   $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (userid, firstname, streetname, email) values ($1, $2, $3, $4)');
+   if(!$result){
+      return false;
+   }
+
+   // Execute the prepared query.
+   $result = pg_execute($db_connection, "addPerson_query", array($usid, $user_name, $user_address, $user_mail));
    if(!$result){
       return false;
    }
