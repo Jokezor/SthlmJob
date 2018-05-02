@@ -36,8 +36,8 @@ $result = 0;
 try {
     // Upload data.
 
-    passthru($cmd, $result);
-    //shell_exec(echo $commandString);
+    //passthru($cmd, $result);
+    shell_exec($cmd);
 
 /*
     $result = $s3->putObject(array(
