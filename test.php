@@ -4,7 +4,7 @@ if(!chdir('/var/www/html/uploads')){
    exit("chdir error");
 }
 
-$keyname = 'dbtable1.txt';
+$keyname = 'dbtable1te.txt';
 $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
 

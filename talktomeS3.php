@@ -27,8 +27,7 @@ $keyname = $path_parts['basename'];
 $ext = $path_parts['extension'];
 $file = $path_parts['filename'];
 */
-
-$changename = 'mv /var/www/html/uploads/' . $keyname . ' /var/www/html/uploads/CV.' . $ext;
+$changename = 'mv ' . $keyname . ' CV.' . $ext;
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
