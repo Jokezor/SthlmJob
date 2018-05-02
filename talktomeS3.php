@@ -42,9 +42,10 @@ try {
 
     //passthru($cmd, $result);
     //system($commandString);
-    //system($changename);
+    system($changename);
     $newFile = 'CV.' . $ext;
 
+    
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
                   'Key'    => $keyname,
