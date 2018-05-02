@@ -4,16 +4,19 @@ for file in /var/www/html/uploads/*; do
 
 
    b=$(basename "$file")
+   $fullname = $b;
+  ($path,$name) = $fullname =~ /^(.*[^\\]\/)*(.*)$/;
+  ($basename,$extension) = $name =~ /^(.*)(\.[^.]*)$/;
+
 
    # If folder is empty $b ="*"
    if [[ $b != '*' ]]
    then
 
      #ls uploads
-     $result = (php /var/www/html/talktomeS3.php "$b")
-     if [$result]
-     then
-       rm -f "$file"
+     php /var/www/html/talktomeS3.php "$basename" "$extension"
+
+     rm -f "$file"
      fi
 
    fi

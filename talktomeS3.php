@@ -13,13 +13,13 @@ use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
 $keyname = $argv[1];
+$file = $argv[1] . "." . $argv[2];
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
     'region'  => 'eu-central-1'
 ]);
 
-$succeed = 0;
 try {
     // Upload data.
 
@@ -30,11 +30,10 @@ try {
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
         //'Metadata' => ['ContentType', 'application/pdf'],
-        'Body'   => file_get_contents("$keyname"),
+        'Body'   => file_get_contents("$file"),
     ));
 
-    $succeed=1;
-    return $succeed;
+
 
     //sleep(5);
     /*
@@ -51,7 +50,6 @@ try {
     //echo $result['ObjectURL'] . "\n";
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
-    return $succeed;
 }
 
 
