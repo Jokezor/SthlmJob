@@ -11,9 +11,11 @@ for file in /var/www/html/uploads/*; do
    then
 
      #ls uploads
-     php /var/www/html/talktomeS3.php "$b"
-
-     rm -f "$file"
+     result = $(php /var/www/html/talktomeS3.php "$b")
+     if [[$result != NULL]]
+     then
+       rm -f "$file"
+     fi
 
    fi
 

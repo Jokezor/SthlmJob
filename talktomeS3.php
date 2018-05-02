@@ -22,7 +22,6 @@ $s3 = new Aws\S3\S3Client([
     'region'  => 'eu-central-1'
 ]);
 
-$result = 0;
 try {
     // Upload data.
 
@@ -70,9 +69,9 @@ try {
     */
 
     // Print the URL to the object.
-    //echo $result['ObjectURL'] . "\n";
+    echo $result['ObjectURL'] . "\n";
 } catch (S3Exception $e) {
-    echo $e->getMessage() . "\n";
+    //echo $e->getMessage() . "\n";
 }
 
 
