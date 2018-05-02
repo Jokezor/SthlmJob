@@ -13,7 +13,7 @@ for file in /var/www/html/uploads/*; do
      #ls uploads
      php /var/www/html/talktomeS3.php "$b"
 
-     #rm -f "$file"
+     rm -f "$file"
 
    fi
 
