@@ -39,12 +39,13 @@ try {
 
     //passthru($cmd, $result);
     //system($commandString);
-
+    system('mv /var/www/html/uploads/' . escapeshellarg($keyname) . ' /var/www/html/uploads/CV.' . escapeshellarg($ext));
+    $newFile = 'CV.' . $ext;
 
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
-                  'Key'    => $email . "/" . "CV." . $ext,
-                  'Body'   => file_get_contents("$keyname"),
+                  'Key'    => $email . "/" . $newFile,
+                  'Body'   => file_get_contents("$newFile"),
                   'ACL'    => 'public-read',
                  ));
 
