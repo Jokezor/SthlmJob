@@ -15,20 +15,6 @@ $bucket = 'sthlmjobcvinput1';
 $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
-//s3cmd put uploads/$keyname s3://sthlmjobcvinput1/$email/CV.$ext
-
-/*
-$commandString = 's3cmd put /var/www/html/uploads/' . $keyname . ' s3://sthlmjobcvinput1/' . $email . '/CV.' . $ext;
-$access = 's3cmd sync --acl-public uploads/' . escapeshellarg($keyname) . ' s3://sthlmjobcvinput1/' . escapeshellarg($email) . '/CV.' escapeshellarg($ext);
-*/
-/*
-$path = "/var/www/html/uploads/" . $argv[1];
-
-$path_parts = pathinfo($path);
-$keyname = $path_parts['basename'];
-$ext = $path_parts['extension'];
-$file = $path_parts['filename'];
-*/
 $changename = 'mv ' . $keyname . ' CV.' . $ext;
 
 $s3 = new Aws\S3\S3Client([
@@ -45,12 +31,11 @@ try {
     system($changename);
     $newFile = 'CV.' . $ext;
 
-
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
                   'Key'    => $email . "/" . $newFile,
                   'SourceFile' => $newFile,
-                  'ContentType' => 'pdf',
+                  'ContentType' => 'application/pdf',
                   'ACL'    => 'public-read',
                  ));
 
