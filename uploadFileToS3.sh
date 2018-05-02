@@ -12,7 +12,8 @@ for file in /var/www/html/uploads/*; do
 
      #ls uploads
      result = $(php /var/www/html/talktomeS3.php "$b")
-     if [[$result != NULL]]
+     
+     if [$? -eq 0]
      then
        rm -f "$file"
      fi
