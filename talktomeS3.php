@@ -16,7 +16,7 @@ $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
 //s3cmd put uploads/$keyname s3://sthlmjobcvinput1/$email/CV.$ext
-$commandString = 's3cmd put uploads/' . escapeshellarg($keyname) . ' s3://sthlmjobcvinput1/' . escapeshellarg($email) . '/CV.' . escapeshellarg($ext);
+$commandString = escapeshellarg('s3cmd put uploads/') . escapeshellarg($keyname) . escapeshellarg(' s3://sthlmjobcvinput1/') . escapeshellarg($email) . escapeshellarg('/CV.') . escapeshellarg($ext);
 $access = 's3cmd sync --acl-public uploads/' . escapeshellarg($keyname) . ' s3://sthlmjobcvinput1/' . escapeshellarg($email) . '/CV.' escapeshellarg($ext);
 /*
 $path = "/var/www/html/uploads/" . $argv[1];
