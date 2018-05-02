@@ -28,11 +28,11 @@ try {
         'Key'    => $keyname,
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
-        'Metadata' => ['ContentType', 'application/pdf'],
+        //'Metadata' => ['ContentType', 'application/pdf'],
         'Body'   => file_get_contents("$keyname"),
     ));
 
-    sleep(5);
+    //sleep(5);
     /*
     $change = $s3->copyObject(array(
         'Bucket' => $bucket,
