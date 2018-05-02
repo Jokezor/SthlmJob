@@ -15,6 +15,7 @@ $bucket = 'sthlmjobcvinput1';
 $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
 $email = str_replace($ext, "", $keyname);
+
 /*
 $path = "/var/www/html/uploads/" . $argv[1];
 

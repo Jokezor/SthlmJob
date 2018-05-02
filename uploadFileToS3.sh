@@ -14,7 +14,6 @@ for file in /var/www/html/uploads/*; do
      php /var/www/html/talktomeS3.php "$b"
 
      rm -f "$file"
-     fi
 
    fi
 
