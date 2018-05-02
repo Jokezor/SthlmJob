@@ -33,10 +33,8 @@ try {
         'Body'   => file_get_contents("$keyname"),
     ));
 
-    if($result){
-      $succeed=1;
-      return $succeed;
-    }
+    $succeed=1;
+    return $succeed;
 
     //sleep(5);
     /*
@@ -53,6 +51,7 @@ try {
     //echo $result['ObjectURL'] . "\n";
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
+    return $succeed;
 }
 
 
