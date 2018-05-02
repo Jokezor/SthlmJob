@@ -38,7 +38,6 @@ try {
     // Upload data.
 
     //passthru($cmd, $result);
-    system('s3cmd --config=/root/s3cmd.conf');
     system($commandString);
 
 /*
