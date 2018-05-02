@@ -16,7 +16,7 @@ $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
 //s3cmd put uploads/$keyname s3://sthlmjobcvinput1/$email/CV.$ext
-$commandString = 's3cmd put uploads/' . $keyname . ' s3://sthlmjobcvinput1/' . $email . '/CV' . $ext;
+$commandString = 's3cmd put uploads/' . $keyname . ' s3://sthlmjobcvinput1/' . $email . '/CV.' . $ext;
 $cmd = escapeshellarg($commandString);
 /*
 $path = "/var/www/html/uploads/" . $argv[1];
