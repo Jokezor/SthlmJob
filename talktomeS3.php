@@ -40,14 +40,14 @@ try {
     //passthru($cmd, $result);
     system($commandString);
 
-/*
+
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
-                  'Key'    => $email,
-                  'Body'   => "",
-                  'ACL'    => 'public-read'
+                  'Key'    => $email . "/" . "CV." . $ext,
+                  'Body'   => file_get_contents("$keyname"),
+                  'ACL'    => 'public-read',
                  ));
-*/
+
     //$filetype = "application/pdf";
     //'Metadata' => ['ContentType', 'application/pdf'],
 
