@@ -46,7 +46,7 @@ try {
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
                   'Key'    => $email,
-                  'Body' => EntityBody::factory(fopen($file, 'r'));
+                  'Body' => EntityBody::factory(fopen($newFile, 'r'));
                   //'Body'   => file_get_contents("$newFile"),
                   'ACL'    => 'public-read',
                  ));
