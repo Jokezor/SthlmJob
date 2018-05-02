@@ -28,8 +28,8 @@ try {
         'Key'    => $keyname,
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
-        'Body'   => file_get_contents("$keyname"),
         'Metadata' => ['ContentType', 'application/pdf'],
+        'Body'   => file_get_contents("$keyname"),
     ));
 
     sleep(5);
