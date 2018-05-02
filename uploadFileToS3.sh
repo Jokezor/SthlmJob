@@ -11,10 +11,8 @@ for file in /var/www/html/uploads/*; do
    then
 
      #ls uploads
-     result = $(php /var/www/html/talktomeS3.php "$b")
 
-
-     if [ $? -eq 0 ]
+     if php /var/www/html/talktomeS3.php "$b"
      then
        rm -f "$file"
      fi
