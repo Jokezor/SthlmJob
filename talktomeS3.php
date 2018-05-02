@@ -27,14 +27,26 @@ $s3 = new Aws\S3\S3Client([
 try {
     // Upload data.
 
-    $filetype = "application/pdf";
+
+    $s3->putObject(array(
+                  'Bucket' => $bucket,
+                  'Key'    => $keyname,
+                  'Body'   => "",
+                  'ACL'    => 'public-read'
+                 ));
+
+    //$filetype = "application/pdf";
+    //'Metadata' => ['ContentType', 'application/pdf'],
+
+    // Change filename
+    $filename = $keyname . $ext;
+
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
-        'Key'    => $keyname,
+        'Key'    => $keyname . "/" . $filename,
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
-        //'Metadata' => ['ContentType', 'application/pdf'],
-        'Body'   => file_get_contents("$path"),
+        'Body'   => file_get_contents("$filename"),
     ));
 
 
