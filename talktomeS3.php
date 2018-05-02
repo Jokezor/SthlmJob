@@ -12,12 +12,17 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
+$keyname = $argv[1];
+$ext = end(explode(".",$keyname));
+$email = str_replace($ext, "", $keyname);
+/*
 $path = "/var/www/html/uploads/" . $argv[1];
 
 $path_parts = pathinfo($path);
 $keyname = $path_parts['basename'];
 $ext = $path_parts['extension'];
 $file = $path_parts['filename'];
+*/
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
@@ -28,9 +33,9 @@ try {
     // Upload data.
 
 
-    $s3->putObject(array(
+    $result = $s3->putObject(array(
                   'Bucket' => $bucket,
-                  'Key'    => $keyname,
+                  'Key'    => $email,
                   'Body'   => "",
                   'ACL'    => 'public-read'
                  ));
@@ -39,8 +44,10 @@ try {
     //'Metadata' => ['ContentType', 'application/pdf'],
 
     // Change filename
-    $filename = $keyname . $ext;
 
+    //$filename = $keyname . $ext;
+
+    /*
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname . "/" . $filename,
@@ -48,6 +55,7 @@ try {
         'ACL'    => 'public-read-write',
         'Body'   => file_get_contents("$filename"),
     ));
+    */
 
 
 
