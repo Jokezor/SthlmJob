@@ -14,7 +14,9 @@ use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
 $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
-$email = str_replace($ext, "", $keyname);
+$email = str_replace("." . $ext, "", $keyname);
+
+
 
 /*
 $path = "/var/www/html/uploads/" . $argv[1];
@@ -33,14 +35,16 @@ $s3 = new Aws\S3\S3Client([
 try {
     // Upload data.
 
+    system (s3cmd put uploads/$keyname s3://sthlmjobcvinput1/$email/CV.$ext)
 
+/*
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
                   'Key'    => $email,
                   'Body'   => "",
                   'ACL'    => 'public-read'
                  ));
-
+*/
     //$filetype = "application/pdf";
     //'Metadata' => ['ContentType', 'application/pdf'],
 
