@@ -102,6 +102,18 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
    if(!$result){
       return false;
    }
+
+   // Prepare a query for execution
+   $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (firstname, streetname, email) values ($1, $2, $3)');
+   if(!$result){
+      return false;
+   }
+
+   // Execute the prepared query.
+   $result = pg_execute($db_connection, "addPerson_query", array($user_name, $user_address, $user_mail));
+   if(!$result){
+      return false;
+   }
    pg_free_result($result);
    return true;
 }
