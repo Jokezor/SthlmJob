@@ -12,8 +12,12 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucket = 'sthlmjobcvinput1';
-$keyname = $argv[1];
-$file = $argv[1] . "." . $argv[2];
+$path = "/var/www/html/uploads/" . $argv[1];
+
+$path_parts = pathinfo($path);
+$keyname = $path_parts['basename'];
+$ext = $path_parts['extension'];
+$file = $path_parts['filename'];
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
@@ -30,7 +34,7 @@ try {
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
         //'Metadata' => ['ContentType', 'application/pdf'],
-        'Body'   => file_get_contents("$file"),
+        'Body'   => file_get_contents("$path"),
     ));
 
 
