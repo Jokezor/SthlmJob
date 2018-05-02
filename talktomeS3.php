@@ -48,7 +48,7 @@ try {
 
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
-                  'Key'    => $newFile,// . "/" . $newFile,
+                  'Key'    => basename($newFile) . "/" . $newFile,
                   'SourceFile' => $newFile,
                   'ContentType' => 'pdf',
                   'ACL'    => 'public-read',
