@@ -28,6 +28,8 @@ $ext = $path_parts['extension'];
 $file = $path_parts['filename'];
 */
 
+$changename = 'mv /var/www/html/uploads/' . $keyname . ' /var/www/html/uploads/CV.' . $ext;
+
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
     'region'  => 'eu-central-1'
@@ -39,7 +41,7 @@ try {
 
     //passthru($cmd, $result);
     //system($commandString);
-    system('mv /var/www/html/uploads/' . escapeshellarg($keyname) . ' /var/www/html/uploads/CV.' . escapeshellarg($ext));
+    system($changename);
     $newFile = 'CV.' . $ext;
 
     $result = $s3->putObject(array(
