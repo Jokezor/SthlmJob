@@ -36,7 +36,7 @@ try {
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'CopySource' => "{$bucket}/{$keyname}",
-        'MetadataDirective' => 'REPLACE'
+        //'MetadataDirective' => 'REPLACE'
         'Metadata' => ['ContentType', 'application/pdf'],
         //'ContentType' => $filetype,
     ));
