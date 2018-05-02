@@ -48,7 +48,7 @@ try {
 
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
-                  'Key'    => $email,// . "/" . $newFile,
+                  'Key'    => $newFile,// . "/" . $newFile,
                   'Body'   => file_get_contents("$newFile"),
                   'ACL'    => 'public-read',
                  ));
