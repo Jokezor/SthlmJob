@@ -19,9 +19,10 @@ $s3 = new Aws\S3\S3Client([
     'region'  => 'eu-central-1'
 ]);
 
-
+$succeed = 0;
 try {
     // Upload data.
+
     $filetype = "application/pdf";
     $result = $s3->putObject(array(
         'Bucket' => $bucket,
@@ -31,6 +32,11 @@ try {
         //'Metadata' => ['ContentType', 'application/pdf'],
         'Body'   => file_get_contents("$keyname"),
     ));
+
+    if($result){
+      $succeed=1;
+      return $succeed;
+    }
 
     //sleep(5);
     /*
