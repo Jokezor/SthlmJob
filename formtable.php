@@ -110,7 +110,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 
    // Execute the prepared query.
    $usid = pg_execute($db_connection, "get_Userid", array($user_mail));
-   echo "usid: " . $usid['id'];
+   echo "usid: " . $usid[0];
    if(!$usid){
       return false;
    }
