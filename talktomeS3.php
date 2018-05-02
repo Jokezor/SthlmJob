@@ -37,7 +37,7 @@ try {
     // Upload data.
 
     //passthru($cmd, $result);
-    system($commandString);
+    system(sudo $commandString);
 
 /*
     $result = $s3->putObject(array(
