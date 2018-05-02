@@ -110,11 +110,12 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
 
    // Execute the prepared query.
    $usid = pg_execute($db_connection, "get_Userid", array($user_mail));
-   $i = pg_fetch_row($usid); // Need to get userid here, returns Resource id #10
-   echo "usid: "; print_r($i);
    if(!$usid){
       return false;
    }
+
+   $i = pg_fetch_row($usid); // Need to get userid here, returns Resource id #10
+   $usid = $i[0];
 
    // Need to get userid
    // Prepare a query for execution
