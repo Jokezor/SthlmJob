@@ -1,3 +1,10 @@
+<?php include "../inc/dbinfo.inc";?>
+<?php
+  /* Connect to PostGreSQL and select the database. */
+  $conn_string = "host=" . DB_SERVER . " port=5439 dbname=" . DB_DATABASE . " user=" . DB_USERNAME . " password=" . DB_PASSWORD;
+  $db_connection =  pg_connect($conn_string) or die('Could not connect: ' . pg_last_error());
+?>
+
 <?php
 if($argc != 2){
    exit("Not enough input args");
@@ -28,6 +35,7 @@ try {
     //passthru($cmd, $result);
     //system($commandString);
     #system($changename);
+    # New file name in each user's folder.
     $newFile = 'CV.' . $ext;
 
     $result = $s3->putObject(array(
@@ -38,12 +46,7 @@ try {
                   'ACL'    => 'public-read',
                  ));
 
-    //$filetype = "application/pdf";
-    //'Metadata' => ['ContentType', 'application/pdf'],
 
-    // Change filename
-
-    //$filename = $keyname . $ext;
 
     /*
     $result = $s3->putObject(array(
@@ -70,6 +73,8 @@ try {
 
     // Print the URL to the object.
     echo $result['ObjectURL'] . "\n";
+    $result = pg_prepare($db_connection, "InsertURL", 'UPDATE person SET url = $1 where email=$2');
+    $result = pg_execute($db_connection, "InsertURL", array($result['ObjectURL'],$email));
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
 }
