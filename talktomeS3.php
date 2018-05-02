@@ -17,7 +17,7 @@ $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
 //s3cmd put uploads/$keyname s3://sthlmjobcvinput1/$email/CV.$ext
 $commandString = 's3cmd put uploads/' . $keyname . ' s3://sthlmjobcvinput1/' . $email . '/CV' . $ext;
-
+$cmd = escapeshellarg($commandString);
 /*
 $path = "/var/www/html/uploads/" . $argv[1];
 
@@ -32,10 +32,12 @@ $s3 = new Aws\S3\S3Client([
     'region'  => 'eu-central-1'
 ]);
 
+$result = 0;
 try {
     // Upload data.
 
-    shell_exec(echo $commandString);
+    passthru($cmd, $result);
+    //shell_exec(echo $commandString);
 
 /*
     $result = $s3->putObject(array(
