@@ -29,18 +29,19 @@ try {
         # body needs to get the file contents.
         'ACL'    => 'public-read-write',
         'Body'   => file_get_contents("$keyname"),
+        'Metadata' => ['ContentType', 'application/pdf'],
     ));
 
     sleep(5);
+    /*
     $change = $s3->copyObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
         'CopySource' => "{$bucket}/{$keyname}",
         //'MetadataDirective' => 'REPLACE'
-        'Metadata' => ['ContentType', 'application/pdf'],
         //'ContentType' => $filetype,
     ));
-
+    */
 
     // Print the URL to the object.
     //echo $result['ObjectURL'] . "\n";
