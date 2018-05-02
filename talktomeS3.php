@@ -35,7 +35,7 @@ try {
     $change = $s3->copyObject(array(
         'Bucket' => $bucket,
         'Key'    => $keyname,
-        'CopySource' => "{$bucket}/{$key}",
+        'CopySource' => "{$bucket}/{$keyname}",
         'MetadataDirective' => 'REPLACE'
         'Metadata' => ['ContentType', 'application/pdf'],
         //'ContentType' => $filetype,
