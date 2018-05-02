@@ -33,7 +33,7 @@ try {
     $result = $s3->putObject(array(
                   'Bucket' => $bucket,
                   'Key'    => $email . "/" . $newFile,
-                  'SourceFile' => $newFile,
+                  'SourceFile' => $keyname,
                   'ContentType' => 'application/' . $ext,
                   'ACL'    => 'public-read',
                  ));
