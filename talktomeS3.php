@@ -35,7 +35,7 @@ try {
                   'Bucket' => $bucket,
                   'Key'    => $email . "/" . $newFile,
                   'SourceFile' => $newFile,
-                  'ContentType' => 'application/pdf',
+                  'ContentType' => 'application/' . $ext,
                   'ACL'    => 'public-read',
                  ));
 
