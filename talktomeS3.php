@@ -35,7 +35,7 @@ $s3 = new Aws\S3\S3Client([
 try {
     // Upload data.
 
-    system ($commandString);
+    shell_exec($commandString);
 
 /*
     $result = $s3->putObject(array(
