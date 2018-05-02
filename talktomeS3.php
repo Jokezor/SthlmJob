@@ -15,7 +15,7 @@ $bucket = 'sthlmjobcvinput1';
 $keyname = $argv[1];
 $ext = end(explode(".",$keyname));
 $email = str_replace("." . $ext, "", $keyname);
-$changename = 'mv ' . $keyname . ' CV.' . $ext;
+//$changename = 'mv ' . $keyname . ' CV.' . $ext;
 
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
@@ -69,7 +69,7 @@ try {
     */
 
     // Print the URL to the object.
-    //echo $result['ObjectURL'] . "\n";
+    echo $result['ObjectURL'] . "\n";
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
 }

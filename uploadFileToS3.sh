@@ -14,10 +14,10 @@ for file in /var/www/html/uploads/*; do
      result = $(php /var/www/html/talktomeS3.php "$b")
 
 
-     #if [$result != NULL]
-     #then
-    #   rm -f "$file"
-     #fi
+     if [$result != NULL]
+     then
+       rm -f "$file"
+     fi
 
    fi
 
