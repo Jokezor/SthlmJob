@@ -10,13 +10,14 @@ for file in /var/www/html/uploads/*; do
    if [[ $b != '*' ]]
    then
 
-     php /var/www/html/talktomeS3.php "$b"
+
      #ls uploads
 
-     #if php /var/www/html/talktomeS3.php "$b"
-     #then
-     rm -f "$file"
-     #fi
+     if php /var/www/html/talktomeS3.php "$b"
+     then
+       sleep(2)
+       rm -f "$file"
+     fi
 
    fi
 
