@@ -955,6 +955,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             if(!empty($allCandidates)){
               $userid_toprint = $scoretoSort[$candNumber-1][1];
               $bransch = $allCandidates[$userid_toprint]["branchmatch"];
+              echo "url: " . $allCandidates[$userid_toprint]["url"];
               // Need to insert into string before printing.
               $earlierjobsString = '';
               $dummy = 0;
@@ -1035,7 +1036,6 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $dummy++;
                 }
               }
-              echo $allCandidates[$userid_toprint]["url"];
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
