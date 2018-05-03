@@ -73,6 +73,7 @@ try {
 
 
     $url = (string)$result['ObjectURL'];
+    echo $url;
     // Print the URL to the object.
     /*echo "\n" . "email: " . $email;
     echo $url . "\n";*/
