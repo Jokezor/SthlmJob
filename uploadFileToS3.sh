@@ -15,7 +15,7 @@ for file in /var/www/html/uploads/*; do
 
      if php /var/www/html/talktomeS3.php "$b"
      then
-       sleep(2)
+       #sleep(2)
        rm -f "$file"
      fi
 
