@@ -12,9 +12,8 @@ for file in /var/www/html/uploads/*; do
 
      #ls uploads
 
-     if php /var/www/html/talktomeS3.php "$b"
+     if php /var/www/html/talktomeS3.php $b #"$b"
      then
-       sleep(2)
        rm -f "$file"
      fi
 
