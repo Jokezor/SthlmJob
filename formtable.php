@@ -123,8 +123,7 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
    for ($j=1; $j<sizeof($name); $j++) {
      $last_name .= $name[$j];
    }
-   echo "First name: " . $first_name;
-   echo "\nLast name: " . $last_name;
+
    // Need to get userid
    // Prepare a query for execution
    $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (userid, firstname, lastname, streetname, email) values ($1, $2, $3, $4, $5)');

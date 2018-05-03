@@ -14,7 +14,7 @@ for file in /var/www/html/uploads/*; do
 
      if php /var/www/html/talktomeS3.php "$b"
      then
-       rm -f "$file"
+       #rm -f "$file"
      fi
 
    fi
