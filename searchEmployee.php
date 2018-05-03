@@ -1112,7 +1112,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                </p>
              </div>
              <div class="SeeCV">
-               <button class="ui right floated blue button">Se CV</button>
+               <button href="' . $allCandidates[$userid_toprint]["url"] . '" ' . 'class="ui right floated blue button">Se CV</button>
              </div>
            </div>';
             }
