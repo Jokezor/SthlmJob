@@ -127,13 +127,13 @@ function AddUser($db_connection, $user_name, $user_address, $user_mail, $user_pa
    echo "\nLast name: " . $last_name;
    // Need to get userid
    // Prepare a query for execution
-   $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (userid, firstname, lastname, streetname, email) values ($1, $2, $3, $4)');
+   $result = pg_prepare($db_connection, "addPerson_query", 'INSERT INTO person (userid, firstname, lastname, streetname, email) values ($1, $2, $3, $4, $5)');
    if(!$result){
       return false;
    }
 
    // Execute the prepared query.
-   $result = pg_execute($db_connection, "addPerson_query", array($usid, $user_name, $user_address, $user_mail));
+   $result = pg_execute($db_connection, "addPerson_query", array($usid, $first_name, $last_name, $user_address, $user_mail));
    if(!$result){
       return false;
    }
