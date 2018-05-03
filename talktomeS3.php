@@ -72,6 +72,7 @@ try {
     */
 
     // Print the URL to the object.
+    echo "\n" . "email: " . $email;
     echo $result['ObjectURL'] . "\n";
     $result = pg_prepare($db_connection, "InsertURL", 'UPDATE person SET url = $1 where email=$2');
     $result = pg_execute($db_connection, "InsertURL", array($result['ObjectURL'],$email));
