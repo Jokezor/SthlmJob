@@ -1035,6 +1035,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                   $dummy++;
                 }
               }
+              echo $allCandidates[$userid_toprint]["url"];
                echo '
                  <!--input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" class="employees" style="text-align: right; float:right;"-->
                  <h3 style="width:95%; margin-top:5px margin-right:0px !important;"><a href="#">';
