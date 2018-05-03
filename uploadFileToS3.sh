@@ -11,7 +11,6 @@ for file in /var/www/html/uploads/*; do
    then
 
      #ls uploads
-     echo "filename: " "$b";
      if php /var/www/html/talktomeS3.php "$b"
      then
        rm -f "$file"
