@@ -71,11 +71,13 @@ try {
     ));
     */
 
+
+    $url = (string)$result['ObjectURL'];
     // Print the URL to the object.
     echo "\n" . "email: " . $email;
-    echo $result['ObjectURL'] . "\n";
+    echo $url . "\n";
     $result = pg_prepare($db_connection, "InsertURL", 'UPDATE person SET url = $1 where email=$2');
-    $result = pg_execute($db_connection, "InsertURL", array($result['ObjectURL'],$email));
+    $result = pg_execute($db_connection, "InsertURL", array($url,$email));
 } catch (S3Exception $e) {
     echo $e->getMessage() . "\n";
 }
