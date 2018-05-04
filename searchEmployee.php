@@ -1112,9 +1112,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
                  <br>
                </p>
              </div>
-              <a href=\'' . htmlentities($allCandidates[$userid_toprint]["url"]) . '\' target=\"_blank\">
-                <div style=\"cursor: pointer;\" onclick=\"window.location=\'' . htmlentities($allCandidates[$userid_toprint]["url"]) . '\';" class=\"SeeCV\">
-                  <button class=\"ui right floated blue button\">Se CV</button>
+              <a href=\'' . htmlentities($allCandidates[$userid_toprint]["url"]) . '\' target="_blank">
+                <div style="cursor: pointer;" onclick="window.location=\'' . htmlentities($allCandidates[$userid_toprint]["url"]) . '\';" class="SeeCV">
+                  <button class="ui right floated blue button">Se CV</button>
                 </div>
               </a>
            </div>';
