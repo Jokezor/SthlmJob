@@ -565,7 +565,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
 
 <!DOCTYPE html>
-<html>
+<html ng-app="bw.paging">
 <head>
    <title> Sök Kandidater </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
