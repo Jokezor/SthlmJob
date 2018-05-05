@@ -1120,28 +1120,28 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
            </div>';
             }
          }
+         echo
+         '<div class = "pagnation">
+           <div class="ui pagination menu">
+             <a class="active item">
+               ' . $N . '
+             </a>
+             <div class="disabled item">
+               ...
+             </div>
+             <a class="item">
+               10
+             </a>
+             <a class="item">
+               11
+             </a>
+             <a class="item">
+               12
+             </a>
+           </div>
+          </div>';
          pg_free_result($cvsummaryResult);
      }
-     echo
-     '<div class = "pagnation">
-       <div class="ui pagination menu">
-         <a class="active item">
-           1
-         </a>
-         <div class="disabled item">
-           ...
-         </div>
-         <a class="item">
-           10
-         </a>
-         <a class="item">
-           11
-         </a>
-         <a class="item">
-           12
-         </a>
-       </div>
-      </div>';
    }
 ?>
 <!-- End of loop  -->
