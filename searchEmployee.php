@@ -911,7 +911,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       </div>
       </div>
 
-<form style="margin-top:10%;">
+<!--form style="margin-top:10%;"-->
+<div style="margin-top:10%;">
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <div id="test">
@@ -1149,7 +1150,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 <!--div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
 </div-->
-</form>
+</div>
+<!--/form-->
 
    <!--div class="contact">
      Kontakt
