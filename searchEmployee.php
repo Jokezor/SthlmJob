@@ -582,7 +582,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <script src="jquery-ui.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/accordion.js"></script>
    <script src="paging.js"></script>
-   <script src="/var/www/html/node_modules/angular/angular.js"></script>
+   <script src="node_modules/angular/angular.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
