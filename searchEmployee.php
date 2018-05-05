@@ -581,6 +581,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <script src="slider.js"></script>
    <script src="jquery-ui.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/accordion.js"></script>
+   <script src="paging.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -1121,6 +1122,13 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
          echo
+         '<div paging
+           page="35"
+           page-size="10"
+           total="1000"
+           paging-action="foo('bar', page)">
+         </div>';
+         /*
          '<div class = "pagnation">
            <div class="ui pagination menu">
              <a class="active item">
@@ -1140,6 +1148,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
              </a>
            </div>
           </div>';
+          */
+
          pg_free_result($cvsummaryResult);
      }
    }
