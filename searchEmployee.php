@@ -1124,10 +1124,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          }
          echo
          '<div paging
-           page="35"
-           page-size="10"
-           total="1000"
-           paging-action="foo(\'bar\', page)">
+           page="currentPage"
+           page-size="pageSize"
+           total="total">
          </div>';
          /*
          '<div class = "pagnation">
