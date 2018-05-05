@@ -1123,11 +1123,41 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             }
          }
          echo
-         '<div paging
-           page="currentPage"
-           page-size="pageSize"
-           total="total">
-         </div>';
+         '<div class="container" ng-app="myApp" ng-controller="sampleCtrl">
+            <div paging
+             page="currentPage"
+             page-size="pageSize"
+             total="total">
+            </div>
+
+            <div class="form-group">
+                <label>Current Page:</label>
+                <input
+                    placeholder="page"
+                    class="form-control"
+                    maxlength="16"
+                    ng-model="currentPage"
+                    ng-init="currentPage = 1"/>
+            </div>
+            <div class="form-group">
+                <label>Page Size:</label>
+                <input
+                    placeholder="Page Size"
+                    class="form-control"
+                    maxlength="16"
+                    ng-model="pageSize"
+                    ng-init="pageSize = 10"/>
+            </div>
+            <div class="form-group">
+                <label>Total Items:</label>
+                <input
+                    placeholder="Total"
+                    class="form-control"
+                    maxlength="16"
+                    ng-model="total"
+                    ng-init="total = 1000"/>
+            </div>
+          </div>';
          /*
          '<div class = "pagnation">
            <div class="ui pagination menu">
