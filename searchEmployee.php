@@ -565,7 +565,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
 
 
 <!DOCTYPE html>
-<html>
+<html ng-app="todos">
 <head>
    <title> Sök Kandidater </title>
    <link rel="stylesheet" type="text/css" href="searchstyle.css">
@@ -573,6 +573,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
    <link rel="stylesheet" type="text/css" href="range.css">
    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+   <link rel="stylesheet" href="style.css" />
+   <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 
    <script src="jquery-3.2.1.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/transition.min.js"></script>
@@ -582,8 +584,14 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <script src="jquery-ui.min.js"></script>
    <script src="node_modules/semantic-ui/dist/components/accordion.js"></script>
    <script src="paging.js"></script>
-   <script src="node_modules/angular/angular.js"></script>
+   <!--script src="node_modules/angular/angular.js"></script-->
    <script src="app.js"></script>
+   <script src="pagination.js"></script>
+
+   <script data-require="angular.js@*" data-semver="1.3.15" src="https://code.angularjs.org/1.3.15/angular.js"></script>
+   <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+   <script src="script.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -945,6 +953,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
+        echo '<body ng-controller="TodoController">';
          $candNumber = 1;
          $getVariables = calculateScore($allCandidates, $keywords, $sortingOut);
          $scoretoSort = $getVariables[1];
@@ -1123,43 +1132,14 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
            </div>';
             }
          }
-         echo
-         '<div class="container" ng-app="myApp" ng-controller="sampleCtrl">
-            <div paging
-             page="currentPage"
-             page-size="pageSize"
-             total="total">
-            </div>
-
-            <div class="form-group">
-                <label>Current Page:</label>
-                <input
-                    placeholder="page"
-                    class="form-control"
-                    maxlength="16"
-                    ng-model="currentPage"
-                    ng-init="currentPage = 1"/>
-            </div>
-            <div class="form-group">
-                <label>Page Size:</label>
-                <input
-                    placeholder="Page Size"
-                    class="form-control"
-                    maxlength="16"
-                    ng-model="pageSize"
-                    ng-init="pageSize = 10"/>
-            </div>
-            <div class="form-group">
-                <label>Total Items:</label>
-                <input
-                    placeholder="Total"
-                    class="form-control"
-                    maxlength="16"
-                    ng-model="total"
-                    ng-init="total = 1000"/>
-            </div>
-          </div>';
          /*
+         echo
+         '<pagination
+            ng-model="currentPage"
+            total-items="todos.length"
+            max-size="maxSize"
+            boundary-links="true">
+          </pagination>';
          '<div class = "pagnation">
            <div class="ui pagination menu">
              <a class="active item">
@@ -1182,6 +1162,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
           */
 
          pg_free_result($cvsummaryResult);
+        echo '</body>';
      }
    }
 ?>
