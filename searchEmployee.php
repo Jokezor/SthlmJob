@@ -923,7 +923,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       </div>
 
 <!--form style="margin-top:10%;"-->
-<div style="margin-top:10%;">
+<div style="margin-top:10%; margin-bottom:10%;">
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <div id="test">
