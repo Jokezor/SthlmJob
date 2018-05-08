@@ -176,7 +176,6 @@ body {
 
 }
 .page1 .introduction .guidance .candidates .guidanceButton{
-
 	position: relative;
 	text-align: center;
 	max-width: 100%;
@@ -185,7 +184,7 @@ body {
 	background: rgba(52,56,65, .5);
 	display: block;
 	float:left;
-
+	border-radius: 2px;
 }
 
 
