@@ -134,6 +134,7 @@ body {
 				margin: 2%;
 				background-color: #ffffff;
 				color: white;
+				z-index: 11;
 }
 
 
