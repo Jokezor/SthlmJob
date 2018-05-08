@@ -135,7 +135,7 @@ body {
 				margin-top: 2%;
 
 				/*background-color: #ffffff;*/
-				color: white;
+
 				z-index: 15;
 				height: 15%;
 				width: 30%;
@@ -188,6 +188,7 @@ body {
 	margin:0;
 	padding:0;
 	border-color: rgba(52,56,65, 0);
+	color: white;
 }
 
 .page1 .introduction .guidance .companies .guidanceButton{
