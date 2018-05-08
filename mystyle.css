@@ -143,6 +143,16 @@ body {
 				text-align: center;
 }
 
+.page1 .introduction .guidance .candidates{
+	margin-left: 5%;
+	margin-top: 5%;
+	position: relative;
+	text-align: center;
+	width: 30%;
+	height: 50%;
+	background-color: #000000;
+}
+
 
 .page2{
 
