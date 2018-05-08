@@ -134,7 +134,7 @@ body {
 				margin-left: 35%;
 				margin-top: 2%;
 
-				background-color: #ffffff;
+				/*background-color: #ffffff;*/
 				color: white;
 				z-index: 15;
 				height: 15%;
@@ -186,7 +186,7 @@ body {
 	max-width: 50%;
 	width: 40%;
 	height: 50%;
-	background-color: #000000;
+	background: rgba(52,56,65, .5);
 	display: block;
 	float:left;
 
