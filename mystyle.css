@@ -209,7 +209,7 @@ body {
 	color: white;
 }
 
-.page1 .introduction .guidance .companies .guidanceButton{
+guidanceButton:hover{
 	background: rgba(52,56,65, .9);
 }
 
