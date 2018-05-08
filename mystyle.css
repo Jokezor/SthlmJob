@@ -131,7 +131,8 @@ body {
 
 .page1 .introduction .guidance{
 			  top:22px;
-				margin: 50%;
+				margin-left: 30%;
+				
 				background-color: #ffffff;
 				color: white;
 				z-index: 15;
