@@ -29,8 +29,9 @@ body {
 
 /* Add a black background color to the top navigation */
 .topnav {
-	background-color: white;
-	background: transparent;
+	/*background-color: #C7C7C5;
+	background: transparent;*/
+	background: rgba(54, 25, 25, .5);*/
  	margin-right: 100px;
 	display: block;
 	float: right;
