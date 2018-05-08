@@ -154,8 +154,8 @@ body {
 	text-align: center;
 	width: 40%;
 	height: 50%;
-	/*background-color: #ffffff;*/
-	display: block;
+	background-color: #ffffff;
+	/*display: block;*/
 	float:left;
 }
 
