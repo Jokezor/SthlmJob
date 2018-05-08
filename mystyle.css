@@ -209,6 +209,9 @@ body {
 	color: white;
 }
 
+.page1 .introduction .guidance .companies .guidanceButton{
+	background: rgba(52,56,65, .9);
+}
 
 .page2{
 
