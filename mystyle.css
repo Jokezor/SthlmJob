@@ -160,7 +160,7 @@ body {
 }
 
 .page1 .introduction .guidance .companies{
-	/*top: 25%;*/
+	top: -25%;
 	bottom: 25%;
 	margin-left: 55%;
 	margin-top: 5%;
