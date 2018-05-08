@@ -217,6 +217,10 @@ body {
 	background-color: rgba(52,56,65, .9);
 }
 
+button[type=submit]:hover {
+    background-color: rgba(52,56,65, .9);
+}
+
 .page2{
 
         background-repeat: no-repeat;
