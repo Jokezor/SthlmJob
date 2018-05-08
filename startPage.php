@@ -46,7 +46,11 @@ sub_e_for_Inextro {
           <button type="submit" class="guidanceButton">Jobbsökande</button>
         </form>
       </div>
-      <div class="companies"></div>
+      <div class="companies">
+        <form method="get" action="#register">
+          <button type="submit" class="guidanceButton">Rekryterare</button>
+        </form>
+      </div>
     </div>
   </div>
 
