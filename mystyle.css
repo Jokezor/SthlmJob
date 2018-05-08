@@ -185,7 +185,7 @@ body {
 	/*background: rgba(207,70,71, .6);*/
 	display: block;
 	float:left;
-	border-radius: 0px;
+	border-radius: 4px;
 	margin:0;
 	padding:0;
 	border-color: rgba(52,56,65, 0);
@@ -204,7 +204,7 @@ body {
 	/*background: rgba(207,70,71, .8);*/
 	display: block;
 	float:left;
-	border-radius: 0px;
+	border-radius: 4px;
 	margin:0;
 	padding:0;
 	border-color: rgba(52,56,65, 0);
