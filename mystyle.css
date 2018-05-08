@@ -175,6 +175,22 @@ body {
 	float:left;
 
 }
+.page1 .introduction .guidance .candidates .guidanceButton{
+	top: 25%;
+	bottom: 25%;
+	margin-left: 10%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	position: relative;
+	text-align: center;
+	max-width: 50%;
+	width: 40%;
+	height: 50%;
+	background-color: #000000;
+	display: block;
+	float:left;
+
+}
 
 
 .page2{
