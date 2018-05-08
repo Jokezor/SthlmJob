@@ -148,15 +148,14 @@ body {
 	bottom: 25%;
 	margin-left: 5%;
 	margin-top: 5%;
-	max-width: 50%;
+	max-width: 40%;
 	position: relative;
 	text-align: center;
 	width: 40%;
-	height: 30%;
-
+	height: 50%;
 	background-color: #000000;
 	display: block;
-	overflow: hidden;
+	float:left;
 }
 
 .page1 .introduction .guidance .companies{
@@ -172,6 +171,7 @@ body {
 	background-color: #000000;
 	display: block;
 	overflow: hidden;
+
 }
 
 
