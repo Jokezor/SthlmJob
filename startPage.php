@@ -41,7 +41,11 @@ sub_e_for_Inextro {
   <div class="introduction">Välkommen till Inextro
   	<div class="subintro">Hitta ditt drömjobb</div>
     <div class="guidance">
-      <div class="candidates"></div>
+      <div class="candidates">
+        <form method="get" action="page3">
+          <button type="submit">Continue</button>
+        </form>
+      </div>
       <div class="companies"></div>
     </div>
   </div>
