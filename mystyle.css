@@ -190,6 +190,7 @@ body {
 	padding:0;
 	border-color: rgba(52,56,65, 0);
 	color: white;
+	cursor:pointer;
 }
 
 .page1 .introduction .guidance .companies .guidanceButton{
@@ -207,6 +208,7 @@ body {
 	padding:0;
 	border-color: rgba(52,56,65, 0);
 	color: white;
+	cursor:pointer;
 }
 
 guidanceButton:hover{
