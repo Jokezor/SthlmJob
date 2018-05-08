@@ -211,7 +211,7 @@ body {
 	cursor:pointer;
 }
 
-guidanceButton:hover{
+.page1 .introduction .guidance .companies .guidanceButton.active{
 	background: rgba(52,56,65, .9);
 }
 
