@@ -213,7 +213,7 @@ body {
 	cursor:pointer;
 }
 
-.page1 .introduction .guidance .companies .guidanceButton.hover{
+.page1 .introduction .guidance .companies #guidanceButton.hover{
 	background-color: rgba(52,56,65, .9);
 }
 
