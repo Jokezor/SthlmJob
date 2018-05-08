@@ -43,12 +43,12 @@ sub_e_for_Inextro {
     <div class="guidance">
       <div class="candidates">
         <form method="get" action="#register">
-          <button type="submit" class="guidanceButton">Jobbsökande</button>
+          <button type="submit" class="guidanceButton">Sök Jobb</button>
         </form>
       </div>
       <div class="companies">
         <form method="get" action="#register">
-          <button type="submit" class="guidanceButton">Rekryterare</button>
+          <button type="submit" class="guidanceButton">Rekrytera</button>
         </form>
       </div>
     </div>
