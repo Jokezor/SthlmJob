@@ -123,6 +123,10 @@
 	font-size: 0.875em;
 }
 
+.page1{
+	background-color: #f2f2f2;
+}
+
 #notaccordion{
 	overflow: hidden;
 }
