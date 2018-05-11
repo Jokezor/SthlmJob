@@ -595,7 +595,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body style="background-color: #8E9BA4;">
 
    <!--  Printing out for errorchecking -->
    <?php
