@@ -656,7 +656,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             <h1 style="text-align:center; margin-top: 5%;"> Sök Kandidater </h1>
             <div style="height:10%; background-color: white; display: inline-block;">
             </div>
-            <div class="page1">
+            <div class="page1" style="margin-top:1%;">
                <form action="#" method="POST">
                   <div>
                      <div style="width:90%; margin:auto; margin-top: 5%;">
