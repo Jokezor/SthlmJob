@@ -658,7 +658,7 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             <div class="page1" style="margin-top:1%;">
                <form action="#" method="POST">
                   <div>
-                     <div style="width:90%; margin:auto; margin-top: 5%;">
+                     <div style="width:90%; margin:auto; margin-top: 2%;">
                        <p style="color:black; font-weight: bold; font-size =1.2em;">I detta sökverktyg fyller ni i vad ni söker och så rangordnar vi kandidater åt er</p>
                        <br>
                         <div class="ui form">
