@@ -926,11 +926,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
       </div>
 
 <!--form style="margin-top:10%;"-->
-<div style="margin-top:10%; margin-bottom:10%;">
+<!--div style="margin-top:10%; margin-bottom:10%;">
    <h1 style="text-align: center;">Kandidater</h1>
 <div id="notaccordion" class="Res">
   <div id="test">
-  <label for="subscribeNews" style="color:black;">Ta kontakta med de kandidater som matchar via mail</label>
+  <label for="subscribeNews" style="color:black;">Ta kontakta med de kandidater som matchar via mail</label-->
   <!--label for="wishtitle" style="margin-left:25%; color:black;">Endast önskad titel</label>
   <input type="checkbox" id ="wishtitle" name = "wish"-->
 
@@ -956,7 +956,11 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
    <?php
    if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(pg_num_rows($cvsummaryResult) != 0){
-        echo '<body ng-controller="TodoController">';
+        echo '<div style="margin-top:10%; margin-bottom:10%;">
+                <h1 style="text-align: center;">Kandidater</h1>
+                  <div id="notaccordion" class="Res">
+                    <div id="test">
+                      <label for="subscribeNews" style="color:black;">Ta kontakta med de kandidater som matchar via mail</label>';
          $candNumber = 1;
          $getVariables = calculateScore($allCandidates, $keywords, $sortingOut);
          $scoretoSort = $getVariables[1];
@@ -1168,13 +1172,15 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
         echo '</body>';
      }
    }
+   echo '</div>';
+   echo '</div>';
 ?>
 <!-- End of loop  -->
-</div>
+<!--/div-->
 <!--div class="field" style="width:20%; margin-top:1%; margin-left:70.5%; color:#6497b1 !important;">
    <button class="fluid ui button" type="submit">Skicka notiser</button>
 </div-->
-</div>
+<!--/div-->
 <!--/form-->
 
    <!--div class="contact">
