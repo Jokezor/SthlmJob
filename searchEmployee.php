@@ -655,7 +655,9 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          <div>
            <div style="height:10%; background-color: #778794;">
             <h1 style="text-align:center; padding-top: 5%; padding-bottom: 2%; background-color: #778794;"> Sök Kandidater </h1>
-            <img src="images/AdobeStock_127154189.svg" width="20%">
+            <img src="images/Desc_1.svg" width="20%">
+            <img src="images/Desc_2.svg" width="20%">
+            <img src="images/Desc_3.svg" width="20%">
            </div>
             </div>
             <div class="page1" style="margin-top:1%; padding-top: 2%; padding-bottom: 2%;">
