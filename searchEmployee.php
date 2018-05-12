@@ -658,6 +658,8 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             <img src="images/Desc_1.jpg" width="20%">
             <img src="images/Desc_2.svg" width="20%">
             <img src="images/Desc_3.svg" width="20%">
+            <img src="images/Desc_4.svg" width="20%">
+            <img src="images/Desc_5.svg" width="20%">
            </div>
             </div>
             <div class="page1" style="margin-top:1%; padding-top: 2%; padding-bottom: 2%;">
