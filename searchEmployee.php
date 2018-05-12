@@ -655,20 +655,20 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
          <div>
            <div style="height:10%; background-color: white;">
             <h1 style="text-align:center; padding-top: 5%; padding-bottom: 2%; background-color: #778794;"> Sök Kandidater </h1>
-            <div style="width:20%; margin:0%; display:inline-block;">
-              <img src="images/Desc_1.jpg" width="20%">
+            <div style="width:19.5%;  display:inline-block;">
+              <img src="images/Desc_1.jpg">
             </div>
-            <div style="width:20%; margin:0%; display:inline-block;">
-              <img src="images/Desc_2.svg" width="19%">
+            <div style="width:19.5%; display:inline-block;">
+              <img src="images/Desc_2.svg">
             </div>
-            <div style="width:20%; display:inline-block;">
-              <img src="images/Desc_3.svg" width="19%">
+            <div style="width:19.5%; display:inline-block;">
+              <img src="images/Desc_3.svg">
             </div>
-            <div style="width:20%; display:inline-block;">
-              <img src="images/Desc_4.png" width="19%">
+            <div style="width:19.5%; display:inline-block;">
+              <img src="images/Desc_4.png">
             </div>
-            <div style="width:20%; display:inline-block;">
-              <img src="images/Desc_5.png" width="19%">
+            <div style="width:19.5%; display:inline-block;">
+              <img src="images/Desc_5.png">
             </div>
            </div>
             </div>
