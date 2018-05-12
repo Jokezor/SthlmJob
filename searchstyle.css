@@ -140,6 +140,14 @@
 
 }
 
+.Desc{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+		margin-bottom: auto;
+		margin-top: auto;
+}
+
 .pagnation{
 	float: right !important;
 	margin-top: 1.5%;
