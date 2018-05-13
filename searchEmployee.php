@@ -658,16 +658,16 @@ function calculateScore($allCandidates, $keywords, $sortingOut){
             <div style="width:19.5%;  display:inline-block; height:100%; max-height:100%;">
               <img src="images/Desc_1.jpg" width="100%" class="Desc">
             </div>
-            <div style="width:19.5%; display:inline-block;">
+            <div style="width:19.8%; display:inline-block;">
               <img src="images/Desc_2.svg" width="100%" class="Desc">
             </div>
-            <div style="width:19.5%; display:inline-block;">
+            <div style="width:19.8%; display:inline-block;">
               <img src="images/Desc_3.svg" width="100%" class="Desc">
             </div>
-            <div style="width:19.5%; display:inline-block;">
+            <div style="width:19.8%; display:inline-block;">
               <img src="images/Desc_4.png" width="100%" class="Desc">
             </div>
-            <div style="width:19.5%; display:inline-block;">
+            <div style="width:19.8%; display:inline-block;">
               <img src="images/Desc_5.png" width="100%" class="Desc">
             </div>
            </div>
